@@ -45,7 +45,7 @@ def save_results(result_file, results, ssd):
 
 def call_iob(iob_path, io_files, result_file, ssd):
     results = []
-    for threads in [1, 2, 4, 8]:
+    for threads in [1, 2, 3, 4, 5, 6, 7, 8, 16]:
         for engine in ["libaio", "io_uring"]:
             config = {
                 "RUNTIME": "30",
