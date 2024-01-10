@@ -868,5 +868,95 @@
             "INIT": "yes",
             "THREADS": "16"
         }
+    ],
+    "Samsung_PM961": [
+        {
+            "IOENGINE": "libaio",
+            "THREADS": 1,
+            "iops": "0.09788",
+            "readss": "0.09788",
+            "writess": "0",
+            "throughput_gb": "0.3734",
+            "throughput_gb_reads": "0.3734",
+            "throughput_gb_writes": "0",
+            "max_iops": "0"
+        },
+        {
+            "IOENGINE": "libaio",
+            "THREADS": 2,
+            "iops": "0.1314",
+            "readss": "0.1314",
+            "writess": "0",
+            "throughput_gb": "0.5013",
+            "throughput_gb_reads": "0.5013",
+            "throughput_gb_writes": "0",
+            "max_iops": "0"
+        },
+        {
+            "IOENGINE": "libaio",
+            "THREADS": 4,
+            "iops": "0.1729",
+            "readss": "0.1729",
+            "writess": "0",
+            "throughput_gb": "0.6596",
+            "throughput_gb_reads": "0.6596",
+            "throughput_gb_writes": "0",
+            "max_iops": "0"
+        },
+        {
+            "IOENGINE": "libaio",
+            "THREADS": 8,
+            "iops": "0.2512",
+            "readss": "0.2512",
+            "writess": "0",
+            "throughput_gb": "0.9582",
+            "throughput_gb_reads": "0.9582",
+            "throughput_gb_writes": "0",
+            "max_iops": "0"
+        },
+        {
+            "IOENGINE": "io_uring",
+            "THREADS": 1,
+            "iops": "0.08886",
+            "readss": "0.08886",
+            "writess": "0",
+            "throughput_gb": "0.339",
+            "throughput_gb_reads": "0.339",
+            "throughput_gb_writes": "0",
+            "max_iops": "0"
+        },
+        {
+            "IOENGINE": "io_uring",
+            "THREADS": 2,
+            "iops": "0.1502",
+            "readss": "0.1502",
+            "writess": "0",
+            "throughput_gb": "0.5728",
+            "throughput_gb_reads": "0.5728",
+            "throughput_gb_writes": "0",
+            "max_iops": "0"
+        },
+        {
+            "IOENGINE": "io_uring",
+            "THREADS": 4,
+            "iops": "0.1848",
+            "readss": "0.1848",
+            "writess": "0",
+            "throughput_gb": "0.7049",
+            "throughput_gb_reads": "0.7049",
+            "throughput_gb_writes": "0",
+            "max_iops": "0"
+        },
+        {
+            "IOENGINE": "io_uring",
+            "THREADS": 8,
+            "iops": "0.2206",
+            "readss": "0.2206",
+            "writess": "0",
+            "throughput_gb": "0.8414",
+            "throughput_gb_reads": "0.8414",
+            "throughput_gb_writes": "0",
+            "max_iops": "0"
+        }
     ]
 }

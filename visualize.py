@@ -11,6 +11,7 @@ REPORTED_READS_M = {
     "INTEL_SSDPE2KE016T8": 0.620,
     "Dell_Ent_NVMe_v2_AGN_RI_U.2_1.92TB": 0.920,
     "Samsung_PM991a": 0.350,
+    "Samsung_PM961": 0.250,
 }
 THREADS = [1, 2, 4, 8]
 ENGINES = ["libaio", "io_uring"]
