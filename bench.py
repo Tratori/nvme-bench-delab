@@ -3,6 +3,8 @@ import os
 import subprocess
 import re
 import json
+import yaml 
+import itertools
 
 
 def main():
@@ -10,9 +12,13 @@ def main():
     iob_path = sys.argv[2]
     result_file = sys.argv[3]
     ssd = sys.argv[4]
+    yaml_file = sys.argv[5]
+    workload = sys.argv[6]
+
     for file in io_files.split(";"):
         subprocess.run(["truncate", "-s", "10G", file], check=True)
-    call_iob(iob_path, io_files, result_file, ssd)
+    combinations = create_benchmark_configurations_from_yaml(yaml_file, workload, io_files)
+    call_iob(iob_path, result_file, ssd, combinations)
     for file in io_files.split(";"):
         subprocess.run(["rm", file], check=True)
 
@@ -43,36 +49,48 @@ def save_results(result_file, results, ssd):
         json.dump({ssd: results}, json_file)
 
 
-def call_iob(iob_path, io_files, result_file, ssd):
+def call_iob(iob_path, result_file, ssd, combinations):
     results = []
-    for threads in [1, 2, 3, 4, 5, 6, 7, 8, 16]:
-        for engine in ["libaio", "io_uring"]:
-            config = {
-                "RUNTIME": "30",
-                "FILESIZE": "1G",
-                "IOSIZE": "10G",
-                "FILENAME": io_files,
-                "IOENGINE": engine,
-                "INIT": "yes",
-                "THREADS": str(threads),
-            }
+    for config in combinations:
+        print(config) 
+        result_iob = subprocess.run(
+            f"""{iob_path}""",
+            text=True,
+            capture_output=True,
+            shell=True,
+            env=dict(os.environ.copy(), **config),
+        )
+        
+        if result_iob.returncode == 0:
+            ret = parse_iob_output(result_iob.stdout)
+            results.append(dict(ret, **config))
+            save_results(result_file, results, ssd)
+        else:
+            print(result_iob.returncode)
+            print(result_iob.stdout)
+            print(result_iob.stderr)
 
-            result_iob = subprocess.run(
-                f"""{iob_path}""",
-                text=True,
-                capture_output=True,
-                shell=True,
-                env=dict(os.environ.copy(), **config),
-            )
-            if result_iob.returncode == 0:
-                ret = parse_iob_output(result_iob.stdout)
-                results.append(dict(ret, **config))
-                save_results(result_file, results, ssd)
-            else:
-                print(result_iob.returncode)
-                print(result_iob.stdout)
-                print(result_iob.stderr)
+def create_matrix(yaml_content): 
+    dimensions = yaml_content.keys() 
+    dimension_values = [yaml_content[dim] for dim in dimensions]
+    combinations = list(itertools.product(*dimension_values))
+    result = []
+    for combo in combinations:
+        result.append(dict(zip(dimensions, combo)))
+    return result 
+
+def create_benchmark_configurations_from_yaml(yaml_file, workload, io_files): 
+    combinations = []
+    with open(yaml_file, 'r') as file:
+        yaml_content = yaml.safe_load(file)
+        combinations = create_matrix(yaml_content[workload]["matrix"])
+        for comb in combinations: 
+            for arg in yaml_content[workload]["args"].keys():
+                comb[arg] = yaml_content[workload]["args"][arg]
+            comb["FILENAME"] = io_files
+    return combinations
 
 
 if __name__ == "__main__":
+    # create_benchmark_configurations_from_yaml() 
     main()
