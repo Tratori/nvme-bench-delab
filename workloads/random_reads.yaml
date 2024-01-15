@@ -1,9 +1,9 @@
 random_reads:
   matrix: 
-    THREADS: [1, 2, 4, 8, 16]
+    THREADS: ["1", "2", "4", "8", "16"]
     IOENGINE: ["libaio", "io_uring"]
   args:
-    FILESIZE: 1G
-    IOSIZE: 10G
-    INIT: yes
-    RUNTIME: 30
+    FILESIZE: "1G"
+    IOSIZE: "10G"
+    INIT: "yes"
+    RUNTIME: "30"
