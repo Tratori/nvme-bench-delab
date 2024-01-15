@@ -1,4 +1,4 @@
-nodes=("nx01")
+nodes=("nx02")
 declare -A mounts
 declare -A files
 declare -A partitions
@@ -16,10 +16,10 @@ files["gx05"]="/scratch/file_nvme_bench"
 partitions["gx05"]="sorcery"
 ssds["gx05"]="Dell_Ent_NVMe_v2_AGN_RI_U.2_1.92TB"
 
-mounts["nx02_raid0"]="/mnt/raid/:/mnt/raid/"
-files["nx02_raid0"]="/mnt/raid/file_nvme_bench"
-partitions["nx02_raid0"]="sorcery"
-ssds["nx02_raid0"]="4_SSD_Raid0"
+mounts["nx02"]="/mnt/raid/:/mnt/raid/"
+files["nx02"]="/mnt/raid/file_nvme_bench"
+partitions["nx02"]="alchemy"
+ssds["nx02"]="4_SSD_Raid0"
 
 mounts["gx03"]="/scratch/:/scratch/"
 files["gx03"]="/scratch/file_nvme_bench"
@@ -74,5 +74,5 @@ for node in ${nodes[@]}; do
       --container-image=/hpi/fs00/share/fg-rabl/dpmh23_nvme/leanstore_all_dep.sqsh \
       --container-mounts=$(pwd)/leanstore:/leanstore,${mounts[$node]},$(pwd)/nvme-bench-delab:/nvme-bench-delab  \
       python3 /nvme-bench-delab/bench.py \
-        $node_files /leanstore/build/frontend/iob /leanstore/results/$node/benchmark ${ssds[$node]} /nvme-bench-delab/workloads/random_reads.yaml random_reads &
+        $node_files /leanstore/build/frontend/iob /leanstore/results/$node/benchmark ${ssds[$node]} /nvme-bench-delab/workloads/test_machine.yaml test_machine &
 done
