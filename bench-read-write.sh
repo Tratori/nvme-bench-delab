@@ -1,4 +1,4 @@
-nodes=("nx01" "gx05")
+nodes=("nx01")
 declare -A mounts
 declare -A files
 declare -A partitions
@@ -41,8 +41,8 @@ for node in ${nodes[@]}; do
 
     echo "submitting task for node ${node}"
     srun -A rabl --partition ${partitions[$node]} -w $node -c 32 --mem-per-cpu 1024 \
-      --container-image=$(pwd)/leanstore_all_dep.sqsh \
-      --container-mounts=$(pwd)/leanstore:/leanstore,${mounts[$node]} \
-      python3 /leanstore/bench.py \
-        $node_files /leanstore/build/frontend/iob /leanstore/results/$node/benchmark ${ssds[$node]} &
+      --container-image=/hpi/fs00/share/fg-rabl/dpmh23_nvme/leanstore_all_dep.sqsh \
+      --container-mounts=$(pwd)/leanstore:/leanstore,${mounts[$node]},$(pwd)/nvme-bench-delab:/nvme-bench-delab  \
+      python3 /nvme-bench-delab/bench.py \
+        $node_files /leanstore/build/frontend/iob /leanstore/results/$node/benchmark ${ssds[$node]} /nvme-bench-delab/workloads/random_reads.yaml random_reads &
 done
