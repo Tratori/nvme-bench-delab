@@ -1,4 +1,4 @@
-node_config=("nx02")
+node_config=("nx01" "gx05" "nx02" "gx03" "gx04" "gx01_raid1")
 declare -A mounts
 declare -A nodenames
 declare -A files
@@ -37,20 +37,20 @@ partitions["gx04"]="sorcery"
 ssds["gx04"]="1_SSD"
 nodenames["gx04"]="gx04"
 
-mounts["gx01_raid0"]="/mnt/userspace:/mnt/userspace"
-files["gx01_raid0"]="/mnt/userspace/file_nvme_bench"
+mounts["gx01_raid0"]="/mnt/userspace/scratch:/mnt/userspace/scratch"
+files["gx01_raid0"]="/mnt/userspace/scratch/file_nvme_bench"
 partitions["gx01_raid0"]="sorcery"
 ssds["gx01_raid0"]="4_SSDs"
 nodenames["gx01_raid0"]="gx01"
 
-mounts["gx01_raid1"]="/tmp/:/tmp/"
-files["gx01_raid1"]="/tmp/file_nvme_bench"
+mounts["gx01_raid1"]="/scratch/:/scratch/"
+files["gx01_raid1"]="/scratch/file_nvme_bench"
 partitions["gx01_raid1"]="sorcery"
 ssds["gx01_raid1"]="2_SSDs"
 nodenames["gx01_raid1"]="gx01"
 
-mounts["gx01_full"]="/tmp/:/tmp/,/mnt/userspace:/mnt/userspace"
-files["gx01_full"]="/tmp/file_nvme_bench;/tmp/:/tmp/file_nvme_bench"
+mounts["gx01_full"]="/scratch/:/scratch/,/mnt/userspace/scratch:/mnt/userspace/scratch"
+files["gx01_full"]="/scratch/file_nvme_bench;/mnt/userspace/scratch/file_nvme_bench"
 partitions["gx01_full"]="sorcery"
 ssds["gx01_full"]="6_SSDs"
 nodenames["gx01_full"]="gx01"
@@ -74,7 +74,7 @@ ssds["cp01"]="1.6TB_NVMe_Gen4_U.2_SSD"
 nodenames["cp01"]="cp01"
 
 for node_conf in ${node_config[@]}; do
-    node=nodenames[$node_config]
+    node=${nodenames[$node_conf]}
     RESULT_FILE="leanstore/results/$node_conf"
 
     node_files=("${files[$node_conf]}")
@@ -86,5 +86,5 @@ for node_conf in ${node_config[@]}; do
       --container-image=/hpi/fs00/share/fg-rabl/dpmh23_nvme/leanstore_all_dep.sqsh \
       --container-mounts=$(pwd)/leanstore:/leanstore,${mounts[$node_conf]},$(pwd)/nvme-bench-delab:/nvme-bench-delab  \
       python3 /nvme-bench-delab/bench.py \
-        $node_files /leanstore/build/frontend/iob /leanstore/results/$node_conf/benchmark ${ssds[$node_conf]} /nvme-bench-delab/workloads/test_machine.yaml test_machine &
+        $node_files /leanstore/build/frontend/iob /leanstore/results/$node_conf/benchmark ${ssds[$node_conf]} /nvme-bench-delab/workloads/mixed_read_write.yaml mixed_read_write &
 done
