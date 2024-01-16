@@ -1,0 +1,10 @@
+mixed_read_write:
+  matrix: 
+    RW: ["0", "0.10", "0.20", "0.30", "0.40", "0.50", "0.60", "0.70", "0.80", "0.90", "1"]
+    IOENGINE: ["libaio", "io_uring"]
+  args:
+    FILESIZE: "1G"
+    IOSIZE: "10G"
+    INIT: "yes"
+    RUNTIME: "120"
+    THREADS: "16"
