@@ -14,6 +14,7 @@ def main():
     for config in configs:
         benchmark_file = input_dir + f"{config}/benchmark"
         if os.path.exists(benchmark_file):
+            print(f"Reading file for {config}")
             with open(benchmark_file, "r") as fp:
                 benchmark = json.load(fp)
                 for key, value in benchmark.items():

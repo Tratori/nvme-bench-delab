@@ -1,8 +1,9 @@
 import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
-import os 
+import os
 import json
 from pathlib import Path
+
 current_directory = Path(__file__).resolve().parent
 
 COLORS_ENGINE = {
@@ -22,11 +23,15 @@ HANDLES_ENGINE_LABELS = [
     mpatches.Patch(color=color, label=label) for label, color in COLORS_ENGINE.items()
 ]
 
+BS = [4096, 8192, 16384, 32768, 65536]
+RW_BS = [0]
 
-def import_benchmark(file = "benchmark.json"):
+
+def import_benchmark(file="benchmark.json"):
     with open(file, "r") as json_file:
         benchmark = json.load(json_file)
     return benchmark
+
 
 def import_benchmarks(benchmark):
     benchmarks = {}
@@ -36,6 +41,7 @@ def import_benchmarks(benchmark):
             file_path = Path(root) / file
             benchmarks[Path(root).name] = import_benchmark(file_path)
     return benchmarks
+
 
 def visualize_random_read_scalability(benchmarks):
     plt.title("4096B - Random Read - IOP/s")
@@ -97,9 +103,9 @@ def visualize_ssds_vs_reported(benchmarks):
     plt.show()
 
 
-def visualize_mixed_read_write(benchmarks): 
+def visualize_mixed_read_write(benchmarks):
     plt.figure(figsize=(12, 8))
-    
+
     machine_configs = list(benchmarks.keys())  # Convert to list if necessary
     num_machines = len(machine_configs)
     num_columns = 2  # You can adjust the number of columns as needed
@@ -110,7 +116,7 @@ def visualize_mixed_read_write(benchmarks):
         plt.ylabel("Throughput (M IOP/s)", fontdict={"fontsize": 12})
         plt.xlabel("Write percentage", fontdict={"fontsize": 12})
 
-        for ssd, benchmark in benchmarks[machine].items(): 
+        for ssd, benchmark in benchmarks[machine].items():
             for engine in ENGINES:
                 runs = [x for x in benchmark if x["IOENGINE"] == engine]
                 throughputs = [
@@ -139,11 +145,59 @@ def visualize_mixed_read_write(benchmarks):
         plt.legend(handles=HANDLES_ENGINE_LABELS, fontsize=12)
         plt.ylim([0.0, max(throughputs) * 1.5])
         plt.xticks(RW)
-    
+
     plt.tight_layout()  # Adjust layout to prevent overlap
     plt.savefig("mixed_read_write.png", dpi=400)
     plt.show()
 
+
+def visualize_bs_read_write(benchmarks):
+    plt.figure(figsize=(12, 8))
+
+    machine_configs = list(benchmarks.keys())  # Convert to list if necessary
+    num_machines = len(machine_configs)
+    num_columns = 2  # You can adjust the number of columns as needed
+
+    for idx, machine in enumerate(machine_configs, start=1):
+        plt.subplot(num_machines // num_columns + 1, num_columns, idx)
+        plt.title(f"{machine} - Different Block sizes - RW - IOP/s")
+        plt.ylabel("Throughput (M IOP/s)", fontdict={"fontsize": 12})
+        plt.xlabel("Blocksize (B)", fontdict={"fontsize": 12})
+
+        for ssd, benchmark in benchmarks[machine].items():
+            for engine in ENGINES:
+                for rw in RW_BS:
+                    runs = [x for x in benchmark if x["IOENGINE"] == engine]
+                    throughputs = [
+                        float(run["iops"])
+                        for run in sorted(runs, key=lambda x: int(x["BS"]))
+                        if int(run["BS"]) in BS and int(run["RW"]) == rw
+                    ]
+                    print(engine, throughputs)
+                    if engine == ENGINES[0]:
+                        plt.text(
+                            BS[-1],
+                            throughputs[-1],
+                            ssd.replace("_", " "),
+                            fontsize=12,
+                            ha="right",
+                            va="bottom",
+                            color="black",
+                        )
+
+                    plt.plot(
+                        BS,
+                        throughputs,
+                        color=COLORS_ENGINE[engine],
+                    )
+
+        plt.legend(handles=HANDLES_ENGINE_LABELS, fontsize=12)
+        plt.ylim([0.0, max(throughputs) * 1.5])
+        plt.xticks(BS)
+
+    plt.tight_layout()  # Adjust layout to prevent overlap
+    plt.savefig("mixed_read_write.png", dpi=400)
+    plt.show()
 
 
 def main():
@@ -152,6 +206,8 @@ def main():
     visualize_ssds_vs_reported(benchmark)
 
     visualize_mixed_read_write(import_benchmarks("mixed_read_write_results"))
+    visualize_bs_read_write(import_benchmarks("results_block_size"))
+
 
 if __name__ == "__main__":
     main()
