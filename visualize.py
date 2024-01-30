@@ -232,11 +232,11 @@ def visualize_bs_read_write(benchmarks):
 
 def main():
     benchmark = import_benchmark()
-    # visualize_random_read_scalability(benchmark)
-    # visualize_ssds_vs_reported(benchmark)
-    #
-    # visualize_mixed_read_write(import_benchmarks("mixed_read_write_results"))
-    # visualize_bs_read_write(import_benchmarks("results_block_size"))
+    visualize_random_read_scalability(benchmark)
+    visualize_ssds_vs_reported(benchmark)
+
+    visualize_mixed_read_write(import_benchmarks("mixed_read_write_results"))
+    visualize_bs_read_write(import_benchmarks("results_block_size"))
     visualize_bs_read_write(import_benchmarks("paused_read"))
 
 
