@@ -3,7 +3,7 @@ import os
 import subprocess
 import re
 import json
-import yaml 
+import yaml
 import itertools
 
 
@@ -49,10 +49,9 @@ def save_results(result_file, results, ssd):
         json.dump({ssd: results}, json_file)
 
 
-def call_iob(iob_path, result_file, ssd, combinations):
-    results = []
+def call_iob(iob_path, result_file, ssd, combinations, results=[], additional_info={}):
     for config in combinations:
-        print(config) 
+        print(config)
         result_iob = subprocess.run(
             f"""{iob_path}""",
             text=True,
@@ -60,31 +59,32 @@ def call_iob(iob_path, result_file, ssd, combinations):
             shell=True,
             env=dict(os.environ.copy(), **config),
         )
-        
+
         if result_iob.returncode == 0:
             ret = parse_iob_output(result_iob.stdout)
-            results.append(dict(ret, **config))
+            results.append(dict(ret, **config, **additional_info))
             save_results(result_file, results, ssd)
         else:
             print(result_iob.returncode)
             print(result_iob.stdout)
             print(result_iob.stderr)
+    return results
 
-def create_matrix(yaml_content): 
-    dimensions = yaml_content.keys() 
+def create_matrix(yaml_content):
+    dimensions = yaml_content.keys()
     dimension_values = [yaml_content[dim] for dim in dimensions]
     combinations = list(itertools.product(*dimension_values))
     result = []
     for combo in combinations:
         result.append(dict(zip(dimensions, combo)))
-    return result 
+    return result
 
-def create_benchmark_configurations_from_yaml(yaml_file, workload, io_files): 
+def create_benchmark_configurations_from_yaml(yaml_file, workload, io_files):
     combinations = []
     with open(yaml_file, 'r') as file:
         yaml_content = yaml.safe_load(file)
         combinations = create_matrix(yaml_content[workload]["matrix"])
-        for comb in combinations: 
+        for comb in combinations:
             for arg in yaml_content[workload]["args"].keys():
                 comb[arg] = yaml_content[workload]["args"][arg]
             comb["FILENAME"] = io_files
@@ -92,5 +92,5 @@ def create_benchmark_configurations_from_yaml(yaml_file, workload, io_files):
 
 
 if __name__ == "__main__":
-    # create_benchmark_configurations_from_yaml() 
+    # create_benchmark_configurations_from_yaml()
     main()

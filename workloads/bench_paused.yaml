@@ -1,0 +1,9 @@
+bench_paused:
+  matrix:
+    IOENGINE: ["libaio", "io_uring"]
+  args:
+    FILESIZE: "5G"
+    IOSIZE: "10G"
+    INIT: "disable"
+    RUNTIME: "5"
+    THREADS: "16"

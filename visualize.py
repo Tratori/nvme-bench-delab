@@ -200,13 +200,44 @@ def visualize_bs_read_write(benchmarks):
     plt.show()
 
 
+def visualize_bs_read_write(benchmarks):
+    machine_configs = list(benchmarks.keys())  # Convert to list if necessary
+
+    for machine in machine_configs:
+        plt.title(f"{machine} - Read benchmark waiting time after file creation")
+        plt.ylabel("Throughput (M IOP/s)", fontdict={"fontsize": 12})
+        plt.xlabel("Time waited (s)", fontdict={"fontsize": 12})
+
+        for ssd, benchmark in benchmarks[machine].items():
+            print(benchmark)
+            sorted_benchmark = sorted(benchmark, key=lambda x: int(x["n"]))
+            for engine in ENGINES:
+                runs = [x for x in sorted_benchmark if x["IOENGINE"] == engine]
+                throughputs = [float(run["iops"]) for run in runs]
+                print(engine, throughputs)
+
+                plt.plot(
+                    [int(run["time_alive"]) for run in runs],
+                    throughputs,
+                    color=COLORS_ENGINE[engine],
+                )
+
+        plt.legend(handles=HANDLES_ENGINE_LABELS, fontsize=12)
+        plt.ylim([min(throughputs) * 0.9, max(throughputs) * 1.1])
+
+    plt.tight_layout()  # Adjust layout to prevent overlap
+    plt.savefig("paused_read.png", dpi=400)
+    plt.show()
+
+
 def main():
     benchmark = import_benchmark()
-    visualize_random_read_scalability(benchmark)
-    visualize_ssds_vs_reported(benchmark)
-
-    visualize_mixed_read_write(import_benchmarks("mixed_read_write_results"))
-    visualize_bs_read_write(import_benchmarks("results_block_size"))
+    # visualize_random_read_scalability(benchmark)
+    # visualize_ssds_vs_reported(benchmark)
+    #
+    # visualize_mixed_read_write(import_benchmarks("mixed_read_write_results"))
+    # visualize_bs_read_write(import_benchmarks("results_block_size"))
+    visualize_bs_read_write(import_benchmarks("paused_read"))
 
 
 if __name__ == "__main__":
