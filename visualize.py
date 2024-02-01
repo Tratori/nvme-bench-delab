@@ -74,7 +74,7 @@ def visualize_random_read_scalability(benchmarks):
     plt.legend(handles=HANDLES_ENGINE_LABELS, fontsize=12)
     plt.ylim([0.0, 1.15])
     plt.xticks(THREADS)
-    plt.savefig("mixed_read_write.png", dpi=400)
+    plt.savefig("figures/random_read_scalability.png", dpi=400)
     plt.show()
 
 
@@ -99,7 +99,7 @@ def visualize_ssds_vs_reported(benchmarks):
     plt.xticks([])
     plt.scatter([0] * len(ratio), ratio)
     plt.tight_layout()
-    plt.savefig("reported_read_measured.png", dpi=400)
+    plt.savefig("figures/reported_read_measured.png", dpi=400)
     plt.show()
 
 
@@ -147,7 +147,7 @@ def visualize_mixed_read_write(benchmarks):
         plt.xticks(RW)
 
     plt.tight_layout()  # Adjust layout to prevent overlap
-    plt.savefig("mixed_read_write.png", dpi=400)
+    plt.savefig("figures/mixed_read_write.png", dpi=400)
     plt.show()
 
 
@@ -196,7 +196,7 @@ def visualize_bs_read_write(benchmarks):
         plt.xticks(BS)
 
     plt.tight_layout()  # Adjust layout to prevent overlap
-    plt.savefig("mixed_read_write.png", dpi=400)
+    plt.savefig("figures/pagesize_read_write.png", dpi=400)
     plt.show()
 
 
@@ -226,7 +226,7 @@ def visualize_bs_read_write_after_pause(benchmarks):
         plt.ylim([min(throughputs) * 0.9, max(throughputs) * 1.1])
 
     plt.tight_layout()  # Adjust layout to prevent overlap
-    plt.savefig("paused_read.png", dpi=400)
+    plt.savefig("figures/paused_read.png", dpi=400)
     plt.show()
 
 
@@ -258,7 +258,7 @@ def visualize_additional_write_random_read(benchmarks):
         plt.ylim([min(throughputs) * 0.9, max(throughputs) * 1.1])
 
     plt.tight_layout()  # Adjust layout to prevent overlap
-    plt.savefig("additional_write.png", dpi=400)
+    plt.savefig("figures/additional_write.png", dpi=400)
     plt.show()
 
 
