@@ -1,0 +1,9 @@
+bench_additional_write:
+  matrix:
+    IOENGINE: ["libaio", "io_uring"]
+  args:
+    FILESIZE: "1G"
+    IOSIZE: "10G"
+    INIT: "disable"
+    RUNTIME: "10"
+    THREADS: "16"

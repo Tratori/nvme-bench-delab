@@ -200,7 +200,7 @@ def visualize_bs_read_write(benchmarks):
     plt.show()
 
 
-def visualize_bs_read_write(benchmarks):
+def visualize_bs_read_write_after_pause(benchmarks):
     machine_configs = list(benchmarks.keys())  # Convert to list if necessary
 
     for machine in machine_configs:
@@ -230,6 +230,38 @@ def visualize_bs_read_write(benchmarks):
     plt.show()
 
 
+def visualize_additional_write_random_read(benchmarks):
+    machine_configs = list(benchmarks.keys())  # Convert to list if necessary
+
+    for machine in machine_configs:
+        plt.title(f"{machine} - Random Read Throughput After Additional Writes to SSD")
+        plt.ylabel("Throughput (M IOP/s)", fontdict={"fontsize": 12})
+        plt.xlabel("Additional writes to SSD (GB)", fontdict={"fontsize": 12})
+
+        for ssd, benchmark in benchmarks[machine].items():
+            print(benchmark)
+            sorted_benchmark = sorted(
+                benchmark, key=lambda x: int(x["GB_written_after_file"])
+            )
+            for engine in ENGINES:
+                runs = [x for x in sorted_benchmark if x["IOENGINE"] == engine]
+                throughputs = [float(run["iops"]) for run in runs]
+                print(engine, throughputs)
+
+                plt.plot(
+                    [int(run["GB_written_after_file"]) for run in runs],
+                    throughputs,
+                    color=COLORS_ENGINE[engine],
+                )
+
+        plt.legend(handles=HANDLES_ENGINE_LABELS, fontsize=12)
+        plt.ylim([min(throughputs) * 0.9, max(throughputs) * 1.1])
+
+    plt.tight_layout()  # Adjust layout to prevent overlap
+    plt.savefig("additional_write.png", dpi=400)
+    plt.show()
+
+
 def main():
     benchmark = import_benchmark()
     visualize_random_read_scalability(benchmark)
@@ -237,7 +269,8 @@ def main():
 
     visualize_mixed_read_write(import_benchmarks("mixed_read_write_results"))
     visualize_bs_read_write(import_benchmarks("results_block_size"))
-    visualize_bs_read_write(import_benchmarks("paused_read"))
+    visualize_bs_read_write_after_pause(import_benchmarks("paused_read"))
+    visualize_additional_write_random_read(import_benchmarks("additional_write"))
 
 
 if __name__ == "__main__":
