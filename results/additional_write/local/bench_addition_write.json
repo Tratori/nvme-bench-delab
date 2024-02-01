@@ -1,0 +1,760 @@
+{
+    "local": [
+        {
+            "IOENGINE": "libaio",
+            "FILESIZE": "1G",
+            "IOSIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "10",
+            "THREADS": "16",
+            "FILENAME": "/home/fabian/Desktop/HPI3/Data_processing/leanstore/build/frontend/test",
+            "GB_written_after_file": 0,
+            "repetitions": [
+                {
+                    "iops": "0.3545",
+                    "readss": "0.3545",
+                    "writess": "0",
+                    "throughput_gb": "1.352",
+                    "throughput_gb_reads": "1.352",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "0.3553",
+                    "readss": "0.3553",
+                    "writess": "0",
+                    "throughput_gb": "1.355",
+                    "throughput_gb_reads": "1.355",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "0.355",
+                    "readss": "0.355",
+                    "writess": "0",
+                    "throughput_gb": "1.354",
+                    "throughput_gb_reads": "1.354",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 2
+                }
+            ]
+        },
+        {
+            "IOENGINE": "io_uring",
+            "FILESIZE": "1G",
+            "IOSIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "10",
+            "THREADS": "16",
+            "FILENAME": "/home/fabian/Desktop/HPI3/Data_processing/leanstore/build/frontend/test",
+            "GB_written_after_file": 0,
+            "repetitions": [
+                {
+                    "iops": "0.3543",
+                    "readss": "0.3543",
+                    "writess": "0",
+                    "throughput_gb": "1.352",
+                    "throughput_gb_reads": "1.352",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "0.3547",
+                    "readss": "0.3547",
+                    "writess": "0",
+                    "throughput_gb": "1.353",
+                    "throughput_gb_reads": "1.353",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "0.355",
+                    "readss": "0.355",
+                    "writess": "0",
+                    "throughput_gb": "1.354",
+                    "throughput_gb_reads": "1.354",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 2
+                }
+            ]
+        },
+        {
+            "IOENGINE": "libaio",
+            "FILESIZE": "1G",
+            "IOSIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "10",
+            "THREADS": "16",
+            "FILENAME": "/home/fabian/Desktop/HPI3/Data_processing/leanstore/build/frontend/test",
+            "GB_written_after_file": 1,
+            "repetitions": [
+                {
+                    "iops": "0.3541",
+                    "readss": "0.3541",
+                    "writess": "0",
+                    "throughput_gb": "1.351",
+                    "throughput_gb_reads": "1.351",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "0.3555",
+                    "readss": "0.3555",
+                    "writess": "0",
+                    "throughput_gb": "1.356",
+                    "throughput_gb_reads": "1.356",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "0.3547",
+                    "readss": "0.3547",
+                    "writess": "0",
+                    "throughput_gb": "1.353",
+                    "throughput_gb_reads": "1.353",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 2
+                }
+            ]
+        },
+        {
+            "IOENGINE": "io_uring",
+            "FILESIZE": "1G",
+            "IOSIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "10",
+            "THREADS": "16",
+            "FILENAME": "/home/fabian/Desktop/HPI3/Data_processing/leanstore/build/frontend/test",
+            "GB_written_after_file": 1,
+            "repetitions": [
+                {
+                    "iops": "0.3331",
+                    "readss": "0.3331",
+                    "writess": "0",
+                    "throughput_gb": "1.271",
+                    "throughput_gb_reads": "1.271",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "0.3331",
+                    "readss": "0.3331",
+                    "writess": "0",
+                    "throughput_gb": "1.271",
+                    "throughput_gb_reads": "1.271",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "0.3328",
+                    "readss": "0.3328",
+                    "writess": "0",
+                    "throughput_gb": "1.269",
+                    "throughput_gb_reads": "1.269",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 2
+                }
+            ]
+        },
+        {
+            "IOENGINE": "libaio",
+            "FILESIZE": "1G",
+            "IOSIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "10",
+            "THREADS": "16",
+            "FILENAME": "/home/fabian/Desktop/HPI3/Data_processing/leanstore/build/frontend/test",
+            "GB_written_after_file": 2,
+            "repetitions": [
+                {
+                    "iops": "0.3556",
+                    "readss": "0.3556",
+                    "writess": "0",
+                    "throughput_gb": "1.356",
+                    "throughput_gb_reads": "1.356",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "0.3558",
+                    "readss": "0.3558",
+                    "writess": "0",
+                    "throughput_gb": "1.357",
+                    "throughput_gb_reads": "1.357",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "0.356",
+                    "readss": "0.356",
+                    "writess": "0",
+                    "throughput_gb": "1.358",
+                    "throughput_gb_reads": "1.358",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 2
+                }
+            ]
+        },
+        {
+            "IOENGINE": "io_uring",
+            "FILESIZE": "1G",
+            "IOSIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "10",
+            "THREADS": "16",
+            "FILENAME": "/home/fabian/Desktop/HPI3/Data_processing/leanstore/build/frontend/test",
+            "GB_written_after_file": 2,
+            "repetitions": [
+                {
+                    "iops": "0.3557",
+                    "readss": "0.3557",
+                    "writess": "0",
+                    "throughput_gb": "1.357",
+                    "throughput_gb_reads": "1.357",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "0.3557",
+                    "readss": "0.3557",
+                    "writess": "0",
+                    "throughput_gb": "1.357",
+                    "throughput_gb_reads": "1.357",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "0.3329",
+                    "readss": "0.3329",
+                    "writess": "0",
+                    "throughput_gb": "1.27",
+                    "throughput_gb_reads": "1.27",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 2
+                }
+            ]
+        },
+        {
+            "IOENGINE": "libaio",
+            "FILESIZE": "1G",
+            "IOSIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "10",
+            "THREADS": "16",
+            "FILENAME": "/home/fabian/Desktop/HPI3/Data_processing/leanstore/build/frontend/test",
+            "GB_written_after_file": 4,
+            "repetitions": [
+                {
+                    "iops": "0.3567",
+                    "readss": "0.3567",
+                    "writess": "0",
+                    "throughput_gb": "1.361",
+                    "throughput_gb_reads": "1.361",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "0.3564",
+                    "readss": "0.3564",
+                    "writess": "0",
+                    "throughput_gb": "1.36",
+                    "throughput_gb_reads": "1.36",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "0.3606",
+                    "readss": "0.3606",
+                    "writess": "0",
+                    "throughput_gb": "1.376",
+                    "throughput_gb_reads": "1.376",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 2
+                }
+            ]
+        },
+        {
+            "IOENGINE": "io_uring",
+            "FILESIZE": "1G",
+            "IOSIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "10",
+            "THREADS": "16",
+            "FILENAME": "/home/fabian/Desktop/HPI3/Data_processing/leanstore/build/frontend/test",
+            "GB_written_after_file": 4,
+            "repetitions": [
+                {
+                    "iops": "0.3575",
+                    "readss": "0.3575",
+                    "writess": "0",
+                    "throughput_gb": "1.364",
+                    "throughput_gb_reads": "1.364",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "0.3568",
+                    "readss": "0.3568",
+                    "writess": "0",
+                    "throughput_gb": "1.361",
+                    "throughput_gb_reads": "1.361",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "0.3573",
+                    "readss": "0.3573",
+                    "writess": "0",
+                    "throughput_gb": "1.363",
+                    "throughput_gb_reads": "1.363",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 2
+                }
+            ]
+        },
+        {
+            "IOENGINE": "libaio",
+            "FILESIZE": "1G",
+            "IOSIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "10",
+            "THREADS": "16",
+            "FILENAME": "/home/fabian/Desktop/HPI3/Data_processing/leanstore/build/frontend/test",
+            "GB_written_after_file": 8,
+            "repetitions": [
+                {
+                    "iops": "0.3557",
+                    "readss": "0.3557",
+                    "writess": "0",
+                    "throughput_gb": "1.357",
+                    "throughput_gb_reads": "1.357",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "0.3558",
+                    "readss": "0.3558",
+                    "writess": "0",
+                    "throughput_gb": "1.357",
+                    "throughput_gb_reads": "1.357",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "0.3555",
+                    "readss": "0.3555",
+                    "writess": "0",
+                    "throughput_gb": "1.356",
+                    "throughput_gb_reads": "1.356",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 2
+                }
+            ]
+        },
+        {
+            "IOENGINE": "io_uring",
+            "FILESIZE": "1G",
+            "IOSIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "10",
+            "THREADS": "16",
+            "FILENAME": "/home/fabian/Desktop/HPI3/Data_processing/leanstore/build/frontend/test",
+            "GB_written_after_file": 8,
+            "repetitions": [
+                {
+                    "iops": "0.3557",
+                    "readss": "0.3557",
+                    "writess": "0",
+                    "throughput_gb": "1.357",
+                    "throughput_gb_reads": "1.357",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "0.3562",
+                    "readss": "0.3562",
+                    "writess": "0",
+                    "throughput_gb": "1.359",
+                    "throughput_gb_reads": "1.359",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "0.356",
+                    "readss": "0.356",
+                    "writess": "0",
+                    "throughput_gb": "1.358",
+                    "throughput_gb_reads": "1.358",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 2
+                }
+            ]
+        },
+        {
+            "IOENGINE": "libaio",
+            "FILESIZE": "1G",
+            "IOSIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "10",
+            "THREADS": "16",
+            "FILENAME": "/home/fabian/Desktop/HPI3/Data_processing/leanstore/build/frontend/test",
+            "GB_written_after_file": 16,
+            "repetitions": [
+                {
+                    "iops": "0.3555",
+                    "readss": "0.3555",
+                    "writess": "0",
+                    "throughput_gb": "1.356",
+                    "throughput_gb_reads": "1.356",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "0.3561",
+                    "readss": "0.3561",
+                    "writess": "0",
+                    "throughput_gb": "1.359",
+                    "throughput_gb_reads": "1.359",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "0.3562",
+                    "readss": "0.3562",
+                    "writess": "0",
+                    "throughput_gb": "1.359",
+                    "throughput_gb_reads": "1.359",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 2
+                }
+            ]
+        },
+        {
+            "IOENGINE": "io_uring",
+            "FILESIZE": "1G",
+            "IOSIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "10",
+            "THREADS": "16",
+            "FILENAME": "/home/fabian/Desktop/HPI3/Data_processing/leanstore/build/frontend/test",
+            "GB_written_after_file": 16,
+            "repetitions": [
+                {
+                    "iops": "0.3558",
+                    "readss": "0.3558",
+                    "writess": "0",
+                    "throughput_gb": "1.357",
+                    "throughput_gb_reads": "1.357",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "0.3557",
+                    "readss": "0.3557",
+                    "writess": "0",
+                    "throughput_gb": "1.357",
+                    "throughput_gb_reads": "1.357",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "0.3562",
+                    "readss": "0.3562",
+                    "writess": "0",
+                    "throughput_gb": "1.359",
+                    "throughput_gb_reads": "1.359",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 2
+                }
+            ]
+        },
+        {
+            "IOENGINE": "libaio",
+            "FILESIZE": "1G",
+            "IOSIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "10",
+            "THREADS": "16",
+            "FILENAME": "/home/fabian/Desktop/HPI3/Data_processing/leanstore/build/frontend/test",
+            "GB_written_after_file": 32,
+            "repetitions": [
+                {
+                    "iops": "0.2858",
+                    "readss": "0.2858",
+                    "writess": "0",
+                    "throughput_gb": "1.09",
+                    "throughput_gb_reads": "1.09",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "0.2853",
+                    "readss": "0.2853",
+                    "writess": "0",
+                    "throughput_gb": "1.088",
+                    "throughput_gb_reads": "1.088",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "0.2856",
+                    "readss": "0.2856",
+                    "writess": "0",
+                    "throughput_gb": "1.09",
+                    "throughput_gb_reads": "1.09",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 2
+                }
+            ]
+        },
+        {
+            "IOENGINE": "io_uring",
+            "FILESIZE": "1G",
+            "IOSIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "10",
+            "THREADS": "16",
+            "FILENAME": "/home/fabian/Desktop/HPI3/Data_processing/leanstore/build/frontend/test",
+            "GB_written_after_file": 32,
+            "repetitions": [
+                {
+                    "iops": "0.2859",
+                    "readss": "0.2859",
+                    "writess": "0",
+                    "throughput_gb": "1.091",
+                    "throughput_gb_reads": "1.091",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "0.2852",
+                    "readss": "0.2852",
+                    "writess": "0",
+                    "throughput_gb": "1.088",
+                    "throughput_gb_reads": "1.088",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "0.2863",
+                    "readss": "0.2863",
+                    "writess": "0",
+                    "throughput_gb": "1.092",
+                    "throughput_gb_reads": "1.092",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 2
+                }
+            ]
+        },
+        {
+            "IOENGINE": "libaio",
+            "FILESIZE": "1G",
+            "IOSIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "10",
+            "THREADS": "16",
+            "FILENAME": "/home/fabian/Desktop/HPI3/Data_processing/leanstore/build/frontend/test",
+            "GB_written_after_file": 48,
+            "repetitions": [
+                {
+                    "iops": "0.2814",
+                    "readss": "0.2814",
+                    "writess": "0",
+                    "throughput_gb": "1.074",
+                    "throughput_gb_reads": "1.074",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "0.2812",
+                    "readss": "0.2812",
+                    "writess": "0",
+                    "throughput_gb": "1.073",
+                    "throughput_gb_reads": "1.073",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "0.251",
+                    "readss": "0.251",
+                    "writess": "0",
+                    "throughput_gb": "0.9574",
+                    "throughput_gb_reads": "0.9574",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 2
+                }
+            ]
+        },
+        {
+            "IOENGINE": "io_uring",
+            "FILESIZE": "1G",
+            "IOSIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "10",
+            "THREADS": "16",
+            "FILENAME": "/home/fabian/Desktop/HPI3/Data_processing/leanstore/build/frontend/test",
+            "GB_written_after_file": 48,
+            "repetitions": [
+                {
+                    "iops": "0.2312",
+                    "readss": "0.2312",
+                    "writess": "0",
+                    "throughput_gb": "0.882",
+                    "throughput_gb_reads": "0.882",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "0.2269",
+                    "readss": "0.2269",
+                    "writess": "0",
+                    "throughput_gb": "0.8656",
+                    "throughput_gb_reads": "0.8656",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "0.2225",
+                    "readss": "0.2225",
+                    "writess": "0",
+                    "throughput_gb": "0.8488",
+                    "throughput_gb_reads": "0.8488",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 2
+                }
+            ]
+        },
+        {
+            "IOENGINE": "libaio",
+            "FILESIZE": "1G",
+            "IOSIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "10",
+            "THREADS": "16",
+            "FILENAME": "/home/fabian/Desktop/HPI3/Data_processing/leanstore/build/frontend/test",
+            "GB_written_after_file": 64,
+            "repetitions": [
+                {
+                    "iops": "0.2672",
+                    "readss": "0.2672",
+                    "writess": "0",
+                    "throughput_gb": "1.019",
+                    "throughput_gb_reads": "1.019",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "0.2439",
+                    "readss": "0.2439",
+                    "writess": "0",
+                    "throughput_gb": "0.9305",
+                    "throughput_gb_reads": "0.9305",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "0.2314",
+                    "readss": "0.2314",
+                    "writess": "0",
+                    "throughput_gb": "0.8825",
+                    "throughput_gb_reads": "0.8825",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 2
+                }
+            ]
+        },
+        {
+            "IOENGINE": "io_uring",
+            "FILESIZE": "1G",
+            "IOSIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "10",
+            "THREADS": "16",
+            "FILENAME": "/home/fabian/Desktop/HPI3/Data_processing/leanstore/build/frontend/test",
+            "GB_written_after_file": 64,
+            "repetitions": [
+                {
+                    "iops": "0.2261",
+                    "readss": "0.2261",
+                    "writess": "0",
+                    "throughput_gb": "0.8624",
+                    "throughput_gb_reads": "0.8624",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "0.225",
+                    "readss": "0.225",
+                    "writess": "0",
+                    "throughput_gb": "0.8583",
+                    "throughput_gb_reads": "0.8583",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "0.2221",
+                    "readss": "0.2221",
+                    "writess": "0",
+                    "throughput_gb": "0.8473",
+                    "throughput_gb_reads": "0.8473",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 2
+                }
+            ]
+        }
+    ]
+}
