@@ -6,6 +6,8 @@ import json
 import yaml
 import itertools
 
+from copy import deepcopy
+
 
 def main():
     io_files = sys.argv[1]
@@ -14,11 +16,14 @@ def main():
     ssd = sys.argv[4]
     yaml_file = sys.argv[5]
     workload = sys.argv[6]
+    repetitions = sys.argv[7] if len(sys.argv >= 8) else 1
 
     for file in io_files.split(";"):
         subprocess.run(["truncate", "-s", "10G", file], check=True)
-    combinations = create_benchmark_configurations_from_yaml(yaml_file, workload, io_files)
-    call_iob(iob_path, result_file, ssd, combinations)
+    combinations = create_benchmark_configurations_from_yaml(
+        yaml_file, workload, io_files
+    )
+    call_iob(iob_path, result_file, ssd, combinations, repetitions)
     for file in io_files.split(";"):
         subprocess.run(["rm", file], check=True)
 
@@ -49,26 +54,42 @@ def save_results(result_file, results, ssd):
         json.dump({ssd: results}, json_file)
 
 
-def call_iob(iob_path, result_file, ssd, combinations, results=[], additional_info={}):
+def call_iob(
+    iob_path,
+    result_file,
+    ssd,
+    combinations,
+    repetitions,
+    results=[],
+    additional_info={},
+):
     for config in combinations:
-        print(config)
-        result_iob = subprocess.run(
-            f"""{iob_path}""",
-            text=True,
-            capture_output=True,
-            shell=True,
-            env=dict(os.environ.copy(), **config),
-        )
+        run_result = deepcopy(config)
+        run_result = dict(run_result, **additional_info)
+        run_result["repetitions"] = []
+        for repetition in range(repetitions):
+            print(config)
+            result_iob = subprocess.run(
+                f"""{iob_path}""",
+                text=True,
+                capture_output=True,
+                shell=True,
+                env=dict(os.environ.copy(), **config),
+            )
 
-        if result_iob.returncode == 0:
-            ret = parse_iob_output(result_iob.stdout)
-            results.append(dict(ret, **config, **additional_info))
-            save_results(result_file, results, ssd)
-        else:
-            print(result_iob.returncode)
-            print(result_iob.stdout)
-            print(result_iob.stderr)
+            if result_iob.returncode == 0:
+                ret = parse_iob_output(result_iob.stdout)
+                ret["repetition"] = repetition
+                run_result["repetitions"].append(ret)
+            else:
+                print(result_iob.returncode)
+                print(result_iob.stdout)
+                print(result_iob.stderr)
+        results.append(run_result)
+    save_results(result_file, results, ssd)
+
     return results
+
 
 def create_matrix(yaml_content):
     dimensions = yaml_content.keys()
@@ -79,9 +100,10 @@ def create_matrix(yaml_content):
         result.append(dict(zip(dimensions, combo)))
     return result
 
+
 def create_benchmark_configurations_from_yaml(yaml_file, workload, io_files):
     combinations = []
-    with open(yaml_file, 'r') as file:
+    with open(yaml_file, "r") as file:
         yaml_content = yaml.safe_load(file)
         combinations = create_matrix(yaml_content[workload]["matrix"])
         for comb in combinations:

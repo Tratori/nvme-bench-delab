@@ -4,7 +4,7 @@ import time
 
 from bench import call_iob, create_benchmark_configurations_from_yaml
 
-GBS = [0, 1, 2, 4, 8, 16, 32, 48]
+GBS = [0, 1, 2, 4, 8, 16, 32, 48, 64]
 
 
 def main():
@@ -37,7 +37,7 @@ def main():
 
         if gb_after_bench_file > 0:
             subprocess.run(
-                ["./write_to_disk.sh", str(gb_after_bench_file), "4"], check=True
+                ["./write_to_disk.sh", str(gb_after_bench_file), "8"], check=True
             )
 
         results = call_iob(
@@ -45,6 +45,7 @@ def main():
             result_file,
             ssd,
             combinations,
+            3,
             results,
             {"GB_written_after_file": gb_after_bench_file},
         )

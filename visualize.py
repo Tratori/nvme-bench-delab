@@ -2,7 +2,12 @@ import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
 import os
 import json
+import numpy as np
 from pathlib import Path
+import seaborn as sns
+
+sns.set()
+from benchmark_helper import aggregate_repeated_benchmark
 
 current_directory = Path(__file__).resolve().parent
 
@@ -124,7 +129,6 @@ def visualize_mixed_read_write(benchmarks):
                     for run in sorted(runs, key=lambda x: float(x["RW"]))
                     if float(run["RW"]) in RW
                 ]
-                print(engine, throughputs)
                 if engine == ENGINES[0]:
                     plt.text(
                         RW[-1],
@@ -173,7 +177,6 @@ def visualize_bs_read_write(benchmarks):
                         for run in sorted(runs, key=lambda x: int(x["BS"]))
                         if int(run["BS"]) in BS and int(run["RW"]) == rw
                     ]
-                    print(engine, throughputs)
                     if engine == ENGINES[0]:
                         plt.text(
                             BS[-1],
@@ -209,12 +212,10 @@ def visualize_bs_read_write_after_pause(benchmarks):
         plt.xlabel("Time waited (s)", fontdict={"fontsize": 12})
 
         for ssd, benchmark in benchmarks[machine].items():
-            print(benchmark)
             sorted_benchmark = sorted(benchmark, key=lambda x: int(x["n"]))
             for engine in ENGINES:
                 runs = [x for x in sorted_benchmark if x["IOENGINE"] == engine]
                 throughputs = [float(run["iops"]) for run in runs]
-                print(engine, throughputs)
 
                 plt.plot(
                     [int(run["time_alive"]) for run in runs],
@@ -230,22 +231,24 @@ def visualize_bs_read_write_after_pause(benchmarks):
     plt.show()
 
 
-def visualize_additional_write_random_read(benchmarks):
-    machine_configs = list(benchmarks.keys())  # Convert to list if necessary
+def visualize_additional_write_random_read(repeated_benchmark):
+    aggregate_repeated_benchmark(repeated_benchmark)
+    print(repeated_benchmark)
+    machine_configs = list(repeated_benchmark.keys())  # Convert to list if necessary
 
     for machine in machine_configs:
         plt.title(f"{machine} - Random Read Throughput After Additional Writes to SSD")
         plt.ylabel("Throughput (M IOP/s)", fontdict={"fontsize": 12})
         plt.xlabel("Additional writes to SSD (GB)", fontdict={"fontsize": 12})
 
-        for ssd, benchmark in benchmarks[machine].items():
-            print(benchmark)
+        for ssd, benchmark in repeated_benchmark[machine].items():
             sorted_benchmark = sorted(
                 benchmark, key=lambda x: int(x["GB_written_after_file"])
             )
             for engine in ENGINES:
                 runs = [x for x in sorted_benchmark if x["IOENGINE"] == engine]
-                throughputs = [float(run["iops"]) for run in runs]
+                throughputs = np.asarray([float(run["iops_mean"]) for run in runs])
+                stds = np.asarray([float(run["iops_std"]) for run in runs])
                 print(engine, throughputs)
 
                 plt.plot(
@@ -253,11 +256,15 @@ def visualize_additional_write_random_read(benchmarks):
                     throughputs,
                     color=COLORS_ENGINE[engine],
                 )
-
+                plt.fill_between(
+                    [int(run["GB_written_after_file"]) for run in runs],
+                    throughputs - stds,
+                    throughputs + stds,
+                    color=COLORS_ENGINE[engine],
+                    alpha=0.2,
+                )
         plt.legend(handles=HANDLES_ENGINE_LABELS, fontsize=12)
-        plt.ylim([min(throughputs) * 0.9, max(throughputs) * 1.1])
 
-    plt.tight_layout()  # Adjust layout to prevent overlap
     plt.savefig("figures/additional_write.png", dpi=400)
     plt.show()
 

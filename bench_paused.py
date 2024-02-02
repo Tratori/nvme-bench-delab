@@ -38,6 +38,7 @@ def main():
             result_file,
             ssd,
             combinations,
+            5,
             results,
             {"n": i, "time_alive": i * wait_seconds},
         )
