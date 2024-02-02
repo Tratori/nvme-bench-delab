@@ -9,6 +9,33 @@ import itertools
 from copy import deepcopy
 
 
+def setup_files(io_files):
+    def setup():
+        for file in io_files.split(";"):
+            subprocess.run(
+                [
+                    "dd",
+                    "if=/dev/zero",
+                    f"of={file}",
+                    "bs=64k",
+                    "oflag=direct",
+                    "iflag=fullblock,count_bytes",
+                    "count=10G",
+                ],
+                check=True,
+            )
+
+    return setup
+
+
+def cleanup_files(io_files):
+    def cleanup():
+        for file in io_files.split(";"):
+            subprocess.run(["rm", file], check=True)
+
+    return cleanup
+
+
 def main():
     io_files = sys.argv[1]
     iob_path = sys.argv[2]
@@ -16,16 +43,20 @@ def main():
     ssd = sys.argv[4]
     yaml_file = sys.argv[5]
     workload = sys.argv[6]
-    repetitions = sys.argv[7] if len(sys.argv >= 8) else 1
+    repetitions = sys.argv[7] if len(sys.argv >= 8) else 8
 
-    for file in io_files.split(";"):
-        subprocess.run(["truncate", "-s", "10G", file], check=True)
     combinations = create_benchmark_configurations_from_yaml(
         yaml_file, workload, io_files
     )
-    call_iob(iob_path, result_file, ssd, combinations, repetitions)
-    for file in io_files.split(";"):
-        subprocess.run(["rm", file], check=True)
+    call_iob(
+        iob_path,
+        result_file,
+        ssd,
+        combinations,
+        repetitions=repetitions,
+        setup=setup_files(io_files),
+        breakdown=cleanup_files(io_files),
+    )
 
 
 def parse_iob_output(output):
@@ -54,21 +85,27 @@ def save_results(result_file, results, ssd):
         json.dump({ssd: results}, json_file)
 
 
+# Calls Leanstore's iob as described in combinations repetition times.
+# If setup or breakdown are given, they are called before/after each repetition.
 def call_iob(
     iob_path,
     result_file,
     ssd,
     combinations,
-    repetitions,
+    repetitions=8,
     results=[],
     additional_info={},
+    setup=None,
+    breakdown=None,
 ):
     for config in combinations:
         run_result = deepcopy(config)
         run_result = dict(run_result, **additional_info)
         run_result["repetitions"] = []
         for repetition in range(repetitions):
-            print(config)
+            if setup:
+                setup()
+
             result_iob = subprocess.run(
                 f"""{iob_path}""",
                 text=True,
@@ -76,6 +113,9 @@ def call_iob(
                 shell=True,
                 env=dict(os.environ.copy(), **config),
             )
+
+            if breakdown:
+                breakdown()
 
             if result_iob.returncode == 0:
                 ret = parse_iob_output(result_iob.stdout)
@@ -85,7 +125,9 @@ def call_iob(
                 print(result_iob.returncode)
                 print(result_iob.stdout)
                 print(result_iob.stderr)
+
         results.append(run_result)
+
     save_results(result_file, results, ssd)
 
     return results
@@ -114,5 +156,4 @@ def create_benchmark_configurations_from_yaml(yaml_file, workload, io_files):
 
 
 if __name__ == "__main__":
-    # create_benchmark_configurations_from_yaml()
     main()
