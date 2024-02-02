@@ -43,7 +43,6 @@ def main():
     ssd = sys.argv[4]
     yaml_file = sys.argv[5]
     workload = sys.argv[6]
-    repetitions = sys.argv[7] if len(sys.argv >= 8) else 8
 
     combinations = create_benchmark_configurations_from_yaml(
         yaml_file, workload, io_files
@@ -53,7 +52,7 @@ def main():
         result_file,
         ssd,
         combinations,
-        repetitions=repetitions,
+        repetitions=8,
         setup=setup_files(io_files),
         breakdown=cleanup_files(io_files),
     )
