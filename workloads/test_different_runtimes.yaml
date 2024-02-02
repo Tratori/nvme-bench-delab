@@ -1,0 +1,10 @@
+test_different_runtimes:
+  matrix:
+    RW: ["0", "0.50", "1"]
+    IOENGINE: ["libaio", "io_uring"]
+  args:
+    FILESIZE: "1G"
+    IOSIZE: "10G"
+    INIT: "yes"
+    RUNTIME: ["1", "16", "32", "64", "128"]
+    THREADS: "16"
