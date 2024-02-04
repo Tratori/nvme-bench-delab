@@ -83,7 +83,7 @@ for node_conf in ${node_config[@]}; do
 
     echo "submitting task for config ${node_conf}"
     srun -A rabl --partition ${partitions[$node_conf]} -w $node -c 32 --mem-per-cpu 1024 \
-      --container-image=/hpi/fs00/share/fg-rabl/dpmh23_nvme/leanstore_all_dep.sqsh \
+      --time=12:00:00 --container-image=/hpi/fs00/share/fg-rabl/dpmh23_nvme/leanstore_all_dep.sqsh \
       --container-mounts=$(pwd)/leanstore:/leanstore,${mounts[$node_conf]},$(pwd)/nvme-bench-delab:/nvme-bench-delab  \
       python3 /nvme-bench-delab/bench.py \
         $node_files /leanstore/build/frontend/iob /leanstore/results/$node_conf/benchmark ${ssds[$node_conf]} /nvme-bench-delab/workloads/mixed_read_write.yaml mixed_read_write &
