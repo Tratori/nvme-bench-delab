@@ -54,7 +54,7 @@ def main():
         combinations,
         repetitions=8,
         setup=setup_files(io_files),
-        breakdown=cleanup_files(io_files),
+        teardown=cleanup_files(io_files),
     )
 
 
@@ -95,7 +95,7 @@ def call_iob(
     results=[],
     additional_info={},
     setup=None,
-    breakdown=None,
+    teardown=None,
 ):
     for config in combinations:
         run_result = deepcopy(config)
@@ -113,8 +113,8 @@ def call_iob(
                 env=dict(os.environ.copy(), **config),
             )
 
-            if breakdown:
-                breakdown()
+            if teardown:
+                teardown()
 
             if result_iob.returncode == 0:
                 ret = parse_iob_output(result_iob.stdout)
@@ -126,8 +126,7 @@ def call_iob(
                 print(result_iob.stderr)
 
         results.append(run_result)
-
-    save_results(result_file, results, ssd)
+        save_results(result_file, results, ssd)
 
     return results
 
