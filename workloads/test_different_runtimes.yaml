@@ -1,7 +1,7 @@
 test_different_runtimes:
   matrix:
     RW: ["0", "0.50", "1"]
-    IOENGINE: "io_uring"
+    IOENGINE: ["io_uring"]
     RUNTIME: ["1", "8", "16", "32", "64", "128"]
   args:
     FILESIZE: "10G"
