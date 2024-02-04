@@ -8,7 +8,6 @@ def aggregate_repeated_benchmark(repeated_benchmark, to_be_aggregated=DEFAULT_AG
         for ssd, reports in nodes.items():
             for report in reports:
                 aggregations = {k: [] for k in to_be_aggregated}
-                print(report)
                 for repetition in report["repetitions"]:
                     for agg in to_be_aggregated:
                         aggregations[agg].append(float(repetition[agg]))

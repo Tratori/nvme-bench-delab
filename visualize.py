@@ -11,6 +11,7 @@ from benchmark_helper import aggregate_repeated_benchmark
 
 current_directory = Path(__file__).resolve().parent
 
+COLORS = ["blue", "green", "purple"]
 COLORS_ENGINE = {
     "libaio": "blue",
     "io_uring": "green",
@@ -31,6 +32,9 @@ HANDLES_ENGINE_LABELS = [
 BS = [4096, 8192, 16384, 32768, 65536]
 RW_BS = [0]
 
+
+RW_RUNTIMES = [0, 0.5, 1.0]
+RUNTIMES = [1, 8, 16, 32, 64, 128]
 
 def import_benchmark(file="benchmark.json"):
     with open(file, "r") as json_file:
@@ -116,7 +120,7 @@ def visualize_mixed_read_write(benchmarks):
     num_columns = 2  # You can adjust the number of columns as needed
 
     for idx, machine in enumerate(machine_configs, start=1):
-        plt.subplot(num_machines // num_columns + 1, num_columns, idx)
+        plt.subplot(num_machines // num_columns, num_columns, idx)
         plt.title(f"{machine} - 4096B - Mixed Read Writes - IOP/s")
         plt.ylabel("Throughput (M IOP/s)", fontdict={"fontsize": 12})
         plt.xlabel("Write percentage", fontdict={"fontsize": 12})
@@ -233,7 +237,6 @@ def visualize_bs_read_write_after_pause(benchmarks):
 
 def visualize_additional_write_random_read(repeated_benchmark):
     aggregate_repeated_benchmark(repeated_benchmark)
-    print(repeated_benchmark)
     machine_configs = list(repeated_benchmark.keys())  # Convert to list if necessary
 
     for machine in machine_configs:
@@ -269,6 +272,61 @@ def visualize_additional_write_random_read(repeated_benchmark):
     plt.show()
 
 
+def visualize_different_runtimes(repeated_benchmark):
+    plt.figure(figsize=(12, 4))
+    aggregate_repeated_benchmark(repeated_benchmark)
+    machine_configs = list(repeated_benchmark.keys())
+    num_machines = len(machine_configs)
+    num_columns = 2  # You can adjust the number of columns as needed
+
+    for idx, machine in enumerate(machine_configs, start=1):
+        plt.subplot(num_machines // num_columns, num_columns, idx)
+        plt.title(f"{machine} - Different Runtimes Mixed RW - IOP/s")
+        plt.ylabel("Throughput (M IOP/s)", fontdict={"fontsize": 12})
+        plt.xlabel("Runtime of benchmark", fontdict={"fontsize": 12})
+
+        for ssd, benchmark in repeated_benchmark[machine].items():
+            for id, rw in enumerate(RW_RUNTIMES):
+                throughputs = np.asarray(
+                    [
+                        float(run["iops_mean"])
+                        for run in sorted(benchmark, key=lambda x: int(x["RUNTIME"]))
+                        if float(run["RW"]) == rw
+                    ]
+                )
+                std = np.asarray(
+                    [
+                        float(run["iops_std"])
+                        for run in sorted(benchmark, key=lambda x: int(x["RUNTIME"]))
+                        if float(run["RW"]) == rw
+                    ]
+                )
+
+                # remove when benchmark is fixed
+                plt.plot(RUNTIMES[: len(throughputs)], throughputs, color=COLORS[id])
+                plt.fill_between(
+                    RUNTIMES[: len(throughputs)],
+                    throughputs - std,
+                    throughputs + std,
+                    color=COLORS[id],
+                    alpha=0.2,
+                )
+
+        plt.legend(
+            handles=[
+                mpatches.Patch(color=COLORS[id], label=f"{rw*100} % write")
+                for id, rw in enumerate(RW_RUNTIMES)
+            ],
+            fontsize=12,
+        )
+
+        plt.xticks(RUNTIMES)
+
+    plt.tight_layout()  # Adjust layout to prevent overlap
+    plt.savefig("figures/runtime_benchmarks.png", dpi=400)
+    plt.show()
+
+
 def main():
     benchmark = import_benchmark()
     visualize_random_read_scalability(benchmark)
@@ -278,7 +336,7 @@ def main():
     visualize_bs_read_write(import_benchmarks("results_block_size"))
     visualize_bs_read_write_after_pause(import_benchmarks("paused_read"))
     visualize_additional_write_random_read(import_benchmarks("additional_write"))
-
+    visualize_different_runtimes(import_benchmarks("different_runtimes_results"))
 
 if __name__ == "__main__":
     main()
