@@ -1,4 +1,4 @@
-node_config=("nx01" "gx05" "nx02" "gx03" "gx04" "gx01_raid1")
+node_config=("nx01" "nx02")
 declare -A mounts
 declare -A nodenames
 declare -A files
@@ -86,5 +86,5 @@ for node_conf in ${node_config[@]}; do
       --time=12:00:00 --container-image=/hpi/fs00/share/fg-rabl/dpmh23_nvme/leanstore_all_dep.sqsh \
       --container-mounts=$(pwd)/leanstore:/leanstore,${mounts[$node_conf]},$(pwd)/nvme-bench-delab:/nvme-bench-delab  \
       python3 /nvme-bench-delab/bench.py \
-        $node_files /leanstore/build/frontend/iob /leanstore/results/$node_conf/benchmark ${ssds[$node_conf]} /nvme-bench-delab/workloads/mixed_read_write.yaml mixed_read_write &
+        $node_files /leanstore/build/frontend/iob /leanstore/results/$node_conf/benchmark ${ssds[$node_conf]} $1 $2 &
 done
