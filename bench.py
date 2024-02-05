@@ -62,7 +62,7 @@ def parse_iob_output(output):
     # one newline and one "fin" line behind last output line
     agg = output.split("\n")[-3]
 
-    numbers = re.findall(r"\d+\.\d+|\d+", agg)
+    numbers = re.findall(r"-?\d+(?:\.\d+)?(?:[eE][-+]?\d+)?", agg)
     if len(numbers) != 7:
         print("Agg numbers output not in expected format : ", numbers)
         print(agg)
