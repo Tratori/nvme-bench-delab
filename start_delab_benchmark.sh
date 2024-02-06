@@ -80,11 +80,12 @@ for node_conf in ${node_config[@]}; do
     node_files=("${files[$node_conf]}")
 
     mkdir -p $(pwd)/leanstore/results/$node_conf
+    mkdir -p /hpi/fs00/share/fg-rabl/dpmh23_nvme/results/$2/$node_conf
 
     echo "submitting task for config ${node_conf}"
     srun -A rabl --partition ${partitions[$node_conf]} -w $node -c 32 --mem-per-cpu 1024 \
       --time=12:00:00 --container-image=/hpi/fs00/share/fg-rabl/dpmh23_nvme/leanstore_all_dep.sqsh \
-      --container-mounts=$(pwd)/leanstore:/leanstore,${mounts[$node_conf]},$(pwd)/nvme-bench-delab:/nvme-bench-delab  \
+      --container-mounts=/hpi/fs00/share/fg-rabl/dpmh23_nvme:/leanstore_fork,/hpi/fs00/share/fg-rabl/dpmh23_nvme/results:/hpi/fs00/share/fg-rabl/dpmh23_nvme/results,$(pwd)/leanstore:/leanstore,${mounts[$node_conf]},$(pwd)/nvme-bench-delab:/nvme-bench-delab  \
       python3 /nvme-bench-delab/bench.py \
-        $node_files /leanstore/build/frontend/iob /nvme-bench-delab/results/$2/$node_conf/benchmark ${ssds[$node_conf]} $1 $2 &
+        $node_files /leanstore_fork/iob /hpi/fs00/share/fg-rabl/dpmh23_nvme/results/$2/$node_conf/benchmark.json ${ssds[$node_conf]} $1 $2 &
 done
