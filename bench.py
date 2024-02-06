@@ -16,7 +16,7 @@ def setup_files(io_files):
             subprocess.run(
                 [
                     "dd",
-                    "if=/dev/zero",
+                    "if=/dev/random",
                     f"of={file}",
                     "bs=64k",
                     "oflag=direct",
@@ -58,7 +58,7 @@ def main():
         result_file,
         ssd,
         combinations,
-        repetitions=8,
+        repetitions=5,
         setup=setup_files(io_files),
         teardown=cleanup_files(io_files)
     )
@@ -97,7 +97,7 @@ def call_iob(
     result_file,
     ssd,
     combinations,
-    repetitions=8,
+    repetitions=5,
     results=[],
     additional_info={},
     setup=None,
@@ -108,7 +108,7 @@ def call_iob(
         run_result = dict(run_result, **additional_info)
         run_result["repetitions"] = []
         for repetition in range(repetitions):
-            config["OUTPUT_DIR"] = setup_output_dir(result_file, config["CONFIG_STR"], repetition)
+            config["OUTPUT_DIR"] = setup_output_dir(result_file, config["CONFIG_STR"], f"repetition_{repetition}/") + "/"
             if setup:
                 setup()
 

@@ -1,0 +1,12 @@
+blocksize_read:
+  matrix: 
+    RW: ["0", "0.5", "1"]
+    POLL: ["0"]
+    IOENGINE: ["io_uring"]
+    BS: ["512", "1024", "2048", "4096", "8192", "16384", "32768", "65536"]
+  args:
+    FILESIZE: "10G"
+    IOSIZE: "10G"
+    INIT: "disable"
+    RUNTIME: "30"
+    THREADS: "16"
