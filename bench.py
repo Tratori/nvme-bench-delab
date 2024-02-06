@@ -7,6 +7,7 @@ import yaml
 import itertools
 
 from copy import deepcopy
+from pathlib import Path
 
 
 def setup_files(io_files):
@@ -27,6 +28,11 @@ def setup_files(io_files):
 
     return setup
 
+def setup_output_dir(result_file, config_str, repetition):
+    path =  Path(result_file).parent / Path(config_str) / Path(repetition)
+    path.mkdir(parents=True, exist_ok=True)
+    print(f"Created output directory {path}")
+    return str(path)
 
 def cleanup_files(io_files):
     def cleanup():
@@ -54,7 +60,7 @@ def main():
         combinations,
         repetitions=8,
         setup=setup_files(io_files),
-        teardown=cleanup_files(io_files),
+        teardown=cleanup_files(io_files)
     )
 
 
@@ -80,12 +86,12 @@ def parse_iob_output(output):
 
 
 def save_results(result_file, results, ssd):
-    with open(result_file, "w") as json_file:
+    with open(result_file, "w+") as json_file:
         json.dump({ssd: results}, json_file)
 
 
 # Calls Leanstore's iob as described in combinations repetition times.
-# If setup or breakdown are given, they are called before/after each repetition.
+# If setup or teardown are given, they are called before/after each repetition.
 def call_iob(
     iob_path,
     result_file,
@@ -95,13 +101,14 @@ def call_iob(
     results=[],
     additional_info={},
     setup=None,
-    teardown=None,
+    teardown=None
 ):
     for config in combinations:
         run_result = deepcopy(config)
         run_result = dict(run_result, **additional_info)
         run_result["repetitions"] = []
         for repetition in range(repetitions):
+            config["OUTPUT_DIR"] = setup_output_dir(result_file, config["CONFIG_STR"], repetition)
             if setup:
                 setup()
 
@@ -140,6 +147,10 @@ def create_matrix(yaml_content):
         result.append(dict(zip(dimensions, combo)))
     return result
 
+def directory_name(comb): 
+    dir_name =  '__'.join([f'{key}_{value}' for key, value in comb.items()])
+    keepcharacters = ('_')
+    return "".join(c for c in dir_name if c.isalnum() or c in keepcharacters).rstrip()
 
 def create_benchmark_configurations_from_yaml(yaml_file, workload, io_files):
     combinations = []
@@ -150,6 +161,7 @@ def create_benchmark_configurations_from_yaml(yaml_file, workload, io_files):
             for arg in yaml_content[workload]["args"].keys():
                 comb[arg] = yaml_content[workload]["args"][arg]
             comb["FILENAME"] = io_files
+            comb["CONFIG_STR"] = directory_name(comb)
     return combinations
 
 
