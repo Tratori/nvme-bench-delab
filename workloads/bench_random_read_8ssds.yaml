@@ -2,7 +2,7 @@ random_reads:
   matrix: 
     THREADS: ["1", "2", "4", "8", "16"]
     IOENGINE: ["libaio", "io_uring"]
-    FILENAME: ["/mnt/nvme0p1/file_iob", "/mnt/nvme0p1/file_iob;/mnt/nvme1p1/file_iob", "/mnt/nvme0p1/file_iob;/mnt/nvme1p1/file_iob;/mnt/nvme2p1/file_iob;/mnt/nvme3p1/file_iob", "/mnt/nvme0p1/file_iob;/mnt/nvme1p1/file_iob;/mnt/nvme2p1/file_iob;/mnt/nvme3p1/file_iob;/mnt/nvme4p1/file_iob;/mnt/nvme5p1/file_iob;/mnt/nvme6p1/file_iob;/mnt/nvme7p1/file_iob"]
+    FILENAME: ["/mnt/nvme0n1p1/file_iob", "/mnt/nvme0n1p1/file_iob;/mnt/nvme1n1p1/file_iob", "/mnt/nvme0n1p1/file_iob;/mnt/nvme1n1p1/file_iob;/mnt/nvme2n1p1/file_iob;/mnt/nvme3n1p1/file_iob", "/mnt/nvme0n1p1/file_iob;/mnt/nvme1n1p1/file_iob;/mnt/nvme2n1p1/file_iob;/mnt/nvme3n1p1/file_iob;/mnt/nvme4n1p1/file_iob;/mnt/nvme5n1p1/file_iob;/mnt/nvme6n1p1/file_iob;/mnt/nvme7n1p1/file_iob"]
   args:
     FILESIZE: "10G"
     IOSIZE: "10G"
