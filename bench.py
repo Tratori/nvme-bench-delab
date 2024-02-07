@@ -31,12 +31,9 @@ def setup_output_dir(result_file, config_str, repetition):
     print(f"Created output directory {path}")
     return str(path)
 
-def cleanup_files(io_files):
-    def cleanup():
-        for file in io_files.split(";"):
-            subprocess.run(["rm", file], check=True)
-
-    return cleanup
+def cleanup_files(config):
+    for file in config["FILENAME"].split(";"):
+        subprocess.run(["rm", file], check=True)
 
 
 def main():
@@ -57,7 +54,7 @@ def main():
         combinations,
         repetitions=5,
         setup=setup_files,
-        teardown=cleanup_files(io_files)
+        teardown=cleanup_files
     )
 
 
@@ -118,7 +115,7 @@ def call_iob(
             )
 
             if teardown:
-                teardown()
+                teardown(config)
 
             if result_iob.returncode == 0:
                 ret = parse_iob_output(result_iob.stdout)
