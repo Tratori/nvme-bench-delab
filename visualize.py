@@ -48,7 +48,7 @@ def import_benchmarks(benchmark):
     path = current_directory / Path("results") / Path(benchmark)
     for root, dirs, files in os.walk(path):
         for file in files:
-            if(file == "benchmark.json"):
+            if file.startswith("benchmark"):
                 file_path = Path(root) / file
                 benchmarks[Path(root).name] = import_benchmark(file_path)
     return benchmarks
@@ -162,6 +162,7 @@ def visualize_mixed_read_write(benchmarks):
 
 
 def visualize_bs_read_write(repeated_benchmarks, metric="iops"):
+    print(repeated_benchmarks)
     aggregate_repeated_benchmark(repeated_benchmarks)
     plt.figure(figsize=(12, 8))
 
@@ -414,12 +415,11 @@ def main():
     visualize_ssds_vs_reported(benchmark)
 
     visualize_mixed_read_write(import_benchmarks("mixed_read_write_results"))
-    visualize_bs_read_write(import_benchmarks("results_block_size"))
+    # visualize_bs_read_write(import_benchmarks("results_block_size"))
     visualize_bs_read_write_after_pause(import_benchmarks("paused_read"))
     visualize_additional_write_random_read(import_benchmarks("additional_write"))
     visualize_different_runtimes(import_benchmarks("different_runtimes_results"))
     visualize_mixed_read_write_new(import_benchmarks("mixed_read_write"))
-
 
     visualize_bs_read_write(import_benchmarks("blocksize_read"))
     visualize_bs_read_write(import_benchmarks("blocksize_read_two_ssd"))
