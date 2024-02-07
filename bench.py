@@ -15,7 +15,7 @@ def setup_files(config):
         subprocess.run(
             [
                 "dd",
-                "if=/dev/random",
+                "if=/dev/zero",
                 f"of={file}",
                 "bs=64k",
                 "oflag=direct",
@@ -159,7 +159,7 @@ def create_benchmark_configurations_from_yaml(yaml_file, workload, io_files):
                 comb[arg] = yaml_content[workload]["args"][arg]
             if io_files:
                 comb["FILENAME"] = io_files
-            assert not ("FILENAME" in comb and comb["FILENAME"] is not None)
+            assert ("FILENAME" in comb and comb["FILENAME"] is not None)
             comb["CONFIG_STR"] = directory_name(comb)
     return combinations
 
