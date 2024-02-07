@@ -1,6 +1,6 @@
 import numpy as np
 
-DEFAULT_AGGS = ["iops"]
+DEFAULT_AGGS = ["iops", "throughput_gb"]
 
 
 def aggregate_repeated_benchmark(repeated_benchmark, to_be_aggregated=DEFAULT_AGGS):

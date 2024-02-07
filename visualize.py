@@ -29,8 +29,9 @@ HANDLES_ENGINE_LABELS = [
     mpatches.Patch(color=color, label=label) for label, color in COLORS_ENGINE.items()
 ]
 
-BS = [4096, 8192, 16384, 32768, 65536]
-RW_BS = [0]
+ENGINES_BS = ["io_uring"]
+BS = [512, 1024, 2048, 4096, 8192, 16384, 32768, 65536]
+RW_BS = [0, 0.5, 1.0]
 
 
 RW_RUNTIMES = [0, 0.5, 1.0]
@@ -47,8 +48,9 @@ def import_benchmarks(benchmark):
     path = current_directory / Path("results") / Path(benchmark)
     for root, dirs, files in os.walk(path):
         for file in files:
-            file_path = Path(root) / file
-            benchmarks[Path(root).name] = import_benchmark(file_path)
+            if(file == "benchmark.json"):
+                file_path = Path(root) / file
+                benchmarks[Path(root).name] = import_benchmark(file_path)
     return benchmarks
 
 
@@ -159,48 +161,60 @@ def visualize_mixed_read_write(benchmarks):
     plt.show()
 
 
-def visualize_bs_read_write(benchmarks):
+def visualize_bs_read_write(repeated_benchmarks, metric="iops"):
+    aggregate_repeated_benchmark(repeated_benchmarks)
     plt.figure(figsize=(12, 8))
 
-    machine_configs = list(benchmarks.keys())  # Convert to list if necessary
+    machine_configs = list(repeated_benchmarks.keys())  # Convert to list if necessary
     num_machines = len(machine_configs)
     num_columns = 2  # You can adjust the number of columns as needed
 
     for idx, machine in enumerate(machine_configs, start=1):
         plt.subplot(num_machines // num_columns + 1, num_columns, idx)
-        plt.title(f"{machine} - Different Block sizes - RW - IOP/s")
-        plt.ylabel("Throughput (M IOP/s)", fontdict={"fontsize": 12})
+        plt.title(f"{machine} - Different Block sizes - RW - {metric}")
+        plt.ylabel(metric, fontdict={"fontsize": 12})
         plt.xlabel("Blocksize (B)", fontdict={"fontsize": 12})
 
-        for ssd, benchmark in benchmarks[machine].items():
-            for engine in ENGINES:
-                for rw in RW_BS:
+        plt.xscale('log')
+       
+        for ssd, benchmark in repeated_benchmarks[machine].items():
+            for engine in ENGINES_BS:
+                for i, rw in enumerate(RW_BS):
+                    
                     runs = [x for x in benchmark if x["IOENGINE"] == engine]
-                    throughputs = [
-                        float(run["iops"])
-                        for run in sorted(runs, key=lambda x: int(x["BS"]))
-                        if int(run["BS"]) in BS and int(run["RW"]) == rw
-                    ]
-                    if engine == ENGINES[0]:
-                        plt.text(
-                            BS[-1],
-                            throughputs[-1],
-                            ssd.replace("_", " "),
-                            fontsize=12,
-                            ha="right",
-                            va="bottom",
-                            color="black",
-                        )
 
+                    iops = np.asarray([
+                        float(run[metric + "_mean"])
+                        for run in sorted(runs, key=lambda x: int(x["BS"]))
+                        if int(run["BS"]) in BS and float(run["RW"]) == rw
+                    ])
+                    iops_stds = np.asarray([
+                        float(run[metric + "_std"])
+                        for run in sorted(runs, key=lambda x: int(x["BS"]))
+                        if int(run["BS"]) in BS and float(run["RW"]) == rw
+                    ])
                     plt.plot(
                         BS,
-                        throughputs,
-                        color=COLORS_ENGINE[engine],
+                        iops,
+                        label=f"{engine} - RW {rw}",
+                        color=COLORS[i],
+                    ) 
+                    plt.fill_between(
+                        BS,
+                        iops - iops_stds,
+                        iops + iops_stds,
+                        color=COLORS[i],
+                        alpha=0.2,
                     )
 
-        plt.legend(handles=HANDLES_ENGINE_LABELS, fontsize=12)
-        plt.ylim([0.0, max(throughputs) * 1.5])
-        plt.xticks(BS)
+        plt.legend(
+            handles=[
+                mpatches.Patch(color=COLORS[id], label=f"{rw*100} % write")
+                for id, rw in enumerate(RW_RUNTIMES)
+            ],
+            fontsize=12,
+        )
+        plt.xticks(BS, BS)
 
     plt.tight_layout()  # Adjust layout to prevent overlap
     plt.savefig("figures/pagesize_read_write.png", dpi=400)
@@ -337,6 +351,12 @@ def main():
     visualize_bs_read_write_after_pause(import_benchmarks("paused_read"))
     visualize_additional_write_random_read(import_benchmarks("additional_write"))
     visualize_different_runtimes(import_benchmarks("different_runtimes_results"))
+
+    visualize_bs_read_write(import_benchmarks("blocksize_read"))
+    visualize_bs_read_write(import_benchmarks("blocksize_read_two_ssd"))
+    visualize_bs_read_write(import_benchmarks("blocksize_read"), metric="throughput_gb")
+    visualize_bs_read_write(import_benchmarks("blocksize_read_two_ssd"), metric="throughput_gb")
+
 
 if __name__ == "__main__":
     main()
