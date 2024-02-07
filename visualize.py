@@ -176,11 +176,11 @@ def visualize_bs_read_write(repeated_benchmarks, metric="iops"):
         plt.xlabel("Blocksize (B)", fontdict={"fontsize": 12})
 
         plt.xscale('log')
-       
+
         for ssd, benchmark in repeated_benchmarks[machine].items():
             for engine in ENGINES_BS:
                 for i, rw in enumerate(RW_BS):
-                    
+
                     runs = [x for x in benchmark if x["IOENGINE"] == engine]
 
                     iops = np.asarray([
@@ -198,7 +198,7 @@ def visualize_bs_read_write(repeated_benchmarks, metric="iops"):
                         iops,
                         label=f"{engine} - RW {rw}",
                         color=COLORS[i],
-                    ) 
+                    )
                     plt.fill_between(
                         BS,
                         iops - iops_stds,
@@ -340,6 +340,73 @@ def visualize_different_runtimes(repeated_benchmark):
     plt.savefig("figures/runtime_benchmarks.png", dpi=400)
     plt.show()
 
+RW_new = [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0]
+
+
+def visualize_mixed_read_write_new(repeated_benchmark):
+    plt.figure(figsize=(12, 8))
+    aggregate_repeated_benchmark(repeated_benchmark)
+
+    machine_configs = list(repeated_benchmark.keys())  # Convert to list if necessary
+    num_machines = len(machine_configs)
+    num_columns = 2  # You can adjust the number of columns as needed
+
+    for idx, machine in enumerate(machine_configs, start=1):
+        plt.subplot(num_machines // num_columns, num_columns, idx)
+        plt.title(f"{machine} - 4096B - Mixed Read Writes - IOP/s")
+        plt.ylabel("Throughput (M IOP/s)", fontdict={"fontsize": 12})
+        plt.xlabel("Write percentage", fontdict={"fontsize": 12})
+
+        for ssd, benchmark in repeated_benchmark[machine].items():
+            for engine in ENGINES:
+                runs = [x for x in benchmark if x["IOENGINE"] == engine]
+                throughputs = np.asarray(
+                    [
+                        float(run["iops_mean"])
+                        for run in sorted(runs, key=lambda x: float(x["RW"]))
+                        if float(run["RW"]) in RW_new
+                    ]
+                )
+
+                std = np.asarray(
+                    [
+                        float(run["iops_std"])
+                        for run in sorted(runs, key=lambda x: float(x["RW"]))
+                        if float(run["RW"]) in RW_new
+                    ]
+                )
+                if engine == ENGINES[0]:
+                    plt.text(
+                        RW_new[-1],
+                        throughputs[-1],
+                        ssd.replace("_", " "),
+                        fontsize=12,
+                        ha="right",
+                        va="bottom",
+                        color="black",
+                    )
+
+                plt.plot(
+                    RW_new,
+                    throughputs,
+                    color=COLORS_ENGINE[engine],
+                )
+                plt.fill_between(
+                    RW_new[: len(throughputs)],
+                    throughputs - std,
+                    throughputs + std,
+                    color=COLORS_ENGINE[engine],
+                    alpha=0.2,
+                )
+
+        plt.legend(handles=HANDLES_ENGINE_LABELS, fontsize=12)
+        plt.ylim([0.0, max(throughputs) * 1.5])
+        plt.xticks(RW)
+
+    plt.tight_layout()  # Adjust layout to prevent overlap
+    plt.savefig("figures/mixed_read_write_new.png", dpi=400)
+    plt.show()
+
 
 def main():
     benchmark = import_benchmark()
@@ -351,6 +418,8 @@ def main():
     visualize_bs_read_write_after_pause(import_benchmarks("paused_read"))
     visualize_additional_write_random_read(import_benchmarks("additional_write"))
     visualize_different_runtimes(import_benchmarks("different_runtimes_results"))
+    visualize_mixed_read_write_new(import_benchmarks("mixed_read_write"))
+
 
     visualize_bs_read_write(import_benchmarks("blocksize_read"))
     visualize_bs_read_write(import_benchmarks("blocksize_read_two_ssd"))

@@ -1,0 +1,21 @@
+stat,type,filesizeGib,writeFreqDistOn,writeFrequencyZones,time,writeMibs, physMibs,readMibs, physicalMediaUnitsWrittenBytes, physicalMediaUnitsReadBytes, percentFreeBlocks,softECCError, unalignedIO, maxUserDataEraseCount,minUserDataEraseCount, currentThrottlingStatus
+keep,ssd,10,0,0,1.00122,177,0,0,0,0,213,0,22,0,0,0
+keep,ssd,10,0,0,3.18828,35,0,0,0,0,213,0,22,0,0,0
+keep,ssd,10,0,0,4.45894,94,0,0,0,0,213,0,22,0,0,0
+keep,ssd,10,0,0,7.14046,109,0,0,0,0,213,0,22,0,0,0
+keep,ssd,10,0,0,8.30003,103,0,0,0,0,213,0,22,0,0,0
+keep,ssd,10,0,0,10.2795,85,0,0,0,0,213,0,22,0,0,0
+keep,ssd,10,0,0,11.2962,76,0,0,0,0,213,0,22,0,0,0
+keep,ssd,10,0,0,12.9561,99,0,0,0,0,213,0,22,0,0,0
+keep,ssd,10,0,0,13.9562,65,0,0,0,0,213,0,22,0,0,0
+keep,ssd,10,0,0,15.624,85,0,0,0,0,213,0,22,0,0,0
+keep,ssd,10,0,0,16.7288,114,0,0,0,0,213,0,22,0,0,0
+keep,ssd,10,0,0,18.3242,82,0,0,0,0,213,0,22,0,0,0
+keep,ssd,10,0,0,19.3242,81,0,0,0,0,213,0,22,0,0,0
+keep,ssd,10,0,0,20.9961,49,0,0,0,0,213,0,22,0,0,0
+keep,ssd,10,0,0,22.015,90,0,0,0,0,213,0,22,0,0,0
+keep,ssd,10,0,0,23.8568,110,0,0,0,0,213,0,22,0,0,0
+keep,ssd,10,0,0,24.8569,85,0,0,0,0,213,0,22,0,0,0
+keep,ssd,10,0,0,26.7,111,0,0,0,0,213,0,22,0,0,0
+keep,ssd,10,0,0,27.796,82,0,0,0,0,213,0,22,0,0,0
+keep,ssd,10,0,0,29.4001,77,0,0,0,0,213,0,22,0,0,0
