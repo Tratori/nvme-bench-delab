@@ -10,23 +10,20 @@ from copy import deepcopy
 from pathlib import Path
 
 
-def setup_files(io_files):
-    def setup():
-        for file in io_files.split(";"):
-            subprocess.run(
-                [
-                    "dd",
-                    "if=/dev/random",
-                    f"of={file}",
-                    "bs=64k",
-                    "oflag=direct",
-                    "iflag=fullblock,count_bytes",
-                    "count=10G",
-                ],
-                check=True,
-            )
-
-    return setup
+def setup_files(config):
+    for file in config["FILENAME"].split(";"):
+        subprocess.run(
+            [
+                "dd",
+                "if=/dev/random",
+                f"of={file}",
+                "bs=64k",
+                "oflag=direct",
+                "iflag=fullblock,count_bytes",
+                "count=10G",
+            ],
+            check=True,
+        )
 
 def setup_output_dir(result_file, config_str, repetition):
     path =  Path(result_file).parent / Path(config_str) / Path(repetition)
@@ -43,7 +40,7 @@ def cleanup_files(io_files):
 
 
 def main():
-    io_files = sys.argv[1]
+    io_files = sys.argv[1] if sys.argv[1] != "None" else None
     iob_path = sys.argv[2]
     result_file = sys.argv[3]
     ssd = sys.argv[4]
@@ -59,7 +56,7 @@ def main():
         ssd,
         combinations,
         repetitions=5,
-        setup=setup_files(io_files),
+        setup=setup_files,
         teardown=cleanup_files(io_files)
     )
 
@@ -110,7 +107,7 @@ def call_iob(
         for repetition in range(repetitions):
             config["OUTPUT_DIR"] = setup_output_dir(result_file, config["CONFIG_STR"], f"repetition_{repetition}/") + "/"
             if setup:
-                setup()
+                setup(config)
 
             result_iob = subprocess.run(
                 f"""{iob_path}""",
@@ -160,7 +157,9 @@ def create_benchmark_configurations_from_yaml(yaml_file, workload, io_files):
         for comb in combinations:
             for arg in yaml_content[workload]["args"].keys():
                 comb[arg] = yaml_content[workload]["args"][arg]
-            comb["FILENAME"] = io_files
+            if io_files:
+                comb["FILENAME"] = io_files
+            assert not ("FILENAME" in comb and comb["FILENAME"] is not None)
             comb["CONFIG_STR"] = directory_name(comb)
     return combinations
 
