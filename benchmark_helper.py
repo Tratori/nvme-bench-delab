@@ -1,7 +1,43 @@
 import numpy as np
+import pandas as pd 
+from pathlib import Path
+import json
+import os
+
+current_directory = Path(__file__).parent
 
 DEFAULT_AGGS = ["iops", "throughput_gb"]
 
+
+def import_benchmark(file="benchmark.json"):
+    with open(file, "r") as json_file:
+        benchmark = json.load(json_file)
+    return benchmark
+
+
+def import_benchmarks(benchmark):
+    benchmarks = {}
+    path = current_directory / Path("results") / Path(benchmark)
+    for root, dirs, files in os.walk(path):
+        for file in files:
+            if file.startswith("benchmark"):
+                file_path = Path(root) / file
+                benchmarks[Path(root).name] = import_benchmark(file_path)
+    return benchmarks
+
+def import_logs(benchmark):
+    logs = {}
+    for path in (current_directory / Path("results") / Path(benchmark)).rglob('repetition_0/'):
+        config = path.parent.name
+        print(config)
+        df = pd.DataFrame(columns=["threadid", "time", "writeMibs", "readMibs"], dtype=float)
+
+        for file in path.rglob('*.csv'):
+            temp_df = pd.read_csv(file)
+            temp_df["threadid"] = file.stem.split("_")[0]
+            df = pd.concat([df, temp_df[["threadid", "time", "writeMibs", "readMibs"]]], ignore_index=True)
+        logs[config] = df
+    return logs
 
 def aggregate_repeated_benchmark(repeated_benchmark, to_be_aggregated=DEFAULT_AGGS):
     for name, nodes in repeated_benchmark.items():
