@@ -9,14 +9,17 @@ import itertools
 from copy import deepcopy
 from pathlib import Path
 
+from concurrent.futures import ThreadPoolExecutor
 
 def setup_files(config):
-    for file in config["FILENAME"].split(";"):
+    filenames = config["FILENAME"].split(";")
+
+    def run_dd(filename):
         subprocess.run(
             [
                 "dd",
                 "if=/dev/zero",
-                f"of={file}",
+                f"of={filename}",
                 "bs=64k",
                 "oflag=direct",
                 "iflag=fullblock,count_bytes",
@@ -24,6 +27,12 @@ def setup_files(config):
             ],
             check=True,
         )
+
+    with ThreadPoolExecutor() as executor:
+        futures = [executor.submit(run_dd, filename) for filename in filenames]
+
+        for future in futures:
+            future.result()
 
 def setup_output_dir(result_file, config_str, repetition):
     path =  Path(result_file).parent / Path(config_str) / Path(repetition)
