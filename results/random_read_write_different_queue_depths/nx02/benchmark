@@ -1,0 +1,3784 @@
+{
+    "4_SSD_Raid0": [
+        {
+            "RW": "0",
+            "IOENGINE": "libaio",
+            "IO_DEPTH": "128",
+            "FILESIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "THREADS": "32",
+            "FILENAME": "/mnt/raid/file_nvme_bench",
+            "CONFIG_STR": "RW_0__IOENGINE_libaio__IO_DEPTH_128__FILESIZE_10G__INIT_disable__RUNTIME_30__THREADS_32__FILENAME_mntraidfile_nvme_bench",
+            "repetitions": [
+                {
+                    "iops": "2.389",
+                    "readss": "2.389",
+                    "writess": "0",
+                    "throughput_gb": "9.115",
+                    "throughput_gb_reads": "9.115",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "2.394",
+                    "readss": "2.394",
+                    "writess": "0",
+                    "throughput_gb": "9.133",
+                    "throughput_gb_reads": "9.133",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "2.398",
+                    "readss": "2.398",
+                    "writess": "0",
+                    "throughput_gb": "9.149",
+                    "throughput_gb_reads": "9.149",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "2.387",
+                    "readss": "2.387",
+                    "writess": "0",
+                    "throughput_gb": "9.105",
+                    "throughput_gb_reads": "9.105",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "2.383",
+                    "readss": "2.383",
+                    "writess": "0",
+                    "throughput_gb": "9.092",
+                    "throughput_gb_reads": "9.092",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "RW": "0",
+            "IOENGINE": "libaio",
+            "IO_DEPTH": "256",
+            "FILESIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "THREADS": "32",
+            "FILENAME": "/mnt/raid/file_nvme_bench",
+            "CONFIG_STR": "RW_0__IOENGINE_libaio__IO_DEPTH_256__FILESIZE_10G__INIT_disable__RUNTIME_30__THREADS_32__FILENAME_mntraidfile_nvme_bench",
+            "repetitions": [
+                {
+                    "iops": "2.372",
+                    "readss": "2.372",
+                    "writess": "0",
+                    "throughput_gb": "9.048",
+                    "throughput_gb_reads": "9.048",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "2.407",
+                    "readss": "2.407",
+                    "writess": "0",
+                    "throughput_gb": "9.18",
+                    "throughput_gb_reads": "9.18",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "2.382",
+                    "readss": "2.382",
+                    "writess": "0",
+                    "throughput_gb": "9.085",
+                    "throughput_gb_reads": "9.085",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "2.396",
+                    "readss": "2.396",
+                    "writess": "0",
+                    "throughput_gb": "9.141",
+                    "throughput_gb_reads": "9.141",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "2.427",
+                    "readss": "2.427",
+                    "writess": "0",
+                    "throughput_gb": "9.258",
+                    "throughput_gb_reads": "9.258",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "RW": "0",
+            "IOENGINE": "libaio",
+            "IO_DEPTH": "1024",
+            "FILESIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "THREADS": "32",
+            "FILENAME": "/mnt/raid/file_nvme_bench",
+            "CONFIG_STR": "RW_0__IOENGINE_libaio__IO_DEPTH_1024__FILESIZE_10G__INIT_disable__RUNTIME_30__THREADS_32__FILENAME_mntraidfile_nvme_bench",
+            "repetitions": [
+                {
+                    "iops": "2.374",
+                    "readss": "2.374",
+                    "writess": "0",
+                    "throughput_gb": "9.056",
+                    "throughput_gb_reads": "9.056",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "2.416",
+                    "readss": "2.416",
+                    "writess": "0",
+                    "throughput_gb": "9.217",
+                    "throughput_gb_reads": "9.217",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "2.375",
+                    "readss": "2.375",
+                    "writess": "0",
+                    "throughput_gb": "9.059",
+                    "throughput_gb_reads": "9.059",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "2.402",
+                    "readss": "2.402",
+                    "writess": "0",
+                    "throughput_gb": "9.161",
+                    "throughput_gb_reads": "9.161",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "2.403",
+                    "readss": "2.403",
+                    "writess": "0",
+                    "throughput_gb": "9.165",
+                    "throughput_gb_reads": "9.165",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "RW": "0",
+            "IOENGINE": "io_uring",
+            "IO_DEPTH": "128",
+            "FILESIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "THREADS": "32",
+            "FILENAME": "/mnt/raid/file_nvme_bench",
+            "CONFIG_STR": "RW_0__IOENGINE_io_uring__IO_DEPTH_128__FILESIZE_10G__INIT_disable__RUNTIME_30__THREADS_32__FILENAME_mntraidfile_nvme_bench",
+            "repetitions": [
+                {
+                    "iops": "2.387",
+                    "readss": "2.387",
+                    "writess": "0",
+                    "throughput_gb": "9.105",
+                    "throughput_gb_reads": "9.105",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "2.399",
+                    "readss": "2.399",
+                    "writess": "0",
+                    "throughput_gb": "9.152",
+                    "throughput_gb_reads": "9.152",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "2.397",
+                    "readss": "2.397",
+                    "writess": "0",
+                    "throughput_gb": "9.143",
+                    "throughput_gb_reads": "9.143",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "2.376",
+                    "readss": "2.376",
+                    "writess": "0",
+                    "throughput_gb": "9.064",
+                    "throughput_gb_reads": "9.064",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "2.388",
+                    "readss": "2.388",
+                    "writess": "0",
+                    "throughput_gb": "9.11",
+                    "throughput_gb_reads": "9.11",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "RW": "0",
+            "IOENGINE": "io_uring",
+            "IO_DEPTH": "256",
+            "FILESIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "THREADS": "32",
+            "FILENAME": "/mnt/raid/file_nvme_bench",
+            "CONFIG_STR": "RW_0__IOENGINE_io_uring__IO_DEPTH_256__FILESIZE_10G__INIT_disable__RUNTIME_30__THREADS_32__FILENAME_mntraidfile_nvme_bench",
+            "repetitions": [
+                {
+                    "iops": "2.381",
+                    "readss": "2.381",
+                    "writess": "0",
+                    "throughput_gb": "9.081",
+                    "throughput_gb_reads": "9.081",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "2.428",
+                    "readss": "2.428",
+                    "writess": "0",
+                    "throughput_gb": "9.262",
+                    "throughput_gb_reads": "9.262",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "2.388",
+                    "readss": "2.388",
+                    "writess": "0",
+                    "throughput_gb": "9.111",
+                    "throughput_gb_reads": "9.111",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "2.411",
+                    "readss": "2.411",
+                    "writess": "0",
+                    "throughput_gb": "9.196",
+                    "throughput_gb_reads": "9.196",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "2.385",
+                    "readss": "2.385",
+                    "writess": "0",
+                    "throughput_gb": "9.098",
+                    "throughput_gb_reads": "9.098",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "RW": "0",
+            "IOENGINE": "io_uring",
+            "IO_DEPTH": "1024",
+            "FILESIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "THREADS": "32",
+            "FILENAME": "/mnt/raid/file_nvme_bench",
+            "CONFIG_STR": "RW_0__IOENGINE_io_uring__IO_DEPTH_1024__FILESIZE_10G__INIT_disable__RUNTIME_30__THREADS_32__FILENAME_mntraidfile_nvme_bench",
+            "repetitions": [
+                {
+                    "iops": "2.39",
+                    "readss": "2.39",
+                    "writess": "0",
+                    "throughput_gb": "9.117",
+                    "throughput_gb_reads": "9.117",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "2.392",
+                    "readss": "2.392",
+                    "writess": "0",
+                    "throughput_gb": "9.126",
+                    "throughput_gb_reads": "9.126",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "2.403",
+                    "readss": "2.403",
+                    "writess": "0",
+                    "throughput_gb": "9.168",
+                    "throughput_gb_reads": "9.168",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "2.4",
+                    "readss": "2.4",
+                    "writess": "0",
+                    "throughput_gb": "9.156",
+                    "throughput_gb_reads": "9.156",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "2.386",
+                    "readss": "2.386",
+                    "writess": "0",
+                    "throughput_gb": "9.101",
+                    "throughput_gb_reads": "9.101",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "RW": "0.01",
+            "IOENGINE": "libaio",
+            "IO_DEPTH": "128",
+            "FILESIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "THREADS": "32",
+            "FILENAME": "/mnt/raid/file_nvme_bench",
+            "CONFIG_STR": "RW_001__IOENGINE_libaio__IO_DEPTH_128__FILESIZE_10G__INIT_disable__RUNTIME_30__THREADS_32__FILENAME_mntraidfile_nvme_bench",
+            "repetitions": [
+                {
+                    "iops": "1.411",
+                    "readss": "1.397",
+                    "writess": "0.01412",
+                    "throughput_gb": "5.383",
+                    "throughput_gb_reads": "5.329",
+                    "throughput_gb_writes": "0.05385",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "1.361",
+                    "readss": "1.347",
+                    "writess": "0.01358",
+                    "throughput_gb": "5.191",
+                    "throughput_gb_reads": "5.139",
+                    "throughput_gb_writes": "0.0518",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "1.401",
+                    "readss": "1.387",
+                    "writess": "0.01402",
+                    "throughput_gb": "5.346",
+                    "throughput_gb_reads": "5.292",
+                    "throughput_gb_writes": "0.05347",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "1.359",
+                    "readss": "1.346",
+                    "writess": "0.0136",
+                    "throughput_gb": "5.185",
+                    "throughput_gb_reads": "5.133",
+                    "throughput_gb_writes": "0.05186",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "1.415",
+                    "readss": "1.401",
+                    "writess": "0.01417",
+                    "throughput_gb": "5.398",
+                    "throughput_gb_reads": "5.344",
+                    "throughput_gb_writes": "0.05405",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "RW": "0.01",
+            "IOENGINE": "libaio",
+            "IO_DEPTH": "256",
+            "FILESIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "THREADS": "32",
+            "FILENAME": "/mnt/raid/file_nvme_bench",
+            "CONFIG_STR": "RW_001__IOENGINE_libaio__IO_DEPTH_256__FILESIZE_10G__INIT_disable__RUNTIME_30__THREADS_32__FILENAME_mntraidfile_nvme_bench",
+            "repetitions": [
+                {
+                    "iops": "1.388",
+                    "readss": "1.374",
+                    "writess": "0.01388",
+                    "throughput_gb": "5.296",
+                    "throughput_gb_reads": "5.243",
+                    "throughput_gb_writes": "0.05296",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "1.37",
+                    "readss": "1.356",
+                    "writess": "0.01369",
+                    "throughput_gb": "5.225",
+                    "throughput_gb_reads": "5.173",
+                    "throughput_gb_writes": "0.05223",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "1.4",
+                    "readss": "1.386",
+                    "writess": "0.01399",
+                    "throughput_gb": "5.339",
+                    "throughput_gb_reads": "5.286",
+                    "throughput_gb_writes": "0.05336",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "1.388",
+                    "readss": "1.374",
+                    "writess": "0.01388",
+                    "throughput_gb": "5.294",
+                    "throughput_gb_reads": "5.241",
+                    "throughput_gb_writes": "0.05296",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "1.376",
+                    "readss": "1.363",
+                    "writess": "0.01379",
+                    "throughput_gb": "5.251",
+                    "throughput_gb_reads": "5.198",
+                    "throughput_gb_writes": "0.0526",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "RW": "0.01",
+            "IOENGINE": "libaio",
+            "IO_DEPTH": "1024",
+            "FILESIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "THREADS": "32",
+            "FILENAME": "/mnt/raid/file_nvme_bench",
+            "CONFIG_STR": "RW_001__IOENGINE_libaio__IO_DEPTH_1024__FILESIZE_10G__INIT_disable__RUNTIME_30__THREADS_32__FILENAME_mntraidfile_nvme_bench",
+            "repetitions": [
+                {
+                    "iops": "1.371",
+                    "readss": "1.357",
+                    "writess": "0.01371",
+                    "throughput_gb": "5.23",
+                    "throughput_gb_reads": "5.178",
+                    "throughput_gb_writes": "0.05231",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "1.353",
+                    "readss": "1.339",
+                    "writess": "0.01354",
+                    "throughput_gb": "5.16",
+                    "throughput_gb_reads": "5.108",
+                    "throughput_gb_writes": "0.05165",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "1.378",
+                    "readss": "1.364",
+                    "writess": "0.01375",
+                    "throughput_gb": "5.256",
+                    "throughput_gb_reads": "5.204",
+                    "throughput_gb_writes": "0.05244",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "1.38",
+                    "readss": "1.366",
+                    "writess": "0.01382",
+                    "throughput_gb": "5.264",
+                    "throughput_gb_reads": "5.211",
+                    "throughput_gb_writes": "0.05272",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "1.348",
+                    "readss": "1.335",
+                    "writess": "0.0135",
+                    "throughput_gb": "5.144",
+                    "throughput_gb_reads": "5.092",
+                    "throughput_gb_writes": "0.0515",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "RW": "0.01",
+            "IOENGINE": "io_uring",
+            "IO_DEPTH": "128",
+            "FILESIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "THREADS": "32",
+            "FILENAME": "/mnt/raid/file_nvme_bench",
+            "CONFIG_STR": "RW_001__IOENGINE_io_uring__IO_DEPTH_128__FILESIZE_10G__INIT_disable__RUNTIME_30__THREADS_32__FILENAME_mntraidfile_nvme_bench",
+            "repetitions": [
+                {
+                    "iops": "0.1542",
+                    "readss": "0.1526",
+                    "writess": "0.001543",
+                    "throughput_gb": "0.5881",
+                    "throughput_gb_reads": "0.5823",
+                    "throughput_gb_writes": "0.005886",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "0.1253",
+                    "readss": "0.1241",
+                    "writess": "0.001254",
+                    "throughput_gb": "0.4782",
+                    "throughput_gb_reads": "0.4734",
+                    "throughput_gb_writes": "0.004785",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "0.1305",
+                    "readss": "0.1292",
+                    "writess": "0.00131",
+                    "throughput_gb": "0.4978",
+                    "throughput_gb_reads": "0.4928",
+                    "throughput_gb_writes": "0.004999",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "0.1196",
+                    "readss": "0.1184",
+                    "writess": "0.001196",
+                    "throughput_gb": "0.4561",
+                    "throughput_gb_reads": "0.4516",
+                    "throughput_gb_writes": "0.004562",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "0.1219",
+                    "readss": "0.1207",
+                    "writess": "0.001212",
+                    "throughput_gb": "0.465",
+                    "throughput_gb_reads": "0.4604",
+                    "throughput_gb_writes": "0.004622",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "RW": "0.01",
+            "IOENGINE": "io_uring",
+            "IO_DEPTH": "256",
+            "FILESIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "THREADS": "32",
+            "FILENAME": "/mnt/raid/file_nvme_bench",
+            "CONFIG_STR": "RW_001__IOENGINE_io_uring__IO_DEPTH_256__FILESIZE_10G__INIT_disable__RUNTIME_30__THREADS_32__FILENAME_mntraidfile_nvme_bench",
+            "repetitions": [
+                {
+                    "iops": "0.1492",
+                    "readss": "0.1477",
+                    "writess": "0.001502",
+                    "throughput_gb": "0.569",
+                    "throughput_gb_reads": "0.5633",
+                    "throughput_gb_writes": "0.005731",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "0.177",
+                    "readss": "0.1753",
+                    "writess": "0.001777",
+                    "throughput_gb": "0.6754",
+                    "throughput_gb_reads": "0.6686",
+                    "throughput_gb_writes": "0.006779",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "0.1203",
+                    "readss": "0.119",
+                    "writess": "0.001213",
+                    "throughput_gb": "0.4587",
+                    "throughput_gb_reads": "0.4541",
+                    "throughput_gb_writes": "0.004627",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "0.173",
+                    "readss": "0.1713",
+                    "writess": "0.001729",
+                    "throughput_gb": "0.66",
+                    "throughput_gb_reads": "0.6534",
+                    "throughput_gb_writes": "0.006594",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "0.158",
+                    "readss": "0.1564",
+                    "writess": "0.001584",
+                    "throughput_gb": "0.6027",
+                    "throughput_gb_reads": "0.5967",
+                    "throughput_gb_writes": "0.006043",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "RW": "0.01",
+            "IOENGINE": "io_uring",
+            "IO_DEPTH": "1024",
+            "FILESIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "THREADS": "32",
+            "FILENAME": "/mnt/raid/file_nvme_bench",
+            "CONFIG_STR": "RW_001__IOENGINE_io_uring__IO_DEPTH_1024__FILESIZE_10G__INIT_disable__RUNTIME_30__THREADS_32__FILENAME_mntraidfile_nvme_bench",
+            "repetitions": [
+                {
+                    "iops": "0.1571",
+                    "readss": "0.1555",
+                    "writess": "0.001568",
+                    "throughput_gb": "0.5992",
+                    "throughput_gb_reads": "0.5933",
+                    "throughput_gb_writes": "0.005981",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "0.1546",
+                    "readss": "0.153",
+                    "writess": "0.001546",
+                    "throughput_gb": "0.5897",
+                    "throughput_gb_reads": "0.5838",
+                    "throughput_gb_writes": "0.005897",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "0.1347",
+                    "readss": "0.1333",
+                    "writess": "0.001357",
+                    "throughput_gb": "0.5138",
+                    "throughput_gb_reads": "0.5087",
+                    "throughput_gb_writes": "0.005177",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "0.1551",
+                    "readss": "0.1536",
+                    "writess": "0.001546",
+                    "throughput_gb": "0.5918",
+                    "throughput_gb_reads": "0.5859",
+                    "throughput_gb_writes": "0.005897",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "0.1455",
+                    "readss": "0.144",
+                    "writess": "0.001469",
+                    "throughput_gb": "0.555",
+                    "throughput_gb_reads": "0.5494",
+                    "throughput_gb_writes": "0.005606",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "RW": "0.05",
+            "IOENGINE": "libaio",
+            "IO_DEPTH": "128",
+            "FILESIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "THREADS": "32",
+            "FILENAME": "/mnt/raid/file_nvme_bench",
+            "CONFIG_STR": "RW_005__IOENGINE_libaio__IO_DEPTH_128__FILESIZE_10G__INIT_disable__RUNTIME_30__THREADS_32__FILENAME_mntraidfile_nvme_bench",
+            "repetitions": [
+                {
+                    "iops": "1.054",
+                    "readss": "1.002",
+                    "writess": "0.05276",
+                    "throughput_gb": "4.022",
+                    "throughput_gb_reads": "3.821",
+                    "throughput_gb_writes": "0.2013",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "1.025",
+                    "readss": "0.9738",
+                    "writess": "0.05124",
+                    "throughput_gb": "3.91",
+                    "throughput_gb_reads": "3.715",
+                    "throughput_gb_writes": "0.1955",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "1.028",
+                    "readss": "0.9764",
+                    "writess": "0.05136",
+                    "throughput_gb": "3.921",
+                    "throughput_gb_reads": "3.725",
+                    "throughput_gb_writes": "0.1959",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "1.009",
+                    "readss": "0.9581",
+                    "writess": "0.05043",
+                    "throughput_gb": "3.847",
+                    "throughput_gb_reads": "3.655",
+                    "throughput_gb_writes": "0.1924",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "1.027",
+                    "readss": "0.9755",
+                    "writess": "0.05131",
+                    "throughput_gb": "3.917",
+                    "throughput_gb_reads": "3.721",
+                    "throughput_gb_writes": "0.1957",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "RW": "0.05",
+            "IOENGINE": "libaio",
+            "IO_DEPTH": "256",
+            "FILESIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "THREADS": "32",
+            "FILENAME": "/mnt/raid/file_nvme_bench",
+            "CONFIG_STR": "RW_005__IOENGINE_libaio__IO_DEPTH_256__FILESIZE_10G__INIT_disable__RUNTIME_30__THREADS_32__FILENAME_mntraidfile_nvme_bench",
+            "repetitions": [
+                {
+                    "iops": "1.043",
+                    "readss": "0.9913",
+                    "writess": "0.05219",
+                    "throughput_gb": "3.981",
+                    "throughput_gb_reads": "3.782",
+                    "throughput_gb_writes": "0.1991",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "1.064",
+                    "readss": "1.011",
+                    "writess": "0.05319",
+                    "throughput_gb": "4.058",
+                    "throughput_gb_reads": "3.855",
+                    "throughput_gb_writes": "0.2029",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "1.046",
+                    "readss": "0.994",
+                    "writess": "0.05233",
+                    "throughput_gb": "3.991",
+                    "throughput_gb_reads": "3.792",
+                    "throughput_gb_writes": "0.1996",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "0.9842",
+                    "readss": "0.935",
+                    "writess": "0.04912",
+                    "throughput_gb": "3.754",
+                    "throughput_gb_reads": "3.567",
+                    "throughput_gb_writes": "0.1874",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "0.9687",
+                    "readss": "0.9204",
+                    "writess": "0.04835",
+                    "throughput_gb": "3.695",
+                    "throughput_gb_reads": "3.511",
+                    "throughput_gb_writes": "0.1844",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "RW": "0.05",
+            "IOENGINE": "libaio",
+            "IO_DEPTH": "1024",
+            "FILESIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "THREADS": "32",
+            "FILENAME": "/mnt/raid/file_nvme_bench",
+            "CONFIG_STR": "RW_005__IOENGINE_libaio__IO_DEPTH_1024__FILESIZE_10G__INIT_disable__RUNTIME_30__THREADS_32__FILENAME_mntraidfile_nvme_bench",
+            "repetitions": [
+                {
+                    "iops": "0.8869",
+                    "readss": "0.8425",
+                    "writess": "0.04433",
+                    "throughput_gb": "3.383",
+                    "throughput_gb_reads": "3.214",
+                    "throughput_gb_writes": "0.1691",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "0.9284",
+                    "readss": "0.882",
+                    "writess": "0.04647",
+                    "throughput_gb": "3.542",
+                    "throughput_gb_reads": "3.364",
+                    "throughput_gb_writes": "0.1773",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "0.9484",
+                    "readss": "0.901",
+                    "writess": "0.04739",
+                    "throughput_gb": "3.618",
+                    "throughput_gb_reads": "3.437",
+                    "throughput_gb_writes": "0.1808",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "0.9724",
+                    "readss": "0.9237",
+                    "writess": "0.04863",
+                    "throughput_gb": "3.709",
+                    "throughput_gb_reads": "3.524",
+                    "throughput_gb_writes": "0.1855",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "0.8937",
+                    "readss": "0.8491",
+                    "writess": "0.04468",
+                    "throughput_gb": "3.409",
+                    "throughput_gb_reads": "3.239",
+                    "throughput_gb_writes": "0.1704",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "RW": "0.05",
+            "IOENGINE": "io_uring",
+            "IO_DEPTH": "128",
+            "FILESIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "THREADS": "32",
+            "FILENAME": "/mnt/raid/file_nvme_bench",
+            "CONFIG_STR": "RW_005__IOENGINE_io_uring__IO_DEPTH_128__FILESIZE_10G__INIT_disable__RUNTIME_30__THREADS_32__FILENAME_mntraidfile_nvme_bench",
+            "repetitions": [
+                {
+                    "iops": "0.0849",
+                    "readss": "0.08065",
+                    "writess": "0.004249",
+                    "throughput_gb": "0.3239",
+                    "throughput_gb_reads": "0.3077",
+                    "throughput_gb_writes": "0.01621",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "0.05803",
+                    "readss": "0.05512",
+                    "writess": "0.002908",
+                    "throughput_gb": "0.2214",
+                    "throughput_gb_reads": "0.2103",
+                    "throughput_gb_writes": "0.01109",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "0.07",
+                    "readss": "0.06649",
+                    "writess": "0.003511",
+                    "throughput_gb": "0.267",
+                    "throughput_gb_reads": "0.2537",
+                    "throughput_gb_writes": "0.01339",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "0.06813",
+                    "readss": "0.06472",
+                    "writess": "0.003414",
+                    "throughput_gb": "0.2599",
+                    "throughput_gb_reads": "0.2469",
+                    "throughput_gb_writes": "0.01303",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "0.06314",
+                    "readss": "0.05997",
+                    "writess": "0.003164",
+                    "throughput_gb": "0.2409",
+                    "throughput_gb_reads": "0.2288",
+                    "throughput_gb_writes": "0.01207",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "RW": "0.05",
+            "IOENGINE": "io_uring",
+            "IO_DEPTH": "256",
+            "FILESIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "THREADS": "32",
+            "FILENAME": "/mnt/raid/file_nvme_bench",
+            "CONFIG_STR": "RW_005__IOENGINE_io_uring__IO_DEPTH_256__FILESIZE_10G__INIT_disable__RUNTIME_30__THREADS_32__FILENAME_mntraidfile_nvme_bench",
+            "repetitions": [
+                {
+                    "iops": "0.1516",
+                    "readss": "0.144",
+                    "writess": "0.007575",
+                    "throughput_gb": "0.5783",
+                    "throughput_gb_reads": "0.5494",
+                    "throughput_gb_writes": "0.0289",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "0.1698",
+                    "readss": "0.1614",
+                    "writess": "0.008479",
+                    "throughput_gb": "0.6479",
+                    "throughput_gb_reads": "0.6155",
+                    "throughput_gb_writes": "0.03235",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "0.1332",
+                    "readss": "0.1265",
+                    "writess": "0.006664",
+                    "throughput_gb": "0.5081",
+                    "throughput_gb_reads": "0.4827",
+                    "throughput_gb_writes": "0.02542",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "0.1297",
+                    "readss": "0.1232",
+                    "writess": "0.006466",
+                    "throughput_gb": "0.4948",
+                    "throughput_gb_reads": "0.4701",
+                    "throughput_gb_writes": "0.02467",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "0.1498",
+                    "readss": "0.1423",
+                    "writess": "0.007497",
+                    "throughput_gb": "0.5716",
+                    "throughput_gb_reads": "0.543",
+                    "throughput_gb_writes": "0.0286",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "RW": "0.05",
+            "IOENGINE": "io_uring",
+            "IO_DEPTH": "1024",
+            "FILESIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "THREADS": "32",
+            "FILENAME": "/mnt/raid/file_nvme_bench",
+            "CONFIG_STR": "RW_005__IOENGINE_io_uring__IO_DEPTH_1024__FILESIZE_10G__INIT_disable__RUNTIME_30__THREADS_32__FILENAME_mntraidfile_nvme_bench",
+            "repetitions": [
+                {
+                    "iops": "0.1603",
+                    "readss": "0.1523",
+                    "writess": "0.008024",
+                    "throughput_gb": "0.6116",
+                    "throughput_gb_reads": "0.5809",
+                    "throughput_gb_writes": "0.03061",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "0.1524",
+                    "readss": "0.1447",
+                    "writess": "0.007633",
+                    "throughput_gb": "0.5813",
+                    "throughput_gb_reads": "0.5522",
+                    "throughput_gb_writes": "0.02912",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "0.1625",
+                    "readss": "0.1544",
+                    "writess": "0.00811",
+                    "throughput_gb": "0.6199",
+                    "throughput_gb_reads": "0.589",
+                    "throughput_gb_writes": "0.03094",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "0.1782",
+                    "readss": "0.1693",
+                    "writess": "0.008894",
+                    "throughput_gb": "0.6796",
+                    "throughput_gb_reads": "0.6457",
+                    "throughput_gb_writes": "0.03393",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "0.1297",
+                    "readss": "0.1232",
+                    "writess": "0.006503",
+                    "throughput_gb": "0.4949",
+                    "throughput_gb_reads": "0.4701",
+                    "throughput_gb_writes": "0.02481",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "RW": "0.10",
+            "IOENGINE": "libaio",
+            "IO_DEPTH": "128",
+            "FILESIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "THREADS": "32",
+            "FILENAME": "/mnt/raid/file_nvme_bench",
+            "CONFIG_STR": "RW_010__IOENGINE_libaio__IO_DEPTH_128__FILESIZE_10G__INIT_disable__RUNTIME_30__THREADS_32__FILENAME_mntraidfile_nvme_bench",
+            "repetitions": [
+                {
+                    "iops": "0.8006",
+                    "readss": "0.7205",
+                    "writess": "0.08002",
+                    "throughput_gb": "3.054",
+                    "throughput_gb_reads": "2.749",
+                    "throughput_gb_writes": "0.3053",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "0.8058",
+                    "readss": "0.7253",
+                    "writess": "0.08058",
+                    "throughput_gb": "3.074",
+                    "throughput_gb_reads": "2.767",
+                    "throughput_gb_writes": "0.3074",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "0.7908",
+                    "readss": "0.7118",
+                    "writess": "0.07899",
+                    "throughput_gb": "3.017",
+                    "throughput_gb_reads": "2.715",
+                    "throughput_gb_writes": "0.3013",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "0.8183",
+                    "readss": "0.7365",
+                    "writess": "0.08181",
+                    "throughput_gb": "3.122",
+                    "throughput_gb_reads": "2.809",
+                    "throughput_gb_writes": "0.3121",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "0.7562",
+                    "readss": "0.6806",
+                    "writess": "0.07556",
+                    "throughput_gb": "2.885",
+                    "throughput_gb_reads": "2.596",
+                    "throughput_gb_writes": "0.2882",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "RW": "0.10",
+            "IOENGINE": "libaio",
+            "IO_DEPTH": "256",
+            "FILESIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "THREADS": "32",
+            "FILENAME": "/mnt/raid/file_nvme_bench",
+            "CONFIG_STR": "RW_010__IOENGINE_libaio__IO_DEPTH_256__FILESIZE_10G__INIT_disable__RUNTIME_30__THREADS_32__FILENAME_mntraidfile_nvme_bench",
+            "repetitions": [
+                {
+                    "iops": "0.7856",
+                    "readss": "0.707",
+                    "writess": "0.0786",
+                    "throughput_gb": "2.997",
+                    "throughput_gb_reads": "2.697",
+                    "throughput_gb_writes": "0.2998",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "0.7824",
+                    "readss": "0.7041",
+                    "writess": "0.0783",
+                    "throughput_gb": "2.985",
+                    "throughput_gb_reads": "2.686",
+                    "throughput_gb_writes": "0.2987",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "0.7884",
+                    "readss": "0.7096",
+                    "writess": "0.07877",
+                    "throughput_gb": "3.007",
+                    "throughput_gb_reads": "2.707",
+                    "throughput_gb_writes": "0.3005",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "0.8075",
+                    "readss": "0.7268",
+                    "writess": "0.08069",
+                    "throughput_gb": "3.08",
+                    "throughput_gb_reads": "2.772",
+                    "throughput_gb_writes": "0.3078",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "0.7725",
+                    "readss": "0.6953",
+                    "writess": "0.0772",
+                    "throughput_gb": "2.947",
+                    "throughput_gb_reads": "2.652",
+                    "throughput_gb_writes": "0.2945",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "RW": "0.10",
+            "IOENGINE": "libaio",
+            "IO_DEPTH": "1024",
+            "FILESIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "THREADS": "32",
+            "FILENAME": "/mnt/raid/file_nvme_bench",
+            "CONFIG_STR": "RW_010__IOENGINE_libaio__IO_DEPTH_1024__FILESIZE_10G__INIT_disable__RUNTIME_30__THREADS_32__FILENAME_mntraidfile_nvme_bench",
+            "repetitions": [
+                {
+                    "iops": "0.7493",
+                    "readss": "0.6744",
+                    "writess": "0.07499",
+                    "throughput_gb": "2.859",
+                    "throughput_gb_reads": "2.572",
+                    "throughput_gb_writes": "0.2861",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "0.7659",
+                    "readss": "0.6893",
+                    "writess": "0.07666",
+                    "throughput_gb": "2.922",
+                    "throughput_gb_reads": "2.629",
+                    "throughput_gb_writes": "0.2924",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "0.7643",
+                    "readss": "0.6879",
+                    "writess": "0.07642",
+                    "throughput_gb": "2.916",
+                    "throughput_gb_reads": "2.624",
+                    "throughput_gb_writes": "0.2915",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "0.8002",
+                    "readss": "0.7202",
+                    "writess": "0.08009",
+                    "throughput_gb": "3.053",
+                    "throughput_gb_reads": "2.747",
+                    "throughput_gb_writes": "0.3055",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "0.7642",
+                    "readss": "0.6878",
+                    "writess": "0.07643",
+                    "throughput_gb": "2.915",
+                    "throughput_gb_reads": "2.624",
+                    "throughput_gb_writes": "0.2916",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "RW": "0.10",
+            "IOENGINE": "io_uring",
+            "IO_DEPTH": "128",
+            "FILESIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "THREADS": "32",
+            "FILENAME": "/mnt/raid/file_nvme_bench",
+            "CONFIG_STR": "RW_010__IOENGINE_io_uring__IO_DEPTH_128__FILESIZE_10G__INIT_disable__RUNTIME_30__THREADS_32__FILENAME_mntraidfile_nvme_bench",
+            "repetitions": [
+                {
+                    "iops": "0.1171",
+                    "readss": "0.1053",
+                    "writess": "0.01172",
+                    "throughput_gb": "0.4465",
+                    "throughput_gb_reads": "0.4018",
+                    "throughput_gb_writes": "0.04471",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "0.06321",
+                    "readss": "0.0569",
+                    "writess": "0.006313",
+                    "throughput_gb": "0.2411",
+                    "throughput_gb_reads": "0.217",
+                    "throughput_gb_writes": "0.02408",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "0.05967",
+                    "readss": "0.05368",
+                    "writess": "0.005987",
+                    "throughput_gb": "0.2276",
+                    "throughput_gb_reads": "0.2048",
+                    "throughput_gb_writes": "0.02284",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "0.06506",
+                    "readss": "0.05855",
+                    "writess": "0.006509",
+                    "throughput_gb": "0.2482",
+                    "throughput_gb_reads": "0.2234",
+                    "throughput_gb_writes": "0.02483",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "0.05448",
+                    "readss": "0.04904",
+                    "writess": "0.005436",
+                    "throughput_gb": "0.2078",
+                    "throughput_gb_reads": "0.1871",
+                    "throughput_gb_writes": "0.02074",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "RW": "0.10",
+            "IOENGINE": "io_uring",
+            "IO_DEPTH": "256",
+            "FILESIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "THREADS": "32",
+            "FILENAME": "/mnt/raid/file_nvme_bench",
+            "CONFIG_STR": "RW_010__IOENGINE_io_uring__IO_DEPTH_256__FILESIZE_10G__INIT_disable__RUNTIME_30__THREADS_32__FILENAME_mntraidfile_nvme_bench",
+            "repetitions": [
+                {
+                    "iops": "0.1726",
+                    "readss": "0.1553",
+                    "writess": "0.01726",
+                    "throughput_gb": "0.6585",
+                    "throughput_gb_reads": "0.5926",
+                    "throughput_gb_writes": "0.06584",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "0.1643",
+                    "readss": "0.1478",
+                    "writess": "0.01643",
+                    "throughput_gb": "0.6266",
+                    "throughput_gb_reads": "0.5639",
+                    "throughput_gb_writes": "0.06268",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "0.1568",
+                    "readss": "0.1411",
+                    "writess": "0.01566",
+                    "throughput_gb": "0.5981",
+                    "throughput_gb_reads": "0.5383",
+                    "throughput_gb_writes": "0.05974",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "0.1643",
+                    "readss": "0.1479",
+                    "writess": "0.01643",
+                    "throughput_gb": "0.6268",
+                    "throughput_gb_reads": "0.5641",
+                    "throughput_gb_writes": "0.06269",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "0.1552",
+                    "readss": "0.1397",
+                    "writess": "0.0155",
+                    "throughput_gb": "0.5922",
+                    "throughput_gb_reads": "0.5331",
+                    "throughput_gb_writes": "0.05914",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "RW": "0.10",
+            "IOENGINE": "io_uring",
+            "IO_DEPTH": "1024",
+            "FILESIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "THREADS": "32",
+            "FILENAME": "/mnt/raid/file_nvme_bench",
+            "CONFIG_STR": "RW_010__IOENGINE_io_uring__IO_DEPTH_1024__FILESIZE_10G__INIT_disable__RUNTIME_30__THREADS_32__FILENAME_mntraidfile_nvme_bench",
+            "repetitions": [
+                {
+                    "iops": "0.1709",
+                    "readss": "0.1539",
+                    "writess": "0.01709",
+                    "throughput_gb": "0.6521",
+                    "throughput_gb_reads": "0.5869",
+                    "throughput_gb_writes": "0.06518",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "0.1576",
+                    "readss": "0.1418",
+                    "writess": "0.01576",
+                    "throughput_gb": "0.6011",
+                    "throughput_gb_reads": "0.541",
+                    "throughput_gb_writes": "0.06012",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "0.1784",
+                    "readss": "0.1606",
+                    "writess": "0.01787",
+                    "throughput_gb": "0.6807",
+                    "throughput_gb_reads": "0.6125",
+                    "throughput_gb_writes": "0.06817",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "0.1805",
+                    "readss": "0.1624",
+                    "writess": "0.01806",
+                    "throughput_gb": "0.6885",
+                    "throughput_gb_reads": "0.6196",
+                    "throughput_gb_writes": "0.06889",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "0.1624",
+                    "readss": "0.1461",
+                    "writess": "0.01625",
+                    "throughput_gb": "0.6194",
+                    "throughput_gb_reads": "0.5575",
+                    "throughput_gb_writes": "0.06199",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "RW": "0.20",
+            "IOENGINE": "libaio",
+            "IO_DEPTH": "128",
+            "FILESIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "THREADS": "32",
+            "FILENAME": "/mnt/raid/file_nvme_bench",
+            "CONFIG_STR": "RW_020__IOENGINE_libaio__IO_DEPTH_128__FILESIZE_10G__INIT_disable__RUNTIME_30__THREADS_32__FILENAME_mntraidfile_nvme_bench",
+            "repetitions": [
+                {
+                    "iops": "0.6242",
+                    "readss": "0.4994",
+                    "writess": "0.1248",
+                    "throughput_gb": "2.381",
+                    "throughput_gb_reads": "1.905",
+                    "throughput_gb_writes": "0.4762",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "0.6456",
+                    "readss": "0.5165",
+                    "writess": "0.1291",
+                    "throughput_gb": "2.463",
+                    "throughput_gb_reads": "1.97",
+                    "throughput_gb_writes": "0.4925",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "0.6396",
+                    "readss": "0.5117",
+                    "writess": "0.1279",
+                    "throughput_gb": "2.44",
+                    "throughput_gb_reads": "1.952",
+                    "throughput_gb_writes": "0.488",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "0.6337",
+                    "readss": "0.5069",
+                    "writess": "0.1268",
+                    "throughput_gb": "2.417",
+                    "throughput_gb_reads": "1.934",
+                    "throughput_gb_writes": "0.4835",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "0.6399",
+                    "readss": "0.5119",
+                    "writess": "0.128",
+                    "throughput_gb": "2.441",
+                    "throughput_gb_reads": "1.953",
+                    "throughput_gb_writes": "0.4883",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "RW": "0.20",
+            "IOENGINE": "libaio",
+            "IO_DEPTH": "256",
+            "FILESIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "THREADS": "32",
+            "FILENAME": "/mnt/raid/file_nvme_bench",
+            "CONFIG_STR": "RW_020__IOENGINE_libaio__IO_DEPTH_256__FILESIZE_10G__INIT_disable__RUNTIME_30__THREADS_32__FILENAME_mntraidfile_nvme_bench",
+            "repetitions": [
+                {
+                    "iops": "0.6411",
+                    "readss": "0.5128",
+                    "writess": "0.1283",
+                    "throughput_gb": "2.445",
+                    "throughput_gb_reads": "1.956",
+                    "throughput_gb_writes": "0.4894",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "0.6353",
+                    "readss": "0.5082",
+                    "writess": "0.1271",
+                    "throughput_gb": "2.424",
+                    "throughput_gb_reads": "1.939",
+                    "throughput_gb_writes": "0.4848",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "0.6299",
+                    "readss": "0.5039",
+                    "writess": "0.126",
+                    "throughput_gb": "2.403",
+                    "throughput_gb_reads": "1.922",
+                    "throughput_gb_writes": "0.4807",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "0.6285",
+                    "readss": "0.5028",
+                    "writess": "0.1257",
+                    "throughput_gb": "2.398",
+                    "throughput_gb_reads": "1.918",
+                    "throughput_gb_writes": "0.4796",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "0.6342",
+                    "readss": "0.5074",
+                    "writess": "0.1268",
+                    "throughput_gb": "2.419",
+                    "throughput_gb_reads": "1.936",
+                    "throughput_gb_writes": "0.4836",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "RW": "0.20",
+            "IOENGINE": "libaio",
+            "IO_DEPTH": "1024",
+            "FILESIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "THREADS": "32",
+            "FILENAME": "/mnt/raid/file_nvme_bench",
+            "CONFIG_STR": "RW_020__IOENGINE_libaio__IO_DEPTH_1024__FILESIZE_10G__INIT_disable__RUNTIME_30__THREADS_32__FILENAME_mntraidfile_nvme_bench",
+            "repetitions": [
+                {
+                    "iops": "0.6213",
+                    "readss": "0.497",
+                    "writess": "0.1243",
+                    "throughput_gb": "2.37",
+                    "throughput_gb_reads": "1.896",
+                    "throughput_gb_writes": "0.474",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "0.6334",
+                    "readss": "0.5068",
+                    "writess": "0.1266",
+                    "throughput_gb": "2.416",
+                    "throughput_gb_reads": "1.933",
+                    "throughput_gb_writes": "0.4831",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "0.62",
+                    "readss": "0.4959",
+                    "writess": "0.1241",
+                    "throughput_gb": "2.365",
+                    "throughput_gb_reads": "1.892",
+                    "throughput_gb_writes": "0.4733",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "0.6234",
+                    "readss": "0.4986",
+                    "writess": "0.1248",
+                    "throughput_gb": "2.378",
+                    "throughput_gb_reads": "1.902",
+                    "throughput_gb_writes": "0.4762",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "0.6279",
+                    "readss": "0.5024",
+                    "writess": "0.1255",
+                    "throughput_gb": "2.395",
+                    "throughput_gb_reads": "1.916",
+                    "throughput_gb_writes": "0.4787",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "RW": "0.20",
+            "IOENGINE": "io_uring",
+            "IO_DEPTH": "128",
+            "FILESIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "THREADS": "32",
+            "FILENAME": "/mnt/raid/file_nvme_bench",
+            "CONFIG_STR": "RW_020__IOENGINE_io_uring__IO_DEPTH_128__FILESIZE_10G__INIT_disable__RUNTIME_30__THREADS_32__FILENAME_mntraidfile_nvme_bench",
+            "repetitions": [
+                {
+                    "iops": "0.1056",
+                    "readss": "0.08446",
+                    "writess": "0.02113",
+                    "throughput_gb": "0.4028",
+                    "throughput_gb_reads": "0.3222",
+                    "throughput_gb_writes": "0.08059",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "0.05652",
+                    "readss": "0.04522",
+                    "writess": "0.0113",
+                    "throughput_gb": "0.2156",
+                    "throughput_gb_reads": "0.1725",
+                    "throughput_gb_writes": "0.04312",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "0.05067",
+                    "readss": "0.04055",
+                    "writess": "0.01012",
+                    "throughput_gb": "0.1933",
+                    "throughput_gb_reads": "0.1547",
+                    "throughput_gb_writes": "0.03859",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "0.05553",
+                    "readss": "0.04442",
+                    "writess": "0.01111",
+                    "throughput_gb": "0.2118",
+                    "throughput_gb_reads": "0.1694",
+                    "throughput_gb_writes": "0.0424",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "0.05227",
+                    "readss": "0.04184",
+                    "writess": "0.01042",
+                    "throughput_gb": "0.1994",
+                    "throughput_gb_reads": "0.1596",
+                    "throughput_gb_writes": "0.03976",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "RW": "0.20",
+            "IOENGINE": "io_uring",
+            "IO_DEPTH": "256",
+            "FILESIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "THREADS": "32",
+            "FILENAME": "/mnt/raid/file_nvme_bench",
+            "CONFIG_STR": "RW_020__IOENGINE_io_uring__IO_DEPTH_256__FILESIZE_10G__INIT_disable__RUNTIME_30__THREADS_32__FILENAME_mntraidfile_nvme_bench",
+            "repetitions": [
+                {
+                    "iops": "0.1786",
+                    "readss": "0.1429",
+                    "writess": "0.03576",
+                    "throughput_gb": "0.6814",
+                    "throughput_gb_reads": "0.5449",
+                    "throughput_gb_writes": "0.1364",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "0.1767",
+                    "readss": "0.1413",
+                    "writess": "0.03533",
+                    "throughput_gb": "0.674",
+                    "throughput_gb_reads": "0.5392",
+                    "throughput_gb_writes": "0.1348",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "0.1895",
+                    "readss": "0.1517",
+                    "writess": "0.03786",
+                    "throughput_gb": "0.723",
+                    "throughput_gb_reads": "0.5786",
+                    "throughput_gb_writes": "0.1444",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "0.1592",
+                    "readss": "0.1274",
+                    "writess": "0.03182",
+                    "throughput_gb": "0.6074",
+                    "throughput_gb_reads": "0.486",
+                    "throughput_gb_writes": "0.1214",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "0.2078",
+                    "readss": "0.1663",
+                    "writess": "0.04156",
+                    "throughput_gb": "0.7927",
+                    "throughput_gb_reads": "0.6342",
+                    "throughput_gb_writes": "0.1585",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "RW": "0.20",
+            "IOENGINE": "io_uring",
+            "IO_DEPTH": "1024",
+            "FILESIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "THREADS": "32",
+            "FILENAME": "/mnt/raid/file_nvme_bench",
+            "CONFIG_STR": "RW_020__IOENGINE_io_uring__IO_DEPTH_1024__FILESIZE_10G__INIT_disable__RUNTIME_30__THREADS_32__FILENAME_mntraidfile_nvme_bench",
+            "repetitions": [
+                {
+                    "iops": "0.1948",
+                    "readss": "0.1558",
+                    "writess": "0.03896",
+                    "throughput_gb": "0.743",
+                    "throughput_gb_reads": "0.5944",
+                    "throughput_gb_writes": "0.1486",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "0.2097",
+                    "readss": "0.1678",
+                    "writess": "0.04197",
+                    "throughput_gb": "0.8001",
+                    "throughput_gb_reads": "0.64",
+                    "throughput_gb_writes": "0.1601",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "0.1859",
+                    "readss": "0.1488",
+                    "writess": "0.03718",
+                    "throughput_gb": "0.7093",
+                    "throughput_gb_reads": "0.5675",
+                    "throughput_gb_writes": "0.1418",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "0.1934",
+                    "readss": "0.1547",
+                    "writess": "0.03873",
+                    "throughput_gb": "0.7378",
+                    "throughput_gb_reads": "0.5901",
+                    "throughput_gb_writes": "0.1477",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "0.1784",
+                    "readss": "0.1427",
+                    "writess": "0.03569",
+                    "throughput_gb": "0.6806",
+                    "throughput_gb_reads": "0.5444",
+                    "throughput_gb_writes": "0.1361",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "RW": "0.30",
+            "IOENGINE": "libaio",
+            "IO_DEPTH": "128",
+            "FILESIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "THREADS": "32",
+            "FILENAME": "/mnt/raid/file_nvme_bench",
+            "CONFIG_STR": "RW_030__IOENGINE_libaio__IO_DEPTH_128__FILESIZE_10G__INIT_disable__RUNTIME_30__THREADS_32__FILENAME_mntraidfile_nvme_bench",
+            "repetitions": [
+                {
+                    "iops": "0.5396",
+                    "readss": "0.3777",
+                    "writess": "0.1619",
+                    "throughput_gb": "2.058",
+                    "throughput_gb_reads": "1.441",
+                    "throughput_gb_writes": "0.6174",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "0.5301",
+                    "readss": "0.371",
+                    "writess": "0.1591",
+                    "throughput_gb": "2.022",
+                    "throughput_gb_reads": "1.415",
+                    "throughput_gb_writes": "0.6069",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "0.5397",
+                    "readss": "0.3778",
+                    "writess": "0.1619",
+                    "throughput_gb": "2.059",
+                    "throughput_gb_reads": "1.441",
+                    "throughput_gb_writes": "0.6178",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "0.5326",
+                    "readss": "0.3729",
+                    "writess": "0.1597",
+                    "throughput_gb": "2.032",
+                    "throughput_gb_reads": "1.422",
+                    "throughput_gb_writes": "0.6092",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "0.5499",
+                    "readss": "0.385",
+                    "writess": "0.165",
+                    "throughput_gb": "2.098",
+                    "throughput_gb_reads": "1.469",
+                    "throughput_gb_writes": "0.6292",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "RW": "0.30",
+            "IOENGINE": "libaio",
+            "IO_DEPTH": "256",
+            "FILESIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "THREADS": "32",
+            "FILENAME": "/mnt/raid/file_nvme_bench",
+            "CONFIG_STR": "RW_030__IOENGINE_libaio__IO_DEPTH_256__FILESIZE_10G__INIT_disable__RUNTIME_30__THREADS_32__FILENAME_mntraidfile_nvme_bench",
+            "repetitions": [
+                {
+                    "iops": "0.5262",
+                    "readss": "0.3683",
+                    "writess": "0.1579",
+                    "throughput_gb": "2.007",
+                    "throughput_gb_reads": "1.405",
+                    "throughput_gb_writes": "0.6022",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "0.53",
+                    "readss": "0.371",
+                    "writess": "0.159",
+                    "throughput_gb": "2.022",
+                    "throughput_gb_reads": "1.415",
+                    "throughput_gb_writes": "0.6064",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "0.53",
+                    "readss": "0.3708",
+                    "writess": "0.1591",
+                    "throughput_gb": "2.022",
+                    "throughput_gb_reads": "1.415",
+                    "throughput_gb_writes": "0.6071",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "0.5392",
+                    "readss": "0.3775",
+                    "writess": "0.1618",
+                    "throughput_gb": "2.057",
+                    "throughput_gb_reads": "1.44",
+                    "throughput_gb_writes": "0.6171",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "0.5279",
+                    "readss": "0.3696",
+                    "writess": "0.1584",
+                    "throughput_gb": "2.014",
+                    "throughput_gb_reads": "1.41",
+                    "throughput_gb_writes": "0.6041",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "RW": "0.30",
+            "IOENGINE": "libaio",
+            "IO_DEPTH": "1024",
+            "FILESIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "THREADS": "32",
+            "FILENAME": "/mnt/raid/file_nvme_bench",
+            "CONFIG_STR": "RW_030__IOENGINE_libaio__IO_DEPTH_1024__FILESIZE_10G__INIT_disable__RUNTIME_30__THREADS_32__FILENAME_mntraidfile_nvme_bench",
+            "repetitions": [
+                {
+                    "iops": "0.5247",
+                    "readss": "0.3673",
+                    "writess": "0.1574",
+                    "throughput_gb": "2.001",
+                    "throughput_gb_reads": "1.401",
+                    "throughput_gb_writes": "0.6002",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "0.5137",
+                    "readss": "0.3596",
+                    "writess": "0.1542",
+                    "throughput_gb": "1.96",
+                    "throughput_gb_reads": "1.372",
+                    "throughput_gb_writes": "0.5881",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "0.525",
+                    "readss": "0.3675",
+                    "writess": "0.1575",
+                    "throughput_gb": "2.003",
+                    "throughput_gb_reads": "1.402",
+                    "throughput_gb_writes": "0.6008",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "0.5417",
+                    "readss": "0.3792",
+                    "writess": "0.1624",
+                    "throughput_gb": "2.066",
+                    "throughput_gb_reads": "1.447",
+                    "throughput_gb_writes": "0.6197",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "0.5285",
+                    "readss": "0.3699",
+                    "writess": "0.1586",
+                    "throughput_gb": "2.016",
+                    "throughput_gb_reads": "1.411",
+                    "throughput_gb_writes": "0.6049",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "RW": "0.30",
+            "IOENGINE": "io_uring",
+            "IO_DEPTH": "128",
+            "FILESIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "THREADS": "32",
+            "FILENAME": "/mnt/raid/file_nvme_bench",
+            "CONFIG_STR": "RW_030__IOENGINE_io_uring__IO_DEPTH_128__FILESIZE_10G__INIT_disable__RUNTIME_30__THREADS_32__FILENAME_mntraidfile_nvme_bench",
+            "repetitions": [
+                {
+                    "iops": "0.09475",
+                    "readss": "0.06635",
+                    "writess": "0.02841",
+                    "throughput_gb": "0.3615",
+                    "throughput_gb_reads": "0.2531",
+                    "throughput_gb_writes": "0.1084",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "0.06666",
+                    "readss": "0.04668",
+                    "writess": "0.01998",
+                    "throughput_gb": "0.2543",
+                    "throughput_gb_reads": "0.1781",
+                    "throughput_gb_writes": "0.07621",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "0.06438",
+                    "readss": "0.04505",
+                    "writess": "0.01933",
+                    "throughput_gb": "0.2456",
+                    "throughput_gb_reads": "0.1718",
+                    "throughput_gb_writes": "0.07374",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "0.06831",
+                    "readss": "0.04784",
+                    "writess": "0.02047",
+                    "throughput_gb": "0.2606",
+                    "throughput_gb_reads": "0.1825",
+                    "throughput_gb_writes": "0.0781",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "0.06064",
+                    "readss": "0.04243",
+                    "writess": "0.01821",
+                    "throughput_gb": "0.2313",
+                    "throughput_gb_reads": "0.1619",
+                    "throughput_gb_writes": "0.06946",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "RW": "0.30",
+            "IOENGINE": "io_uring",
+            "IO_DEPTH": "256",
+            "FILESIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "THREADS": "32",
+            "FILENAME": "/mnt/raid/file_nvme_bench",
+            "CONFIG_STR": "RW_030__IOENGINE_io_uring__IO_DEPTH_256__FILESIZE_10G__INIT_disable__RUNTIME_30__THREADS_32__FILENAME_mntraidfile_nvme_bench",
+            "repetitions": [
+                {
+                    "iops": "0.1885",
+                    "readss": "0.132",
+                    "writess": "0.05651",
+                    "throughput_gb": "0.719",
+                    "throughput_gb_reads": "0.5034",
+                    "throughput_gb_writes": "0.2156",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "0.2107",
+                    "readss": "0.1475",
+                    "writess": "0.0632",
+                    "throughput_gb": "0.8037",
+                    "throughput_gb_reads": "0.5626",
+                    "throughput_gb_writes": "0.2411",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "0.2153",
+                    "readss": "0.1507",
+                    "writess": "0.0646",
+                    "throughput_gb": "0.8213",
+                    "throughput_gb_reads": "0.5749",
+                    "throughput_gb_writes": "0.2464",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "0.1863",
+                    "readss": "0.1304",
+                    "writess": "0.05587",
+                    "throughput_gb": "0.7107",
+                    "throughput_gb_reads": "0.4975",
+                    "throughput_gb_writes": "0.2131",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "0.191",
+                    "readss": "0.1338",
+                    "writess": "0.05723",
+                    "throughput_gb": "0.7287",
+                    "throughput_gb_reads": "0.5104",
+                    "throughput_gb_writes": "0.2183",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "RW": "0.30",
+            "IOENGINE": "io_uring",
+            "IO_DEPTH": "1024",
+            "FILESIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "THREADS": "32",
+            "FILENAME": "/mnt/raid/file_nvme_bench",
+            "CONFIG_STR": "RW_030__IOENGINE_io_uring__IO_DEPTH_1024__FILESIZE_10G__INIT_disable__RUNTIME_30__THREADS_32__FILENAME_mntraidfile_nvme_bench",
+            "repetitions": [
+                {
+                    "iops": "0.2199",
+                    "readss": "0.1539",
+                    "writess": "0.06599",
+                    "throughput_gb": "0.8387",
+                    "throughput_gb_reads": "0.587",
+                    "throughput_gb_writes": "0.2517",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "0.2056",
+                    "readss": "0.1439",
+                    "writess": "0.06168",
+                    "throughput_gb": "0.7843",
+                    "throughput_gb_reads": "0.549",
+                    "throughput_gb_writes": "0.2353",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "0.2192",
+                    "readss": "0.1535",
+                    "writess": "0.06576",
+                    "throughput_gb": "0.8363",
+                    "throughput_gb_reads": "0.5854",
+                    "throughput_gb_writes": "0.2509",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "0.1954",
+                    "readss": "0.1368",
+                    "writess": "0.05862",
+                    "throughput_gb": "0.7456",
+                    "throughput_gb_reads": "0.5219",
+                    "throughput_gb_writes": "0.2236",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "0.2222",
+                    "readss": "0.1555",
+                    "writess": "0.06669",
+                    "throughput_gb": "0.8476",
+                    "throughput_gb_reads": "0.5932",
+                    "throughput_gb_writes": "0.2544",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "RW": "0.40",
+            "IOENGINE": "libaio",
+            "IO_DEPTH": "128",
+            "FILESIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "THREADS": "32",
+            "FILENAME": "/mnt/raid/file_nvme_bench",
+            "CONFIG_STR": "RW_040__IOENGINE_libaio__IO_DEPTH_128__FILESIZE_10G__INIT_disable__RUNTIME_30__THREADS_32__FILENAME_mntraidfile_nvme_bench",
+            "repetitions": [
+                {
+                    "iops": "0.4574",
+                    "readss": "0.2744",
+                    "writess": "0.1831",
+                    "throughput_gb": "1.745",
+                    "throughput_gb_reads": "1.047",
+                    "throughput_gb_writes": "0.6983",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "0.4653",
+                    "readss": "0.2792",
+                    "writess": "0.1861",
+                    "throughput_gb": "1.775",
+                    "throughput_gb_reads": "1.065",
+                    "throughput_gb_writes": "0.7098",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "0.4569",
+                    "readss": "0.2741",
+                    "writess": "0.1828",
+                    "throughput_gb": "1.743",
+                    "throughput_gb_reads": "1.046",
+                    "throughput_gb_writes": "0.6974",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "0.4598",
+                    "readss": "0.276",
+                    "writess": "0.1838",
+                    "throughput_gb": "1.754",
+                    "throughput_gb_reads": "1.053",
+                    "throughput_gb_writes": "0.7013",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "0.4623",
+                    "readss": "0.2775",
+                    "writess": "0.1848",
+                    "throughput_gb": "1.764",
+                    "throughput_gb_reads": "1.059",
+                    "throughput_gb_writes": "0.705",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "RW": "0.40",
+            "IOENGINE": "libaio",
+            "IO_DEPTH": "256",
+            "FILESIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "THREADS": "32",
+            "FILENAME": "/mnt/raid/file_nvme_bench",
+            "CONFIG_STR": "RW_040__IOENGINE_libaio__IO_DEPTH_256__FILESIZE_10G__INIT_disable__RUNTIME_30__THREADS_32__FILENAME_mntraidfile_nvme_bench",
+            "repetitions": [
+                {
+                    "iops": "0.4401",
+                    "readss": "0.2641",
+                    "writess": "0.176",
+                    "throughput_gb": "1.679",
+                    "throughput_gb_reads": "1.008",
+                    "throughput_gb_writes": "0.6714",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "0.4518",
+                    "readss": "0.2711",
+                    "writess": "0.1807",
+                    "throughput_gb": "1.723",
+                    "throughput_gb_reads": "1.034",
+                    "throughput_gb_writes": "0.6895",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "0.4421",
+                    "readss": "0.2653",
+                    "writess": "0.1769",
+                    "throughput_gb": "1.687",
+                    "throughput_gb_reads": "1.012",
+                    "throughput_gb_writes": "0.6747",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "0.4544",
+                    "readss": "0.2725",
+                    "writess": "0.1819",
+                    "throughput_gb": "1.733",
+                    "throughput_gb_reads": "1.039",
+                    "throughput_gb_writes": "0.694",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "0.4519",
+                    "readss": "0.2712",
+                    "writess": "0.1806",
+                    "throughput_gb": "1.724",
+                    "throughput_gb_reads": "1.035",
+                    "throughput_gb_writes": "0.6891",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "RW": "0.40",
+            "IOENGINE": "libaio",
+            "IO_DEPTH": "1024",
+            "FILESIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "THREADS": "32",
+            "FILENAME": "/mnt/raid/file_nvme_bench",
+            "CONFIG_STR": "RW_040__IOENGINE_libaio__IO_DEPTH_1024__FILESIZE_10G__INIT_disable__RUNTIME_30__THREADS_32__FILENAME_mntraidfile_nvme_bench",
+            "repetitions": [
+                {
+                    "iops": "0.4576",
+                    "readss": "0.2747",
+                    "writess": "0.1829",
+                    "throughput_gb": "1.746",
+                    "throughput_gb_reads": "1.048",
+                    "throughput_gb_writes": "0.6977",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "0.4553",
+                    "readss": "0.2732",
+                    "writess": "0.1821",
+                    "throughput_gb": "1.737",
+                    "throughput_gb_reads": "1.042",
+                    "throughput_gb_writes": "0.6946",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "0.4397",
+                    "readss": "0.2639",
+                    "writess": "0.1758",
+                    "throughput_gb": "1.677",
+                    "throughput_gb_reads": "1.007",
+                    "throughput_gb_writes": "0.6706",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "0.4585",
+                    "readss": "0.275",
+                    "writess": "0.1834",
+                    "throughput_gb": "1.749",
+                    "throughput_gb_reads": "1.049",
+                    "throughput_gb_writes": "0.6998",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "0.4476",
+                    "readss": "0.2685",
+                    "writess": "0.1791",
+                    "throughput_gb": "1.707",
+                    "throughput_gb_reads": "1.024",
+                    "throughput_gb_writes": "0.6831",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "RW": "0.40",
+            "IOENGINE": "io_uring",
+            "IO_DEPTH": "128",
+            "FILESIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "THREADS": "32",
+            "FILENAME": "/mnt/raid/file_nvme_bench",
+            "CONFIG_STR": "RW_040__IOENGINE_io_uring__IO_DEPTH_128__FILESIZE_10G__INIT_disable__RUNTIME_30__THREADS_32__FILENAME_mntraidfile_nvme_bench",
+            "repetitions": [
+                {
+                    "iops": "0.1481",
+                    "readss": "0.0889",
+                    "writess": "0.05925",
+                    "throughput_gb": "0.5651",
+                    "throughput_gb_reads": "0.3391",
+                    "throughput_gb_writes": "0.226",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "0.1063",
+                    "readss": "0.06382",
+                    "writess": "0.04249",
+                    "throughput_gb": "0.4056",
+                    "throughput_gb_reads": "0.2435",
+                    "throughput_gb_writes": "0.1621",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "0.09284",
+                    "readss": "0.05571",
+                    "writess": "0.03713",
+                    "throughput_gb": "0.3541",
+                    "throughput_gb_reads": "0.2125",
+                    "throughput_gb_writes": "0.1416",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "0.09517",
+                    "readss": "0.05707",
+                    "writess": "0.0381",
+                    "throughput_gb": "0.363",
+                    "throughput_gb_reads": "0.2177",
+                    "throughput_gb_writes": "0.1453",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "0.08905",
+                    "readss": "0.05344",
+                    "writess": "0.03561",
+                    "throughput_gb": "0.3397",
+                    "throughput_gb_reads": "0.2039",
+                    "throughput_gb_writes": "0.1358",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "RW": "0.40",
+            "IOENGINE": "io_uring",
+            "IO_DEPTH": "256",
+            "FILESIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "THREADS": "32",
+            "FILENAME": "/mnt/raid/file_nvme_bench",
+            "CONFIG_STR": "RW_040__IOENGINE_io_uring__IO_DEPTH_256__FILESIZE_10G__INIT_disable__RUNTIME_30__THREADS_32__FILENAME_mntraidfile_nvme_bench",
+            "repetitions": [
+                {
+                    "iops": "0.2352",
+                    "readss": "0.1411",
+                    "writess": "0.09414",
+                    "throughput_gb": "0.8973",
+                    "throughput_gb_reads": "0.5382",
+                    "throughput_gb_writes": "0.3591",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "0.2321",
+                    "readss": "0.1393",
+                    "writess": "0.09278",
+                    "throughput_gb": "0.8855",
+                    "throughput_gb_reads": "0.5316",
+                    "throughput_gb_writes": "0.3539",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "0.2325",
+                    "readss": "0.1394",
+                    "writess": "0.09309",
+                    "throughput_gb": "0.8869",
+                    "throughput_gb_reads": "0.5318",
+                    "throughput_gb_writes": "0.3551",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "0.2208",
+                    "readss": "0.1325",
+                    "writess": "0.08834",
+                    "throughput_gb": "0.8423",
+                    "throughput_gb_reads": "0.5053",
+                    "throughput_gb_writes": "0.337",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "0.2234",
+                    "readss": "0.134",
+                    "writess": "0.08939",
+                    "throughput_gb": "0.8521",
+                    "throughput_gb_reads": "0.5111",
+                    "throughput_gb_writes": "0.341",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "RW": "0.40",
+            "IOENGINE": "io_uring",
+            "IO_DEPTH": "1024",
+            "FILESIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "THREADS": "32",
+            "FILENAME": "/mnt/raid/file_nvme_bench",
+            "CONFIG_STR": "RW_040__IOENGINE_io_uring__IO_DEPTH_1024__FILESIZE_10G__INIT_disable__RUNTIME_30__THREADS_32__FILENAME_mntraidfile_nvme_bench",
+            "repetitions": [
+                {
+                    "iops": "0.2363",
+                    "readss": "0.1418",
+                    "writess": "0.09449",
+                    "throughput_gb": "0.9012",
+                    "throughput_gb_reads": "0.5408",
+                    "throughput_gb_writes": "0.3604",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "0.2433",
+                    "readss": "0.146",
+                    "writess": "0.0973",
+                    "throughput_gb": "0.9281",
+                    "throughput_gb_reads": "0.557",
+                    "throughput_gb_writes": "0.3712",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "0.2372",
+                    "readss": "0.1424",
+                    "writess": "0.09485",
+                    "throughput_gb": "0.9049",
+                    "throughput_gb_reads": "0.5431",
+                    "throughput_gb_writes": "0.3618",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "0.2529",
+                    "readss": "0.1516",
+                    "writess": "0.1013",
+                    "throughput_gb": "0.9646",
+                    "throughput_gb_reads": "0.5783",
+                    "throughput_gb_writes": "0.3863",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "0.2339",
+                    "readss": "0.1403",
+                    "writess": "0.0936",
+                    "throughput_gb": "0.8923",
+                    "throughput_gb_reads": "0.5352",
+                    "throughput_gb_writes": "0.357",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "RW": "0.60",
+            "IOENGINE": "libaio",
+            "IO_DEPTH": "128",
+            "FILESIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "THREADS": "32",
+            "FILENAME": "/mnt/raid/file_nvme_bench",
+            "CONFIG_STR": "RW_060__IOENGINE_libaio__IO_DEPTH_128__FILESIZE_10G__INIT_disable__RUNTIME_30__THREADS_32__FILENAME_mntraidfile_nvme_bench",
+            "repetitions": [
+                {
+                    "iops": "0.3817",
+                    "readss": "0.1527",
+                    "writess": "0.229",
+                    "throughput_gb": "1.456",
+                    "throughput_gb_reads": "0.5824",
+                    "throughput_gb_writes": "0.8737",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "0.3818",
+                    "readss": "0.1527",
+                    "writess": "0.2291",
+                    "throughput_gb": "1.456",
+                    "throughput_gb_reads": "0.5825",
+                    "throughput_gb_writes": "0.8739",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "0.3436",
+                    "readss": "0.1375",
+                    "writess": "0.2061",
+                    "throughput_gb": "1.311",
+                    "throughput_gb_reads": "0.5245",
+                    "throughput_gb_writes": "0.7862",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "0.3797",
+                    "readss": "0.1519",
+                    "writess": "0.2279",
+                    "throughput_gb": "1.449",
+                    "throughput_gb_reads": "0.5793",
+                    "throughput_gb_writes": "0.8693",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "0.3726",
+                    "readss": "0.149",
+                    "writess": "0.2236",
+                    "throughput_gb": "1.421",
+                    "throughput_gb_reads": "0.5684",
+                    "throughput_gb_writes": "0.8529",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "RW": "0.60",
+            "IOENGINE": "libaio",
+            "IO_DEPTH": "256",
+            "FILESIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "THREADS": "32",
+            "FILENAME": "/mnt/raid/file_nvme_bench",
+            "CONFIG_STR": "RW_060__IOENGINE_libaio__IO_DEPTH_256__FILESIZE_10G__INIT_disable__RUNTIME_30__THREADS_32__FILENAME_mntraidfile_nvme_bench",
+            "repetitions": [
+                {
+                    "iops": "0.3642",
+                    "readss": "0.1456",
+                    "writess": "0.2186",
+                    "throughput_gb": "1.389",
+                    "throughput_gb_reads": "0.5556",
+                    "throughput_gb_writes": "0.8339",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "0.3693",
+                    "readss": "0.1477",
+                    "writess": "0.2217",
+                    "throughput_gb": "1.409",
+                    "throughput_gb_reads": "0.5632",
+                    "throughput_gb_writes": "0.8457",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "0.3687",
+                    "readss": "0.1475",
+                    "writess": "0.2212",
+                    "throughput_gb": "1.406",
+                    "throughput_gb_reads": "0.5628",
+                    "throughput_gb_writes": "0.8436",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "0.3771",
+                    "readss": "0.1508",
+                    "writess": "0.2263",
+                    "throughput_gb": "1.439",
+                    "throughput_gb_reads": "0.5753",
+                    "throughput_gb_writes": "0.8634",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "0.369",
+                    "readss": "0.1476",
+                    "writess": "0.2214",
+                    "throughput_gb": "1.407",
+                    "throughput_gb_reads": "0.5629",
+                    "throughput_gb_writes": "0.8446",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "RW": "0.60",
+            "IOENGINE": "libaio",
+            "IO_DEPTH": "1024",
+            "FILESIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "THREADS": "32",
+            "FILENAME": "/mnt/raid/file_nvme_bench",
+            "CONFIG_STR": "RW_060__IOENGINE_libaio__IO_DEPTH_1024__FILESIZE_10G__INIT_disable__RUNTIME_30__THREADS_32__FILENAME_mntraidfile_nvme_bench",
+            "repetitions": [
+                {
+                    "iops": "0.3769",
+                    "readss": "0.1508",
+                    "writess": "0.2261",
+                    "throughput_gb": "1.438",
+                    "throughput_gb_reads": "0.5751",
+                    "throughput_gb_writes": "0.8626",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "0.3731",
+                    "readss": "0.1493",
+                    "writess": "0.2238",
+                    "throughput_gb": "1.423",
+                    "throughput_gb_reads": "0.5694",
+                    "throughput_gb_writes": "0.8538",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "0.3684",
+                    "readss": "0.1473",
+                    "writess": "0.2211",
+                    "throughput_gb": "1.405",
+                    "throughput_gb_reads": "0.562",
+                    "throughput_gb_writes": "0.8433",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "0.3709",
+                    "readss": "0.1483",
+                    "writess": "0.2226",
+                    "throughput_gb": "1.415",
+                    "throughput_gb_reads": "0.5658",
+                    "throughput_gb_writes": "0.849",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "0.369",
+                    "readss": "0.1476",
+                    "writess": "0.2214",
+                    "throughput_gb": "1.408",
+                    "throughput_gb_reads": "0.5631",
+                    "throughput_gb_writes": "0.8445",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "RW": "0.60",
+            "IOENGINE": "io_uring",
+            "IO_DEPTH": "128",
+            "FILESIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "THREADS": "32",
+            "FILENAME": "/mnt/raid/file_nvme_bench",
+            "CONFIG_STR": "RW_060__IOENGINE_io_uring__IO_DEPTH_128__FILESIZE_10G__INIT_disable__RUNTIME_30__THREADS_32__FILENAME_mntraidfile_nvme_bench",
+            "repetitions": [
+                {
+                    "iops": "0.2348",
+                    "readss": "0.0938",
+                    "writess": "0.141",
+                    "throughput_gb": "0.8956",
+                    "throughput_gb_reads": "0.3578",
+                    "throughput_gb_writes": "0.5378",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "0.2372",
+                    "readss": "0.09484",
+                    "writess": "0.1424",
+                    "throughput_gb": "0.905",
+                    "throughput_gb_reads": "0.3618",
+                    "throughput_gb_writes": "0.5432",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "0.2194",
+                    "readss": "0.08771",
+                    "writess": "0.1317",
+                    "throughput_gb": "0.8369",
+                    "throughput_gb_reads": "0.3346",
+                    "throughput_gb_writes": "0.5023",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "0.2476",
+                    "readss": "0.09901",
+                    "writess": "0.1486",
+                    "throughput_gb": "0.9446",
+                    "throughput_gb_reads": "0.3777",
+                    "throughput_gb_writes": "0.5669",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "0.2298",
+                    "readss": "0.09191",
+                    "writess": "0.1379",
+                    "throughput_gb": "0.8767",
+                    "throughput_gb_reads": "0.3506",
+                    "throughput_gb_writes": "0.5261",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "RW": "0.60",
+            "IOENGINE": "io_uring",
+            "IO_DEPTH": "256",
+            "FILESIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "THREADS": "32",
+            "FILENAME": "/mnt/raid/file_nvme_bench",
+            "CONFIG_STR": "RW_060__IOENGINE_io_uring__IO_DEPTH_256__FILESIZE_10G__INIT_disable__RUNTIME_30__THREADS_32__FILENAME_mntraidfile_nvme_bench",
+            "repetitions": [
+                {
+                    "iops": "0.2589",
+                    "readss": "0.1036",
+                    "writess": "0.1553",
+                    "throughput_gb": "0.9877",
+                    "throughput_gb_reads": "0.3952",
+                    "throughput_gb_writes": "0.5926",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "0.2786",
+                    "readss": "0.1114",
+                    "writess": "0.1672",
+                    "throughput_gb": "1.063",
+                    "throughput_gb_reads": "0.4251",
+                    "throughput_gb_writes": "0.6377",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "0.2539",
+                    "readss": "0.1015",
+                    "writess": "0.1524",
+                    "throughput_gb": "0.9687",
+                    "throughput_gb_reads": "0.3872",
+                    "throughput_gb_writes": "0.5815",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "0.2779",
+                    "readss": "0.1112",
+                    "writess": "0.1667",
+                    "throughput_gb": "1.06",
+                    "throughput_gb_reads": "0.4241",
+                    "throughput_gb_writes": "0.636",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "0.2717",
+                    "readss": "0.1087",
+                    "writess": "0.163",
+                    "throughput_gb": "1.036",
+                    "throughput_gb_reads": "0.4146",
+                    "throughput_gb_writes": "0.6217",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "RW": "0.60",
+            "IOENGINE": "io_uring",
+            "IO_DEPTH": "1024",
+            "FILESIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "THREADS": "32",
+            "FILENAME": "/mnt/raid/file_nvme_bench",
+            "CONFIG_STR": "RW_060__IOENGINE_io_uring__IO_DEPTH_1024__FILESIZE_10G__INIT_disable__RUNTIME_30__THREADS_32__FILENAME_mntraidfile_nvme_bench",
+            "repetitions": [
+                {
+                    "iops": "0.2695",
+                    "readss": "0.1078",
+                    "writess": "0.1617",
+                    "throughput_gb": "1.028",
+                    "throughput_gb_reads": "0.4113",
+                    "throughput_gb_writes": "0.6168",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "0.2654",
+                    "readss": "0.1061",
+                    "writess": "0.1593",
+                    "throughput_gb": "1.012",
+                    "throughput_gb_reads": "0.4048",
+                    "throughput_gb_writes": "0.6075",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "0.2622",
+                    "readss": "0.1049",
+                    "writess": "0.1574",
+                    "throughput_gb": "1",
+                    "throughput_gb_reads": "0.4001",
+                    "throughput_gb_writes": "0.6003",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "0.261",
+                    "readss": "0.1044",
+                    "writess": "0.1566",
+                    "throughput_gb": "0.9955",
+                    "throughput_gb_reads": "0.3982",
+                    "throughput_gb_writes": "0.5973",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "0.2641",
+                    "readss": "0.1056",
+                    "writess": "0.1585",
+                    "throughput_gb": "1.007",
+                    "throughput_gb_reads": "0.4027",
+                    "throughput_gb_writes": "0.6046",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "RW": "0.80",
+            "IOENGINE": "libaio",
+            "IO_DEPTH": "128",
+            "FILESIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "THREADS": "32",
+            "FILENAME": "/mnt/raid/file_nvme_bench",
+            "CONFIG_STR": "RW_080__IOENGINE_libaio__IO_DEPTH_128__FILESIZE_10G__INIT_disable__RUNTIME_30__THREADS_32__FILENAME_mntraidfile_nvme_bench",
+            "repetitions": [
+                {
+                    "iops": "0.3371",
+                    "readss": "0.06745",
+                    "writess": "0.2697",
+                    "throughput_gb": "1.286",
+                    "throughput_gb_reads": "0.2573",
+                    "throughput_gb_writes": "1.029",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "0.3348",
+                    "readss": "0.06703",
+                    "writess": "0.2678",
+                    "throughput_gb": "1.277",
+                    "throughput_gb_reads": "0.2557",
+                    "throughput_gb_writes": "1.022",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "0.3385",
+                    "readss": "0.06779",
+                    "writess": "0.2707",
+                    "throughput_gb": "1.291",
+                    "throughput_gb_reads": "0.2586",
+                    "throughput_gb_writes": "1.033",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "0.3441",
+                    "readss": "0.06883",
+                    "writess": "0.2753",
+                    "throughput_gb": "1.313",
+                    "throughput_gb_reads": "0.2626",
+                    "throughput_gb_writes": "1.05",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "0.3427",
+                    "readss": "0.06857",
+                    "writess": "0.2741",
+                    "throughput_gb": "1.307",
+                    "throughput_gb_reads": "0.2616",
+                    "throughput_gb_writes": "1.046",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "RW": "0.80",
+            "IOENGINE": "libaio",
+            "IO_DEPTH": "256",
+            "FILESIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "THREADS": "32",
+            "FILENAME": "/mnt/raid/file_nvme_bench",
+            "CONFIG_STR": "RW_080__IOENGINE_libaio__IO_DEPTH_256__FILESIZE_10G__INIT_disable__RUNTIME_30__THREADS_32__FILENAME_mntraidfile_nvme_bench",
+            "repetitions": [
+                {
+                    "iops": "0.336",
+                    "readss": "0.06716",
+                    "writess": "0.2689",
+                    "throughput_gb": "1.282",
+                    "throughput_gb_reads": "0.2562",
+                    "throughput_gb_writes": "1.026",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "0.3354",
+                    "readss": "0.06711",
+                    "writess": "0.2683",
+                    "throughput_gb": "1.279",
+                    "throughput_gb_reads": "0.256",
+                    "throughput_gb_writes": "1.023",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "0.3389",
+                    "readss": "0.06778",
+                    "writess": "0.2712",
+                    "throughput_gb": "1.293",
+                    "throughput_gb_reads": "0.2586",
+                    "throughput_gb_writes": "1.034",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "0.3366",
+                    "readss": "0.06742",
+                    "writess": "0.2692",
+                    "throughput_gb": "1.284",
+                    "throughput_gb_reads": "0.2572",
+                    "throughput_gb_writes": "1.027",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "0.3298",
+                    "readss": "0.06596",
+                    "writess": "0.2639",
+                    "throughput_gb": "1.258",
+                    "throughput_gb_reads": "0.2516",
+                    "throughput_gb_writes": "1.007",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "RW": "0.80",
+            "IOENGINE": "libaio",
+            "IO_DEPTH": "1024",
+            "FILESIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "THREADS": "32",
+            "FILENAME": "/mnt/raid/file_nvme_bench",
+            "CONFIG_STR": "RW_080__IOENGINE_libaio__IO_DEPTH_1024__FILESIZE_10G__INIT_disable__RUNTIME_30__THREADS_32__FILENAME_mntraidfile_nvme_bench",
+            "repetitions": [
+                {
+                    "iops": "0.3414",
+                    "readss": "0.06826",
+                    "writess": "0.2732",
+                    "throughput_gb": "1.302",
+                    "throughput_gb_reads": "0.2604",
+                    "throughput_gb_writes": "1.042",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "0.3361",
+                    "readss": "0.06716",
+                    "writess": "0.269",
+                    "throughput_gb": "1.282",
+                    "throughput_gb_reads": "0.2562",
+                    "throughput_gb_writes": "1.026",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "0.3404",
+                    "readss": "0.06815",
+                    "writess": "0.2723",
+                    "throughput_gb": "1.299",
+                    "throughput_gb_reads": "0.26",
+                    "throughput_gb_writes": "1.039",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "0.3392",
+                    "readss": "0.06787",
+                    "writess": "0.2713",
+                    "throughput_gb": "1.294",
+                    "throughput_gb_reads": "0.2589",
+                    "throughput_gb_writes": "1.035",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "0.3404",
+                    "readss": "0.06814",
+                    "writess": "0.2722",
+                    "throughput_gb": "1.298",
+                    "throughput_gb_reads": "0.2599",
+                    "throughput_gb_writes": "1.038",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "RW": "0.80",
+            "IOENGINE": "io_uring",
+            "IO_DEPTH": "128",
+            "FILESIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "THREADS": "32",
+            "FILENAME": "/mnt/raid/file_nvme_bench",
+            "CONFIG_STR": "RW_080__IOENGINE_io_uring__IO_DEPTH_128__FILESIZE_10G__INIT_disable__RUNTIME_30__THREADS_32__FILENAME_mntraidfile_nvme_bench",
+            "repetitions": [
+                {
+                    "iops": "0.2674",
+                    "readss": "0.05351",
+                    "writess": "0.2139",
+                    "throughput_gb": "1.02",
+                    "throughput_gb_reads": "0.2041",
+                    "throughput_gb_writes": "0.8161",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "0.2555",
+                    "readss": "0.05111",
+                    "writess": "0.2043",
+                    "throughput_gb": "0.9745",
+                    "throughput_gb_reads": "0.195",
+                    "throughput_gb_writes": "0.7795",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "0.2702",
+                    "readss": "0.05404",
+                    "writess": "0.2161",
+                    "throughput_gb": "1.031",
+                    "throughput_gb_reads": "0.2062",
+                    "throughput_gb_writes": "0.8245",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "0.2652",
+                    "readss": "0.05304",
+                    "writess": "0.2122",
+                    "throughput_gb": "1.012",
+                    "throughput_gb_reads": "0.2023",
+                    "throughput_gb_writes": "0.8094",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "0.2732",
+                    "readss": "0.05459",
+                    "writess": "0.2186",
+                    "throughput_gb": "1.042",
+                    "throughput_gb_reads": "0.2082",
+                    "throughput_gb_writes": "0.8338",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "RW": "0.80",
+            "IOENGINE": "io_uring",
+            "IO_DEPTH": "256",
+            "FILESIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "THREADS": "32",
+            "FILENAME": "/mnt/raid/file_nvme_bench",
+            "CONFIG_STR": "RW_080__IOENGINE_io_uring__IO_DEPTH_256__FILESIZE_10G__INIT_disable__RUNTIME_30__THREADS_32__FILENAME_mntraidfile_nvme_bench",
+            "repetitions": [
+                {
+                    "iops": "0.2678",
+                    "readss": "0.05363",
+                    "writess": "0.2142",
+                    "throughput_gb": "1.022",
+                    "throughput_gb_reads": "0.2046",
+                    "throughput_gb_writes": "0.8172",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "0.2625",
+                    "readss": "0.05249",
+                    "writess": "0.21",
+                    "throughput_gb": "1.001",
+                    "throughput_gb_reads": "0.2002",
+                    "throughput_gb_writes": "0.801",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "0.2582",
+                    "readss": "0.05159",
+                    "writess": "0.2066",
+                    "throughput_gb": "0.985",
+                    "throughput_gb_reads": "0.1968",
+                    "throughput_gb_writes": "0.7882",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "0.2643",
+                    "readss": "0.05279",
+                    "writess": "0.2115",
+                    "throughput_gb": "1.008",
+                    "throughput_gb_reads": "0.2014",
+                    "throughput_gb_writes": "0.8067",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "0.2748",
+                    "readss": "0.05503",
+                    "writess": "0.2198",
+                    "throughput_gb": "1.048",
+                    "throughput_gb_reads": "0.2099",
+                    "throughput_gb_writes": "0.8383",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "RW": "0.80",
+            "IOENGINE": "io_uring",
+            "IO_DEPTH": "1024",
+            "FILESIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "THREADS": "32",
+            "FILENAME": "/mnt/raid/file_nvme_bench",
+            "CONFIG_STR": "RW_080__IOENGINE_io_uring__IO_DEPTH_1024__FILESIZE_10G__INIT_disable__RUNTIME_30__THREADS_32__FILENAME_mntraidfile_nvme_bench",
+            "repetitions": [
+                {
+                    "iops": "0.2705",
+                    "readss": "0.05408",
+                    "writess": "0.2165",
+                    "throughput_gb": "1.032",
+                    "throughput_gb_reads": "0.2063",
+                    "throughput_gb_writes": "0.8257",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "0.2612",
+                    "readss": "0.05223",
+                    "writess": "0.209",
+                    "throughput_gb": "0.9965",
+                    "throughput_gb_reads": "0.1992",
+                    "throughput_gb_writes": "0.7973",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "0.266",
+                    "readss": "0.0532",
+                    "writess": "0.2128",
+                    "throughput_gb": "1.015",
+                    "throughput_gb_reads": "0.203",
+                    "throughput_gb_writes": "0.8116",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "0.2619",
+                    "readss": "0.05238",
+                    "writess": "0.2095",
+                    "throughput_gb": "0.999",
+                    "throughput_gb_reads": "0.1998",
+                    "throughput_gb_writes": "0.7992",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "0.2689",
+                    "readss": "0.05378",
+                    "writess": "0.2151",
+                    "throughput_gb": "1.026",
+                    "throughput_gb_reads": "0.2051",
+                    "throughput_gb_writes": "0.8207",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "RW": "1",
+            "IOENGINE": "libaio",
+            "IO_DEPTH": "128",
+            "FILESIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "THREADS": "32",
+            "FILENAME": "/mnt/raid/file_nvme_bench",
+            "CONFIG_STR": "RW_1__IOENGINE_libaio__IO_DEPTH_128__FILESIZE_10G__INIT_disable__RUNTIME_30__THREADS_32__FILENAME_mntraidfile_nvme_bench",
+            "repetitions": [
+                {
+                    "iops": "0.3182",
+                    "readss": "3.333e-08",
+                    "writess": "0.3182",
+                    "throughput_gb": "1.214",
+                    "throughput_gb_reads": "1.272e-07",
+                    "throughput_gb_writes": "1.214",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "0.3075",
+                    "readss": "3.333e-08",
+                    "writess": "0.3075",
+                    "throughput_gb": "1.173",
+                    "throughput_gb_reads": "1.271e-07",
+                    "throughput_gb_writes": "1.173",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "0.3176",
+                    "readss": "0",
+                    "writess": "0.3176",
+                    "throughput_gb": "1.211",
+                    "throughput_gb_reads": "0",
+                    "throughput_gb_writes": "1.211",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "0.3092",
+                    "readss": "0",
+                    "writess": "0.3092",
+                    "throughput_gb": "1.179",
+                    "throughput_gb_reads": "0",
+                    "throughput_gb_writes": "1.179",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "0.3131",
+                    "readss": "3.333e-08",
+                    "writess": "0.3131",
+                    "throughput_gb": "1.194",
+                    "throughput_gb_reads": "1.271e-07",
+                    "throughput_gb_writes": "1.194",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "RW": "1",
+            "IOENGINE": "libaio",
+            "IO_DEPTH": "256",
+            "FILESIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "THREADS": "32",
+            "FILENAME": "/mnt/raid/file_nvme_bench",
+            "CONFIG_STR": "RW_1__IOENGINE_libaio__IO_DEPTH_256__FILESIZE_10G__INIT_disable__RUNTIME_30__THREADS_32__FILENAME_mntraidfile_nvme_bench",
+            "repetitions": [
+                {
+                    "iops": "0.3101",
+                    "readss": "3.333e-08",
+                    "writess": "0.3101",
+                    "throughput_gb": "1.183",
+                    "throughput_gb_reads": "1.271e-07",
+                    "throughput_gb_writes": "1.183",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "0.3079",
+                    "readss": "0",
+                    "writess": "0.3079",
+                    "throughput_gb": "1.175",
+                    "throughput_gb_reads": "0",
+                    "throughput_gb_writes": "1.175",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "0.3111",
+                    "readss": "0",
+                    "writess": "0.3111",
+                    "throughput_gb": "1.187",
+                    "throughput_gb_reads": "0",
+                    "throughput_gb_writes": "1.187",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "0.3123",
+                    "readss": "3.332e-08",
+                    "writess": "0.3123",
+                    "throughput_gb": "1.191",
+                    "throughput_gb_reads": "1.271e-07",
+                    "throughput_gb_writes": "1.191",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "0.316",
+                    "readss": "0",
+                    "writess": "0.316",
+                    "throughput_gb": "1.206",
+                    "throughput_gb_reads": "0",
+                    "throughput_gb_writes": "1.206",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "RW": "1",
+            "IOENGINE": "libaio",
+            "IO_DEPTH": "1024",
+            "FILESIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "THREADS": "32",
+            "FILENAME": "/mnt/raid/file_nvme_bench",
+            "CONFIG_STR": "RW_1__IOENGINE_libaio__IO_DEPTH_1024__FILESIZE_10G__INIT_disable__RUNTIME_30__THREADS_32__FILENAME_mntraidfile_nvme_bench",
+            "repetitions": [
+                {
+                    "iops": "0.3087",
+                    "readss": "0",
+                    "writess": "0.3087",
+                    "throughput_gb": "1.178",
+                    "throughput_gb_reads": "0",
+                    "throughput_gb_writes": "1.178",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "0.3117",
+                    "readss": "3.329e-08",
+                    "writess": "0.3117",
+                    "throughput_gb": "1.189",
+                    "throughput_gb_reads": "1.27e-07",
+                    "throughput_gb_writes": "1.189",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "0.3075",
+                    "readss": "0",
+                    "writess": "0.3075",
+                    "throughput_gb": "1.173",
+                    "throughput_gb_reads": "0",
+                    "throughput_gb_writes": "1.173",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "0.3063",
+                    "readss": "0",
+                    "writess": "0.3063",
+                    "throughput_gb": "1.169",
+                    "throughput_gb_reads": "0",
+                    "throughput_gb_writes": "1.169",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "0.3189",
+                    "readss": "0",
+                    "writess": "0.3189",
+                    "throughput_gb": "1.216",
+                    "throughput_gb_reads": "0",
+                    "throughput_gb_writes": "1.216",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "RW": "1",
+            "IOENGINE": "io_uring",
+            "IO_DEPTH": "128",
+            "FILESIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "THREADS": "32",
+            "FILENAME": "/mnt/raid/file_nvme_bench",
+            "CONFIG_STR": "RW_1__IOENGINE_io_uring__IO_DEPTH_128__FILESIZE_10G__INIT_disable__RUNTIME_30__THREADS_32__FILENAME_mntraidfile_nvme_bench",
+            "repetitions": [
+                {
+                    "iops": "0.2693",
+                    "readss": "3.333e-08",
+                    "writess": "0.2693",
+                    "throughput_gb": "1.027",
+                    "throughput_gb_reads": "1.272e-07",
+                    "throughput_gb_writes": "1.027",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "0.2645",
+                    "readss": "3.343e-08",
+                    "writess": "0.2645",
+                    "throughput_gb": "1.009",
+                    "throughput_gb_reads": "1.275e-07",
+                    "throughput_gb_writes": "1.009",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "0.2673",
+                    "readss": "3.336e-08",
+                    "writess": "0.2673",
+                    "throughput_gb": "1.02",
+                    "throughput_gb_reads": "1.272e-07",
+                    "throughput_gb_writes": "1.02",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "0.2654",
+                    "readss": "3.334e-08",
+                    "writess": "0.2654",
+                    "throughput_gb": "1.012",
+                    "throughput_gb_reads": "1.272e-07",
+                    "throughput_gb_writes": "1.012",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "0.2702",
+                    "readss": "0",
+                    "writess": "0.2702",
+                    "throughput_gb": "1.031",
+                    "throughput_gb_reads": "0",
+                    "throughput_gb_writes": "1.031",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "RW": "1",
+            "IOENGINE": "io_uring",
+            "IO_DEPTH": "256",
+            "FILESIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "THREADS": "32",
+            "FILENAME": "/mnt/raid/file_nvme_bench",
+            "CONFIG_STR": "RW_1__IOENGINE_io_uring__IO_DEPTH_256__FILESIZE_10G__INIT_disable__RUNTIME_30__THREADS_32__FILENAME_mntraidfile_nvme_bench",
+            "repetitions": [
+                {
+                    "iops": "0.2707",
+                    "readss": "0",
+                    "writess": "0.2707",
+                    "throughput_gb": "1.033",
+                    "throughput_gb_reads": "0",
+                    "throughput_gb_writes": "1.033",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "0.2681",
+                    "readss": "3.333e-08",
+                    "writess": "0.2681",
+                    "throughput_gb": "1.023",
+                    "throughput_gb_reads": "1.271e-07",
+                    "throughput_gb_writes": "1.023",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "0.2621",
+                    "readss": "0",
+                    "writess": "0.2621",
+                    "throughput_gb": "1",
+                    "throughput_gb_reads": "0",
+                    "throughput_gb_writes": "1",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "0.2667",
+                    "readss": "0",
+                    "writess": "0.2667",
+                    "throughput_gb": "1.017",
+                    "throughput_gb_reads": "0",
+                    "throughput_gb_writes": "1.017",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "0.27",
+                    "readss": "0",
+                    "writess": "0.27",
+                    "throughput_gb": "1.03",
+                    "throughput_gb_reads": "0",
+                    "throughput_gb_writes": "1.03",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "RW": "1",
+            "IOENGINE": "io_uring",
+            "IO_DEPTH": "1024",
+            "FILESIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "THREADS": "32",
+            "FILENAME": "/mnt/raid/file_nvme_bench",
+            "CONFIG_STR": "RW_1__IOENGINE_io_uring__IO_DEPTH_1024__FILESIZE_10G__INIT_disable__RUNTIME_30__THREADS_32__FILENAME_mntraidfile_nvme_bench",
+            "repetitions": [
+                {
+                    "iops": "0.2644",
+                    "readss": "0",
+                    "writess": "0.2644",
+                    "throughput_gb": "1.009",
+                    "throughput_gb_reads": "0",
+                    "throughput_gb_writes": "1.009",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "0.2696",
+                    "readss": "0",
+                    "writess": "0.2696",
+                    "throughput_gb": "1.028",
+                    "throughput_gb_reads": "0",
+                    "throughput_gb_writes": "1.028",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "0.266",
+                    "readss": "3.331e-08",
+                    "writess": "0.266",
+                    "throughput_gb": "1.015",
+                    "throughput_gb_reads": "1.271e-07",
+                    "throughput_gb_writes": "1.015",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "0.2603",
+                    "readss": "9.996e-08",
+                    "writess": "0.2603",
+                    "throughput_gb": "0.9931",
+                    "throughput_gb_reads": "3.813e-07",
+                    "throughput_gb_writes": "0.9931",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "0.2662",
+                    "readss": "0",
+                    "writess": "0.2662",
+                    "throughput_gb": "1.015",
+                    "throughput_gb_reads": "0",
+                    "throughput_gb_writes": "1.015",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        }
+    ]
+}
