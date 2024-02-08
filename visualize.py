@@ -381,8 +381,9 @@ def visualize_different_runtimes(repeated_benchmark):
     plt.savefig("figures/runtime_benchmarks.png", dpi=400)
     plt.show()
 
+
 RW_new = [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0]
-def visualize_mixed_read_write_new(repeated_benchmarks):
+def visualize_mixed_read_write_new(repeated_benchmarks, titles=[], suptitle=""):
     plt.figure(figsize=(12, 8))
 
     repeated_benchmark = {}
@@ -395,10 +396,20 @@ def visualize_mixed_read_write_new(repeated_benchmarks):
     num_machines = len(machine_configs)
     num_columns = 3  # You can adjust the number of columns as needed
     print(machine_configs)
+    if suptitle:
+        plt.suptitle(
+            suptitle,
+            fontsize=16,
+        )
     for idx, machine in enumerate(machine_configs, start=1):
         print(num_machines // num_columns)
         plt.subplot(max(1, num_machines // num_columns), num_columns, idx)
-        plt.title(f"Koroneia - Single SSD - 4096B Page Size - Mixed Read Writes - IOP/s")
+        if titles:
+            plt.title(titles[idx - 1])
+        else:
+            plt.title(
+                f"Koroneia - Single SSD - 4096B Page Size - Mixed Read Writes - IOP/s"
+            )
         plt.ylabel("Throughput (M IOP/s)", fontdict={"fontsize": 12})
         plt.xlabel("Write percentage", fontdict={"fontsize": 12})
 
@@ -451,6 +462,7 @@ def visualize_mixed_read_write_new(repeated_benchmarks):
     plt.tight_layout()  # Adjust layout to prevent overlap
     plt.savefig("figures/mixed_read_write_new.png", dpi=400)
     plt.show()
+
 
 def visualize_logs(logs):
     machine_configs = list(logs.keys())  # Convert to list if necessary
@@ -564,7 +576,15 @@ def main():
 
     # visualize_mixed_read_write_new(import_benchmarks("read_write_90_percent_ssd"))
     # visualize_mixed_read_write_new(import_benchmarks("read_write_empty_ssd"))
-    visualize_mixed_read_write_new([import_benchmarks("read_write_empty_ssd"), import_benchmarks("combined_mixed_read_write"), import_benchmarks("result_999_filled_ssd_koroneia")])
+    visualize_mixed_read_write_new(
+        [
+            import_benchmarks("read_write_empty_ssd"),
+            import_benchmarks("combined_mixed_read_write"),
+            import_benchmarks("result_999_filled_ssd_koroneia"),
+        ],
+        ["empty SSD", "90% filled", "99% filled"],
+        "Koroneia - Single SSD - 4096B Page Size - Mixed Read Writes - IOP/s",
+    )
     # visualize_mixed_read_write_new(import_benchmarks("result_999_filled_ssd_koroneia"))
 
     # visualize_mixed_read_write_new(import_benchmarks("fine_granular_mixed_read_write"))
