@@ -563,7 +563,7 @@ def visualize_mixed_read_write_queue_depths(
         plt.xticks(RW)
 
     plt.tight_layout()  # Adjust layout to prevent overlap
-    plt.savefig("figures/mixed_read_write_new.png", dpi=400)
+    plt.savefig("figures/mixed_read_write_different_queue_depths.png", dpi=400)
     plt.show()
 
 
