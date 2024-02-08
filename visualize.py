@@ -22,9 +22,12 @@ REPORTED_READS_M = {
     "Samsung_PM991a": 0.350,
     "Samsung_PM961": 0.250,
 }
-THREADS = [1, 2, 4, 8]
+THREADS = [1, 2, 4, 8, 16]
 RW = [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9]
 ENGINES = ["libaio", "io_uring"]
+ENGINES_KORONEIA = ["io_uring"]
+POLL_MODE_KORONEIA = ["0", "1"]
+
 HANDLES_ENGINE_LABELS = [
     mpatches.Patch(color=color, label=label) for label, color in COLORS_ENGINE.items()
 ]
@@ -87,6 +90,57 @@ def visualize_random_read_scalability(benchmarks):
     plt.xticks(THREADS)
     plt.savefig("figures/random_read_scalability.png", dpi=400)
     plt.show()
+
+def visualize_random_read_scalability2(repeated_benchmarks, metric="iops"):
+    aggregate_repeated_benchmark(repeated_benchmarks)
+
+    machine_configs = list(repeated_benchmarks.keys())  # Convert to list if necessary
+
+    num_machines = len(machine_configs)
+    num_columns = 1  # You can adjust the number of columns as needed
+
+    for idx, machine in enumerate(machine_configs, start=1):
+        plt.subplot(num_machines // num_columns + 1, num_columns, idx)
+        plt.title(f"{machine} - Different Block sizes - RW - {metric}")
+        plt.ylabel(metric, fontdict={"fontsize": 12})
+        plt.xlabel("Blocksize (B)", fontdict={"fontsize": 12})
+
+        plt.xscale('log')
+
+        for ssd, benchmark in repeated_benchmarks[machine].items():
+            print(benchmark)
+            for i, poll_mode in enumerate(POLL_MODE_KORONEIA):
+                runs = [x for x in benchmark if x["IOENGINE"] == "io_uring" and x["IOUPOLL"] == poll_mode]
+                print(len(runs))
+                # print(benchmark)
+                iops = np.asarray([
+                    float(run[metric + "_mean"])
+                    for run in sorted(runs, key=lambda x: int(x["THREADS"]))
+                    if int(run["THREADS"]) in THREADS 
+                ])
+                iops_stds = np.asarray([
+                    float(run[metric + "_std"])
+                    for run in sorted(runs, key=lambda x: int(x["THREADS"]))
+                    if int(run["THREADS"]) in THREADS 
+                ])
+                plt.plot(
+                    THREADS,
+                    iops,
+                    label=f"{poll_mode}",
+                    color=COLORS[i],
+                )
+                plt.fill_between(
+                    THREADS,
+                    iops - iops_stds,
+                    iops + iops_stds,
+                    color=COLORS[i],
+                    alpha=0.2,
+                )
+
+        plt.ylim([0.0, 1.15])
+        plt.xticks(THREADS, THREADS)
+        plt.savefig("figures/random_read_scalability.png", dpi=400)
+        plt.show()
 
 
 def visualize_ssds_vs_reported(benchmarks):
@@ -414,6 +468,8 @@ def main():
     visualize_random_read_scalability(benchmark)
     visualize_ssds_vs_reported(benchmark)
 
+    visualize_random_read_scalability2(import_benchmarks("random_reads_koroneia"))
+    
     visualize_mixed_read_write(import_benchmarks("mixed_read_write_results"))
     # visualize_bs_read_write(import_benchmarks("results_block_size"))
     visualize_bs_read_write_after_pause(import_benchmarks("paused_read"))
