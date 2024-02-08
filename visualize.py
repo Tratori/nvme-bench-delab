@@ -39,22 +39,6 @@ RW_BS = [0, 0.5, 1.0]
 RW_RUNTIMES = [0, 0.5, 1.0]
 RUNTIMES = [1, 8, 16, 32, 64, 128]
 
-def import_benchmark(file="benchmark.json"):
-    with open(file, "r") as json_file:
-        benchmark = json.load(json_file)
-    return benchmark
-
-
-def import_benchmarks(benchmark):
-    benchmarks = {}
-    path = current_directory / Path("results") / Path(benchmark)
-    for root, dirs, files in os.walk(path):
-        for file in files:
-            if file.startswith("benchmark"):
-                file_path = Path(root) / file
-                benchmarks[Path(root).name] = import_benchmark(file_path)
-    return benchmarks
-
 
 def visualize_random_read_scalability(benchmarks, threads=THREADS):
     plt.title("4096B - Random Read - IOP/s")
