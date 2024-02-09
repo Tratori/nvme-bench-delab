@@ -1,0 +1,11 @@
+random_reads:
+  matrix: 
+    THREADS: ["1", "2", "4", "8", "16", "32", "64"]
+    IOENGINE: ["libaio", "io_uring"]
+    FILENAME: ["/mnt/nvme1/f", "/mnt/nvme1/f;/mnt/nvme2/f", "/mnt/nvme1/f;/mnt/nvme2/f;/mnt/nvme3/f"]
+  args:
+    FILESIZE: "10G"
+    IOSIZE: "10G"
+    INIT: "disable"
+    RUNTIME: "30"
+  
