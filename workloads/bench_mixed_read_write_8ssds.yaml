@@ -1,0 +1,11 @@
+mixed_read_write:
+  matrix: 
+    THREADS: ["16", "32"]
+    RW: ["0", "0.01", "0.05", "0.1", "0.2", "0.4", "0.5", "0.6", "0.8", "1"]
+    IOENGINE: ["libaio", "io_uring"]
+    FILENAME: ["/mnt/nvme0n1/f", "/mnt/nvme0n1/f;/mnt/nvme1n1/f", "/mnt/nvme0n1/f;/mnt/nvme1n1/f;/mnt/nvme2n1/f;/mnt/nvme3n1/f"]
+  args:
+    FILESIZE: "10G"
+    IOSIZE: "10G"
+    INIT: "disable"
+    RUNTIME: "30"
