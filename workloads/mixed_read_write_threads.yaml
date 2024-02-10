@@ -1,0 +1,9 @@
+mixed_read_write_threads:
+  matrix:
+    RW: ["0", "0.01", "0.05", "0.10", "0.20", "0.30", "0.40", "0.50", "0.60", "0.80", "1"]
+    IOENGINE: ["libaio", "io_uring"]
+    THREADS: ["1", "2", "4", "8", "16", "32"]
+  args:
+    FILESIZE: "10G"
+    INIT: "disable"
+    RUNTIME: "30"
