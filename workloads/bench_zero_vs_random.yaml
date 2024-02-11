@@ -1,0 +1,11 @@
+zero_vs_random:
+  matrix:
+    THREADS: ["16"]
+    RW: ["0", "0.5", "1"]
+    DD_INIT: ["zero", "random"]
+    IOENGINE: ["libaio", "io_uring"]
+  args:
+    FILESIZE: "10G"
+    IOSIZE: "10G"
+    INIT: "disable"
+    RUNTIME: "30"
