@@ -14,7 +14,9 @@ from concurrent.futures import ThreadPoolExecutor
 def setup_files(config):
     filenames = config["FILENAME"].split(";")
     dd_init = config["DD_INIT"] if "DD_INIT" in config else "zero"
+    dd_filesize = config["FILESIZE"] if "FILESIZE" in config else "10G"
     assert dd_init in ["zero", "random"]
+    assert dd_filesize in ["10G", "100G"]
 
     def run_dd(filename):
         subprocess.run(
@@ -25,7 +27,7 @@ def setup_files(config):
                 "bs=64k",
                 "oflag=direct",
                 "iflag=fullblock,count_bytes",
-                "count=10G",
+                f"count={dd_filesize}",
             ],
             check=True,
         )
