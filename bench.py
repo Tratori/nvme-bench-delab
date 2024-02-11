@@ -15,7 +15,7 @@ def setup_files(config):
     filenames = config["FILENAME"].split(";")
     dd_init = config["DD_INIT"] if "DD_INIT" in config else "zero"
     dd_filesize = config["FILESIZE"] if "FILESIZE" in config else "10G"
-    sleep_time = config["SLEEP_AFTER_INIT"] if "SLEEP_AFTER_INIT" in config else 0
+    sleep_time = int(config["SLEEP_AFTER_INIT"]) if "SLEEP_AFTER_INIT" in config else 0
     assert dd_init in ["zero", "random"]
     assert dd_filesize in ["10G", "100G"]
 
