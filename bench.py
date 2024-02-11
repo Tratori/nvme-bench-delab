@@ -5,7 +5,7 @@ import re
 import json
 import yaml
 import itertools
-import time 
+import time
 from copy import deepcopy
 from pathlib import Path
 
@@ -16,7 +16,7 @@ def setup_files(config):
     dd_init = config["DD_INIT"] if "DD_INIT" in config else "zero"
     dd_filesize = config["FILESIZE"] if "FILESIZE" in config else "10G"
     sleep_time = int(config["SLEEP_AFTER_INIT"]) if "SLEEP_AFTER_INIT" in config else 0
-    assert dd_init in ["zero", "random"]
+    assert dd_init in ["zero", "random", "urandom"]
     assert dd_filesize in ["10G", "100G"]
 
     def run_dd(filename):
@@ -156,10 +156,12 @@ def create_matrix(yaml_content):
         result.append(dict(zip(dimensions, combo)))
     return result
 
-def directory_name(comb): 
+
+def directory_name(comb):
     dir_name =  '__'.join([f'{key}_{value}' for key, value in comb.items()])
     keepcharacters = ('_')
     return "".join(c for c in dir_name if c.isalnum() or c in keepcharacters).rstrip()
+
 
 def create_benchmark_configurations_from_yaml(yaml_file, workload, io_files):
     combinations = []
