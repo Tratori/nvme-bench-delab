@@ -5,7 +5,7 @@ import re
 import json
 import yaml
 import itertools
-
+import time 
 from copy import deepcopy
 from pathlib import Path
 
@@ -15,6 +15,7 @@ def setup_files(config):
     filenames = config["FILENAME"].split(";")
     dd_init = config["DD_INIT"] if "DD_INIT" in config else "zero"
     dd_filesize = config["FILESIZE"] if "FILESIZE" in config else "10G"
+    sleep_time = config["SLEEP_AFTER_INIT"] if "SLEEP_AFTER_INIT" in config else 0
     assert dd_init in ["zero", "random"]
     assert dd_filesize in ["10G", "100G"]
 
@@ -37,6 +38,7 @@ def setup_files(config):
 
         for future in futures:
             future.result()
+    time.sleep(sleep_time)
 
 def setup_output_dir(result_file, config_str, repetition):
     path =  Path(result_file).parent / Path(config_str) / Path(repetition)
