@@ -13,12 +13,14 @@ from concurrent.futures import ThreadPoolExecutor
 
 def setup_files(config):
     filenames = config["FILENAME"].split(";")
+    dd_init = config["DD_INIT"] if "DD_INIT" in config else "zero"
+    assert dd_init in ["zero", "random"]
 
     def run_dd(filename):
         subprocess.run(
             [
                 "dd",
-                "if=/dev/zero",
+                f"if=/dev/{dd_init}",
                 f"of={filename}",
                 "bs=64k",
                 "oflag=direct",
