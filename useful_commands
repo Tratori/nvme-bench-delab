@@ -1,0 +1,5 @@
+fio --name=rw_test --ioengine=io_uring --rw=randrw --direct=1 --bs=4k --size=1G --iodepth=128 --filename=/mnt/nvme2/test --rwmixread=90 --numjobs=8 --group_reporting=1
+
+
+
+sudo nvme list-subsys
