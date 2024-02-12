@@ -20,8 +20,10 @@ COLORS = [
     "gold",
     "pink",
     "plum",
-    "sky blue",
-    "reddish purple",
+    # "sky blue",
+    # "reddish purple",
+     "black", "brown"
+
 ]
 COLORS_ENGINE = {
     "libaio": "blue",
@@ -276,6 +278,7 @@ def visualize_bs_read_write(repeated_benchmarks, metric="iops"):
 
 
 def visualize_bs_read_write_after_pause(benchmarks):
+    aggregate_repeated_benchmark(benchmarks)
     machine_configs = list(benchmarks.keys())  # Convert to list if necessary
 
     for machine in machine_configs:
@@ -284,15 +287,22 @@ def visualize_bs_read_write_after_pause(benchmarks):
         plt.xlabel("Time waited (s)", fontdict={"fontsize": 12})
 
         for ssd, benchmark in benchmarks[machine].items():
-            sorted_benchmark = sorted(benchmark, key=lambda x: int(x["n"]))
+            sorted_benchmark = sorted(benchmark, key=lambda x: int(x["SLEEP_AFTER_INIT"]))
             for engine in ENGINES:
-                runs = [x for x in sorted_benchmark if x["IOENGINE"] == engine]
-                throughputs = [float(run["iops"]) for run in runs]
-
+                runs = [x for x in sorted_benchmark if x["IOENGINE"] == engine and x["RW"] == "0.0"]
+                throughputs = [float(run["iops_mean"]) for run in runs]
+                stds = np.asarray([float(run["iops_std"]) for run in runs])
                 plt.plot(
-                    [int(run["time_alive"]) for run in runs],
+                    [int(run["SLEEP_AFTER_INIT"]) for run in runs],
                     throughputs,
                     color=COLORS_ENGINE[engine],
+                )
+                plt.fill_between(
+                    [int(run["SLEEP_AFTER_INIT"]) for run in runs],
+                    throughputs - stds,
+                    throughputs + stds,
+                    color=COLORS_ENGINE[engine],
+                    alpha=0.2,
                 )
 
         plt.legend(handles=HANDLES_ENGINE_LABELS, fontsize=12)
@@ -521,28 +531,35 @@ def visualize_logs(logs):
         plt.savefig("figures/logs.png", dpi=400)
         plt.show()
 
-def visualize_scalability(repeated_benchmark):
-    plt.figure(figsize=(12, 8))
+def visualize_scalability(repeated_benchmark, title = "SSD Scalability - Random Reads"):
+    plt.figure(figsize=(4, 8))
+    # plt.ylabel("Throughput (M IOP/s)", fontdict={"fontsize": 12})
+    # plt.xlabel("Threads", fontdict={"fontsize": 12})
+    plt.suptitle(title, fontsize=12)
+
+    # fig,axs = plt.subplots(2,1, figsize = (10,8), sharex=True)
+
     aggregate_repeated_benchmark(repeated_benchmark)
 
     machine_configs = list(repeated_benchmark.keys())  # Convert to list if necessary
     num_machines = len(machine_configs)
     num_columns = 2  # You can adjust the number of columns as needed
 
+    # plt.title(f"Throughput - 4096B - Random Reads - IOP/s")
     for idx, machine in enumerate(machine_configs, start=1):
         # plt.subplot(max(num_machines // num_columns, 1), num_columns, idx)
         # plt.title(f"{machine} - 4096B - Random Reads - IOP/s")
         # plt.ylabel("Throughput (M IOP/s)", fontdict={"fontsize": 12})
         # plt.xlabel("Threads", fontdict={"fontsize": 12})
         for ssd, benchmark in repeated_benchmark[machine].items():
-            unique_filenames = list(set([run["FILENAME"] for run in benchmark]))
+            unique_filenames = sorted(list(set([run["FILENAME"] for run in benchmark])))
             
             unique_engines = list(set([run["IOENGINE"] for run in benchmark]))
             
             for idx, filename in enumerate(unique_filenames, start=1):
                 # plt.subplot(max(len(unique_filenames) // num_columns, 1), num_columns, max(idx // num_columns, 1))
                 print(unique_filenames)
-                fig = plt.subplot(len(unique_filenames), 1, idx)
+                ax = plt.subplot(len(unique_filenames), 1, idx)
                 for engine in ENGINES:
                     runs = [x for x in benchmark if x["IOENGINE"] == engine and x["FILENAME"] == filename]
                     unique_threads = sorted(list(set([int(run["THREADS"]) for run in runs])))
@@ -562,15 +579,11 @@ def visualize_scalability(repeated_benchmark):
                             if int(run["THREADS"]) in unique_threads
                         ]
                     )
-                    print(len(runs))
-                    print(len(unique_threads))
-                    print(len(throughputs))
-                    print(len(std))
                     plt.plot(
                         unique_threads,
                         throughputs,
                         color=COLORS_ENGINE[engine],
-                        label=f"{ssd} - {engine}",
+                        label=f"{engine}",
                     )
                     plt.fill_between(
                         unique_threads,
@@ -579,12 +592,18 @@ def visualize_scalability(repeated_benchmark):
                         color=COLORS_ENGINE[engine],
                         alpha=0.2,
                     )
-                # fig.xscale('log')
-
-    plt.legend(fontsize=12)
-    plt.ylim([0.0, max(throughputs) * 1.5])
-    plt.xticks(unique_threads, unique_threads)
-    # plt.xscale('log')
+                    plt.ylim([0.0, max(throughputs) * 1.5])
+                    # plt.xticks(unique_threads, unique_threads)
+                    # fig.xscale('log')
+                ax.set_xscale('log')
+                ax.set_xticks(unique_threads, unique_threads)
+                num_ssds = len((filename.split(";")))
+                plt.title( f"{num_ssds} SSDs")
+    plt.legend(loc='upper center', bbox_to_anchor=(0.5, -0.5),
+          fancybox=True, shadow=True, ncol=5)
+    
+    # fig.supylabel("Throughput (M IOP/s)")
+    # fig.supxlabel("Threads")
 
     plt.tight_layout()  # Adjust layout to prevent overlap
     plt.savefig("figures/scalability.png", dpi=400)
@@ -655,11 +674,230 @@ def visualize_mixed_read_write_queue_depths(
     plt.savefig("figures/mixed_read_write_different_queue_depths.png", dpi=400)
     plt.show()
 
+def visualize_zero_vs_random(repeated_benchmark, threads=[32], rw=[0.0, 0.5, 1.0], engines=["libaio", "io_uring"]):
+    plt.figure(figsize=(12, 8))
+    aggregate_repeated_benchmark(repeated_benchmark)
+
+
+    print(repeated_benchmark)
+    machine_configs = sorted(list(repeated_benchmark.keys()))  # Convert to list if necessary
+    num_machines = len(machine_configs)
+    num_columns = num_machines  # You can adjust the number of columns as needed
+
+    for idx, machine in enumerate(machine_configs, start=1):
+        plt.subplot(num_machines // num_columns, num_columns, idx)
+        plt.title(f"{machine}")
+        # if titles:
+        #     plt.title(titles[idx - 1])
+        # else:
+        #     plt.title(f"{machine} - 4096B Page Size - Mixed Read Writes - IOP/s")
+        plt.ylabel("Throughput (M IOP/s)", fontdict={"fontsize": 12})
+        plt.xlabel("Write percentage", fontdict={"fontsize": 12})
+
+        for ssd, benchmark in repeated_benchmark[machine].items():
+            color_id = 0
+            for engine in ["io_uring"]:
+                for init in ["zero", "random"]:
+                    for thread in threads:
+                        runs = [x for x in benchmark if x["IOENGINE"] == engine and x["DD_INIT"] == init]
+                        throughputs = np.asarray(
+                            [
+                                float(run["iops_mean"])
+                                for run in sorted(runs, key=lambda x: float(x["RW"]))
+                                if float(run["RW"]) in rw and int(run["THREADS"]) == thread 
+                            ]
+                        )
+
+                        std = np.asarray(
+                            [
+                                float(run["iops_std"])
+                                for run in sorted(runs, key=lambda x: float(x["RW"]))
+                                if float(run["RW"]) in rw and int(run["THREADS"]) == thread
+                            ]
+                        )
+
+                        plt.plot(
+                            rw,
+                            throughputs,
+                            color=COLORS[color_id],
+                            label=f"{engine} - {init} init",
+                        )
+                        plt.fill_between(
+                            rw[: len(throughputs)],
+                            throughputs - std,
+                            throughputs + std,
+                            color=COLORS[color_id],
+                            alpha=0.2,
+                        )
+                        color_id += 1
+
+        plt.legend(fontsize=12)
+        # if y_lims:
+        #     plt.ylim(y_lims[idx - 1])
+        # else:
+        #     plt.ylim([0.0, max(throughputs) * 1.5])
+        plt.xticks(RW)
+
+    plt.tight_layout()  # Adjust layout to prevent overlap
+    plt.savefig(
+        f"figures/zero_vs_random_{'_'.join(map(lambda x: str(x), engines))}_{'_'.join(map(lambda x: str(x), threads))}.png",
+        dpi=400,
+    )
+    plt.show()
+
+
+def visualize_filled_ssd(repeated_benchmark, threads=[16], rw=[0.0, 1.0], engines=["libaio", "io_uring"]):
+    plt.figure(figsize=(12, 8))
+    aggregate_repeated_benchmark(repeated_benchmark)
+
+
+    print(repeated_benchmark)
+    machine_configs = sorted(list(repeated_benchmark.keys()))  # Convert to list if necessary
+    num_machines = len(machine_configs)
+    num_columns = num_machines  # You can adjust the number of columns as needed
+
+
+    for idx, machine in enumerate(machine_configs, start=1):
+        plt.subplot(num_machines // num_columns, num_columns, idx)
+        plt.title(f"{machine}")
+        # if titles:
+        #     plt.title(titles[idx - 1])
+        # else:
+        #     plt.title(f"{machine} - 4096B Page Size - Mixed Read Writes - IOP/s")
+        plt.ylabel("Throughput (M IOP/s)", fontdict={"fontsize": 12})
+        plt.xlabel("Filled Percentage", fontdict={"fontsize": 12})
+
+        for ssd, benchmark in repeated_benchmark[machine].items():
+            color_id = 0
+
+            for engine in ["io_uring", "libaio"]:
+                for file_size in ["10G", "100G"]:
+                    runs = [x for x in benchmark if x["IOENGINE"] == engine and x["FILESIZE"] == file_size]
+                    print(runs)
+                    throughputs = np.asarray(
+                        [
+                            float(run["iops_mean"])
+                            for run in sorted(runs, key=lambda x: float(x["RW"]))
+                            
+                        ]
+                    )
+                    print(throughputs)
+                    # TODO: 
+                    fill_percentage = []
+                    std = np.asarray(
+                        [
+                            float(run["iops_std"])
+                            for run in sorted(runs, key=lambda x: float(x["RW"]))
+                        ]
+                    )
+
+                    plt.plot(
+                        rw,
+                        throughputs,
+                        color=COLORS[color_id],
+                        label=f"{engine} - {file_size}",
+                    )
+                    plt.fill_between(
+                        rw[: len(throughputs)],
+                        throughputs - std,
+                        throughputs + std,
+                        color=COLORS[color_id],
+                        alpha=0.2,
+                    )
+                    color_id += 1
+                    plt.xticks(RW, RW)
+
+        plt.legend(fontsize=12)
+        # if y_lims:
+        #     plt.ylim(y_lims[idx - 1])
+        # else:
+        #     plt.ylim([0.0, max(throughputs) * 1.5])
+        # plt.xticks(RW)
+
+    plt.tight_layout()  # Adjust layout to prevent overlap
+    plt.savefig(
+        f"figures/zero_vs_random_{'_'.join(map(lambda x: str(x), engines))}_{'_'.join(map(lambda x: str(x), threads))}.png",
+        dpi=400,
+    )
+    plt.show()
+
+def visualize_10g_vs_100g(repeated_benchmark, threads=[64], rw=[0.0, 0.5, 1.0], engines=["libaio", "io_uring"]):
+    plt.figure(figsize=(12, 8))
+    aggregate_repeated_benchmark(repeated_benchmark)
+
+
+    print(repeated_benchmark)
+    machine_configs = sorted(list(repeated_benchmark.keys()))  # Convert to list if necessary
+    num_machines = len(machine_configs)
+    num_columns = num_machines  # You can adjust the number of columns as needed
+
+    for idx, machine in enumerate(machine_configs, start=1):
+        plt.subplot(num_machines // num_columns, num_columns, idx)
+        plt.title(f"{machine}")
+        # if titles:
+        #     plt.title(titles[idx - 1])
+        # else:
+        #     plt.title(f"{machine} - 4096B Page Size - Mixed Read Writes - IOP/s")
+        plt.ylabel("Throughput (M IOP/s)", fontdict={"fontsize": 12})
+        plt.xlabel("Write percentage", fontdict={"fontsize": 12})
+
+        for ssd, benchmark in repeated_benchmark[machine].items():
+            color_id = 0
+
+            for engine in ["io_uring", "libaio"]:
+                for file_size in ["10G", "100G"]:
+                    runs = [x for x in benchmark if x["IOENGINE"] == engine and x["FILESIZE"] == file_size]
+                    print(runs)
+                    throughputs = np.asarray(
+                        [
+                            float(run["iops_mean"])
+                            for run in sorted(runs, key=lambda x: float(x["RW"]))
+                            
+                        ]
+                    )
+                    print(throughputs)
+
+                    std = np.asarray(
+                        [
+                            float(run["iops_std"])
+                            for run in sorted(runs, key=lambda x: float(x["RW"]))
+                        ]
+                    )
+
+                    plt.plot(
+                        rw,
+                        throughputs,
+                        color=COLORS[color_id],
+                        label=f"{engine} - {file_size}",
+                    )
+                    plt.fill_between(
+                        rw[: len(throughputs)],
+                        throughputs - std,
+                        throughputs + std,
+                        color=COLORS[color_id],
+                        alpha=0.2,
+                    )
+                    color_id += 1
+                    plt.xticks(RW, RW)
+
+        plt.legend(fontsize=12)
+        # if y_lims:
+        #     plt.ylim(y_lims[idx - 1])
+        # else:
+        #     plt.ylim([0.0, max(throughputs) * 1.5])
+        # plt.xticks(RW)
+
+    plt.tight_layout()  # Adjust layout to prevent overlap
+    plt.savefig(
+        f"figures/zero_vs_random_{'_'.join(map(lambda x: str(x), engines))}_{'_'.join(map(lambda x: str(x), threads))}.png",
+        dpi=400,
+    )
+    plt.show()
 
 def visualize_mixed_read_write_threads(
     repeated_benchmark,
     threads=[1, 2, 4, 8, 16, 32],
-    rw=[0.0, 0.01, 0.05, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.8, 1.0],
+    rw=[0.0, 0.01, 0.05, 0.1, 0.2,  0.4, 0.5, 0.6, 0.8, 1.0],
     engines=["libaio", "io_uring"],
     titles=[],
     suptitle="",
@@ -670,7 +908,7 @@ def visualize_mixed_read_write_threads(
 
     machine_configs = list(repeated_benchmark.keys())  # Convert to list if necessary
     num_machines = len(machine_configs)
-    num_columns = 2  # You can adjust the number of columns as needed
+    num_columns = 3  # You can adjust the number of columns as needed
 
     if suptitle:
         plt.suptitle(suptitle)
@@ -778,20 +1016,28 @@ def main():
     #     "Koroneia - Single SSD - 4096B Page Size - Mixed Read Writes - IOP/s",
     # )
 
-    visualize_scalability(import_benchmarks("koroneia_scalability"))
-    visualize_scalability(import_benchmarks("leanstore_scalability"))
+    # visualize_scalability(import_benchmarks("koroneia_scalability"))
+    # visualize_scalability(import_benchmarks("leanstore_scalability"))
 
     # visualize_mixed_read_write_new([import_benchmarks("koroneia_mixed_read_write_new")])
 
     # visualize_mixed_read_write_new(import_benchmarks("fine_granular_mixed_read_write"))
-
+    # visualize_mixed_read_write_threads(import_benchmarks("nx05_mixed_read_write"))
     # visualize_mixed_read_write_new(import_benchmarks("combined_mixed_read_write"))
+
+    # visualize_10g_vs_100g(import_benchmarks("10g_vs_100g_nx05"))
+
+    # visualize_zero_vs_random(import_benchmarks("zero_vs_random_koroneia"))
+
+    # visualize_zero_vs_random(import_benchmarks("zero_vs_random_delab"), threads=[16])
 
     # visualize_mixed_read_write_new([import_benchmarks("nx05_mixed_read_write")], ["1", "2", "4", "8", "16", "32"])
 
+    visualize_filled_ssd(import_benchmarks("filled_ssd"))
+
     # visualize_mixed_read_write(import_benchmarks("mixed_read_write_results"))
     # # visualize_bs_read_write(import_benchmarks("results_block_size"))
-    # visualize_bs_read_write_after_pause(import_benchmarks("paused_read"))
+    # visualize_bs_read_write_after_pause(import_benchmarks("bench_paused_koroneia"))
     # visualize_additional_write_random_read(import_benchmarks("additional_write"))
     # visualize_different_runtimes(import_benchmarks("different_runtimes_results"))
     # visualize_mixed_read_write_new(import_benchmarks("mixed_read_write"))
@@ -802,6 +1048,7 @@ def main():
     # visualize_bs_read_write(import_benchmarks("blocksize_read_two_ssd"), metric="throughput_gb")
 
     # visualize_logs(import_logs("random_reads_koroneia"))
+
 
 
 if __name__ == "__main__":
