@@ -1,0 +1,10 @@
+10g_vs_100g:
+  matrix:
+    THREADS: ["16"]
+    IOENGINE: ["libaio", "io_uring"]
+    FILESIZE: ["10G", "100G"]
+    RW: ["0.0", "0.5", "1.0"]
+  args:
+    INIT: "disable"
+    RUNTIME: "30"
+

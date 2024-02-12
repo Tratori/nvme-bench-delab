@@ -430,11 +430,11 @@ def visualize_mixed_read_write_new(repeated_benchmarks, titles=[], suptitle=""):
         )
     for column_idx, machine in enumerate(machine_configs, start=1):
         print(num_machines // num_columns)
-        
+
         for ssd, benchmark in repeated_benchmark[machine].items():
             unique_filenames = sorted(list(set([run["FILENAME"] for run in benchmark])))
             for row_idx, unique_filename in enumerate(unique_filenames, start=0):
-                
+
                 plt.subplot(num_rows, num_columns, row_idx * num_columns + column_idx)
                 if titles:
                     plt.title(titles[column_idx - 1])
@@ -454,7 +454,7 @@ def visualize_mixed_read_write_new(repeated_benchmarks, titles=[], suptitle=""):
                         [
                             float(run["iops_mean"])
                             for run in sorted(runs, key=lambda x: float(x["RW"]))
-                            if float(run["RW"]) in rw 
+                            if float(run["RW"]) in rw
                         ]
                     )
 
@@ -553,9 +553,9 @@ def visualize_scalability(repeated_benchmark, title = "SSD Scalability - Random 
         # plt.xlabel("Threads", fontdict={"fontsize": 12})
         for ssd, benchmark in repeated_benchmark[machine].items():
             unique_filenames = sorted(list(set([run["FILENAME"] for run in benchmark])))
-            
+
             unique_engines = list(set([run["IOENGINE"] for run in benchmark]))
-            
+
             for idx, filename in enumerate(unique_filenames, start=1):
                 # plt.subplot(max(len(unique_filenames) // num_columns, 1), num_columns, max(idx // num_columns, 1))
                 print(unique_filenames)
@@ -563,7 +563,7 @@ def visualize_scalability(repeated_benchmark, title = "SSD Scalability - Random 
                 for engine in ENGINES:
                     runs = [x for x in benchmark if x["IOENGINE"] == engine and x["FILENAME"] == filename]
                     unique_threads = sorted(list(set([int(run["THREADS"]) for run in runs])))
-            
+
                     throughputs = np.asarray(
                         [
                             float(run["iops_mean"])
@@ -601,7 +601,7 @@ def visualize_scalability(repeated_benchmark, title = "SSD Scalability - Random 
                 plt.title( f"{num_ssds} SSDs")
     plt.legend(loc='upper center', bbox_to_anchor=(0.5, -0.5),
           fancybox=True, shadow=True, ncol=5)
-    
+
     # fig.supylabel("Throughput (M IOP/s)")
     # fig.supxlabel("Threads")
 
@@ -678,8 +678,6 @@ def visualize_zero_vs_random(repeated_benchmark, threads=[32], rw=[0.0, 0.5, 1.0
     plt.figure(figsize=(12, 8))
     aggregate_repeated_benchmark(repeated_benchmark)
 
-
-    print(repeated_benchmark)
     machine_configs = sorted(list(repeated_benchmark.keys()))  # Convert to list if necessary
     num_machines = len(machine_configs)
     num_columns = num_machines  # You can adjust the number of columns as needed
@@ -704,7 +702,8 @@ def visualize_zero_vs_random(repeated_benchmark, threads=[32], rw=[0.0, 0.5, 1.0
                             [
                                 float(run["iops_mean"])
                                 for run in sorted(runs, key=lambda x: float(x["RW"]))
-                                if float(run["RW"]) in rw and int(run["THREADS"]) == thread 
+                                if float(run["RW"]) in rw
+                                and int(run["THREADS"]) == thread
                             ]
                         )
 
@@ -750,12 +749,9 @@ def visualize_filled_ssd(repeated_benchmark, threads=[16], rw=[0.0, 1.0], engine
     plt.figure(figsize=(12, 8))
     aggregate_repeated_benchmark(repeated_benchmark)
 
-
-    print(repeated_benchmark)
     machine_configs = sorted(list(repeated_benchmark.keys()))  # Convert to list if necessary
     num_machines = len(machine_configs)
     num_columns = num_machines  # You can adjust the number of columns as needed
-
 
     for idx, machine in enumerate(machine_configs, start=1):
         plt.subplot(num_machines // num_columns, num_columns, idx)
@@ -778,12 +774,8 @@ def visualize_filled_ssd(repeated_benchmark, threads=[16], rw=[0.0, 1.0], engine
                         [
                             float(run["iops_mean"])
                             for run in sorted(runs, key=lambda x: float(x["RW"]))
-                            
                         ]
                     )
-                    print(throughputs)
-                    # TODO: 
-                    fill_percentage = []
                     std = np.asarray(
                         [
                             float(run["iops_std"])
@@ -825,8 +817,6 @@ def visualize_10g_vs_100g(repeated_benchmark, threads=[64], rw=[0.0, 0.5, 1.0], 
     plt.figure(figsize=(12, 8))
     aggregate_repeated_benchmark(repeated_benchmark)
 
-
-    print(repeated_benchmark)
     machine_configs = sorted(list(repeated_benchmark.keys()))  # Convert to list if necessary
     num_machines = len(machine_configs)
     num_columns = num_machines  # You can adjust the number of columns as needed
@@ -852,7 +842,6 @@ def visualize_10g_vs_100g(repeated_benchmark, threads=[64], rw=[0.0, 0.5, 1.0], 
                         [
                             float(run["iops_mean"])
                             for run in sorted(runs, key=lambda x: float(x["RW"]))
-                            
                         ]
                     )
                     print(throughputs)
@@ -894,21 +883,22 @@ def visualize_10g_vs_100g(repeated_benchmark, threads=[64], rw=[0.0, 0.5, 1.0], 
     )
     plt.show()
 
+
 def visualize_mixed_read_write_threads(
     repeated_benchmark,
     threads=[1, 2, 4, 8, 16, 32],
-    rw=[0.0, 0.01, 0.05, 0.1, 0.2,  0.4, 0.5, 0.6, 0.8, 1.0],
+    rw=[0.0, 0.01, 0.05, 0.1, 0.2, 0.4, 0.5, 0.6, 0.8, 1.0],
     engines=["libaio", "io_uring"],
     titles=[],
     suptitle="",
     y_lims=[],
+    num_columns=2,
 ):
     plt.figure(figsize=(12, 8))
     aggregate_repeated_benchmark(repeated_benchmark)
 
     machine_configs = list(repeated_benchmark.keys())  # Convert to list if necessary
     num_machines = len(machine_configs)
-    num_columns = 3  # You can adjust the number of columns as needed
 
     if suptitle:
         plt.suptitle(suptitle)
@@ -975,6 +965,8 @@ def visualize_mixed_read_write_threads(
 
 
 def main():
+    visualize_10g_vs_100g(import_benchmarks("10g_vs_100g"))
+
     threads = [1, 2, 4, 8, 16, 32]
     for i in range(len(threads)):
         visualize_mixed_read_write_threads(
@@ -996,7 +988,7 @@ def main():
     visualize_mixed_read_write_queue_depths(
         import_benchmarks("random_read_write_different_queue_depths")
     )
-    visualize_mixed_read_write_new([import_benchmarks("mixed_read_write_new")])
+    # visualize_mixed_read_write_new([import_benchmarks("mixed_read_write_new")])
     # benchmark = import_benchmark()
     # visualize_random_read_scalability(benchmark, [1, 2, 4, 8])
     # visualize_ssds_vs_reported(benchmark)
@@ -1022,7 +1014,7 @@ def main():
     # visualize_mixed_read_write_new([import_benchmarks("koroneia_mixed_read_write_new")])
 
     # visualize_mixed_read_write_new(import_benchmarks("fine_granular_mixed_read_write"))
-    # visualize_mixed_read_write_threads(import_benchmarks("nx05_mixed_read_write"))
+    # visualize_mixed_read_write_threads(import_benchmarks("nx05_mixed_read_write"), num_columns=3)
     # visualize_mixed_read_write_new(import_benchmarks("combined_mixed_read_write"))
 
     # visualize_10g_vs_100g(import_benchmarks("10g_vs_100g_nx05"))
@@ -1033,7 +1025,7 @@ def main():
 
     # visualize_mixed_read_write_new([import_benchmarks("nx05_mixed_read_write")], ["1", "2", "4", "8", "16", "32"])
 
-    visualize_filled_ssd(import_benchmarks("filled_ssd"))
+    # visualize_filled_ssd(import_benchmarks("filled_ssd"))
 
     # visualize_mixed_read_write(import_benchmarks("mixed_read_write_results"))
     # # visualize_bs_read_write(import_benchmarks("results_block_size"))
@@ -1046,9 +1038,7 @@ def main():
     # visualize_bs_read_write(import_benchmarks("blocksize_read_two_ssd"))
     # visualize_bs_read_write(import_benchmarks("blocksize_read"), metric="throughput_gb")
     # visualize_bs_read_write(import_benchmarks("blocksize_read_two_ssd"), metric="throughput_gb")
-
     # visualize_logs(import_logs("random_reads_koroneia"))
-
 
 
 if __name__ == "__main__":
