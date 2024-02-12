@@ -5,7 +5,7 @@ import subprocess
 
 from concurrent.futures import ThreadPoolExecutor
 
-def fill_ssd(io_files, ssd_size, fill_percent):
+def fill_ssd(io_files, ssd_size, fill_percent, idx):
     dir = Path(io_files).parent
 
     fill_files = [] 
@@ -15,10 +15,8 @@ def fill_ssd(io_files, ssd_size, fill_percent):
     size_mod_file = to_be_filled % 10
     
     for i in range (num_10g_files + 1):
-        fill_file = dir / f"fill_file_{i}"
+        fill_file = dir / f"{idx}_fill_file_{i}"
         fill_files.append(fill_file)
-
-    # print("fill_files: ", fill_files)
 
     def run_dd(filename, size):
         print("filename:", filename, " size: ", size)
@@ -34,12 +32,12 @@ def fill_ssd(io_files, ssd_size, fill_percent):
             ],
             check=True,
         )
-    with ThreadPoolExecutor() as executor:
+    
+    with ThreadPoolExecutor(max_workers=32) as executor:
         futures = [executor.submit(run_dd, str(filename), 10) for filename in fill_files[:-1]]
         futures.append(executor.submit(run_dd, fill_files[-1], size_mod_file))
         for future in futures:
             future.result()
-    # print("Created files:", fill_files)
     return fill_files 
 
 def main():
@@ -53,12 +51,20 @@ def main():
     ssd_size_gb_without_benchmarking_file = int(sys.argv[7])
     print("SSD-size: ", ssd_size_gb_without_benchmarking_file)
     
-    fill_level = [0.1, 0.3, 0.5, 0.7, 0.9, 0.95, 0.99, 1]
+    # fill_level = [0.1, 0.3, 0.5, 0.7, 0.9, 0.95, 0.99, 1]
+    fill_level_steps = [0.1, 0.2, 0.2, 0.2, 0.2, 0.05, 0.04, 0.01]
+    assert (sum(fill_level_steps) == 1.0)
 
-    for fill in fill_level:
-        fill_files = fill_ssd(io_files, ssd_size_gb_without_benchmarking_file, fill)
+
+    for idx, fill in enumerate(fill_level_steps):
+        fill_files = fill_ssd(io_files, ssd_size_gb_without_benchmarking_file, fill, idx)
+
+        get_fill_status_cmd = "df -lH | grep /dev/nvme0n1p1"
+        fill_status = subprocess.run(get_fill_status_cmd, shell=True, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+
         additional_info = {
-            "fill_percent": fill
+            "fill_percent": fill,
+            "fill_status": fill_status.stdout.decode("utf-8")
         }
 
         fill_result_file = result_file.replace(".json", f"_fill_{fill}.json")
@@ -77,8 +83,8 @@ def main():
             additional_info=additional_info
         ) 
 
-        for file in fill_files:
-            subprocess.run(["rm", file], check=True)
+        # for file in fill_files:
+        #     subprocess.run(["rm", file], check=True)
 
 if __name__ == "__main__":
     main()
