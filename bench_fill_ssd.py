@@ -27,6 +27,7 @@ def fill_ssd(io_files, ssd_size, fill_percent):
                 "dd",
                 "if=/dev/zero",
                 f"of={filename}",
+                "oflag=direct",
                 "bs=4k",
                 "iflag=fullblock,count_bytes",
                 f"count={size}G",
