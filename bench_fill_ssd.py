@@ -18,12 +18,15 @@ def fill_ssd(io_files, ssd_size, fill_percent):
         fill_file = dir / f"fill_file_{i}"
         fill_files.append(fill_file)
 
+    # print("fill_files: ", fill_files)
+
     def run_dd(filename, size):
+        print("filename:", filename, " size: ", size)
         subprocess.run(
             [
                 "dd",
                 "if=/dev/zero",
-                f"of={fill_file}",
+                f"of={filename}",
                 "bs=4k",
                 "iflag=fullblock,count_bytes",
                 f"count={size}G",
@@ -31,11 +34,11 @@ def fill_ssd(io_files, ssd_size, fill_percent):
             check=True,
         )
     with ThreadPoolExecutor() as executor:
-        futures = [executor.submit(run_dd, filename, 10) for filename in fill_files[:-1]]
-        future.append(executor.submit(run_dd, fill_files[-1], size_mod_file))
+        futures = [executor.submit(run_dd, str(filename), 10) for filename in fill_files[:-1]]
+        futures.append(executor.submit(run_dd, fill_files[-1], size_mod_file))
         for future in futures:
             future.result()
-    print("Creates files:", "\n\t".join(fill_files))
+    # print("Created files:", fill_files)
     return fill_files 
 
 def main():
@@ -46,7 +49,8 @@ def main():
     yaml_file = sys.argv[5]
     workload = sys.argv[6]
 
-    ssd_size_gb_without_benchmarking_file = sys.argv[7]
+    ssd_size_gb_without_benchmarking_file = int(sys.argv[7])
+    print("SSD-size: ", ssd_size_gb_without_benchmarking_file)
     
     fill_level = [0.1, 0.3, 0.5, 0.7, 0.9, 0.95, 0.99, 1]
 
