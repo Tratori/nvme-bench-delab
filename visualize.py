@@ -674,7 +674,14 @@ def visualize_mixed_read_write_queue_depths(
     plt.savefig("figures/mixed_read_write_different_queue_depths.png", dpi=400)
     plt.show()
 
-def visualize_zero_vs_random(repeated_benchmark, threads=[32], rw=[0.0, 0.5, 1.0], engines=["libaio", "io_uring"]):
+
+def visualize_zero_vs_random(
+    repeated_benchmark,
+    threads=[32],
+    rw=[0.0, 0.5, 1.0],
+    engines=["libaio", "io_uring"],
+    init_dd=["zero", "random"],
+):
     plt.figure(figsize=(12, 8))
     aggregate_repeated_benchmark(repeated_benchmark)
 
@@ -695,7 +702,7 @@ def visualize_zero_vs_random(repeated_benchmark, threads=[32], rw=[0.0, 0.5, 1.0
         for ssd, benchmark in repeated_benchmark[machine].items():
             color_id = 0
             for engine in ["io_uring"]:
-                for init in ["zero", "random"]:
+                for init in init_dd:
                     for thread in threads:
                         runs = [x for x in benchmark if x["IOENGINE"] == engine and x["DD_INIT"] == init]
                         throughputs = np.asarray(
@@ -715,6 +722,8 @@ def visualize_zero_vs_random(repeated_benchmark, threads=[32], rw=[0.0, 0.5, 1.0
                             ]
                         )
 
+                        print(rw)
+                        print(throughputs)
                         plt.plot(
                             rw,
                             throughputs,
@@ -965,6 +974,9 @@ def visualize_mixed_read_write_threads(
 
 
 def main():
+    visualize_zero_vs_random(
+        import_benchmarks("zero_vs_random"), threads=[16], init_dd=["zero", "urandom"]
+    )
     visualize_10g_vs_100g(import_benchmarks("10g_vs_100g"))
 
     threads = [1, 2, 4, 8, 16, 32]
@@ -1020,8 +1032,6 @@ def main():
     # visualize_10g_vs_100g(import_benchmarks("10g_vs_100g_nx05"))
 
     # visualize_zero_vs_random(import_benchmarks("zero_vs_random_koroneia"))
-
-    # visualize_zero_vs_random(import_benchmarks("zero_vs_random_delab"), threads=[16])
 
     # visualize_mixed_read_write_new([import_benchmarks("nx05_mixed_read_write")], ["1", "2", "4", "8", "16", "32"])
 
