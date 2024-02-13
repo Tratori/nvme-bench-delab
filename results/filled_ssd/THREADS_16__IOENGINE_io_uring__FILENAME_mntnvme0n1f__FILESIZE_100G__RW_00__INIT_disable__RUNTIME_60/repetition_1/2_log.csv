@@ -1,4 +1,5 @@
 stat,type,filesizeGib,writeFreqDistOn,writeFrequencyZones,time,writeMibs, physMibs,readMibs, physicalMediaUnitsWrittenBytes, physicalMediaUnitsReadBytes, percentFreeBlocks,softECCError, unalignedIO, maxUserDataEraseCount,minUserDataEraseCount, currentThrottlingStatus
+
 keep,ssd,100,0,0,1.00212,0,0,382,0,0,213,0,22,0,0,0
 keep,ssd,100,0,0,2.00212,0,0,381,0,0,213,0,22,0,0,0
 keep,ssd,100,0,0,3.00213,0,0,381,0,0,213,0,22,0,0,0

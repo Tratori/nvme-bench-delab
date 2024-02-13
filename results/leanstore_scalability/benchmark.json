@@ -1,1 +1,3476 @@
-{"nxo05_ssds": [{"THREADS": "1", "IOENGINE": "libaio", "FILENAME": "/mnt/nvme0n1/f", "FILESIZE": "10G", "IOSIZE": "10G", "INIT": "disable", "RUNTIME": "30", "CONFIG_STR": "THREADS_1__IOENGINE_libaio__FILENAME_mntnvme0n1f__FILESIZE_10G__IOSIZE_10G__INIT_disable__RUNTIME_30", "repetitions": [{"iops": "0.5648", "readss": "0.5648", "writess": "0", "throughput_gb": "2.155", "throughput_gb_reads": "2.155", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 0}, {"iops": "0.5622", "readss": "0.5622", "writess": "0", "throughput_gb": "2.145", "throughput_gb_reads": "2.145", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 1}, {"iops": "0.5653", "readss": "0.5653", "writess": "0", "throughput_gb": "2.157", "throughput_gb_reads": "2.157", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 2}, {"iops": "0.5637", "readss": "0.5637", "writess": "0", "throughput_gb": "2.15", "throughput_gb_reads": "2.15", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 3}, {"iops": "0.565", "readss": "0.565", "writess": "0", "throughput_gb": "2.155", "throughput_gb_reads": "2.155", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 4}]}, {"THREADS": "1", "IOENGINE": "libaio", "FILENAME": "/mnt/nvme0n1/f;/mnt/nvme1n1/f", "FILESIZE": "10G", "IOSIZE": "10G", "INIT": "disable", "RUNTIME": "30", "CONFIG_STR": "THREADS_1__IOENGINE_libaio__FILENAME_mntnvme0n1fmntnvme1n1f__FILESIZE_10G__IOSIZE_10G__INIT_disable__RUNTIME_30", "repetitions": [{"iops": "0.5497", "readss": "0.5497", "writess": "0", "throughput_gb": "2.097", "throughput_gb_reads": "2.097", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 0}, {"iops": "0.5488", "readss": "0.5488", "writess": "0", "throughput_gb": "2.094", "throughput_gb_reads": "2.094", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 1}, {"iops": "0.5498", "readss": "0.5498", "writess": "0", "throughput_gb": "2.097", "throughput_gb_reads": "2.097", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 2}, {"iops": "0.5524", "readss": "0.5524", "writess": "0", "throughput_gb": "2.107", "throughput_gb_reads": "2.107", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 3}, {"iops": "0.5524", "readss": "0.5524", "writess": "0", "throughput_gb": "2.107", "throughput_gb_reads": "2.107", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 4}]}, {"THREADS": "1", "IOENGINE": "libaio", "FILENAME": "/mnt/nvme0n1/f;/mnt/nvme1n1/f;/mnt/nvme2n1/f;/mnt/nvme3n1/f", "FILESIZE": "10G", "IOSIZE": "10G", "INIT": "disable", "RUNTIME": "30", "CONFIG_STR": "THREADS_1__IOENGINE_libaio__FILENAME_mntnvme0n1fmntnvme1n1fmntnvme2n1fmntnvme3n1f__FILESIZE_10G__IOSIZE_10G__INIT_disable__RUNTIME_30", "repetitions": [{"iops": "0.5289", "readss": "0.5289", "writess": "0", "throughput_gb": "2.017", "throughput_gb_reads": "2.017", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 0}, {"iops": "0.5279", "readss": "0.5279", "writess": "0", "throughput_gb": "2.014", "throughput_gb_reads": "2.014", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 1}, {"iops": "0.5278", "readss": "0.5278", "writess": "0", "throughput_gb": "2.013", "throughput_gb_reads": "2.013", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 2}, {"iops": "0.5261", "readss": "0.5261", "writess": "0", "throughput_gb": "2.007", "throughput_gb_reads": "2.007", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 3}, {"iops": "0.5285", "readss": "0.5285", "writess": "0", "throughput_gb": "2.016", "throughput_gb_reads": "2.016", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 4}]}, {"THREADS": "1", "IOENGINE": "libaio", "FILENAME": "/mnt/nvme0n1/f;/mnt/nvme1n1/f;/mnt/nvme2n1/f;/mnt/nvme3n1/f;/mnt/nvme4n1/f;/mnt/nvme5n1/f;/mnt/nvme6n1/f;/mnt/nvme7n1/f", "FILESIZE": "10G", "IOSIZE": "10G", "INIT": "disable", "RUNTIME": "30", "CONFIG_STR": "THREADS_1__IOENGINE_libaio__FILENAME_mntnvme0n1fmntnvme1n1fmntnvme2n1fmntnvme3n1fmntnvme4n1fmntnvme5n1fmntnvme6n1fmntnvme7n1f__FILESIZE_10G__IOSIZE_10G__INIT_disable__RUNTIME_30", "repetitions": [{"iops": "0.4991", "readss": "0.4991", "writess": "0", "throughput_gb": "1.904", "throughput_gb_reads": "1.904", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 0}, {"iops": "0.5001", "readss": "0.5001", "writess": "0", "throughput_gb": "1.908", "throughput_gb_reads": "1.908", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 1}, {"iops": "0.5035", "readss": "0.5035", "writess": "0", "throughput_gb": "1.921", "throughput_gb_reads": "1.921", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 2}, {"iops": "0.5019", "readss": "0.5019", "writess": "0", "throughput_gb": "1.915", "throughput_gb_reads": "1.915", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 3}, {"iops": "0.5028", "readss": "0.5028", "writess": "0", "throughput_gb": "1.918", "throughput_gb_reads": "1.918", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 4}]}, {"THREADS": "1", "IOENGINE": "io_uring", "FILENAME": "/mnt/nvme0n1/f", "FILESIZE": "10G", "IOSIZE": "10G", "INIT": "disable", "RUNTIME": "30", "CONFIG_STR": "THREADS_1__IOENGINE_io_uring__FILENAME_mntnvme0n1f__FILESIZE_10G__IOSIZE_10G__INIT_disable__RUNTIME_30", "repetitions": [{"iops": "0.6157", "readss": "0.6157", "writess": "0", "throughput_gb": "2.349", "throughput_gb_reads": "2.349", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 0}, {"iops": "0.6177", "readss": "0.6177", "writess": "0", "throughput_gb": "2.356", "throughput_gb_reads": "2.356", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 1}, {"iops": "0.6157", "readss": "0.6157", "writess": "0", "throughput_gb": "2.349", "throughput_gb_reads": "2.349", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 2}, {"iops": "0.6177", "readss": "0.6177", "writess": "0", "throughput_gb": "2.356", "throughput_gb_reads": "2.356", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 3}, {"iops": "0.614", "readss": "0.614", "writess": "0", "throughput_gb": "2.342", "throughput_gb_reads": "2.342", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 4}]}, {"THREADS": "1", "IOENGINE": "io_uring", "FILENAME": "/mnt/nvme0n1/f;/mnt/nvme1n1/f", "FILESIZE": "10G", "IOSIZE": "10G", "INIT": "disable", "RUNTIME": "30", "CONFIG_STR": "THREADS_1__IOENGINE_io_uring__FILENAME_mntnvme0n1fmntnvme1n1f__FILESIZE_10G__IOSIZE_10G__INIT_disable__RUNTIME_30", "repetitions": [{"iops": "0.6076", "readss": "0.6076", "writess": "0", "throughput_gb": "2.318", "throughput_gb_reads": "2.318", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 0}, {"iops": "0.6085", "readss": "0.6085", "writess": "0", "throughput_gb": "2.321", "throughput_gb_reads": "2.321", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 1}, {"iops": "0.609", "readss": "0.609", "writess": "0", "throughput_gb": "2.323", "throughput_gb_reads": "2.323", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 2}, {"iops": "0.6087", "readss": "0.6087", "writess": "0", "throughput_gb": "2.322", "throughput_gb_reads": "2.322", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 3}, {"iops": "0.6122", "readss": "0.6122", "writess": "0", "throughput_gb": "2.335", "throughput_gb_reads": "2.335", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 4}]}, {"THREADS": "1", "IOENGINE": "io_uring", "FILENAME": "/mnt/nvme0n1/f;/mnt/nvme1n1/f;/mnt/nvme2n1/f;/mnt/nvme3n1/f", "FILESIZE": "10G", "IOSIZE": "10G", "INIT": "disable", "RUNTIME": "30", "CONFIG_STR": "THREADS_1__IOENGINE_io_uring__FILENAME_mntnvme0n1fmntnvme1n1fmntnvme2n1fmntnvme3n1f__FILESIZE_10G__IOSIZE_10G__INIT_disable__RUNTIME_30", "repetitions": [{"iops": "0.5794", "readss": "0.5794", "writess": "0", "throughput_gb": "2.21", "throughput_gb_reads": "2.21", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 0}, {"iops": "0.5825", "readss": "0.5825", "writess": "0", "throughput_gb": "2.222", "throughput_gb_reads": "2.222", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 1}, {"iops": "0.5822", "readss": "0.5822", "writess": "0", "throughput_gb": "2.221", "throughput_gb_reads": "2.221", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 2}, {"iops": "0.5845", "readss": "0.5845", "writess": "0", "throughput_gb": "2.23", "throughput_gb_reads": "2.23", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 3}, {"iops": "0.5794", "readss": "0.5794", "writess": "0", "throughput_gb": "2.21", "throughput_gb_reads": "2.21", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 4}]}, {"THREADS": "1", "IOENGINE": "io_uring", "FILENAME": "/mnt/nvme0n1/f;/mnt/nvme1n1/f;/mnt/nvme2n1/f;/mnt/nvme3n1/f;/mnt/nvme4n1/f;/mnt/nvme5n1/f;/mnt/nvme6n1/f;/mnt/nvme7n1/f", "FILESIZE": "10G", "IOSIZE": "10G", "INIT": "disable", "RUNTIME": "30", "CONFIG_STR": "THREADS_1__IOENGINE_io_uring__FILENAME_mntnvme0n1fmntnvme1n1fmntnvme2n1fmntnvme3n1fmntnvme4n1fmntnvme5n1fmntnvme6n1fmntnvme7n1f__FILESIZE_10G__IOSIZE_10G__INIT_disable__RUNTIME_30", "repetitions": [{"iops": "0.5507", "readss": "0.5507", "writess": "0", "throughput_gb": "2.101", "throughput_gb_reads": "2.101", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 0}, {"iops": "0.553", "readss": "0.553", "writess": "0", "throughput_gb": "2.11", "throughput_gb_reads": "2.11", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 1}, {"iops": "0.5526", "readss": "0.5526", "writess": "0", "throughput_gb": "2.108", "throughput_gb_reads": "2.108", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 2}, {"iops": "0.5533", "readss": "0.5533", "writess": "0", "throughput_gb": "2.111", "throughput_gb_reads": "2.111", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 3}, {"iops": "0.5521", "readss": "0.5521", "writess": "0", "throughput_gb": "2.106", "throughput_gb_reads": "2.106", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 4}]}, {"THREADS": "2", "IOENGINE": "libaio", "FILENAME": "/mnt/nvme0n1/f", "FILESIZE": "10G", "IOSIZE": "10G", "INIT": "disable", "RUNTIME": "30", "CONFIG_STR": "THREADS_2__IOENGINE_libaio__FILENAME_mntnvme0n1f__FILESIZE_10G__IOSIZE_10G__INIT_disable__RUNTIME_30", "repetitions": [{"iops": "1.036", "readss": "1.036", "writess": "0", "throughput_gb": "3.951", "throughput_gb_reads": "3.951", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 0}, {"iops": "1.032", "readss": "1.032", "writess": "0", "throughput_gb": "3.935", "throughput_gb_reads": "3.935", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 1}, {"iops": "1.019", "readss": "1.019", "writess": "0", "throughput_gb": "3.888", "throughput_gb_reads": "3.888", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 2}, {"iops": "1.04", "readss": "1.04", "writess": "0", "throughput_gb": "3.966", "throughput_gb_reads": "3.966", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 3}, {"iops": "1.028", "readss": "1.028", "writess": "0", "throughput_gb": "3.921", "throughput_gb_reads": "3.921", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 4}]}, {"THREADS": "2", "IOENGINE": "libaio", "FILENAME": "/mnt/nvme0n1/f;/mnt/nvme1n1/f", "FILESIZE": "10G", "IOSIZE": "10G", "INIT": "disable", "RUNTIME": "30", "CONFIG_STR": "THREADS_2__IOENGINE_libaio__FILENAME_mntnvme0n1fmntnvme1n1f__FILESIZE_10G__IOSIZE_10G__INIT_disable__RUNTIME_30", "repetitions": [{"iops": "1.037", "readss": "1.037", "writess": "0", "throughput_gb": "3.954", "throughput_gb_reads": "3.954", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 0}, {"iops": "1.034", "readss": "1.034", "writess": "0", "throughput_gb": "3.943", "throughput_gb_reads": "3.943", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 1}, {"iops": "1.033", "readss": "1.033", "writess": "0", "throughput_gb": "3.94", "throughput_gb_reads": "3.94", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 2}, {"iops": "1.035", "readss": "1.035", "writess": "0", "throughput_gb": "3.947", "throughput_gb_reads": "3.947", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 3}, {"iops": "1.036", "readss": "1.036", "writess": "0", "throughput_gb": "3.953", "throughput_gb_reads": "3.953", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 4}]}, {"THREADS": "2", "IOENGINE": "libaio", "FILENAME": "/mnt/nvme0n1/f;/mnt/nvme1n1/f;/mnt/nvme2n1/f;/mnt/nvme3n1/f", "FILESIZE": "10G", "IOSIZE": "10G", "INIT": "disable", "RUNTIME": "30", "CONFIG_STR": "THREADS_2__IOENGINE_libaio__FILENAME_mntnvme0n1fmntnvme1n1fmntnvme2n1fmntnvme3n1f__FILESIZE_10G__IOSIZE_10G__INIT_disable__RUNTIME_30", "repetitions": [{"iops": "1.01", "readss": "1.01", "writess": "0", "throughput_gb": "3.855", "throughput_gb_reads": "3.855", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 0}, {"iops": "1.014", "readss": "1.014", "writess": "0", "throughput_gb": "3.867", "throughput_gb_reads": "3.867", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 1}, {"iops": "1.012", "readss": "1.012", "writess": "0", "throughput_gb": "3.861", "throughput_gb_reads": "3.861", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 2}, {"iops": "1.012", "readss": "1.012", "writess": "0", "throughput_gb": "3.861", "throughput_gb_reads": "3.861", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 3}, {"iops": "1.013", "readss": "1.013", "writess": "0", "throughput_gb": "3.865", "throughput_gb_reads": "3.865", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 4}]}, {"THREADS": "2", "IOENGINE": "libaio", "FILENAME": "/mnt/nvme0n1/f;/mnt/nvme1n1/f;/mnt/nvme2n1/f;/mnt/nvme3n1/f;/mnt/nvme4n1/f;/mnt/nvme5n1/f;/mnt/nvme6n1/f;/mnt/nvme7n1/f", "FILESIZE": "10G", "IOSIZE": "10G", "INIT": "disable", "RUNTIME": "30", "CONFIG_STR": "THREADS_2__IOENGINE_libaio__FILENAME_mntnvme0n1fmntnvme1n1fmntnvme2n1fmntnvme3n1fmntnvme4n1fmntnvme5n1fmntnvme6n1fmntnvme7n1f__FILESIZE_10G__IOSIZE_10G__INIT_disable__RUNTIME_30", "repetitions": [{"iops": "0.9771", "readss": "0.9771", "writess": "0", "throughput_gb": "3.727", "throughput_gb_reads": "3.727", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 0}, {"iops": "0.9831", "readss": "0.9831", "writess": "0", "throughput_gb": "3.75", "throughput_gb_reads": "3.75", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 1}, {"iops": "0.9793", "readss": "0.9793", "writess": "0", "throughput_gb": "3.736", "throughput_gb_reads": "3.736", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 2}, {"iops": "0.9792", "readss": "0.9792", "writess": "0", "throughput_gb": "3.735", "throughput_gb_reads": "3.735", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 3}, {"iops": "0.9778", "readss": "0.9778", "writess": "0", "throughput_gb": "3.73", "throughput_gb_reads": "3.73", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 4}]}, {"THREADS": "2", "IOENGINE": "io_uring", "FILENAME": "/mnt/nvme0n1/f", "FILESIZE": "10G", "IOSIZE": "10G", "INIT": "disable", "RUNTIME": "30", "CONFIG_STR": "THREADS_2__IOENGINE_io_uring__FILENAME_mntnvme0n1f__FILESIZE_10G__IOSIZE_10G__INIT_disable__RUNTIME_30", "repetitions": [{"iops": "1.127", "readss": "1.127", "writess": "0", "throughput_gb": "4.298", "throughput_gb_reads": "4.298", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 0}, {"iops": "1.125", "readss": "1.125", "writess": "0", "throughput_gb": "4.29", "throughput_gb_reads": "4.29", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 1}, {"iops": "1.119", "readss": "1.119", "writess": "0", "throughput_gb": "4.268", "throughput_gb_reads": "4.268", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 2}, {"iops": "1.121", "readss": "1.121", "writess": "0", "throughput_gb": "4.277", "throughput_gb_reads": "4.277", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 3}, {"iops": "1.119", "readss": "1.119", "writess": "0", "throughput_gb": "4.27", "throughput_gb_reads": "4.27", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 4}]}, {"THREADS": "2", "IOENGINE": "io_uring", "FILENAME": "/mnt/nvme0n1/f;/mnt/nvme1n1/f", "FILESIZE": "10G", "IOSIZE": "10G", "INIT": "disable", "RUNTIME": "30", "CONFIG_STR": "THREADS_2__IOENGINE_io_uring__FILENAME_mntnvme0n1fmntnvme1n1f__FILESIZE_10G__IOSIZE_10G__INIT_disable__RUNTIME_30", "repetitions": [{"iops": "1.167", "readss": "1.167", "writess": "0", "throughput_gb": "4.452", "throughput_gb_reads": "4.452", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 0}, {"iops": "1.159", "readss": "1.159", "writess": "0", "throughput_gb": "4.421", "throughput_gb_reads": "4.421", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 1}, {"iops": "1.155", "readss": "1.155", "writess": "0", "throughput_gb": "4.407", "throughput_gb_reads": "4.407", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 2}, {"iops": "1.146", "readss": "1.146", "writess": "0", "throughput_gb": "4.372", "throughput_gb_reads": "4.372", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 3}, {"iops": "1.156", "readss": "1.156", "writess": "0", "throughput_gb": "4.409", "throughput_gb_reads": "4.409", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 4}]}, {"THREADS": "2", "IOENGINE": "io_uring", "FILENAME": "/mnt/nvme0n1/f;/mnt/nvme1n1/f;/mnt/nvme2n1/f;/mnt/nvme3n1/f", "FILESIZE": "10G", "IOSIZE": "10G", "INIT": "disable", "RUNTIME": "30", "CONFIG_STR": "THREADS_2__IOENGINE_io_uring__FILENAME_mntnvme0n1fmntnvme1n1fmntnvme2n1fmntnvme3n1f__FILESIZE_10G__IOSIZE_10G__INIT_disable__RUNTIME_30", "repetitions": [{"iops": "1.117", "readss": "1.117", "writess": "0", "throughput_gb": "4.261", "throughput_gb_reads": "4.261", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 0}, {"iops": "1.113", "readss": "1.113", "writess": "0", "throughput_gb": "4.245", "throughput_gb_reads": "4.245", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 1}, {"iops": "1.113", "readss": "1.113", "writess": "0", "throughput_gb": "4.246", "throughput_gb_reads": "4.246", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 2}, {"iops": "1.114", "readss": "1.114", "writess": "0", "throughput_gb": "4.249", "throughput_gb_reads": "4.249", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 3}, {"iops": "1.116", "readss": "1.116", "writess": "0", "throughput_gb": "4.257", "throughput_gb_reads": "4.257", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 4}]}, {"THREADS": "2", "IOENGINE": "io_uring", "FILENAME": "/mnt/nvme0n1/f;/mnt/nvme1n1/f;/mnt/nvme2n1/f;/mnt/nvme3n1/f;/mnt/nvme4n1/f;/mnt/nvme5n1/f;/mnt/nvme6n1/f;/mnt/nvme7n1/f", "FILESIZE": "10G", "IOSIZE": "10G", "INIT": "disable", "RUNTIME": "30", "CONFIG_STR": "THREADS_2__IOENGINE_io_uring__FILENAME_mntnvme0n1fmntnvme1n1fmntnvme2n1fmntnvme3n1fmntnvme4n1fmntnvme5n1fmntnvme6n1fmntnvme7n1f__FILESIZE_10G__IOSIZE_10G__INIT_disable__RUNTIME_30", "repetitions": [{"iops": "1.075", "readss": "1.075", "writess": "0", "throughput_gb": "4.101", "throughput_gb_reads": "4.101", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 0}, {"iops": "1.072", "readss": "1.072", "writess": "0", "throughput_gb": "4.089", "throughput_gb_reads": "4.089", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 1}, {"iops": "1.078", "readss": "1.078", "writess": "0", "throughput_gb": "4.114", "throughput_gb_reads": "4.114", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 2}, {"iops": "1.079", "readss": "1.079", "writess": "0", "throughput_gb": "4.117", "throughput_gb_reads": "4.117", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 3}, {"iops": "1.077", "readss": "1.077", "writess": "0", "throughput_gb": "4.108", "throughput_gb_reads": "4.108", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 4}]}, {"THREADS": "4", "IOENGINE": "libaio", "FILENAME": "/mnt/nvme0n1/f", "FILESIZE": "10G", "IOSIZE": "10G", "INIT": "disable", "RUNTIME": "30", "CONFIG_STR": "THREADS_4__IOENGINE_libaio__FILENAME_mntnvme0n1f__FILESIZE_10G__IOSIZE_10G__INIT_disable__RUNTIME_30", "repetitions": [{"iops": "1.562", "readss": "1.562", "writess": "0", "throughput_gb": "5.958", "throughput_gb_reads": "5.958", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 0}, {"iops": "1.562", "readss": "1.562", "writess": "0", "throughput_gb": "5.958", "throughput_gb_reads": "5.958", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 1}, {"iops": "1.562", "readss": "1.562", "writess": "0", "throughput_gb": "5.958", "throughput_gb_reads": "5.958", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 2}, {"iops": "1.562", "readss": "1.562", "writess": "0", "throughput_gb": "5.958", "throughput_gb_reads": "5.958", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 3}, {"iops": "1.562", "readss": "1.562", "writess": "0", "throughput_gb": "5.958", "throughput_gb_reads": "5.958", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 4}]}, {"THREADS": "4", "IOENGINE": "libaio", "FILENAME": "/mnt/nvme0n1/f;/mnt/nvme1n1/f", "FILESIZE": "10G", "IOSIZE": "10G", "INIT": "disable", "RUNTIME": "30", "CONFIG_STR": "THREADS_4__IOENGINE_libaio__FILENAME_mntnvme0n1fmntnvme1n1f__FILESIZE_10G__IOSIZE_10G__INIT_disable__RUNTIME_30", "repetitions": [{"iops": "1.975", "readss": "1.975", "writess": "0", "throughput_gb": "7.533", "throughput_gb_reads": "7.533", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 0}, {"iops": "1.959", "readss": "1.959", "writess": "0", "throughput_gb": "7.473", "throughput_gb_reads": "7.473", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 1}, {"iops": "1.96", "readss": "1.96", "writess": "0", "throughput_gb": "7.476", "throughput_gb_reads": "7.476", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 2}, {"iops": "1.969", "readss": "1.969", "writess": "0", "throughput_gb": "7.512", "throughput_gb_reads": "7.512", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 3}, {"iops": "1.961", "readss": "1.961", "writess": "0", "throughput_gb": "7.482", "throughput_gb_reads": "7.482", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 4}]}, {"THREADS": "4", "IOENGINE": "libaio", "FILENAME": "/mnt/nvme0n1/f;/mnt/nvme1n1/f;/mnt/nvme2n1/f;/mnt/nvme3n1/f", "FILESIZE": "10G", "IOSIZE": "10G", "INIT": "disable", "RUNTIME": "30", "CONFIG_STR": "THREADS_4__IOENGINE_libaio__FILENAME_mntnvme0n1fmntnvme1n1fmntnvme2n1fmntnvme3n1f__FILESIZE_10G__IOSIZE_10G__INIT_disable__RUNTIME_30", "repetitions": [{"iops": "1.943", "readss": "1.943", "writess": "0", "throughput_gb": "7.413", "throughput_gb_reads": "7.413", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 0}, {"iops": "1.949", "readss": "1.949", "writess": "0", "throughput_gb": "7.433", "throughput_gb_reads": "7.433", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 1}, {"iops": "1.947", "readss": "1.947", "writess": "0", "throughput_gb": "7.428", "throughput_gb_reads": "7.428", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 2}, {"iops": "1.957", "readss": "1.957", "writess": "0", "throughput_gb": "7.466", "throughput_gb_reads": "7.466", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 3}, {"iops": "1.953", "readss": "1.953", "writess": "0", "throughput_gb": "7.451", "throughput_gb_reads": "7.451", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 4}]}, {"THREADS": "4", "IOENGINE": "libaio", "FILENAME": "/mnt/nvme0n1/f;/mnt/nvme1n1/f;/mnt/nvme2n1/f;/mnt/nvme3n1/f;/mnt/nvme4n1/f;/mnt/nvme5n1/f;/mnt/nvme6n1/f;/mnt/nvme7n1/f", "FILESIZE": "10G", "IOSIZE": "10G", "INIT": "disable", "RUNTIME": "30", "CONFIG_STR": "THREADS_4__IOENGINE_libaio__FILENAME_mntnvme0n1fmntnvme1n1fmntnvme2n1fmntnvme3n1fmntnvme4n1fmntnvme5n1fmntnvme6n1fmntnvme7n1f__FILESIZE_10G__IOSIZE_10G__INIT_disable__RUNTIME_30", "repetitions": [{"iops": "1.895", "readss": "1.895", "writess": "0", "throughput_gb": "7.23", "throughput_gb_reads": "7.23", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 0}, {"iops": "1.9", "readss": "1.9", "writess": "0", "throughput_gb": "7.247", "throughput_gb_reads": "7.247", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 1}, {"iops": "1.901", "readss": "1.901", "writess": "0", "throughput_gb": "7.251", "throughput_gb_reads": "7.251", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 2}, {"iops": "1.902", "readss": "1.902", "writess": "0", "throughput_gb": "7.257", "throughput_gb_reads": "7.257", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 3}, {"iops": "1.902", "readss": "1.902", "writess": "0", "throughput_gb": "7.254", "throughput_gb_reads": "7.254", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 4}]}, {"THREADS": "4", "IOENGINE": "io_uring", "FILENAME": "/mnt/nvme0n1/f", "FILESIZE": "10G", "IOSIZE": "10G", "INIT": "disable", "RUNTIME": "30", "CONFIG_STR": "THREADS_4__IOENGINE_io_uring__FILENAME_mntnvme0n1f__FILESIZE_10G__IOSIZE_10G__INIT_disable__RUNTIME_30", "repetitions": [{"iops": "1.562", "readss": "1.562", "writess": "0", "throughput_gb": "5.958", "throughput_gb_reads": "5.958", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 0}, {"iops": "1.562", "readss": "1.562", "writess": "0", "throughput_gb": "5.959", "throughput_gb_reads": "5.959", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 1}, {"iops": "1.562", "readss": "1.562", "writess": "0", "throughput_gb": "5.959", "throughput_gb_reads": "5.959", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 2}, {"iops": "1.562", "readss": "1.562", "writess": "0", "throughput_gb": "5.959", "throughput_gb_reads": "5.959", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 3}, {"iops": "1.562", "readss": "1.562", "writess": "0", "throughput_gb": "5.959", "throughput_gb_reads": "5.959", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 4}]}, {"THREADS": "4", "IOENGINE": "io_uring", "FILENAME": "/mnt/nvme0n1/f;/mnt/nvme1n1/f", "FILESIZE": "10G", "IOSIZE": "10G", "INIT": "disable", "RUNTIME": "30", "CONFIG_STR": "THREADS_4__IOENGINE_io_uring__FILENAME_mntnvme0n1fmntnvme1n1f__FILESIZE_10G__IOSIZE_10G__INIT_disable__RUNTIME_30", "repetitions": [{"iops": "2.172", "readss": "2.172", "writess": "0", "throughput_gb": "8.284", "throughput_gb_reads": "8.284", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 0}, {"iops": "2.176", "readss": "2.176", "writess": "0", "throughput_gb": "8.3", "throughput_gb_reads": "8.3", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 1}, {"iops": "2.15", "readss": "2.15", "writess": "0", "throughput_gb": "8.203", "throughput_gb_reads": "8.203", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 2}, {"iops": "2.154", "readss": "2.154", "writess": "0", "throughput_gb": "8.216", "throughput_gb_reads": "8.216", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 3}, {"iops": "2.139", "readss": "2.139", "writess": "0", "throughput_gb": "8.16", "throughput_gb_reads": "8.16", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 4}]}, {"THREADS": "4", "IOENGINE": "io_uring", "FILENAME": "/mnt/nvme0n1/f;/mnt/nvme1n1/f;/mnt/nvme2n1/f;/mnt/nvme3n1/f", "FILESIZE": "10G", "IOSIZE": "10G", "INIT": "disable", "RUNTIME": "30", "CONFIG_STR": "THREADS_4__IOENGINE_io_uring__FILENAME_mntnvme0n1fmntnvme1n1fmntnvme2n1fmntnvme3n1f__FILESIZE_10G__IOSIZE_10G__INIT_disable__RUNTIME_30", "repetitions": [{"iops": "2.157", "readss": "2.157", "writess": "0", "throughput_gb": "8.228", "throughput_gb_reads": "8.228", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 0}, {"iops": "2.146", "readss": "2.146", "writess": "0", "throughput_gb": "8.186", "throughput_gb_reads": "8.186", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 1}, {"iops": "2.154", "readss": "2.154", "writess": "0", "throughput_gb": "8.218", "throughput_gb_reads": "8.218", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 2}, {"iops": "2.155", "readss": "2.155", "writess": "0", "throughput_gb": "8.219", "throughput_gb_reads": "8.219", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 3}, {"iops": "2.159", "readss": "2.159", "writess": "0", "throughput_gb": "8.236", "throughput_gb_reads": "8.236", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 4}]}, {"THREADS": "4", "IOENGINE": "io_uring", "FILENAME": "/mnt/nvme0n1/f;/mnt/nvme1n1/f;/mnt/nvme2n1/f;/mnt/nvme3n1/f;/mnt/nvme4n1/f;/mnt/nvme5n1/f;/mnt/nvme6n1/f;/mnt/nvme7n1/f", "FILESIZE": "10G", "IOSIZE": "10G", "INIT": "disable", "RUNTIME": "30", "CONFIG_STR": "THREADS_4__IOENGINE_io_uring__FILENAME_mntnvme0n1fmntnvme1n1fmntnvme2n1fmntnvme3n1fmntnvme4n1fmntnvme5n1fmntnvme6n1fmntnvme7n1f__FILESIZE_10G__IOSIZE_10G__INIT_disable__RUNTIME_30", "repetitions": [{"iops": "2.077", "readss": "2.077", "writess": "0", "throughput_gb": "7.923", "throughput_gb_reads": "7.923", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 0}, {"iops": "2.079", "readss": "2.079", "writess": "0", "throughput_gb": "7.932", "throughput_gb_reads": "7.932", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 1}, {"iops": "2.072", "readss": "2.072", "writess": "0", "throughput_gb": "7.902", "throughput_gb_reads": "7.902", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 2}, {"iops": "2.077", "readss": "2.077", "writess": "0", "throughput_gb": "7.923", "throughput_gb_reads": "7.923", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 3}, {"iops": "2.074", "readss": "2.074", "writess": "0", "throughput_gb": "7.91", "throughput_gb_reads": "7.91", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 4}]}, {"THREADS": "8", "IOENGINE": "libaio", "FILENAME": "/mnt/nvme0n1/f", "FILESIZE": "10G", "IOSIZE": "10G", "INIT": "disable", "RUNTIME": "30", "CONFIG_STR": "THREADS_8__IOENGINE_libaio__FILENAME_mntnvme0n1f__FILESIZE_10G__IOSIZE_10G__INIT_disable__RUNTIME_30", "repetitions": [{"iops": "1.562", "readss": "1.562", "writess": "0", "throughput_gb": "5.959", "throughput_gb_reads": "5.959", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 0}, {"iops": "1.562", "readss": "1.562", "writess": "0", "throughput_gb": "5.959", "throughput_gb_reads": "5.959", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 1}, {"iops": "1.562", "readss": "1.562", "writess": "0", "throughput_gb": "5.959", "throughput_gb_reads": "5.959", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 2}, {"iops": "1.562", "readss": "1.562", "writess": "0", "throughput_gb": "5.959", "throughput_gb_reads": "5.959", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 3}, {"iops": "1.562", "readss": "1.562", "writess": "0", "throughput_gb": "5.959", "throughput_gb_reads": "5.959", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 4}]}, {"THREADS": "8", "IOENGINE": "libaio", "FILENAME": "/mnt/nvme0n1/f;/mnt/nvme1n1/f", "FILESIZE": "10G", "IOSIZE": "10G", "INIT": "disable", "RUNTIME": "30", "CONFIG_STR": "THREADS_8__IOENGINE_libaio__FILENAME_mntnvme0n1fmntnvme1n1f__FILESIZE_10G__IOSIZE_10G__INIT_disable__RUNTIME_30", "repetitions": [{"iops": "3.121", "readss": "3.121", "writess": "0", "throughput_gb": "11.91", "throughput_gb_reads": "11.91", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 0}, {"iops": "3.121", "readss": "3.121", "writess": "0", "throughput_gb": "11.91", "throughput_gb_reads": "11.91", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 1}, {"iops": "3.121", "readss": "3.121", "writess": "0", "throughput_gb": "11.91", "throughput_gb_reads": "11.91", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 2}, {"iops": "3.122", "readss": "3.122", "writess": "0", "throughput_gb": "11.91", "throughput_gb_reads": "11.91", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 3}, {"iops": "3.122", "readss": "3.122", "writess": "0", "throughput_gb": "11.91", "throughput_gb_reads": "11.91", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 4}]}, {"THREADS": "8", "IOENGINE": "libaio", "FILENAME": "/mnt/nvme0n1/f;/mnt/nvme1n1/f;/mnt/nvme2n1/f;/mnt/nvme3n1/f", "FILESIZE": "10G", "IOSIZE": "10G", "INIT": "disable", "RUNTIME": "30", "CONFIG_STR": "THREADS_8__IOENGINE_libaio__FILENAME_mntnvme0n1fmntnvme1n1fmntnvme2n1fmntnvme3n1f__FILESIZE_10G__IOSIZE_10G__INIT_disable__RUNTIME_30", "repetitions": [{"iops": "3.755", "readss": "3.755", "writess": "0", "throughput_gb": "14.32", "throughput_gb_reads": "14.32", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 0}, {"iops": "3.775", "readss": "3.775", "writess": "0", "throughput_gb": "14.4", "throughput_gb_reads": "14.4", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 1}, {"iops": "3.751", "readss": "3.751", "writess": "0", "throughput_gb": "14.31", "throughput_gb_reads": "14.31", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 2}, {"iops": "3.769", "readss": "3.769", "writess": "0", "throughput_gb": "14.38", "throughput_gb_reads": "14.38", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 3}, {"iops": "3.785", "readss": "3.785", "writess": "0", "throughput_gb": "14.44", "throughput_gb_reads": "14.44", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 4}]}, {"THREADS": "8", "IOENGINE": "libaio", "FILENAME": "/mnt/nvme0n1/f;/mnt/nvme1n1/f;/mnt/nvme2n1/f;/mnt/nvme3n1/f;/mnt/nvme4n1/f;/mnt/nvme5n1/f;/mnt/nvme6n1/f;/mnt/nvme7n1/f", "FILESIZE": "10G", "IOSIZE": "10G", "INIT": "disable", "RUNTIME": "30", "CONFIG_STR": "THREADS_8__IOENGINE_libaio__FILENAME_mntnvme0n1fmntnvme1n1fmntnvme2n1fmntnvme3n1fmntnvme4n1fmntnvme5n1fmntnvme6n1fmntnvme7n1f__FILESIZE_10G__IOSIZE_10G__INIT_disable__RUNTIME_30", "repetitions": [{"iops": "3.688", "readss": "3.688", "writess": "0", "throughput_gb": "14.07", "throughput_gb_reads": "14.07", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 0}, {"iops": "3.701", "readss": "3.701", "writess": "0", "throughput_gb": "14.12", "throughput_gb_reads": "14.12", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 1}, {"iops": "3.701", "readss": "3.701", "writess": "0", "throughput_gb": "14.12", "throughput_gb_reads": "14.12", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 2}, {"iops": "3.695", "readss": "3.695", "writess": "0", "throughput_gb": "14.1", "throughput_gb_reads": "14.1", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 3}, {"iops": "3.681", "readss": "3.681", "writess": "0", "throughput_gb": "14.04", "throughput_gb_reads": "14.04", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 4}]}, {"THREADS": "8", "IOENGINE": "io_uring", "FILENAME": "/mnt/nvme0n1/f", "FILESIZE": "10G", "IOSIZE": "10G", "INIT": "disable", "RUNTIME": "30", "CONFIG_STR": "THREADS_8__IOENGINE_io_uring__FILENAME_mntnvme0n1f__FILESIZE_10G__IOSIZE_10G__INIT_disable__RUNTIME_30", "repetitions": [{"iops": "1.562", "readss": "1.562", "writess": "0", "throughput_gb": "5.959", "throughput_gb_reads": "5.959", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 0}, {"iops": "1.562", "readss": "1.562", "writess": "0", "throughput_gb": "5.959", "throughput_gb_reads": "5.959", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 1}, {"iops": "1.562", "readss": "1.562", "writess": "0", "throughput_gb": "5.959", "throughput_gb_reads": "5.959", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 2}, {"iops": "1.562", "readss": "1.562", "writess": "0", "throughput_gb": "5.959", "throughput_gb_reads": "5.959", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 3}, {"iops": "1.562", "readss": "1.562", "writess": "0", "throughput_gb": "5.959", "throughput_gb_reads": "5.959", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 4}]}, {"THREADS": "8", "IOENGINE": "io_uring", "FILENAME": "/mnt/nvme0n1/f;/mnt/nvme1n1/f", "FILESIZE": "10G", "IOSIZE": "10G", "INIT": "disable", "RUNTIME": "30", "CONFIG_STR": "THREADS_8__IOENGINE_io_uring__FILENAME_mntnvme0n1fmntnvme1n1f__FILESIZE_10G__IOSIZE_10G__INIT_disable__RUNTIME_30", "repetitions": [{"iops": "3.122", "readss": "3.122", "writess": "0", "throughput_gb": "11.91", "throughput_gb_reads": "11.91", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 0}, {"iops": "3.122", "readss": "3.122", "writess": "0", "throughput_gb": "11.91", "throughput_gb_reads": "11.91", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 1}, {"iops": "3.122", "readss": "3.122", "writess": "0", "throughput_gb": "11.91", "throughput_gb_reads": "11.91", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 2}, {"iops": "3.122", "readss": "3.122", "writess": "0", "throughput_gb": "11.91", "throughput_gb_reads": "11.91", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 3}, {"iops": "3.122", "readss": "3.122", "writess": "0", "throughput_gb": "11.91", "throughput_gb_reads": "11.91", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 4}]}, {"THREADS": "8", "IOENGINE": "io_uring", "FILENAME": "/mnt/nvme0n1/f;/mnt/nvme1n1/f;/mnt/nvme2n1/f;/mnt/nvme3n1/f", "FILESIZE": "10G", "IOSIZE": "10G", "INIT": "disable", "RUNTIME": "30", "CONFIG_STR": "THREADS_8__IOENGINE_io_uring__FILENAME_mntnvme0n1fmntnvme1n1fmntnvme2n1fmntnvme3n1f__FILESIZE_10G__IOSIZE_10G__INIT_disable__RUNTIME_30", "repetitions": [{"iops": "4.123", "readss": "4.123", "writess": "0", "throughput_gb": "15.73", "throughput_gb_reads": "15.73", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 0}, {"iops": "4.174", "readss": "4.174", "writess": "0", "throughput_gb": "15.92", "throughput_gb_reads": "15.92", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 1}, {"iops": "4.175", "readss": "4.175", "writess": "0", "throughput_gb": "15.93", "throughput_gb_reads": "15.93", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 2}, {"iops": "4.117", "readss": "4.117", "writess": "0", "throughput_gb": "15.7", "throughput_gb_reads": "15.7", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 3}, {"iops": "4.169", "readss": "4.169", "writess": "0", "throughput_gb": "15.91", "throughput_gb_reads": "15.91", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 4}]}, {"THREADS": "8", "IOENGINE": "io_uring", "FILENAME": "/mnt/nvme0n1/f;/mnt/nvme1n1/f;/mnt/nvme2n1/f;/mnt/nvme3n1/f;/mnt/nvme4n1/f;/mnt/nvme5n1/f;/mnt/nvme6n1/f;/mnt/nvme7n1/f", "FILESIZE": "10G", "IOSIZE": "10G", "INIT": "disable", "RUNTIME": "30", "CONFIG_STR": "THREADS_8__IOENGINE_io_uring__FILENAME_mntnvme0n1fmntnvme1n1fmntnvme2n1fmntnvme3n1fmntnvme4n1fmntnvme5n1fmntnvme6n1fmntnvme7n1f__FILESIZE_10G__IOSIZE_10G__INIT_disable__RUNTIME_30", "repetitions": [{"iops": "4.017", "readss": "4.017", "writess": "0", "throughput_gb": "15.32", "throughput_gb_reads": "15.32", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 0}, {"iops": "4.014", "readss": "4.014", "writess": "0", "throughput_gb": "15.31", "throughput_gb_reads": "15.31", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 1}, {"iops": "4.005", "readss": "4.005", "writess": "0", "throughput_gb": "15.28", "throughput_gb_reads": "15.28", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 2}, {"iops": "4.036", "readss": "4.036", "writess": "0", "throughput_gb": "15.4", "throughput_gb_reads": "15.4", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 3}, {"iops": "4.011", "readss": "4.011", "writess": "0", "throughput_gb": "15.3", "throughput_gb_reads": "15.3", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 4}]}, {"THREADS": "16", "IOENGINE": "libaio", "FILENAME": "/mnt/nvme0n1/f", "FILESIZE": "10G", "IOSIZE": "10G", "INIT": "disable", "RUNTIME": "30", "CONFIG_STR": "THREADS_16__IOENGINE_libaio__FILENAME_mntnvme0n1f__FILESIZE_10G__IOSIZE_10G__INIT_disable__RUNTIME_30", "repetitions": [{"iops": "1.562", "readss": "1.562", "writess": "0", "throughput_gb": "5.959", "throughput_gb_reads": "5.959", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 0}, {"iops": "1.562", "readss": "1.562", "writess": "0", "throughput_gb": "5.959", "throughput_gb_reads": "5.959", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 1}, {"iops": "1.562", "readss": "1.562", "writess": "0", "throughput_gb": "5.959", "throughput_gb_reads": "5.959", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 2}, {"iops": "1.562", "readss": "1.562", "writess": "0", "throughput_gb": "5.959", "throughput_gb_reads": "5.959", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 3}, {"iops": "1.562", "readss": "1.562", "writess": "0", "throughput_gb": "5.959", "throughput_gb_reads": "5.959", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 4}]}, {"THREADS": "16", "IOENGINE": "libaio", "FILENAME": "/mnt/nvme0n1/f;/mnt/nvme1n1/f", "FILESIZE": "10G", "IOSIZE": "10G", "INIT": "disable", "RUNTIME": "30", "CONFIG_STR": "THREADS_16__IOENGINE_libaio__FILENAME_mntnvme0n1fmntnvme1n1f__FILESIZE_10G__IOSIZE_10G__INIT_disable__RUNTIME_30", "repetitions": [{"iops": "3.123", "readss": "3.123", "writess": "0", "throughput_gb": "11.91", "throughput_gb_reads": "11.91", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 0}, {"iops": "3.123", "readss": "3.123", "writess": "0", "throughput_gb": "11.91", "throughput_gb_reads": "11.91", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 1}, {"iops": "3.123", "readss": "3.123", "writess": "0", "throughput_gb": "11.91", "throughput_gb_reads": "11.91", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 2}, {"iops": "3.123", "readss": "3.123", "writess": "0", "throughput_gb": "11.91", "throughput_gb_reads": "11.91", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 3}, {"iops": "3.123", "readss": "3.123", "writess": "0", "throughput_gb": "11.91", "throughput_gb_reads": "11.91", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 4}]}, {"THREADS": "16", "IOENGINE": "libaio", "FILENAME": "/mnt/nvme0n1/f;/mnt/nvme1n1/f;/mnt/nvme2n1/f;/mnt/nvme3n1/f", "FILESIZE": "10G", "IOSIZE": "10G", "INIT": "disable", "RUNTIME": "30", "CONFIG_STR": "THREADS_16__IOENGINE_libaio__FILENAME_mntnvme0n1fmntnvme1n1fmntnvme2n1fmntnvme3n1f__FILESIZE_10G__IOSIZE_10G__INIT_disable__RUNTIME_30", "repetitions": [{"iops": "6.23", "readss": "6.23", "writess": "0", "throughput_gb": "23.76", "throughput_gb_reads": "23.76", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 0}, {"iops": "6.23", "readss": "6.23", "writess": "0", "throughput_gb": "23.77", "throughput_gb_reads": "23.77", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 1}, {"iops": "6.231", "readss": "6.231", "writess": "0", "throughput_gb": "23.77", "throughput_gb_reads": "23.77", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 2}, {"iops": "6.231", "readss": "6.231", "writess": "0", "throughput_gb": "23.77", "throughput_gb_reads": "23.77", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 3}, {"iops": "6.231", "readss": "6.231", "writess": "0", "throughput_gb": "23.77", "throughput_gb_reads": "23.77", "throughput_gb_writes": "0", "max_iops": "0", "repetition": 4}]}]}
+{
+    "nxo05_ssds": [
+        {
+            "THREADS": "1",
+            "IOENGINE": "libaio",
+            "FILENAME": "/mnt/nvme0n1/f",
+            "FILESIZE": "10G",
+            "IOSIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "CONFIG_STR": "THREADS_1__IOENGINE_libaio__FILENAME_mntnvme0n1f__FILESIZE_10G__IOSIZE_10G__INIT_disable__RUNTIME_30",
+            "repetitions": [
+                {
+                    "iops": "0.5648",
+                    "readss": "0.5648",
+                    "writess": "0",
+                    "throughput_gb": "2.155",
+                    "throughput_gb_reads": "2.155",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "0.5622",
+                    "readss": "0.5622",
+                    "writess": "0",
+                    "throughput_gb": "2.145",
+                    "throughput_gb_reads": "2.145",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "0.5653",
+                    "readss": "0.5653",
+                    "writess": "0",
+                    "throughput_gb": "2.157",
+                    "throughput_gb_reads": "2.157",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "0.5637",
+                    "readss": "0.5637",
+                    "writess": "0",
+                    "throughput_gb": "2.15",
+                    "throughput_gb_reads": "2.15",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "0.565",
+                    "readss": "0.565",
+                    "writess": "0",
+                    "throughput_gb": "2.155",
+                    "throughput_gb_reads": "2.155",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "THREADS": "1",
+            "IOENGINE": "libaio",
+            "FILENAME": "/mnt/nvme0n1/f;/mnt/nvme1n1/f",
+            "FILESIZE": "10G",
+            "IOSIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "CONFIG_STR": "THREADS_1__IOENGINE_libaio__FILENAME_mntnvme0n1fmntnvme1n1f__FILESIZE_10G__IOSIZE_10G__INIT_disable__RUNTIME_30",
+            "repetitions": [
+                {
+                    "iops": "0.5497",
+                    "readss": "0.5497",
+                    "writess": "0",
+                    "throughput_gb": "2.097",
+                    "throughput_gb_reads": "2.097",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "0.5488",
+                    "readss": "0.5488",
+                    "writess": "0",
+                    "throughput_gb": "2.094",
+                    "throughput_gb_reads": "2.094",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "0.5498",
+                    "readss": "0.5498",
+                    "writess": "0",
+                    "throughput_gb": "2.097",
+                    "throughput_gb_reads": "2.097",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "0.5524",
+                    "readss": "0.5524",
+                    "writess": "0",
+                    "throughput_gb": "2.107",
+                    "throughput_gb_reads": "2.107",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "0.5524",
+                    "readss": "0.5524",
+                    "writess": "0",
+                    "throughput_gb": "2.107",
+                    "throughput_gb_reads": "2.107",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "THREADS": "1",
+            "IOENGINE": "libaio",
+            "FILENAME": "/mnt/nvme0n1/f;/mnt/nvme1n1/f;/mnt/nvme2n1/f;/mnt/nvme3n1/f",
+            "FILESIZE": "10G",
+            "IOSIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "CONFIG_STR": "THREADS_1__IOENGINE_libaio__FILENAME_mntnvme0n1fmntnvme1n1fmntnvme2n1fmntnvme3n1f__FILESIZE_10G__IOSIZE_10G__INIT_disable__RUNTIME_30",
+            "repetitions": [
+                {
+                    "iops": "0.5289",
+                    "readss": "0.5289",
+                    "writess": "0",
+                    "throughput_gb": "2.017",
+                    "throughput_gb_reads": "2.017",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "0.5279",
+                    "readss": "0.5279",
+                    "writess": "0",
+                    "throughput_gb": "2.014",
+                    "throughput_gb_reads": "2.014",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "0.5278",
+                    "readss": "0.5278",
+                    "writess": "0",
+                    "throughput_gb": "2.013",
+                    "throughput_gb_reads": "2.013",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "0.5261",
+                    "readss": "0.5261",
+                    "writess": "0",
+                    "throughput_gb": "2.007",
+                    "throughput_gb_reads": "2.007",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "0.5285",
+                    "readss": "0.5285",
+                    "writess": "0",
+                    "throughput_gb": "2.016",
+                    "throughput_gb_reads": "2.016",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "THREADS": "1",
+            "IOENGINE": "libaio",
+            "FILENAME": "/mnt/nvme0n1/f;/mnt/nvme1n1/f;/mnt/nvme2n1/f;/mnt/nvme3n1/f;/mnt/nvme4n1/f;/mnt/nvme5n1/f;/mnt/nvme6n1/f;/mnt/nvme7n1/f",
+            "FILESIZE": "10G",
+            "IOSIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "CONFIG_STR": "THREADS_1__IOENGINE_libaio__FILENAME_mntnvme0n1fmntnvme1n1fmntnvme2n1fmntnvme3n1fmntnvme4n1fmntnvme5n1fmntnvme6n1fmntnvme7n1f__FILESIZE_10G__IOSIZE_10G__INIT_disable__RUNTIME_30",
+            "repetitions": [
+                {
+                    "iops": "0.4991",
+                    "readss": "0.4991",
+                    "writess": "0",
+                    "throughput_gb": "1.904",
+                    "throughput_gb_reads": "1.904",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "0.5001",
+                    "readss": "0.5001",
+                    "writess": "0",
+                    "throughput_gb": "1.908",
+                    "throughput_gb_reads": "1.908",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "0.5035",
+                    "readss": "0.5035",
+                    "writess": "0",
+                    "throughput_gb": "1.921",
+                    "throughput_gb_reads": "1.921",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "0.5019",
+                    "readss": "0.5019",
+                    "writess": "0",
+                    "throughput_gb": "1.915",
+                    "throughput_gb_reads": "1.915",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "0.5028",
+                    "readss": "0.5028",
+                    "writess": "0",
+                    "throughput_gb": "1.918",
+                    "throughput_gb_reads": "1.918",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "THREADS": "1",
+            "IOENGINE": "io_uring",
+            "FILENAME": "/mnt/nvme0n1/f",
+            "FILESIZE": "10G",
+            "IOSIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "CONFIG_STR": "THREADS_1__IOENGINE_io_uring__FILENAME_mntnvme0n1f__FILESIZE_10G__IOSIZE_10G__INIT_disable__RUNTIME_30",
+            "repetitions": [
+                {
+                    "iops": "0.6157",
+                    "readss": "0.6157",
+                    "writess": "0",
+                    "throughput_gb": "2.349",
+                    "throughput_gb_reads": "2.349",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "0.6177",
+                    "readss": "0.6177",
+                    "writess": "0",
+                    "throughput_gb": "2.356",
+                    "throughput_gb_reads": "2.356",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "0.6157",
+                    "readss": "0.6157",
+                    "writess": "0",
+                    "throughput_gb": "2.349",
+                    "throughput_gb_reads": "2.349",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "0.6177",
+                    "readss": "0.6177",
+                    "writess": "0",
+                    "throughput_gb": "2.356",
+                    "throughput_gb_reads": "2.356",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "0.614",
+                    "readss": "0.614",
+                    "writess": "0",
+                    "throughput_gb": "2.342",
+                    "throughput_gb_reads": "2.342",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "THREADS": "1",
+            "IOENGINE": "io_uring",
+            "FILENAME": "/mnt/nvme0n1/f;/mnt/nvme1n1/f",
+            "FILESIZE": "10G",
+            "IOSIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "CONFIG_STR": "THREADS_1__IOENGINE_io_uring__FILENAME_mntnvme0n1fmntnvme1n1f__FILESIZE_10G__IOSIZE_10G__INIT_disable__RUNTIME_30",
+            "repetitions": [
+                {
+                    "iops": "0.6076",
+                    "readss": "0.6076",
+                    "writess": "0",
+                    "throughput_gb": "2.318",
+                    "throughput_gb_reads": "2.318",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "0.6085",
+                    "readss": "0.6085",
+                    "writess": "0",
+                    "throughput_gb": "2.321",
+                    "throughput_gb_reads": "2.321",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "0.609",
+                    "readss": "0.609",
+                    "writess": "0",
+                    "throughput_gb": "2.323",
+                    "throughput_gb_reads": "2.323",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "0.6087",
+                    "readss": "0.6087",
+                    "writess": "0",
+                    "throughput_gb": "2.322",
+                    "throughput_gb_reads": "2.322",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "0.6122",
+                    "readss": "0.6122",
+                    "writess": "0",
+                    "throughput_gb": "2.335",
+                    "throughput_gb_reads": "2.335",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "THREADS": "1",
+            "IOENGINE": "io_uring",
+            "FILENAME": "/mnt/nvme0n1/f;/mnt/nvme1n1/f;/mnt/nvme2n1/f;/mnt/nvme3n1/f",
+            "FILESIZE": "10G",
+            "IOSIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "CONFIG_STR": "THREADS_1__IOENGINE_io_uring__FILENAME_mntnvme0n1fmntnvme1n1fmntnvme2n1fmntnvme3n1f__FILESIZE_10G__IOSIZE_10G__INIT_disable__RUNTIME_30",
+            "repetitions": [
+                {
+                    "iops": "0.5794",
+                    "readss": "0.5794",
+                    "writess": "0",
+                    "throughput_gb": "2.21",
+                    "throughput_gb_reads": "2.21",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "0.5825",
+                    "readss": "0.5825",
+                    "writess": "0",
+                    "throughput_gb": "2.222",
+                    "throughput_gb_reads": "2.222",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "0.5822",
+                    "readss": "0.5822",
+                    "writess": "0",
+                    "throughput_gb": "2.221",
+                    "throughput_gb_reads": "2.221",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "0.5845",
+                    "readss": "0.5845",
+                    "writess": "0",
+                    "throughput_gb": "2.23",
+                    "throughput_gb_reads": "2.23",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "0.5794",
+                    "readss": "0.5794",
+                    "writess": "0",
+                    "throughput_gb": "2.21",
+                    "throughput_gb_reads": "2.21",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "THREADS": "1",
+            "IOENGINE": "io_uring",
+            "FILENAME": "/mnt/nvme0n1/f;/mnt/nvme1n1/f;/mnt/nvme2n1/f;/mnt/nvme3n1/f;/mnt/nvme4n1/f;/mnt/nvme5n1/f;/mnt/nvme6n1/f;/mnt/nvme7n1/f",
+            "FILESIZE": "10G",
+            "IOSIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "CONFIG_STR": "THREADS_1__IOENGINE_io_uring__FILENAME_mntnvme0n1fmntnvme1n1fmntnvme2n1fmntnvme3n1fmntnvme4n1fmntnvme5n1fmntnvme6n1fmntnvme7n1f__FILESIZE_10G__IOSIZE_10G__INIT_disable__RUNTIME_30",
+            "repetitions": [
+                {
+                    "iops": "0.5507",
+                    "readss": "0.5507",
+                    "writess": "0",
+                    "throughput_gb": "2.101",
+                    "throughput_gb_reads": "2.101",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "0.553",
+                    "readss": "0.553",
+                    "writess": "0",
+                    "throughput_gb": "2.11",
+                    "throughput_gb_reads": "2.11",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "0.5526",
+                    "readss": "0.5526",
+                    "writess": "0",
+                    "throughput_gb": "2.108",
+                    "throughput_gb_reads": "2.108",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "0.5533",
+                    "readss": "0.5533",
+                    "writess": "0",
+                    "throughput_gb": "2.111",
+                    "throughput_gb_reads": "2.111",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "0.5521",
+                    "readss": "0.5521",
+                    "writess": "0",
+                    "throughput_gb": "2.106",
+                    "throughput_gb_reads": "2.106",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "THREADS": "2",
+            "IOENGINE": "libaio",
+            "FILENAME": "/mnt/nvme0n1/f",
+            "FILESIZE": "10G",
+            "IOSIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "CONFIG_STR": "THREADS_2__IOENGINE_libaio__FILENAME_mntnvme0n1f__FILESIZE_10G__IOSIZE_10G__INIT_disable__RUNTIME_30",
+            "repetitions": [
+                {
+                    "iops": "1.036",
+                    "readss": "1.036",
+                    "writess": "0",
+                    "throughput_gb": "3.951",
+                    "throughput_gb_reads": "3.951",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "1.032",
+                    "readss": "1.032",
+                    "writess": "0",
+                    "throughput_gb": "3.935",
+                    "throughput_gb_reads": "3.935",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "1.019",
+                    "readss": "1.019",
+                    "writess": "0",
+                    "throughput_gb": "3.888",
+                    "throughput_gb_reads": "3.888",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "1.04",
+                    "readss": "1.04",
+                    "writess": "0",
+                    "throughput_gb": "3.966",
+                    "throughput_gb_reads": "3.966",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "1.028",
+                    "readss": "1.028",
+                    "writess": "0",
+                    "throughput_gb": "3.921",
+                    "throughput_gb_reads": "3.921",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "THREADS": "2",
+            "IOENGINE": "libaio",
+            "FILENAME": "/mnt/nvme0n1/f;/mnt/nvme1n1/f",
+            "FILESIZE": "10G",
+            "IOSIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "CONFIG_STR": "THREADS_2__IOENGINE_libaio__FILENAME_mntnvme0n1fmntnvme1n1f__FILESIZE_10G__IOSIZE_10G__INIT_disable__RUNTIME_30",
+            "repetitions": [
+                {
+                    "iops": "1.037",
+                    "readss": "1.037",
+                    "writess": "0",
+                    "throughput_gb": "3.954",
+                    "throughput_gb_reads": "3.954",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "1.034",
+                    "readss": "1.034",
+                    "writess": "0",
+                    "throughput_gb": "3.943",
+                    "throughput_gb_reads": "3.943",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "1.033",
+                    "readss": "1.033",
+                    "writess": "0",
+                    "throughput_gb": "3.94",
+                    "throughput_gb_reads": "3.94",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "1.035",
+                    "readss": "1.035",
+                    "writess": "0",
+                    "throughput_gb": "3.947",
+                    "throughput_gb_reads": "3.947",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "1.036",
+                    "readss": "1.036",
+                    "writess": "0",
+                    "throughput_gb": "3.953",
+                    "throughput_gb_reads": "3.953",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "THREADS": "2",
+            "IOENGINE": "libaio",
+            "FILENAME": "/mnt/nvme0n1/f;/mnt/nvme1n1/f;/mnt/nvme2n1/f;/mnt/nvme3n1/f",
+            "FILESIZE": "10G",
+            "IOSIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "CONFIG_STR": "THREADS_2__IOENGINE_libaio__FILENAME_mntnvme0n1fmntnvme1n1fmntnvme2n1fmntnvme3n1f__FILESIZE_10G__IOSIZE_10G__INIT_disable__RUNTIME_30",
+            "repetitions": [
+                {
+                    "iops": "1.01",
+                    "readss": "1.01",
+                    "writess": "0",
+                    "throughput_gb": "3.855",
+                    "throughput_gb_reads": "3.855",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "1.014",
+                    "readss": "1.014",
+                    "writess": "0",
+                    "throughput_gb": "3.867",
+                    "throughput_gb_reads": "3.867",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "1.012",
+                    "readss": "1.012",
+                    "writess": "0",
+                    "throughput_gb": "3.861",
+                    "throughput_gb_reads": "3.861",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "1.012",
+                    "readss": "1.012",
+                    "writess": "0",
+                    "throughput_gb": "3.861",
+                    "throughput_gb_reads": "3.861",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "1.013",
+                    "readss": "1.013",
+                    "writess": "0",
+                    "throughput_gb": "3.865",
+                    "throughput_gb_reads": "3.865",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "THREADS": "2",
+            "IOENGINE": "libaio",
+            "FILENAME": "/mnt/nvme0n1/f;/mnt/nvme1n1/f;/mnt/nvme2n1/f;/mnt/nvme3n1/f;/mnt/nvme4n1/f;/mnt/nvme5n1/f;/mnt/nvme6n1/f;/mnt/nvme7n1/f",
+            "FILESIZE": "10G",
+            "IOSIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "CONFIG_STR": "THREADS_2__IOENGINE_libaio__FILENAME_mntnvme0n1fmntnvme1n1fmntnvme2n1fmntnvme3n1fmntnvme4n1fmntnvme5n1fmntnvme6n1fmntnvme7n1f__FILESIZE_10G__IOSIZE_10G__INIT_disable__RUNTIME_30",
+            "repetitions": [
+                {
+                    "iops": "0.9771",
+                    "readss": "0.9771",
+                    "writess": "0",
+                    "throughput_gb": "3.727",
+                    "throughput_gb_reads": "3.727",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "0.9831",
+                    "readss": "0.9831",
+                    "writess": "0",
+                    "throughput_gb": "3.75",
+                    "throughput_gb_reads": "3.75",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "0.9793",
+                    "readss": "0.9793",
+                    "writess": "0",
+                    "throughput_gb": "3.736",
+                    "throughput_gb_reads": "3.736",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "0.9792",
+                    "readss": "0.9792",
+                    "writess": "0",
+                    "throughput_gb": "3.735",
+                    "throughput_gb_reads": "3.735",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "0.9778",
+                    "readss": "0.9778",
+                    "writess": "0",
+                    "throughput_gb": "3.73",
+                    "throughput_gb_reads": "3.73",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "THREADS": "2",
+            "IOENGINE": "io_uring",
+            "FILENAME": "/mnt/nvme0n1/f",
+            "FILESIZE": "10G",
+            "IOSIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "CONFIG_STR": "THREADS_2__IOENGINE_io_uring__FILENAME_mntnvme0n1f__FILESIZE_10G__IOSIZE_10G__INIT_disable__RUNTIME_30",
+            "repetitions": [
+                {
+                    "iops": "1.127",
+                    "readss": "1.127",
+                    "writess": "0",
+                    "throughput_gb": "4.298",
+                    "throughput_gb_reads": "4.298",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "1.125",
+                    "readss": "1.125",
+                    "writess": "0",
+                    "throughput_gb": "4.29",
+                    "throughput_gb_reads": "4.29",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "1.119",
+                    "readss": "1.119",
+                    "writess": "0",
+                    "throughput_gb": "4.268",
+                    "throughput_gb_reads": "4.268",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "1.121",
+                    "readss": "1.121",
+                    "writess": "0",
+                    "throughput_gb": "4.277",
+                    "throughput_gb_reads": "4.277",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "1.119",
+                    "readss": "1.119",
+                    "writess": "0",
+                    "throughput_gb": "4.27",
+                    "throughput_gb_reads": "4.27",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "THREADS": "2",
+            "IOENGINE": "io_uring",
+            "FILENAME": "/mnt/nvme0n1/f;/mnt/nvme1n1/f",
+            "FILESIZE": "10G",
+            "IOSIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "CONFIG_STR": "THREADS_2__IOENGINE_io_uring__FILENAME_mntnvme0n1fmntnvme1n1f__FILESIZE_10G__IOSIZE_10G__INIT_disable__RUNTIME_30",
+            "repetitions": [
+                {
+                    "iops": "1.167",
+                    "readss": "1.167",
+                    "writess": "0",
+                    "throughput_gb": "4.452",
+                    "throughput_gb_reads": "4.452",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "1.159",
+                    "readss": "1.159",
+                    "writess": "0",
+                    "throughput_gb": "4.421",
+                    "throughput_gb_reads": "4.421",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "1.155",
+                    "readss": "1.155",
+                    "writess": "0",
+                    "throughput_gb": "4.407",
+                    "throughput_gb_reads": "4.407",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "1.146",
+                    "readss": "1.146",
+                    "writess": "0",
+                    "throughput_gb": "4.372",
+                    "throughput_gb_reads": "4.372",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "1.156",
+                    "readss": "1.156",
+                    "writess": "0",
+                    "throughput_gb": "4.409",
+                    "throughput_gb_reads": "4.409",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "THREADS": "2",
+            "IOENGINE": "io_uring",
+            "FILENAME": "/mnt/nvme0n1/f;/mnt/nvme1n1/f;/mnt/nvme2n1/f;/mnt/nvme3n1/f",
+            "FILESIZE": "10G",
+            "IOSIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "CONFIG_STR": "THREADS_2__IOENGINE_io_uring__FILENAME_mntnvme0n1fmntnvme1n1fmntnvme2n1fmntnvme3n1f__FILESIZE_10G__IOSIZE_10G__INIT_disable__RUNTIME_30",
+            "repetitions": [
+                {
+                    "iops": "1.117",
+                    "readss": "1.117",
+                    "writess": "0",
+                    "throughput_gb": "4.261",
+                    "throughput_gb_reads": "4.261",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "1.113",
+                    "readss": "1.113",
+                    "writess": "0",
+                    "throughput_gb": "4.245",
+                    "throughput_gb_reads": "4.245",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "1.113",
+                    "readss": "1.113",
+                    "writess": "0",
+                    "throughput_gb": "4.246",
+                    "throughput_gb_reads": "4.246",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "1.114",
+                    "readss": "1.114",
+                    "writess": "0",
+                    "throughput_gb": "4.249",
+                    "throughput_gb_reads": "4.249",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "1.116",
+                    "readss": "1.116",
+                    "writess": "0",
+                    "throughput_gb": "4.257",
+                    "throughput_gb_reads": "4.257",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "THREADS": "2",
+            "IOENGINE": "io_uring",
+            "FILENAME": "/mnt/nvme0n1/f;/mnt/nvme1n1/f;/mnt/nvme2n1/f;/mnt/nvme3n1/f;/mnt/nvme4n1/f;/mnt/nvme5n1/f;/mnt/nvme6n1/f;/mnt/nvme7n1/f",
+            "FILESIZE": "10G",
+            "IOSIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "CONFIG_STR": "THREADS_2__IOENGINE_io_uring__FILENAME_mntnvme0n1fmntnvme1n1fmntnvme2n1fmntnvme3n1fmntnvme4n1fmntnvme5n1fmntnvme6n1fmntnvme7n1f__FILESIZE_10G__IOSIZE_10G__INIT_disable__RUNTIME_30",
+            "repetitions": [
+                {
+                    "iops": "1.075",
+                    "readss": "1.075",
+                    "writess": "0",
+                    "throughput_gb": "4.101",
+                    "throughput_gb_reads": "4.101",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "1.072",
+                    "readss": "1.072",
+                    "writess": "0",
+                    "throughput_gb": "4.089",
+                    "throughput_gb_reads": "4.089",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "1.078",
+                    "readss": "1.078",
+                    "writess": "0",
+                    "throughput_gb": "4.114",
+                    "throughput_gb_reads": "4.114",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "1.079",
+                    "readss": "1.079",
+                    "writess": "0",
+                    "throughput_gb": "4.117",
+                    "throughput_gb_reads": "4.117",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "1.077",
+                    "readss": "1.077",
+                    "writess": "0",
+                    "throughput_gb": "4.108",
+                    "throughput_gb_reads": "4.108",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "THREADS": "4",
+            "IOENGINE": "libaio",
+            "FILENAME": "/mnt/nvme0n1/f",
+            "FILESIZE": "10G",
+            "IOSIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "CONFIG_STR": "THREADS_4__IOENGINE_libaio__FILENAME_mntnvme0n1f__FILESIZE_10G__IOSIZE_10G__INIT_disable__RUNTIME_30",
+            "repetitions": [
+                {
+                    "iops": "1.562",
+                    "readss": "1.562",
+                    "writess": "0",
+                    "throughput_gb": "5.958",
+                    "throughput_gb_reads": "5.958",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "1.562",
+                    "readss": "1.562",
+                    "writess": "0",
+                    "throughput_gb": "5.958",
+                    "throughput_gb_reads": "5.958",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "1.562",
+                    "readss": "1.562",
+                    "writess": "0",
+                    "throughput_gb": "5.958",
+                    "throughput_gb_reads": "5.958",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "1.562",
+                    "readss": "1.562",
+                    "writess": "0",
+                    "throughput_gb": "5.958",
+                    "throughput_gb_reads": "5.958",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "1.562",
+                    "readss": "1.562",
+                    "writess": "0",
+                    "throughput_gb": "5.958",
+                    "throughput_gb_reads": "5.958",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "THREADS": "4",
+            "IOENGINE": "libaio",
+            "FILENAME": "/mnt/nvme0n1/f;/mnt/nvme1n1/f",
+            "FILESIZE": "10G",
+            "IOSIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "CONFIG_STR": "THREADS_4__IOENGINE_libaio__FILENAME_mntnvme0n1fmntnvme1n1f__FILESIZE_10G__IOSIZE_10G__INIT_disable__RUNTIME_30",
+            "repetitions": [
+                {
+                    "iops": "1.975",
+                    "readss": "1.975",
+                    "writess": "0",
+                    "throughput_gb": "7.533",
+                    "throughput_gb_reads": "7.533",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "1.959",
+                    "readss": "1.959",
+                    "writess": "0",
+                    "throughput_gb": "7.473",
+                    "throughput_gb_reads": "7.473",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "1.96",
+                    "readss": "1.96",
+                    "writess": "0",
+                    "throughput_gb": "7.476",
+                    "throughput_gb_reads": "7.476",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "1.969",
+                    "readss": "1.969",
+                    "writess": "0",
+                    "throughput_gb": "7.512",
+                    "throughput_gb_reads": "7.512",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "1.961",
+                    "readss": "1.961",
+                    "writess": "0",
+                    "throughput_gb": "7.482",
+                    "throughput_gb_reads": "7.482",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "THREADS": "4",
+            "IOENGINE": "libaio",
+            "FILENAME": "/mnt/nvme0n1/f;/mnt/nvme1n1/f;/mnt/nvme2n1/f;/mnt/nvme3n1/f",
+            "FILESIZE": "10G",
+            "IOSIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "CONFIG_STR": "THREADS_4__IOENGINE_libaio__FILENAME_mntnvme0n1fmntnvme1n1fmntnvme2n1fmntnvme3n1f__FILESIZE_10G__IOSIZE_10G__INIT_disable__RUNTIME_30",
+            "repetitions": [
+                {
+                    "iops": "1.943",
+                    "readss": "1.943",
+                    "writess": "0",
+                    "throughput_gb": "7.413",
+                    "throughput_gb_reads": "7.413",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "1.949",
+                    "readss": "1.949",
+                    "writess": "0",
+                    "throughput_gb": "7.433",
+                    "throughput_gb_reads": "7.433",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "1.947",
+                    "readss": "1.947",
+                    "writess": "0",
+                    "throughput_gb": "7.428",
+                    "throughput_gb_reads": "7.428",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "1.957",
+                    "readss": "1.957",
+                    "writess": "0",
+                    "throughput_gb": "7.466",
+                    "throughput_gb_reads": "7.466",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "1.953",
+                    "readss": "1.953",
+                    "writess": "0",
+                    "throughput_gb": "7.451",
+                    "throughput_gb_reads": "7.451",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "THREADS": "4",
+            "IOENGINE": "libaio",
+            "FILENAME": "/mnt/nvme0n1/f;/mnt/nvme1n1/f;/mnt/nvme2n1/f;/mnt/nvme3n1/f;/mnt/nvme4n1/f;/mnt/nvme5n1/f;/mnt/nvme6n1/f;/mnt/nvme7n1/f",
+            "FILESIZE": "10G",
+            "IOSIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "CONFIG_STR": "THREADS_4__IOENGINE_libaio__FILENAME_mntnvme0n1fmntnvme1n1fmntnvme2n1fmntnvme3n1fmntnvme4n1fmntnvme5n1fmntnvme6n1fmntnvme7n1f__FILESIZE_10G__IOSIZE_10G__INIT_disable__RUNTIME_30",
+            "repetitions": [
+                {
+                    "iops": "1.895",
+                    "readss": "1.895",
+                    "writess": "0",
+                    "throughput_gb": "7.23",
+                    "throughput_gb_reads": "7.23",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "1.9",
+                    "readss": "1.9",
+                    "writess": "0",
+                    "throughput_gb": "7.247",
+                    "throughput_gb_reads": "7.247",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "1.901",
+                    "readss": "1.901",
+                    "writess": "0",
+                    "throughput_gb": "7.251",
+                    "throughput_gb_reads": "7.251",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "1.902",
+                    "readss": "1.902",
+                    "writess": "0",
+                    "throughput_gb": "7.257",
+                    "throughput_gb_reads": "7.257",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "1.902",
+                    "readss": "1.902",
+                    "writess": "0",
+                    "throughput_gb": "7.254",
+                    "throughput_gb_reads": "7.254",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "THREADS": "4",
+            "IOENGINE": "io_uring",
+            "FILENAME": "/mnt/nvme0n1/f",
+            "FILESIZE": "10G",
+            "IOSIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "CONFIG_STR": "THREADS_4__IOENGINE_io_uring__FILENAME_mntnvme0n1f__FILESIZE_10G__IOSIZE_10G__INIT_disable__RUNTIME_30",
+            "repetitions": [
+                {
+                    "iops": "1.562",
+                    "readss": "1.562",
+                    "writess": "0",
+                    "throughput_gb": "5.958",
+                    "throughput_gb_reads": "5.958",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "1.562",
+                    "readss": "1.562",
+                    "writess": "0",
+                    "throughput_gb": "5.959",
+                    "throughput_gb_reads": "5.959",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "1.562",
+                    "readss": "1.562",
+                    "writess": "0",
+                    "throughput_gb": "5.959",
+                    "throughput_gb_reads": "5.959",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "1.562",
+                    "readss": "1.562",
+                    "writess": "0",
+                    "throughput_gb": "5.959",
+                    "throughput_gb_reads": "5.959",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "1.562",
+                    "readss": "1.562",
+                    "writess": "0",
+                    "throughput_gb": "5.959",
+                    "throughput_gb_reads": "5.959",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "THREADS": "4",
+            "IOENGINE": "io_uring",
+            "FILENAME": "/mnt/nvme0n1/f;/mnt/nvme1n1/f",
+            "FILESIZE": "10G",
+            "IOSIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "CONFIG_STR": "THREADS_4__IOENGINE_io_uring__FILENAME_mntnvme0n1fmntnvme1n1f__FILESIZE_10G__IOSIZE_10G__INIT_disable__RUNTIME_30",
+            "repetitions": [
+                {
+                    "iops": "2.172",
+                    "readss": "2.172",
+                    "writess": "0",
+                    "throughput_gb": "8.284",
+                    "throughput_gb_reads": "8.284",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "2.176",
+                    "readss": "2.176",
+                    "writess": "0",
+                    "throughput_gb": "8.3",
+                    "throughput_gb_reads": "8.3",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "2.15",
+                    "readss": "2.15",
+                    "writess": "0",
+                    "throughput_gb": "8.203",
+                    "throughput_gb_reads": "8.203",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "2.154",
+                    "readss": "2.154",
+                    "writess": "0",
+                    "throughput_gb": "8.216",
+                    "throughput_gb_reads": "8.216",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "2.139",
+                    "readss": "2.139",
+                    "writess": "0",
+                    "throughput_gb": "8.16",
+                    "throughput_gb_reads": "8.16",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "THREADS": "4",
+            "IOENGINE": "io_uring",
+            "FILENAME": "/mnt/nvme0n1/f;/mnt/nvme1n1/f;/mnt/nvme2n1/f;/mnt/nvme3n1/f",
+            "FILESIZE": "10G",
+            "IOSIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "CONFIG_STR": "THREADS_4__IOENGINE_io_uring__FILENAME_mntnvme0n1fmntnvme1n1fmntnvme2n1fmntnvme3n1f__FILESIZE_10G__IOSIZE_10G__INIT_disable__RUNTIME_30",
+            "repetitions": [
+                {
+                    "iops": "2.157",
+                    "readss": "2.157",
+                    "writess": "0",
+                    "throughput_gb": "8.228",
+                    "throughput_gb_reads": "8.228",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "2.146",
+                    "readss": "2.146",
+                    "writess": "0",
+                    "throughput_gb": "8.186",
+                    "throughput_gb_reads": "8.186",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "2.154",
+                    "readss": "2.154",
+                    "writess": "0",
+                    "throughput_gb": "8.218",
+                    "throughput_gb_reads": "8.218",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "2.155",
+                    "readss": "2.155",
+                    "writess": "0",
+                    "throughput_gb": "8.219",
+                    "throughput_gb_reads": "8.219",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "2.159",
+                    "readss": "2.159",
+                    "writess": "0",
+                    "throughput_gb": "8.236",
+                    "throughput_gb_reads": "8.236",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "THREADS": "4",
+            "IOENGINE": "io_uring",
+            "FILENAME": "/mnt/nvme0n1/f;/mnt/nvme1n1/f;/mnt/nvme2n1/f;/mnt/nvme3n1/f;/mnt/nvme4n1/f;/mnt/nvme5n1/f;/mnt/nvme6n1/f;/mnt/nvme7n1/f",
+            "FILESIZE": "10G",
+            "IOSIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "CONFIG_STR": "THREADS_4__IOENGINE_io_uring__FILENAME_mntnvme0n1fmntnvme1n1fmntnvme2n1fmntnvme3n1fmntnvme4n1fmntnvme5n1fmntnvme6n1fmntnvme7n1f__FILESIZE_10G__IOSIZE_10G__INIT_disable__RUNTIME_30",
+            "repetitions": [
+                {
+                    "iops": "2.077",
+                    "readss": "2.077",
+                    "writess": "0",
+                    "throughput_gb": "7.923",
+                    "throughput_gb_reads": "7.923",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "2.079",
+                    "readss": "2.079",
+                    "writess": "0",
+                    "throughput_gb": "7.932",
+                    "throughput_gb_reads": "7.932",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "2.072",
+                    "readss": "2.072",
+                    "writess": "0",
+                    "throughput_gb": "7.902",
+                    "throughput_gb_reads": "7.902",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "2.077",
+                    "readss": "2.077",
+                    "writess": "0",
+                    "throughput_gb": "7.923",
+                    "throughput_gb_reads": "7.923",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "2.074",
+                    "readss": "2.074",
+                    "writess": "0",
+                    "throughput_gb": "7.91",
+                    "throughput_gb_reads": "7.91",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "THREADS": "8",
+            "IOENGINE": "libaio",
+            "FILENAME": "/mnt/nvme0n1/f",
+            "FILESIZE": "10G",
+            "IOSIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "CONFIG_STR": "THREADS_8__IOENGINE_libaio__FILENAME_mntnvme0n1f__FILESIZE_10G__IOSIZE_10G__INIT_disable__RUNTIME_30",
+            "repetitions": [
+                {
+                    "iops": "1.562",
+                    "readss": "1.562",
+                    "writess": "0",
+                    "throughput_gb": "5.959",
+                    "throughput_gb_reads": "5.959",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "1.562",
+                    "readss": "1.562",
+                    "writess": "0",
+                    "throughput_gb": "5.959",
+                    "throughput_gb_reads": "5.959",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "1.562",
+                    "readss": "1.562",
+                    "writess": "0",
+                    "throughput_gb": "5.959",
+                    "throughput_gb_reads": "5.959",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "1.562",
+                    "readss": "1.562",
+                    "writess": "0",
+                    "throughput_gb": "5.959",
+                    "throughput_gb_reads": "5.959",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "1.562",
+                    "readss": "1.562",
+                    "writess": "0",
+                    "throughput_gb": "5.959",
+                    "throughput_gb_reads": "5.959",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "THREADS": "8",
+            "IOENGINE": "libaio",
+            "FILENAME": "/mnt/nvme0n1/f;/mnt/nvme1n1/f",
+            "FILESIZE": "10G",
+            "IOSIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "CONFIG_STR": "THREADS_8__IOENGINE_libaio__FILENAME_mntnvme0n1fmntnvme1n1f__FILESIZE_10G__IOSIZE_10G__INIT_disable__RUNTIME_30",
+            "repetitions": [
+                {
+                    "iops": "3.121",
+                    "readss": "3.121",
+                    "writess": "0",
+                    "throughput_gb": "11.91",
+                    "throughput_gb_reads": "11.91",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "3.121",
+                    "readss": "3.121",
+                    "writess": "0",
+                    "throughput_gb": "11.91",
+                    "throughput_gb_reads": "11.91",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "3.121",
+                    "readss": "3.121",
+                    "writess": "0",
+                    "throughput_gb": "11.91",
+                    "throughput_gb_reads": "11.91",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "3.122",
+                    "readss": "3.122",
+                    "writess": "0",
+                    "throughput_gb": "11.91",
+                    "throughput_gb_reads": "11.91",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "3.122",
+                    "readss": "3.122",
+                    "writess": "0",
+                    "throughput_gb": "11.91",
+                    "throughput_gb_reads": "11.91",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "THREADS": "8",
+            "IOENGINE": "libaio",
+            "FILENAME": "/mnt/nvme0n1/f;/mnt/nvme1n1/f;/mnt/nvme2n1/f;/mnt/nvme3n1/f",
+            "FILESIZE": "10G",
+            "IOSIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "CONFIG_STR": "THREADS_8__IOENGINE_libaio__FILENAME_mntnvme0n1fmntnvme1n1fmntnvme2n1fmntnvme3n1f__FILESIZE_10G__IOSIZE_10G__INIT_disable__RUNTIME_30",
+            "repetitions": [
+                {
+                    "iops": "3.755",
+                    "readss": "3.755",
+                    "writess": "0",
+                    "throughput_gb": "14.32",
+                    "throughput_gb_reads": "14.32",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "3.775",
+                    "readss": "3.775",
+                    "writess": "0",
+                    "throughput_gb": "14.4",
+                    "throughput_gb_reads": "14.4",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "3.751",
+                    "readss": "3.751",
+                    "writess": "0",
+                    "throughput_gb": "14.31",
+                    "throughput_gb_reads": "14.31",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "3.769",
+                    "readss": "3.769",
+                    "writess": "0",
+                    "throughput_gb": "14.38",
+                    "throughput_gb_reads": "14.38",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "3.785",
+                    "readss": "3.785",
+                    "writess": "0",
+                    "throughput_gb": "14.44",
+                    "throughput_gb_reads": "14.44",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "THREADS": "8",
+            "IOENGINE": "libaio",
+            "FILENAME": "/mnt/nvme0n1/f;/mnt/nvme1n1/f;/mnt/nvme2n1/f;/mnt/nvme3n1/f;/mnt/nvme4n1/f;/mnt/nvme5n1/f;/mnt/nvme6n1/f;/mnt/nvme7n1/f",
+            "FILESIZE": "10G",
+            "IOSIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "CONFIG_STR": "THREADS_8__IOENGINE_libaio__FILENAME_mntnvme0n1fmntnvme1n1fmntnvme2n1fmntnvme3n1fmntnvme4n1fmntnvme5n1fmntnvme6n1fmntnvme7n1f__FILESIZE_10G__IOSIZE_10G__INIT_disable__RUNTIME_30",
+            "repetitions": [
+                {
+                    "iops": "3.688",
+                    "readss": "3.688",
+                    "writess": "0",
+                    "throughput_gb": "14.07",
+                    "throughput_gb_reads": "14.07",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "3.701",
+                    "readss": "3.701",
+                    "writess": "0",
+                    "throughput_gb": "14.12",
+                    "throughput_gb_reads": "14.12",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "3.701",
+                    "readss": "3.701",
+                    "writess": "0",
+                    "throughput_gb": "14.12",
+                    "throughput_gb_reads": "14.12",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "3.695",
+                    "readss": "3.695",
+                    "writess": "0",
+                    "throughput_gb": "14.1",
+                    "throughput_gb_reads": "14.1",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "3.681",
+                    "readss": "3.681",
+                    "writess": "0",
+                    "throughput_gb": "14.04",
+                    "throughput_gb_reads": "14.04",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "THREADS": "8",
+            "IOENGINE": "io_uring",
+            "FILENAME": "/mnt/nvme0n1/f",
+            "FILESIZE": "10G",
+            "IOSIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "CONFIG_STR": "THREADS_8__IOENGINE_io_uring__FILENAME_mntnvme0n1f__FILESIZE_10G__IOSIZE_10G__INIT_disable__RUNTIME_30",
+            "repetitions": [
+                {
+                    "iops": "1.562",
+                    "readss": "1.562",
+                    "writess": "0",
+                    "throughput_gb": "5.959",
+                    "throughput_gb_reads": "5.959",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "1.562",
+                    "readss": "1.562",
+                    "writess": "0",
+                    "throughput_gb": "5.959",
+                    "throughput_gb_reads": "5.959",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "1.562",
+                    "readss": "1.562",
+                    "writess": "0",
+                    "throughput_gb": "5.959",
+                    "throughput_gb_reads": "5.959",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "1.562",
+                    "readss": "1.562",
+                    "writess": "0",
+                    "throughput_gb": "5.959",
+                    "throughput_gb_reads": "5.959",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "1.562",
+                    "readss": "1.562",
+                    "writess": "0",
+                    "throughput_gb": "5.959",
+                    "throughput_gb_reads": "5.959",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "THREADS": "8",
+            "IOENGINE": "io_uring",
+            "FILENAME": "/mnt/nvme0n1/f;/mnt/nvme1n1/f",
+            "FILESIZE": "10G",
+            "IOSIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "CONFIG_STR": "THREADS_8__IOENGINE_io_uring__FILENAME_mntnvme0n1fmntnvme1n1f__FILESIZE_10G__IOSIZE_10G__INIT_disable__RUNTIME_30",
+            "repetitions": [
+                {
+                    "iops": "3.122",
+                    "readss": "3.122",
+                    "writess": "0",
+                    "throughput_gb": "11.91",
+                    "throughput_gb_reads": "11.91",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "3.122",
+                    "readss": "3.122",
+                    "writess": "0",
+                    "throughput_gb": "11.91",
+                    "throughput_gb_reads": "11.91",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "3.122",
+                    "readss": "3.122",
+                    "writess": "0",
+                    "throughput_gb": "11.91",
+                    "throughput_gb_reads": "11.91",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "3.122",
+                    "readss": "3.122",
+                    "writess": "0",
+                    "throughput_gb": "11.91",
+                    "throughput_gb_reads": "11.91",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "3.122",
+                    "readss": "3.122",
+                    "writess": "0",
+                    "throughput_gb": "11.91",
+                    "throughput_gb_reads": "11.91",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "THREADS": "8",
+            "IOENGINE": "io_uring",
+            "FILENAME": "/mnt/nvme0n1/f;/mnt/nvme1n1/f;/mnt/nvme2n1/f;/mnt/nvme3n1/f",
+            "FILESIZE": "10G",
+            "IOSIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "CONFIG_STR": "THREADS_8__IOENGINE_io_uring__FILENAME_mntnvme0n1fmntnvme1n1fmntnvme2n1fmntnvme3n1f__FILESIZE_10G__IOSIZE_10G__INIT_disable__RUNTIME_30",
+            "repetitions": [
+                {
+                    "iops": "4.123",
+                    "readss": "4.123",
+                    "writess": "0",
+                    "throughput_gb": "15.73",
+                    "throughput_gb_reads": "15.73",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "4.174",
+                    "readss": "4.174",
+                    "writess": "0",
+                    "throughput_gb": "15.92",
+                    "throughput_gb_reads": "15.92",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "4.175",
+                    "readss": "4.175",
+                    "writess": "0",
+                    "throughput_gb": "15.93",
+                    "throughput_gb_reads": "15.93",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "4.117",
+                    "readss": "4.117",
+                    "writess": "0",
+                    "throughput_gb": "15.7",
+                    "throughput_gb_reads": "15.7",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "4.169",
+                    "readss": "4.169",
+                    "writess": "0",
+                    "throughput_gb": "15.91",
+                    "throughput_gb_reads": "15.91",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "THREADS": "8",
+            "IOENGINE": "io_uring",
+            "FILENAME": "/mnt/nvme0n1/f;/mnt/nvme1n1/f;/mnt/nvme2n1/f;/mnt/nvme3n1/f;/mnt/nvme4n1/f;/mnt/nvme5n1/f;/mnt/nvme6n1/f;/mnt/nvme7n1/f",
+            "FILESIZE": "10G",
+            "IOSIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "CONFIG_STR": "THREADS_8__IOENGINE_io_uring__FILENAME_mntnvme0n1fmntnvme1n1fmntnvme2n1fmntnvme3n1fmntnvme4n1fmntnvme5n1fmntnvme6n1fmntnvme7n1f__FILESIZE_10G__IOSIZE_10G__INIT_disable__RUNTIME_30",
+            "repetitions": [
+                {
+                    "iops": "4.017",
+                    "readss": "4.017",
+                    "writess": "0",
+                    "throughput_gb": "15.32",
+                    "throughput_gb_reads": "15.32",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "4.014",
+                    "readss": "4.014",
+                    "writess": "0",
+                    "throughput_gb": "15.31",
+                    "throughput_gb_reads": "15.31",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "4.005",
+                    "readss": "4.005",
+                    "writess": "0",
+                    "throughput_gb": "15.28",
+                    "throughput_gb_reads": "15.28",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "4.036",
+                    "readss": "4.036",
+                    "writess": "0",
+                    "throughput_gb": "15.4",
+                    "throughput_gb_reads": "15.4",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "4.011",
+                    "readss": "4.011",
+                    "writess": "0",
+                    "throughput_gb": "15.3",
+                    "throughput_gb_reads": "15.3",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "THREADS": "16",
+            "IOENGINE": "libaio",
+            "FILENAME": "/mnt/nvme0n1/f",
+            "FILESIZE": "10G",
+            "IOSIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "CONFIG_STR": "THREADS_16__IOENGINE_libaio__FILENAME_mntnvme0n1f__FILESIZE_10G__IOSIZE_10G__INIT_disable__RUNTIME_30",
+            "repetitions": [
+                {
+                    "iops": "1.562",
+                    "readss": "1.562",
+                    "writess": "0",
+                    "throughput_gb": "5.959",
+                    "throughput_gb_reads": "5.959",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "1.562",
+                    "readss": "1.562",
+                    "writess": "0",
+                    "throughput_gb": "5.959",
+                    "throughput_gb_reads": "5.959",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "1.562",
+                    "readss": "1.562",
+                    "writess": "0",
+                    "throughput_gb": "5.959",
+                    "throughput_gb_reads": "5.959",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "1.562",
+                    "readss": "1.562",
+                    "writess": "0",
+                    "throughput_gb": "5.959",
+                    "throughput_gb_reads": "5.959",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "1.562",
+                    "readss": "1.562",
+                    "writess": "0",
+                    "throughput_gb": "5.959",
+                    "throughput_gb_reads": "5.959",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "THREADS": "16",
+            "IOENGINE": "libaio",
+            "FILENAME": "/mnt/nvme0n1/f;/mnt/nvme1n1/f",
+            "FILESIZE": "10G",
+            "IOSIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "CONFIG_STR": "THREADS_16__IOENGINE_libaio__FILENAME_mntnvme0n1fmntnvme1n1f__FILESIZE_10G__IOSIZE_10G__INIT_disable__RUNTIME_30",
+            "repetitions": [
+                {
+                    "iops": "3.123",
+                    "readss": "3.123",
+                    "writess": "0",
+                    "throughput_gb": "11.91",
+                    "throughput_gb_reads": "11.91",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "3.123",
+                    "readss": "3.123",
+                    "writess": "0",
+                    "throughput_gb": "11.91",
+                    "throughput_gb_reads": "11.91",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "3.123",
+                    "readss": "3.123",
+                    "writess": "0",
+                    "throughput_gb": "11.91",
+                    "throughput_gb_reads": "11.91",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "3.123",
+                    "readss": "3.123",
+                    "writess": "0",
+                    "throughput_gb": "11.91",
+                    "throughput_gb_reads": "11.91",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "3.123",
+                    "readss": "3.123",
+                    "writess": "0",
+                    "throughput_gb": "11.91",
+                    "throughput_gb_reads": "11.91",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "THREADS": "16",
+            "IOENGINE": "libaio",
+            "FILENAME": "/mnt/nvme0n1/f;/mnt/nvme1n1/f;/mnt/nvme2n1/f;/mnt/nvme3n1/f",
+            "FILESIZE": "10G",
+            "IOSIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "CONFIG_STR": "THREADS_16__IOENGINE_libaio__FILENAME_mntnvme0n1fmntnvme1n1fmntnvme2n1fmntnvme3n1f__FILESIZE_10G__IOSIZE_10G__INIT_disable__RUNTIME_30",
+            "repetitions": [
+                {
+                    "iops": "6.232",
+                    "readss": "6.232",
+                    "writess": "0",
+                    "throughput_gb": "23.77",
+                    "throughput_gb_reads": "23.77",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "6.231",
+                    "readss": "6.231",
+                    "writess": "0",
+                    "throughput_gb": "23.77",
+                    "throughput_gb_reads": "23.77",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "6.231",
+                    "readss": "6.231",
+                    "writess": "0",
+                    "throughput_gb": "23.77",
+                    "throughput_gb_reads": "23.77",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "6.23",
+                    "readss": "6.23",
+                    "writess": "0",
+                    "throughput_gb": "23.77",
+                    "throughput_gb_reads": "23.77",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "6.231",
+                    "readss": "6.231",
+                    "writess": "0",
+                    "throughput_gb": "23.77",
+                    "throughput_gb_reads": "23.77",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "THREADS": "16",
+            "IOENGINE": "libaio",
+            "FILENAME": "/mnt/nvme0n1/f;/mnt/nvme1n1/f;/mnt/nvme2n1/f;/mnt/nvme3n1/f;/mnt/nvme4n1/f;/mnt/nvme5n1/f;/mnt/nvme6n1/f;/mnt/nvme7n1/f",
+            "FILESIZE": "10G",
+            "IOSIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "CONFIG_STR": "THREADS_16__IOENGINE_libaio__FILENAME_mntnvme0n1fmntnvme1n1fmntnvme2n1fmntnvme3n1fmntnvme4n1fmntnvme5n1fmntnvme6n1fmntnvme7n1f__FILESIZE_10G__IOSIZE_10G__INIT_disable__RUNTIME_30",
+            "repetitions": [
+                {
+                    "iops": "7.14",
+                    "readss": "7.14",
+                    "writess": "0",
+                    "throughput_gb": "27.24",
+                    "throughput_gb_reads": "27.24",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "7.138",
+                    "readss": "7.138",
+                    "writess": "0",
+                    "throughput_gb": "27.23",
+                    "throughput_gb_reads": "27.23",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "7.17",
+                    "readss": "7.17",
+                    "writess": "0",
+                    "throughput_gb": "27.35",
+                    "throughput_gb_reads": "27.35",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "7.099",
+                    "readss": "7.099",
+                    "writess": "0",
+                    "throughput_gb": "27.08",
+                    "throughput_gb_reads": "27.08",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "7.109",
+                    "readss": "7.109",
+                    "writess": "0",
+                    "throughput_gb": "27.12",
+                    "throughput_gb_reads": "27.12",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "THREADS": "16",
+            "IOENGINE": "io_uring",
+            "FILENAME": "/mnt/nvme0n1/f",
+            "FILESIZE": "10G",
+            "IOSIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "CONFIG_STR": "THREADS_16__IOENGINE_io_uring__FILENAME_mntnvme0n1f__FILESIZE_10G__IOSIZE_10G__INIT_disable__RUNTIME_30",
+            "repetitions": [
+                {
+                    "iops": "1.562",
+                    "readss": "1.562",
+                    "writess": "0",
+                    "throughput_gb": "5.959",
+                    "throughput_gb_reads": "5.959",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "1.562",
+                    "readss": "1.562",
+                    "writess": "0",
+                    "throughput_gb": "5.959",
+                    "throughput_gb_reads": "5.959",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "1.562",
+                    "readss": "1.562",
+                    "writess": "0",
+                    "throughput_gb": "5.959",
+                    "throughput_gb_reads": "5.959",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "1.562",
+                    "readss": "1.562",
+                    "writess": "0",
+                    "throughput_gb": "5.959",
+                    "throughput_gb_reads": "5.959",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "1.562",
+                    "readss": "1.562",
+                    "writess": "0",
+                    "throughput_gb": "5.959",
+                    "throughput_gb_reads": "5.959",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "THREADS": "16",
+            "IOENGINE": "io_uring",
+            "FILENAME": "/mnt/nvme0n1/f;/mnt/nvme1n1/f",
+            "FILESIZE": "10G",
+            "IOSIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "CONFIG_STR": "THREADS_16__IOENGINE_io_uring__FILENAME_mntnvme0n1fmntnvme1n1f__FILESIZE_10G__IOSIZE_10G__INIT_disable__RUNTIME_30",
+            "repetitions": [
+                {
+                    "iops": "3.123",
+                    "readss": "3.123",
+                    "writess": "0",
+                    "throughput_gb": "11.91",
+                    "throughput_gb_reads": "11.91",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "3.123",
+                    "readss": "3.123",
+                    "writess": "0",
+                    "throughput_gb": "11.91",
+                    "throughput_gb_reads": "11.91",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "3.123",
+                    "readss": "3.123",
+                    "writess": "0",
+                    "throughput_gb": "11.91",
+                    "throughput_gb_reads": "11.91",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "3.123",
+                    "readss": "3.123",
+                    "writess": "0",
+                    "throughput_gb": "11.91",
+                    "throughput_gb_reads": "11.91",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "3.123",
+                    "readss": "3.123",
+                    "writess": "0",
+                    "throughput_gb": "11.91",
+                    "throughput_gb_reads": "11.91",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "THREADS": "16",
+            "IOENGINE": "io_uring",
+            "FILENAME": "/mnt/nvme0n1/f;/mnt/nvme1n1/f;/mnt/nvme2n1/f;/mnt/nvme3n1/f",
+            "FILESIZE": "10G",
+            "IOSIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "CONFIG_STR": "THREADS_16__IOENGINE_io_uring__FILENAME_mntnvme0n1fmntnvme1n1fmntnvme2n1fmntnvme3n1f__FILESIZE_10G__IOSIZE_10G__INIT_disable__RUNTIME_30",
+            "repetitions": [
+                {
+                    "iops": "6.239",
+                    "readss": "6.239",
+                    "writess": "0",
+                    "throughput_gb": "23.8",
+                    "throughput_gb_reads": "23.8",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "6.24",
+                    "readss": "6.24",
+                    "writess": "0",
+                    "throughput_gb": "23.8",
+                    "throughput_gb_reads": "23.8",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "6.239",
+                    "readss": "6.239",
+                    "writess": "0",
+                    "throughput_gb": "23.8",
+                    "throughput_gb_reads": "23.8",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "6.24",
+                    "readss": "6.24",
+                    "writess": "0",
+                    "throughput_gb": "23.8",
+                    "throughput_gb_reads": "23.8",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "6.239",
+                    "readss": "6.239",
+                    "writess": "0",
+                    "throughput_gb": "23.8",
+                    "throughput_gb_reads": "23.8",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "THREADS": "16",
+            "IOENGINE": "io_uring",
+            "FILENAME": "/mnt/nvme0n1/f;/mnt/nvme1n1/f;/mnt/nvme2n1/f;/mnt/nvme3n1/f;/mnt/nvme4n1/f;/mnt/nvme5n1/f;/mnt/nvme6n1/f;/mnt/nvme7n1/f",
+            "FILESIZE": "10G",
+            "IOSIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "CONFIG_STR": "THREADS_16__IOENGINE_io_uring__FILENAME_mntnvme0n1fmntnvme1n1fmntnvme2n1fmntnvme3n1fmntnvme4n1fmntnvme5n1fmntnvme6n1fmntnvme7n1f__FILESIZE_10G__IOSIZE_10G__INIT_disable__RUNTIME_30",
+            "repetitions": [
+                {
+                    "iops": "7.728",
+                    "readss": "7.728",
+                    "writess": "0",
+                    "throughput_gb": "29.48",
+                    "throughput_gb_reads": "29.48",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "7.772",
+                    "readss": "7.772",
+                    "writess": "0",
+                    "throughput_gb": "29.65",
+                    "throughput_gb_reads": "29.65",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "7.782",
+                    "readss": "7.782",
+                    "writess": "0",
+                    "throughput_gb": "29.68",
+                    "throughput_gb_reads": "29.68",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "7.765",
+                    "readss": "7.765",
+                    "writess": "0",
+                    "throughput_gb": "29.62",
+                    "throughput_gb_reads": "29.62",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "7.74",
+                    "readss": "7.74",
+                    "writess": "0",
+                    "throughput_gb": "29.53",
+                    "throughput_gb_reads": "29.53",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "THREADS": "32",
+            "IOENGINE": "libaio",
+            "FILENAME": "/mnt/nvme0n1/f",
+            "FILESIZE": "10G",
+            "IOSIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "CONFIG_STR": "THREADS_32__IOENGINE_libaio__FILENAME_mntnvme0n1f__FILESIZE_10G__IOSIZE_10G__INIT_disable__RUNTIME_30",
+            "repetitions": [
+                {
+                    "iops": "1.562",
+                    "readss": "1.562",
+                    "writess": "0",
+                    "throughput_gb": "5.957",
+                    "throughput_gb_reads": "5.957",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "1.562",
+                    "readss": "1.562",
+                    "writess": "0",
+                    "throughput_gb": "5.957",
+                    "throughput_gb_reads": "5.957",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "1.562",
+                    "readss": "1.562",
+                    "writess": "0",
+                    "throughput_gb": "5.957",
+                    "throughput_gb_reads": "5.957",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "1.562",
+                    "readss": "1.562",
+                    "writess": "0",
+                    "throughput_gb": "5.957",
+                    "throughput_gb_reads": "5.957",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "1.562",
+                    "readss": "1.562",
+                    "writess": "0",
+                    "throughput_gb": "5.957",
+                    "throughput_gb_reads": "5.957",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "THREADS": "32",
+            "IOENGINE": "libaio",
+            "FILENAME": "/mnt/nvme0n1/f;/mnt/nvme1n1/f",
+            "FILESIZE": "10G",
+            "IOSIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "CONFIG_STR": "THREADS_32__IOENGINE_libaio__FILENAME_mntnvme0n1fmntnvme1n1f__FILESIZE_10G__IOSIZE_10G__INIT_disable__RUNTIME_30",
+            "repetitions": [
+                {
+                    "iops": "3.123",
+                    "readss": "3.123",
+                    "writess": "0",
+                    "throughput_gb": "11.91",
+                    "throughput_gb_reads": "11.91",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "3.122",
+                    "readss": "3.122",
+                    "writess": "0",
+                    "throughput_gb": "11.91",
+                    "throughput_gb_reads": "11.91",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "3.122",
+                    "readss": "3.122",
+                    "writess": "0",
+                    "throughput_gb": "11.91",
+                    "throughput_gb_reads": "11.91",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "3.122",
+                    "readss": "3.122",
+                    "writess": "0",
+                    "throughput_gb": "11.91",
+                    "throughput_gb_reads": "11.91",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "3.123",
+                    "readss": "3.123",
+                    "writess": "0",
+                    "throughput_gb": "11.91",
+                    "throughput_gb_reads": "11.91",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "THREADS": "32",
+            "IOENGINE": "libaio",
+            "FILENAME": "/mnt/nvme0n1/f;/mnt/nvme1n1/f;/mnt/nvme2n1/f;/mnt/nvme3n1/f",
+            "FILESIZE": "10G",
+            "IOSIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "CONFIG_STR": "THREADS_32__IOENGINE_libaio__FILENAME_mntnvme0n1fmntnvme1n1fmntnvme2n1fmntnvme3n1f__FILESIZE_10G__IOSIZE_10G__INIT_disable__RUNTIME_30",
+            "repetitions": [
+                {
+                    "iops": "6.24",
+                    "readss": "6.24",
+                    "writess": "0",
+                    "throughput_gb": "23.81",
+                    "throughput_gb_reads": "23.81",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "6.24",
+                    "readss": "6.24",
+                    "writess": "0",
+                    "throughput_gb": "23.81",
+                    "throughput_gb_reads": "23.81",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "6.24",
+                    "readss": "6.24",
+                    "writess": "0",
+                    "throughput_gb": "23.81",
+                    "throughput_gb_reads": "23.81",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "6.24",
+                    "readss": "6.24",
+                    "writess": "0",
+                    "throughput_gb": "23.81",
+                    "throughput_gb_reads": "23.81",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "6.24",
+                    "readss": "6.24",
+                    "writess": "0",
+                    "throughput_gb": "23.81",
+                    "throughput_gb_reads": "23.81",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "THREADS": "32",
+            "IOENGINE": "libaio",
+            "FILENAME": "/mnt/nvme0n1/f;/mnt/nvme1n1/f;/mnt/nvme2n1/f;/mnt/nvme3n1/f;/mnt/nvme4n1/f;/mnt/nvme5n1/f;/mnt/nvme6n1/f;/mnt/nvme7n1/f",
+            "FILESIZE": "10G",
+            "IOSIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "CONFIG_STR": "THREADS_32__IOENGINE_libaio__FILENAME_mntnvme0n1fmntnvme1n1fmntnvme2n1fmntnvme3n1fmntnvme4n1fmntnvme5n1fmntnvme6n1fmntnvme7n1f__FILESIZE_10G__IOSIZE_10G__INIT_disable__RUNTIME_30",
+            "repetitions": [
+                {
+                    "iops": "9.905",
+                    "readss": "9.905",
+                    "writess": "0",
+                    "throughput_gb": "37.78",
+                    "throughput_gb_reads": "37.78",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "9.949",
+                    "readss": "9.949",
+                    "writess": "0",
+                    "throughput_gb": "37.95",
+                    "throughput_gb_reads": "37.95",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "9.911",
+                    "readss": "9.911",
+                    "writess": "0",
+                    "throughput_gb": "37.81",
+                    "throughput_gb_reads": "37.81",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "9.926",
+                    "readss": "9.926",
+                    "writess": "0",
+                    "throughput_gb": "37.86",
+                    "throughput_gb_reads": "37.86",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "9.869",
+                    "readss": "9.869",
+                    "writess": "0",
+                    "throughput_gb": "37.65",
+                    "throughput_gb_reads": "37.65",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "THREADS": "32",
+            "IOENGINE": "io_uring",
+            "FILENAME": "/mnt/nvme0n1/f",
+            "FILESIZE": "10G",
+            "IOSIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "CONFIG_STR": "THREADS_32__IOENGINE_io_uring__FILENAME_mntnvme0n1f__FILESIZE_10G__IOSIZE_10G__INIT_disable__RUNTIME_30",
+            "repetitions": [
+                {
+                    "iops": "1.562",
+                    "readss": "1.562",
+                    "writess": "0",
+                    "throughput_gb": "5.959",
+                    "throughput_gb_reads": "5.959",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "1.562",
+                    "readss": "1.562",
+                    "writess": "0",
+                    "throughput_gb": "5.959",
+                    "throughput_gb_reads": "5.959",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "1.562",
+                    "readss": "1.562",
+                    "writess": "0",
+                    "throughput_gb": "5.959",
+                    "throughput_gb_reads": "5.959",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "1.562",
+                    "readss": "1.562",
+                    "writess": "0",
+                    "throughput_gb": "5.959",
+                    "throughput_gb_reads": "5.959",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "1.562",
+                    "readss": "1.562",
+                    "writess": "0",
+                    "throughput_gb": "5.959",
+                    "throughput_gb_reads": "5.959",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "THREADS": "32",
+            "IOENGINE": "io_uring",
+            "FILENAME": "/mnt/nvme0n1/f;/mnt/nvme1n1/f",
+            "FILESIZE": "10G",
+            "IOSIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "CONFIG_STR": "THREADS_32__IOENGINE_io_uring__FILENAME_mntnvme0n1fmntnvme1n1f__FILESIZE_10G__IOSIZE_10G__INIT_disable__RUNTIME_30",
+            "repetitions": [
+                {
+                    "iops": "3.123",
+                    "readss": "3.123",
+                    "writess": "0",
+                    "throughput_gb": "11.91",
+                    "throughput_gb_reads": "11.91",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "3.123",
+                    "readss": "3.123",
+                    "writess": "0",
+                    "throughput_gb": "11.91",
+                    "throughput_gb_reads": "11.91",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "3.123",
+                    "readss": "3.123",
+                    "writess": "0",
+                    "throughput_gb": "11.91",
+                    "throughput_gb_reads": "11.91",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "3.123",
+                    "readss": "3.123",
+                    "writess": "0",
+                    "throughput_gb": "11.91",
+                    "throughput_gb_reads": "11.91",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "3.123",
+                    "readss": "3.123",
+                    "writess": "0",
+                    "throughput_gb": "11.91",
+                    "throughput_gb_reads": "11.91",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "THREADS": "32",
+            "IOENGINE": "io_uring",
+            "FILENAME": "/mnt/nvme0n1/f;/mnt/nvme1n1/f;/mnt/nvme2n1/f;/mnt/nvme3n1/f",
+            "FILESIZE": "10G",
+            "IOSIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "CONFIG_STR": "THREADS_32__IOENGINE_io_uring__FILENAME_mntnvme0n1fmntnvme1n1fmntnvme2n1fmntnvme3n1f__FILESIZE_10G__IOSIZE_10G__INIT_disable__RUNTIME_30",
+            "repetitions": [
+                {
+                    "iops": "6.241",
+                    "readss": "6.241",
+                    "writess": "0",
+                    "throughput_gb": "23.81",
+                    "throughput_gb_reads": "23.81",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "6.241",
+                    "readss": "6.241",
+                    "writess": "0",
+                    "throughput_gb": "23.81",
+                    "throughput_gb_reads": "23.81",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "6.24",
+                    "readss": "6.24",
+                    "writess": "0",
+                    "throughput_gb": "23.8",
+                    "throughput_gb_reads": "23.8",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "6.241",
+                    "readss": "6.241",
+                    "writess": "0",
+                    "throughput_gb": "23.81",
+                    "throughput_gb_reads": "23.81",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "6.241",
+                    "readss": "6.241",
+                    "writess": "0",
+                    "throughput_gb": "23.81",
+                    "throughput_gb_reads": "23.81",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "THREADS": "32",
+            "IOENGINE": "io_uring",
+            "FILENAME": "/mnt/nvme0n1/f;/mnt/nvme1n1/f;/mnt/nvme2n1/f;/mnt/nvme3n1/f;/mnt/nvme4n1/f;/mnt/nvme5n1/f;/mnt/nvme6n1/f;/mnt/nvme7n1/f",
+            "FILESIZE": "10G",
+            "IOSIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "CONFIG_STR": "THREADS_32__IOENGINE_io_uring__FILENAME_mntnvme0n1fmntnvme1n1fmntnvme2n1fmntnvme3n1fmntnvme4n1fmntnvme5n1fmntnvme6n1fmntnvme7n1f__FILESIZE_10G__IOSIZE_10G__INIT_disable__RUNTIME_30",
+            "repetitions": [
+                {
+                    "iops": "10.2",
+                    "readss": "10.2",
+                    "writess": "0",
+                    "throughput_gb": "38.93",
+                    "throughput_gb_reads": "38.93",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "10.17",
+                    "readss": "10.17",
+                    "writess": "0",
+                    "throughput_gb": "38.81",
+                    "throughput_gb_reads": "38.81",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "10.33",
+                    "readss": "10.33",
+                    "writess": "0",
+                    "throughput_gb": "39.42",
+                    "throughput_gb_reads": "39.42",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "10.37",
+                    "readss": "10.37",
+                    "writess": "0",
+                    "throughput_gb": "39.58",
+                    "throughput_gb_reads": "39.58",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "10.16",
+                    "readss": "10.16",
+                    "writess": "0",
+                    "throughput_gb": "38.75",
+                    "throughput_gb_reads": "38.75",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "THREADS": "64",
+            "IOENGINE": "libaio",
+            "FILENAME": "/mnt/nvme0n1/f",
+            "FILESIZE": "10G",
+            "IOSIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "CONFIG_STR": "THREADS_64__IOENGINE_libaio__FILENAME_mntnvme0n1f__FILESIZE_10G__IOSIZE_10G__INIT_disable__RUNTIME_30",
+            "repetitions": [
+                {
+                    "iops": "1.561",
+                    "readss": "1.561",
+                    "writess": "0",
+                    "throughput_gb": "5.955",
+                    "throughput_gb_reads": "5.955",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "1.561",
+                    "readss": "1.561",
+                    "writess": "0",
+                    "throughput_gb": "5.955",
+                    "throughput_gb_reads": "5.955",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "1.561",
+                    "readss": "1.561",
+                    "writess": "0",
+                    "throughput_gb": "5.954",
+                    "throughput_gb_reads": "5.954",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "1.561",
+                    "readss": "1.561",
+                    "writess": "0",
+                    "throughput_gb": "5.955",
+                    "throughput_gb_reads": "5.955",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "1.561",
+                    "readss": "1.561",
+                    "writess": "0",
+                    "throughput_gb": "5.955",
+                    "throughput_gb_reads": "5.955",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "THREADS": "64",
+            "IOENGINE": "libaio",
+            "FILENAME": "/mnt/nvme0n1/f;/mnt/nvme1n1/f",
+            "FILESIZE": "10G",
+            "IOSIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "CONFIG_STR": "THREADS_64__IOENGINE_libaio__FILENAME_mntnvme0n1fmntnvme1n1f__FILESIZE_10G__IOSIZE_10G__INIT_disable__RUNTIME_30",
+            "repetitions": [
+                {
+                    "iops": "3.12",
+                    "readss": "3.12",
+                    "writess": "0",
+                    "throughput_gb": "11.9",
+                    "throughput_gb_reads": "11.9",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "3.12",
+                    "readss": "3.12",
+                    "writess": "0",
+                    "throughput_gb": "11.9",
+                    "throughput_gb_reads": "11.9",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "3.12",
+                    "readss": "3.12",
+                    "writess": "0",
+                    "throughput_gb": "11.9",
+                    "throughput_gb_reads": "11.9",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "3.12",
+                    "readss": "3.12",
+                    "writess": "0",
+                    "throughput_gb": "11.9",
+                    "throughput_gb_reads": "11.9",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "3.12",
+                    "readss": "3.12",
+                    "writess": "0",
+                    "throughput_gb": "11.9",
+                    "throughput_gb_reads": "11.9",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "THREADS": "64",
+            "IOENGINE": "libaio",
+            "FILENAME": "/mnt/nvme0n1/f;/mnt/nvme1n1/f;/mnt/nvme2n1/f;/mnt/nvme3n1/f",
+            "FILESIZE": "10G",
+            "IOSIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "CONFIG_STR": "THREADS_64__IOENGINE_libaio__FILENAME_mntnvme0n1fmntnvme1n1fmntnvme2n1fmntnvme3n1f__FILESIZE_10G__IOSIZE_10G__INIT_disable__RUNTIME_30",
+            "repetitions": [
+                {
+                    "iops": "6.229",
+                    "readss": "6.229",
+                    "writess": "0",
+                    "throughput_gb": "23.76",
+                    "throughput_gb_reads": "23.76",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "6.23",
+                    "readss": "6.23",
+                    "writess": "0",
+                    "throughput_gb": "23.77",
+                    "throughput_gb_reads": "23.77",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "6.23",
+                    "readss": "6.23",
+                    "writess": "0",
+                    "throughput_gb": "23.76",
+                    "throughput_gb_reads": "23.76",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "6.23",
+                    "readss": "6.23",
+                    "writess": "0",
+                    "throughput_gb": "23.76",
+                    "throughput_gb_reads": "23.76",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "6.23",
+                    "readss": "6.23",
+                    "writess": "0",
+                    "throughput_gb": "23.76",
+                    "throughput_gb_reads": "23.76",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "THREADS": "64",
+            "IOENGINE": "libaio",
+            "FILENAME": "/mnt/nvme0n1/f;/mnt/nvme1n1/f;/mnt/nvme2n1/f;/mnt/nvme3n1/f;/mnt/nvme4n1/f;/mnt/nvme5n1/f;/mnt/nvme6n1/f;/mnt/nvme7n1/f",
+            "FILESIZE": "10G",
+            "IOSIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "CONFIG_STR": "THREADS_64__IOENGINE_libaio__FILENAME_mntnvme0n1fmntnvme1n1fmntnvme2n1fmntnvme3n1fmntnvme4n1fmntnvme5n1fmntnvme6n1fmntnvme7n1f__FILESIZE_10G__IOSIZE_10G__INIT_disable__RUNTIME_30",
+            "repetitions": [
+                {
+                    "iops": "8.204",
+                    "readss": "8.204",
+                    "writess": "0",
+                    "throughput_gb": "31.29",
+                    "throughput_gb_reads": "31.29",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "8.204",
+                    "readss": "8.204",
+                    "writess": "0",
+                    "throughput_gb": "31.3",
+                    "throughput_gb_reads": "31.3",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "8.207",
+                    "readss": "8.207",
+                    "writess": "0",
+                    "throughput_gb": "31.31",
+                    "throughput_gb_reads": "31.31",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "8.262",
+                    "readss": "8.262",
+                    "writess": "0",
+                    "throughput_gb": "31.52",
+                    "throughput_gb_reads": "31.52",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "8.197",
+                    "readss": "8.197",
+                    "writess": "0",
+                    "throughput_gb": "31.27",
+                    "throughput_gb_reads": "31.27",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "THREADS": "64",
+            "IOENGINE": "io_uring",
+            "FILENAME": "/mnt/nvme0n1/f",
+            "FILESIZE": "10G",
+            "IOSIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "CONFIG_STR": "THREADS_64__IOENGINE_io_uring__FILENAME_mntnvme0n1f__FILESIZE_10G__IOSIZE_10G__INIT_disable__RUNTIME_30",
+            "repetitions": [
+                {
+                    "iops": "1.562",
+                    "readss": "1.562",
+                    "writess": "0",
+                    "throughput_gb": "5.96",
+                    "throughput_gb_reads": "5.96",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "1.562",
+                    "readss": "1.562",
+                    "writess": "0",
+                    "throughput_gb": "5.96",
+                    "throughput_gb_reads": "5.96",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "1.562",
+                    "readss": "1.562",
+                    "writess": "0",
+                    "throughput_gb": "5.96",
+                    "throughput_gb_reads": "5.96",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "1.562",
+                    "readss": "1.562",
+                    "writess": "0",
+                    "throughput_gb": "5.96",
+                    "throughput_gb_reads": "5.96",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "1.562",
+                    "readss": "1.562",
+                    "writess": "0",
+                    "throughput_gb": "5.96",
+                    "throughput_gb_reads": "5.96",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "THREADS": "64",
+            "IOENGINE": "io_uring",
+            "FILENAME": "/mnt/nvme0n1/f;/mnt/nvme1n1/f",
+            "FILESIZE": "10G",
+            "IOSIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "CONFIG_STR": "THREADS_64__IOENGINE_io_uring__FILENAME_mntnvme0n1fmntnvme1n1f__FILESIZE_10G__IOSIZE_10G__INIT_disable__RUNTIME_30",
+            "repetitions": [
+                {
+                    "iops": "3.123",
+                    "readss": "3.123",
+                    "writess": "0",
+                    "throughput_gb": "11.91",
+                    "throughput_gb_reads": "11.91",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "3.123",
+                    "readss": "3.123",
+                    "writess": "0",
+                    "throughput_gb": "11.91",
+                    "throughput_gb_reads": "11.91",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "3.123",
+                    "readss": "3.123",
+                    "writess": "0",
+                    "throughput_gb": "11.91",
+                    "throughput_gb_reads": "11.91",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "3.123",
+                    "readss": "3.123",
+                    "writess": "0",
+                    "throughput_gb": "11.91",
+                    "throughput_gb_reads": "11.91",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "3.123",
+                    "readss": "3.123",
+                    "writess": "0",
+                    "throughput_gb": "11.91",
+                    "throughput_gb_reads": "11.91",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "THREADS": "64",
+            "IOENGINE": "io_uring",
+            "FILENAME": "/mnt/nvme0n1/f;/mnt/nvme1n1/f;/mnt/nvme2n1/f;/mnt/nvme3n1/f",
+            "FILESIZE": "10G",
+            "IOSIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "CONFIG_STR": "THREADS_64__IOENGINE_io_uring__FILENAME_mntnvme0n1fmntnvme1n1fmntnvme2n1fmntnvme3n1f__FILESIZE_10G__IOSIZE_10G__INIT_disable__RUNTIME_30",
+            "repetitions": [
+                {
+                    "iops": "6.229",
+                    "readss": "6.229",
+                    "writess": "0",
+                    "throughput_gb": "23.76",
+                    "throughput_gb_reads": "23.76",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "6.228",
+                    "readss": "6.228",
+                    "writess": "0",
+                    "throughput_gb": "23.76",
+                    "throughput_gb_reads": "23.76",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "6.228",
+                    "readss": "6.228",
+                    "writess": "0",
+                    "throughput_gb": "23.76",
+                    "throughput_gb_reads": "23.76",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "6.228",
+                    "readss": "6.228",
+                    "writess": "0",
+                    "throughput_gb": "23.76",
+                    "throughput_gb_reads": "23.76",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "6.228",
+                    "readss": "6.228",
+                    "writess": "0",
+                    "throughput_gb": "23.76",
+                    "throughput_gb_reads": "23.76",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "THREADS": "64",
+            "IOENGINE": "io_uring",
+            "FILENAME": "/mnt/nvme0n1/f;/mnt/nvme1n1/f;/mnt/nvme2n1/f;/mnt/nvme3n1/f;/mnt/nvme4n1/f;/mnt/nvme5n1/f;/mnt/nvme6n1/f;/mnt/nvme7n1/f",
+            "FILESIZE": "10G",
+            "IOSIZE": "10G",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "CONFIG_STR": "THREADS_64__IOENGINE_io_uring__FILENAME_mntnvme0n1fmntnvme1n1fmntnvme2n1fmntnvme3n1fmntnvme4n1fmntnvme5n1fmntnvme6n1fmntnvme7n1f__FILESIZE_10G__IOSIZE_10G__INIT_disable__RUNTIME_30",
+            "repetitions": [
+                {
+                    "iops": "8.396",
+                    "readss": "8.396",
+                    "writess": "0",
+                    "throughput_gb": "32.03",
+                    "throughput_gb_reads": "32.03",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "8.389",
+                    "readss": "8.389",
+                    "writess": "0",
+                    "throughput_gb": "32",
+                    "throughput_gb_reads": "32",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "8.415",
+                    "readss": "8.415",
+                    "writess": "0",
+                    "throughput_gb": "32.1",
+                    "throughput_gb_reads": "32.1",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "8.446",
+                    "readss": "8.446",
+                    "writess": "0",
+                    "throughput_gb": "32.22",
+                    "throughput_gb_reads": "32.22",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "8.377",
+                    "readss": "8.377",
+                    "writess": "0",
+                    "throughput_gb": "31.95",
+                    "throughput_gb_reads": "31.95",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        }
+    ]
+}
