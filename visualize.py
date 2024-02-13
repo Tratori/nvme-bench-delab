@@ -688,8 +688,10 @@ def visualize_mixed_read_write_queue_depths(
     plt.savefig("figures/mixed_read_write_different_queue_depths.png", dpi=400)
     plt.show()
 
-def visualize_zero_vs_random(repeated_benchmark, threads=[32], rw=[0.0, 0.5, 1.0], engines=["libaio", "io_uring"]):
-    plt.figure(figsize=(12, 4))
+
+HATCHES = ["//", "", "|", "-", "+", "x", "o", "O", ".", "*", " "]
+def visualize_zero_vs_random(repeated_benchmark, threads=[32], rw=[0.0, 0.5, 1.0], inits =["zero", "random"], engines=["libaio", "io_uring"], title=""):
+    fig = plt.figure(figsize=(12, 4))
     aggregate_repeated_benchmark(repeated_benchmark)
 
     machine_configs = sorted(list(repeated_benchmark.keys()))  # Convert to list if necessary
@@ -702,52 +704,54 @@ def visualize_zero_vs_random(repeated_benchmark, threads=[32], rw=[0.0, 0.5, 1.0
         axes.append(ax)
         for ssd, benchmark in repeated_benchmark[machine].items():
             color_id = 0
-            for engine in ["io_uring", "libaio"]:
-                for init in ["zero", "random"]:
-                    for thread in threads:
-                        runs = [x for x in benchmark if x["IOENGINE"] == engine and x["DD_INIT"] == init]
-                        throughputs = np.asarray(
-                            [
-                                float(run["iops_mean"])
-                                for run in sorted(runs, key=lambda x: float(x["RW"]))
-                                if float(run["RW"]) in rw
-                                and int(run["THREADS"]) == thread
-                            ]
-                        )
+            bars = []
+            legend_keys = []
+            for enine_idx, engine in enumerate(["io_uring", "libaio"]):
+                for init_idx, init in enumerate(inits):
+                    # for RW in rw:
+                    runs = [x for x in benchmark if x["IOENGINE"] == engine and x["DD_INIT"] == init]
+                    throughputs = np.asarray(
+                        [
+                            float(run["iops_mean"])
+                            for run in sorted(runs, key=lambda x: float(x["RW"]))
+                        ]
+                    )
+                    
+                    # N = 3
+                    # ind = np.arange(N)  # the x locations for the groups
+                    # width = 0.27       # the width of the bars
 
-                        std = np.asarray(
-                            [
-                                float(run["iops_std"])
-                                for run in sorted(runs, key=lambda x: float(x["RW"]))
-                                if float(run["RW"]) in rw and int(run["THREADS"]) == thread
-                            ]
-                        )
+                    bar_width = 0.2
+                    n_bars = len(engines) * len(inits)
+                    single_width = 1
+                    i = enine_idx * len(engines) + init_idx
+                    x_offset = (i - n_bars / 2) * bar_width + bar_width / 2
 
-                        plt.plot(
-                            rw,
-                            throughputs,
-                            color=COLORS[color_id],
-                            label=f"{engine} - {init} init",
-                        )
-                        plt.fill_between(
-                            rw[: len(throughputs)],
-                            throughputs - std,
-                            throughputs + std,
-                            color=COLORS[color_id],
-                            alpha=0.2,
-                        )
-                        color_id += 1
-                        ax.set_xticks(range(len(rw)), rw)
+                    std = np.asarray(
+                        [
+                            float(run["iops_std"])
+                            for run in sorted(runs, key=lambda x: float(x["RW"]))
+                        ]
+                    )
+                    # Draw a bar for every value of that type
+                    for x, y in enumerate(throughputs):
+                        bar = ax.bar(x + x_offset, y, yerr=std[x], width=bar_width * single_width, color=COLORS[enine_idx], label=f"{engine} - {init} init", hatch=HATCHES[init_idx], error_kw=dict(ecolor='black', lw=2, capsize=3, capthick=1))
+                    legend_keys.append(f"{engine} - {init} init")
+                    # Add a handle to the last drawn bar, which we'll need for the legend
+                    bars.append(bar[0])
 
-
+                    color_id += 1
+                    ax.set_xticks(range(len(rw)), rw)
     axes[0].set_ylabel("Throughput (M IOP/s)", fontdict={"fontsize": 12})
     fig.supxlabel("Write percentage")
     fig.suptitle(f"{title} - Mixed Read Writes for files initialized with random data/zeros - IOP/s", fontsize=16)
     plt.legend(bars, legend_keys,loc='right',bbox_to_anchor=(2.25, 0.5),
         fancybox=True, shadow=True, ncol=1)
     plt.tight_layout()  # Adjust layout to prevent overlap
+    save_file = title.replace("/","_")
+    safe = save_file.replace(" ", "_")
     plt.savefig(
-        save,
+        f"./figures/{safe}_zero_vs_random.png",
         dpi=400,
     )
     plt.show()
@@ -1031,9 +1035,12 @@ def main():
 
     # visualize_10g_vs_100g(import_benchmarks("10g_vs_100g_nx05"))
 
-    visualize_zero_vs_random(import_benchmarks("zero_vs_random_koroneia"))
+    # visualize_zero_vs_random(import_benchmarks("zero_vs_random_koroneia"), title="Koroneia")
 
-    visualize_zero_vs_random(import_benchmarks("zero_vs_random_delab"), threads=[16])
+    # visualize_zero_vs_random(import_benchmarks("zero_vs_random"), inits=["zero", "urandom"], threads=[16], title="nx01/nx02")
+
+    visualize_zero_vs_random(import_benchmarks("nullwrite_zero_vs_random"), inits=["zero", "random"], threads=[16], title="nx05 null write")
+    visualize_zero_vs_random(import_benchmarks("notnullwrite_zero_vs_random"), inits=["zero", "random"], threads=[16], title="nx05 not null write")
 
     # visualize_mixed_read_write_new([import_benchmarks("nx05_mixed_read_write")], ["1", "2", "4", "8", "16", "32"])
 
