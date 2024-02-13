@@ -1,5 +1,5 @@
 {
-    "2_SSDs": [
+    "Samsung PM1733 (2 * RAID 1)": [
         {
             "iops": "2.237",
             "readss": "2.237",
