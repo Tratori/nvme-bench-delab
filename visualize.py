@@ -189,14 +189,16 @@ def visualize_mixed_read_write(
                     for run in sorted(runs, key=lambda x: float(x["RW"]))
                     if float(run["RW"]) in RW
                 ]
-
                 ax.plot(
                     RW,
                     throughputs,
                     color=COLORS_ENGINE[engine],
                 )
+        if idx == 4:
+            ax.legend(
+                handles=HANDLES_ENGINE_LABELS, fontsize=12, bbox_to_anchor=(1, 0.5)
+            )
 
-        ax.legend(handles=HANDLES_ENGINE_LABELS, fontsize=12)
         ax.set_ylim([0.0, max(throughputs) * 1.5])
         ax.set_xticks(RW)
 
