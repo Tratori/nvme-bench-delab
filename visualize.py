@@ -654,18 +654,17 @@ def visualize_mixed_read_write_queue_depths(
     queue_depths=[128, 256, 1024],
     rw=[0.0, 0.01, 0.05, 0.1, 0.2, 0.3, 0.4, 0.6, 0.8, 1.0],
 ):
-    plt.figure(figsize=(12, 8))
-    aggregate_repeated_benchmark(repeated_benchmark)
-
     machine_configs = list(repeated_benchmark.keys())  # Convert to list if necessary
     num_machines = len(machine_configs)
     num_columns = 2  # You can adjust the number of columns as needed
 
-    for idx, machine in enumerate(machine_configs, start=1):
-        plt.subplot(num_machines // num_columns, num_columns, idx)
-        plt.title(f"{machine} - 4096B - Mixed Read Writes, different IO_DEPTHS - IOP/s")
-        plt.ylabel("Throughput (M IOP/s)", fontdict={"fontsize": 12})
-        plt.xlabel("Write percentage", fontdict={"fontsize": 12})
+    fig, axs = plt.subplots(num_machines // num_columns, num_columns, figsize=(12, 8))
+    fig.supxlabel("Write percentage")
+    fig.supylabel("Throughput (M IOP/s)")
+    fig.suptitle("Mixed Read Writes - Different IO_DEPTHS - IOP/s")
+    aggregate_repeated_benchmark(repeated_benchmark)
+
+    for idx, (machine, ax) in enumerate(zip(machine_configs, axs.flatten()), start=1):
 
         for ssd, benchmark in repeated_benchmark[machine].items():
             color_id = 0
@@ -690,13 +689,13 @@ def visualize_mixed_read_write_queue_depths(
                         ]
                     )
 
-                    plt.plot(
+                    ax.plot(
                         rw,
                         throughputs,
                         color=COLORS[color_id],
                         label=f"{engine} - {queue_depth}",
                     )
-                    plt.fill_between(
+                    ax.fill_between(
                         rw[: len(throughputs)],
                         throughputs - std,
                         throughputs + std,
@@ -705,9 +704,9 @@ def visualize_mixed_read_write_queue_depths(
                     )
                     color_id += 1
 
-        plt.legend(fontsize=12)
-        plt.ylim([0.0, max(throughputs) * 1.5])
-        plt.xticks(RW)
+        ax.legend(fontsize=12)
+        ax.set_ylim([0.0, max(throughputs) * 1.1])
+        ax.set_xticks(RW)
 
     plt.tight_layout()  # Adjust layout to prevent overlap
     plt.savefig("figures/mixed_read_write_different_queue_depths.png", dpi=400)
@@ -1110,6 +1109,9 @@ def visualize_mixed_read_write_threads_polished(
 
 
 def main():
+    visualize_mixed_read_write_queue_depths(
+        import_benchmarks("random_read_write_different_queue_depths")
+    )
     visualize_mixed_read_write(import_benchmarks("mixed_read_write_results"))
     visualize_filled_ssd(import_benchmarks("filled_ssd"))
     visualize_logs(import_logs("hour_long"), bin_size=1)
@@ -1152,9 +1154,7 @@ def main():
     #         threads=threads[: i + 1],
     #         y_lims=[[0, 3.0], [0, 0.8]],
     #     )
-    # visualize_mixed_read_write_queue_depths(
-    #     import_benchmarks("random_read_write_different_queue_depths")
-    # )
+
     # visualize_mixed_read_write_new([import_benchmarks("mixed_read_write_new")])
     # benchmark = import_benchmark()
     # visualize_random_read_scalability(benchmark, [1, 2, 4, 8])
