@@ -1119,7 +1119,12 @@ def visualize_mixed_read_write_threads_polished(
 
 
 def main():
-    visualize_filled_ssd(import_benchmarks("filled_ssd"))
+    visualize_zero_vs_random(import_benchmarks("zero_vs_random_nullwrites_koro"), threads=[32], title="only zeros write")
+    visualize_zero_vs_random(import_benchmarks("zero_vs_random_koroneia"), threads=[32], title="random data write")
+
+    return 0
+
+    visualize_filled_ssd(import_benchmarks("filled_ssd")), 
     visualize_mixed_read_write_threads_polished(
         import_benchmarks("koroneia_mixed_read_write_new"), threads=[16], num_columns=3
     )
@@ -1196,13 +1201,15 @@ def main():
 
     # visualize_zero_vs_random(import_benchmarks("zero_vs_random"), inits=["zero", "urandom"], threads=[16], title="nx01/nx02")
 
-    visualize_zero_vs_random(import_benchmarks("nullwrite_zero_vs_random"), inits=["zero", "random"], threads=[16], title="nx05 null write")
-    visualize_zero_vs_random(import_benchmarks("notnullwrite_zero_vs_random"), inits=["zero", "random"], threads=[16], title="nx05 not null write")
+    # visualize_zero_vs_random(import_benchmarks("nullwrite_zero_vs_random"), inits=["zero", "random"], threads=[16], title="nx05 null write")
+    # visualize_zero_vs_random(import_benchmarks("notnullwrite_zero_vs_random"), inits=["zero", "random"], threads=[16], title="nx05 not null write")
     # visualize_zero_vs_random(import_benchmarks("zero_vs_random_koroneia"))
 
     # visualize_zero_vs_random(import_benchmarks("zero_vs_random_delab"), threads=[16])
 
+    visualize_zero_vs_random(import_benchmarks("zero_vs_random_nullwrites_koro"), threads=[32])
     visualize_zero_vs_random(import_benchmarks("notnullwrite_zero_vs_random"), threads=[32])
+
     # visualize_zero_vs_random(import_benchmarks("nullwrite_zero_vs_random"), inits=["zero", "random"], threads=[16], title="nx05 null write")
     # visualize_zero_vs_random(import_benchmarks("notnullwrite_zero_vs_random"), inits=["zero", "random"], threads=[16], title="nx05 not null write")
 
