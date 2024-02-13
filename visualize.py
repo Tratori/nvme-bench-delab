@@ -1008,13 +1008,14 @@ def visualize_mixed_read_write_threads_polished(
         fig.suptitle(suptitle)
     if suplabel:
         fig.supxlabel(suplabel)
+    fig.supylabel("Throughput (M IOP/s)")
+
     for idx, (machine, ax) in enumerate(zip(machine_configs, axs.flatten()), start=1):
         ax.set_title(f"{machine}")
         if titles:
             ax.set_title(titles[idx - 1])
         else:
             ax.set_title(f"{machine} - 4096B Page Size - Mixed Read Writes - IOP/s")
-        ax.set_ylabel("Throughput (M IOP/s)", fontdict={"fontsize": 12})
         if not suplabel:
             ax.set_xlabel("Write percentage", fontdict={"fontsize": 12})
 
@@ -1038,12 +1039,20 @@ def visualize_mixed_read_write_threads_polished(
                             if float(run["RW"]) in rw and int(run["THREADS"]) == thread
                         ]
                     )
-                    ax.plot(
-                        rw,
-                        throughputs,
-                        color=COLORS[color_id],
-                        label=f"{engine} - {thread} threads",
-                    )
+                    if len(engines) > 1:
+                        ax.plot(
+                            rw,
+                            throughputs,
+                            color=COLORS[color_id],
+                            label=f"{engine} - {thread} threads",
+                        )
+                    else:
+                        ax.plot(
+                            rw,
+                            throughputs,
+                            color=COLORS[color_id],
+                            label=f"{thread} threads",
+                        )
                     ax.fill_between(
                         rw[: len(throughputs)],
                         throughputs - std,
@@ -1072,6 +1081,7 @@ def visualize_mixed_read_write_threads_polished(
 
 
 def main():
+    visualize_filled_ssd(import_benchmarks("filled_ssd"))
     visualize_mixed_read_write_threads_polished(
         import_benchmarks("koroneia_mixed_read_write_new"), threads=[16], num_columns=3
     )
@@ -1080,6 +1090,15 @@ def main():
         num_columns=3,
         titles=["1 Optane SSD", "2 Optane SSD", "4 Optane SSD"],
         suptitle="Scalability Threads - nx05 - IOP/s for Threads",
+        suplabel="Write Percentage",
+        x_ticks=[0.0, 0.2, 0.4, 0.6, 0.8, 1.0],
+    )
+    visualize_mixed_read_write_threads_polished(
+        import_benchmarks("nx05_mixed_read_write"),
+        engines=["io_uring"],
+        num_columns=3,
+        titles=["1 Optane SSD", "2 Optane SSD", "4 Optane SSD"],
+        suptitle="Scalability Threads - nx05 - io_uring - IOP/s for Threads",
         suplabel="Write Percentage",
         x_ticks=[0.0, 0.2, 0.4, 0.6, 0.8, 1.0],
     )
