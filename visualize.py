@@ -1038,7 +1038,6 @@ def visualize_mixed_read_write_threads_polished(
                             if float(run["RW"]) in rw and int(run["THREADS"]) == thread
                         ]
                     )
-
                     ax.plot(
                         rw,
                         throughputs,
@@ -1074,7 +1073,7 @@ def visualize_mixed_read_write_threads_polished(
 
 def main():
     visualize_mixed_read_write_threads_polished(
-        import_benchmarks("koroneia_mixed_read_write_new")
+        import_benchmarks("koroneia_mixed_read_write_new"), threads=[16], num_columns=3
     )
     visualize_mixed_read_write_threads_polished(
         import_benchmarks("nx05_mixed_read_write"),
