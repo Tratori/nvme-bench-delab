@@ -214,19 +214,23 @@ ylabel = {
 def visualize_bs_read_write(repeated_benchmarks, metric="iops"):
     print(repeated_benchmarks)
     aggregate_repeated_benchmark(repeated_benchmarks)
-    plt.figure(figsize=(12, 8))
 
     machine_configs = list(repeated_benchmarks.keys())  # Convert to list if necessary
     num_machines = len(machine_configs)
     num_columns = 2  # You can adjust the number of columns as needed
 
-    for idx, machine in enumerate(machine_configs, start=1):
-        plt.subplot(num_machines // num_columns + 1, num_columns, idx)
-        plt.title(f"{machine} - Different page sizes - {metric}")
-        plt.ylabel(ylabel[metric], fontdict={"fontsize": 12})
-        plt.xlabel("Pagesize (KiB)", fontdict={"fontsize": 12})
+    fig, axs = plt.subplots(
+        max(1, num_machines // num_columns), num_columns, figsize=(12, 8), sharey=True
+    )
+    fig.suptitle(f"{metric} for Different Block Sizes")
 
-        plt.xscale('log')
+    fig.supxlabel("Block Size (KiB)")
+    fig.supylabel(ylabel[metric])
+
+    for idx, (machine, ax) in enumerate(zip(machine_configs, axs.flatten()), start=1):
+        ax.set_title(f"{machine}")
+
+        ax.set_xscale("log")
 
         for ssd, benchmark in repeated_benchmarks[machine].items():
             for engine in ENGINES_BS:
@@ -244,13 +248,13 @@ def visualize_bs_read_write(repeated_benchmarks, metric="iops"):
                         for run in sorted(runs, key=lambda x: int(x["BS"]))
                         if int(run["BS"]) in BS and float(run["RW"]) == rw
                     ])
-                    plt.plot(
+                    ax.plot(
                         BS,
                         iops,
                         label=f"{engine} - RW {rw}",
                         color=COLORS[i],
                     )
-                    plt.fill_between(
+                    ax.fill_between(
                         BS,
                         iops - iops_stds,
                         iops + iops_stds,
@@ -265,10 +269,10 @@ def visualize_bs_read_write(repeated_benchmarks, metric="iops"):
             ],
             fontsize=12,
         )
-        plt.xticks(BS, BS_LABEL)
+        ax.set_xticks(BS, BS_LABEL)
 
     plt.tight_layout()  # Adjust layout to prevent overlap
-    plt.savefig("figures/pagesize_read_write.png", dpi=400)
+    plt.savefig("figures/bs_read_write.png", dpi=400)
     plt.show()
 
 
@@ -1109,6 +1113,7 @@ def visualize_mixed_read_write_threads_polished(
 
 
 def main():
+    visualize_bs_read_write(import_benchmarks("blocksize_read"))
     visualize_mixed_read_write_queue_depths(
         import_benchmarks("random_read_write_different_queue_depths")
     )
