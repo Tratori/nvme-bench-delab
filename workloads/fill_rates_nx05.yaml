@@ -1,0 +1,10 @@
+fill_rates:
+  matrix:
+    THREADS: ["16"]
+    IOENGINE: ["libaio", "io_uring"]
+    FILENAME: ["/mnt/nvme0n1/f"]
+    FILESIZE: ["100G"]
+    RW: ["0.0", "1.0"]
+  args:
+    INIT: "disable"
+    RUNTIME: "60"
