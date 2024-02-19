@@ -1,0 +1,11 @@
+zero_vs_random:
+  matrix:
+    THREADS: ["32"]
+    RW: ["0", "0.5", "1"]
+    DD_INIT: ["zero", "random"]
+    IOENGINE: ["libaio", "io_uring"]
+    FILENAME: ["/mnt/nvme0n1/f", "/mnt/nvme0n1/f;/mnt/nvme1n1/f", "/mnt/nvme0n1/f;/mnt/nvme1n1/f;/mnt/nvme2n1/f;/mnt/nvme3n1/f"]
+  args:
+    FILESIZE: "10G"
+    INIT: "disable"
+    RUNTIME: "30"

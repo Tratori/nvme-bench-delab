@@ -1025,6 +1025,8 @@ def visualize_mixed_read_write_threads_polished(
     num_columns=2,
     suplabel="",
     x_ticks=[],
+    share_y=True,
+    legend_id=None,
 ):
     aggregate_repeated_benchmark(repeated_benchmark)
 
@@ -1034,7 +1036,7 @@ def visualize_mixed_read_write_threads_polished(
     num_machines = len(machine_configs)
 
     fig, axs = plt.subplots(
-        num_machines // num_columns, num_columns, figsize=(12, 8), sharey=True
+        num_machines // num_columns, num_columns, figsize=(12, 8), sharey=share_y
     )
     if suptitle:
         fig.suptitle(suptitle)
@@ -1045,7 +1047,7 @@ def visualize_mixed_read_write_threads_polished(
     for idx, (machine, ax) in enumerate(zip(machine_configs, axs.flatten()), start=1):
         ax.set_title(f"{machine}")
         if titles:
-            ax.set_title(titles[idx - 1], fontdict={"fontsize": 16})
+            ax.set_title(titles[idx - 1], fontdict={"fontsize": 15})
         else:
             ax.set_title(f"{machine} - 4096B Page Size - Mixed Read Writes - IOP/s")
         if not suplabel:
@@ -1076,14 +1078,14 @@ def visualize_mixed_read_write_threads_polished(
                             rw,
                             throughputs,
                             color=COLORS[color_id],
-                            label=f"{engine} - {thread} threads",
+                            label=f"{engine} - {'{:2d}'.format(thread)} Threads",
                         )
                     else:
                         ax.plot(
                             rw,
                             throughputs,
                             color=COLORS[color_id],
-                            label=f"{thread} threads",
+                            label=f"{'{:2d}'.format(thread)} Threads",
                         )
                     ax.fill_between(
                         rw[: len(throughputs)],
@@ -1093,8 +1095,18 @@ def visualize_mixed_read_write_threads_polished(
                         alpha=0.2,
                     )
                     color_id += 1
-
-        # ax.legend(fontsize=12)
+        if legend_id:
+            if legend_id == idx:
+                ax.legend(
+                    fontsize=12,
+                    loc="center left",
+                    bbox_to_anchor=(1.0, 0.5),
+                    fancybox=True,
+                    shadow=True,
+                    ncol=1,
+                )
+        else:
+            ax.legend(fontsize=12)
         if y_lims:
             ax.set_ylim(y_lims[idx - 1])
         else:
@@ -1122,6 +1134,32 @@ def main():
     return 0
 
     visualize_filled_ssd(import_benchmarks("filled_ssd")), 
+    threads = [1, 2, 4, 8, 16, 32]
+    for i in range(len(threads)):
+        visualize_mixed_read_write_threads_polished(
+            import_benchmarks("mixed_read_write_threads"),
+            engines=["libaio"],
+            suptitle="libaio Scalability - Linux 5.4.0 (2019)",
+            titles=["Intel P4610", "Intel P4610 (4 * Raid 0)"],
+            threads=threads[: i + 1],
+            y_lims=[[0, 0.8], [0, 3.0]],
+            x_ticks=[0.0, 0.2, 0.4, 0.6, 0.8, 1.0],
+            share_y=False,
+            suplabel="Write Percentage",
+            legend_id=2,
+        )
+        visualize_mixed_read_write_threads_polished(
+            import_benchmarks("mixed_read_write_threads"),
+            engines=["io_uring"],
+            suptitle="io_uring Scalability - Linux 5.4.0 (2019)",
+            titles=["Intel P4610", "Intel P4610 (4 * Raid 0)"],
+            threads=threads[: i + 1],
+            y_lims=[[0, 0.8], [0, 3.0]],
+            x_ticks=[0.0, 0.2, 0.4, 0.6, 0.8, 1.0],
+            share_y=False,
+            suplabel="Write Percentage",
+            legend_id=2,
+        )
     visualize_bs_read_write(import_benchmarks("blocksize_read"))
     visualize_mixed_read_write_queue_depths(
         import_benchmarks("random_read_write_different_queue_depths")
@@ -1149,25 +1187,6 @@ def main():
         suplabel="Write Percentage",
         x_ticks=[0.0, 0.2, 0.4, 0.6, 0.8, 1.0],
     )
-
-    # threads = [1, 2, 4, 8, 16, 32]
-    # for i in range(len(threads)):
-    #     visualize_mixed_read_write_threads(
-    #         import_benchmarks("mixed_read_write_threads"),
-    #         engines=["libaio"],
-    #         suptitle="libaio Scalability - Linux 5.4.0 (2019)",
-    #         titles=["Four SSDs", "Single SSD"],
-    #         threads=threads[: i + 1],
-    #         y_lims=[[0, 3.0], [0, 0.8]],
-    #     )
-    #     visualize_mixed_read_write_threads(
-    #         import_benchmarks("mixed_read_write_threads"),
-    #         engines=["io_uring"],
-    #         suptitle="io_uring Scalability - Linux 5.4.0 (2019)",
-    #         titles=["Four SSDs", "Single SSD"],
-    #         threads=threads[: i + 1],
-    #         y_lims=[[0, 3.0], [0, 0.8]],
-    #     )
 
     # visualize_mixed_read_write_new([import_benchmarks("mixed_read_write_new")])
     # benchmark = import_benchmark()
