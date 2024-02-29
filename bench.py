@@ -21,6 +21,9 @@ def setup_files(config):
     assert dd_filesize in ["10G", "100G"]
 
     def run_dd(filename):
+        if filename.startswith('/dev/'):
+            print("Not initializing a file, because filename starts with /dev/. If this is not intended, fix filenames!!!")
+            return
         subprocess.run(
             [
                 "dd",

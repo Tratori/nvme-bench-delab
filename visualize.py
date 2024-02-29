@@ -1042,7 +1042,7 @@ def visualize_mixed_read_write_threads_polished(
         fig.suptitle(suptitle)
     if suplabel:
         fig.supxlabel(suplabel)
-    fig.supylabel("Throughput (M IOP/s)")
+    fig.supylabel("Throughput (M IOP/s)", size=16)
 
     for idx, (machine, ax) in enumerate(zip(machine_configs, axs.flatten()), start=1):
         ax.set_title(f"{machine}")
@@ -1051,7 +1051,7 @@ def visualize_mixed_read_write_threads_polished(
         else:
             ax.set_title(f"{machine} - 4096B Page Size - Mixed Read Writes - IOP/s")
         if not suplabel:
-            ax.set_xlabel("Write percentage", fontdict={"fontsize": 12})
+            ax.set_xlabel("Write percentage", fontdict={"fontsize": 16})
 
         for ssd, benchmark in repeated_benchmark[machine].items():
             color_id = 0
@@ -1116,15 +1116,24 @@ def visualize_mixed_read_write_threads_polished(
         else:
             ax.set_xticks(rw)
 
+    ax.legend(loc='right', bbox_to_anchor=(1.8, 0.5),
+          fancybox=True, shadow=True, ncol=1, borderaxespad=-0.5, fontsize=16)
     plt.tight_layout()  # Adjust layout to prevent overlap
     plt.savefig(
         f"figures/mixed_read_write_different_threads_{'_'.join(map(lambda x: str(x), engines))}_{'_'.join(map(lambda x: str(x), threads))}.png",
-        dpi=400,
+        dpi=800,
     )
     plt.show()
 
 
 def main():
+    visualize_mixed_read_write_threads_polished(import_benchmarks("nx05_mixed_read_write"), titles=["Intel P5800x", "Intel P5800x (2)", "Intel P5800x (4)"], suptitle="nx05", suplabel="Write Percentage", engines=["io_uring"], num_columns=3, x_ticks=[0.0, 0.2, 0.4, 0.6, 0.8, 1.0])
+    # visualize_zero_vs_random(import_benchmarks("zero_vs_random_nullwrites_koro"), threads=[32], title="only zeros write")
+    # visualize_zero_vs_random(import_benchmarks("zero_vs_random_koroneia"), threads=[32], title="random data write")
+
+    return 0
+
+    visualize_filled_ssd(import_benchmarks("filled_ssd")), 
     threads = [1, 2, 4, 8, 16, 32]
     for i in range(len(threads)):
         visualize_mixed_read_write_threads_polished(
@@ -1213,13 +1222,15 @@ def main():
 
     # visualize_zero_vs_random(import_benchmarks("zero_vs_random"), inits=["zero", "urandom"], threads=[16], title="nx01/nx02")
 
-    visualize_zero_vs_random(import_benchmarks("nullwrite_zero_vs_random"), inits=["zero", "random"], threads=[16], title="nx05 null write")
-    visualize_zero_vs_random(import_benchmarks("notnullwrite_zero_vs_random"), inits=["zero", "random"], threads=[16], title="nx05 not null write")
+    # visualize_zero_vs_random(import_benchmarks("nullwrite_zero_vs_random"), inits=["zero", "random"], threads=[16], title="nx05 null write")
+    # visualize_zero_vs_random(import_benchmarks("notnullwrite_zero_vs_random"), inits=["zero", "random"], threads=[16], title="nx05 not null write")
     # visualize_zero_vs_random(import_benchmarks("zero_vs_random_koroneia"))
 
     # visualize_zero_vs_random(import_benchmarks("zero_vs_random_delab"), threads=[16])
 
+    visualize_zero_vs_random(import_benchmarks("zero_vs_random_nullwrites_koro"), threads=[32])
     visualize_zero_vs_random(import_benchmarks("notnullwrite_zero_vs_random"), threads=[32])
+
     # visualize_zero_vs_random(import_benchmarks("nullwrite_zero_vs_random"), inits=["zero", "random"], threads=[16], title="nx05 null write")
     # visualize_zero_vs_random(import_benchmarks("notnullwrite_zero_vs_random"), inits=["zero", "random"], threads=[16], title="nx05 not null write")
 

@@ -42,7 +42,7 @@ plt.figure(figsize=(10, 6))
 for storage_type, data in all_data.groupby("Type"):
     plt.scatter(data["date"], data["GB/$"], label=storage_type, marker="o")
 
-    degree = 2  # Degree of the polynomial (you can adjust this)
+    degree = 2
     model = make_pipeline(PolynomialFeatures(degree), LinearRegression())
     model.fit(data[["date"]], np.log(data["GB/$"]))
     x_values = data[["date"]].sort_values(by="date")
@@ -59,7 +59,7 @@ plt.xlabel("Year", fontsize=16)
 plt.yscale("log")
 plt.ylabel("GB/$", fontsize=16)
 plt.grid(True)
-plt.xticks(range(2000, 2025, 5))
+plt.xticks(list(range(2000, 2025, 5)) + [2024])
 
 
 def custom_format(x, _):
