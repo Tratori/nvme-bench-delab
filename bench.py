@@ -80,9 +80,14 @@ def main():
     )
 
 
-def parse_iob_output(output):
+def parse_iob_output(output, config):
+    spdk_offset = 0
+    if config["IOENGINE"] == "spdk":
+        spdk_offset = config["FILENAME"].count("traddr") + 1 
+        print("spdk_offset: ", spdk_offset)
+
     # one newline and one "fin" line behind last output line
-    agg = output.split("\n")[-3]
+    agg = output.split("\n")[-3-spdk_offset]
 
     numbers = re.findall(r"-?\d+(?:\.\d+)?(?:[eE][-+]?\d+)?", agg)
     if len(numbers) != 7:
@@ -140,7 +145,7 @@ def call_iob(
                 teardown(config)
 
             if result_iob.returncode == 0:
-                ret = parse_iob_output(result_iob.stdout)
+                ret = parse_iob_output(result_iob.stdout, config)
                 ret["repetition"] = repetition
                 run_result["repetitions"].append(ret)
             else:
