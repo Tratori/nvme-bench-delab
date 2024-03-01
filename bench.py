@@ -52,7 +52,7 @@ def setup_output_dir(result_file, config_str, repetition):
 
 def cleanup_files(config):
     for file in config["FILENAME"].split(";"):
-        if file.startswith('/dev/') or file.starswith("traddr"):
+        if file.startswith('/dev/') or file.startswith("traddr"):
             print("Not removing a file, because you are either benchmarking passthrough or spdk: ", file)
             continue
         subprocess.run(["rm", file], check=True)
