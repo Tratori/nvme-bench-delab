@@ -21,8 +21,8 @@ def setup_files(config):
     assert dd_filesize in ["10G", "100G"]
 
     def run_dd(filename):
-        if filename.startswith('/dev/'):
-            print("Not initializing a file, because filename starts with /dev/. If this is not intended, fix filenames!!!")
+        if filename.startswith('/dev/') or filename.startswith("traddr"):
+            print("Not initializing a file, because you are either benchmarking passthrough or spdk: ", filename)
             return
         subprocess.run(
             [
@@ -52,6 +52,9 @@ def setup_output_dir(result_file, config_str, repetition):
 
 def cleanup_files(config):
     for file in config["FILENAME"].split(";"):
+        if file.startswith('/dev/') or file.starswith("traddr"):
+            print("Not removing a file, because you are either benchmarking passthrough or spdk: ", file)
+            continue
         subprocess.run(["rm", file], check=True)
 
 
