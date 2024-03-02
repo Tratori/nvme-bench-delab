@@ -15,6 +15,18 @@ def import_benchmark(file="benchmark.json"):
     return benchmark
 
 
+def import_latency_dump(benchmark):
+    latency_dumps = {}
+    for path in (current_directory / Path("results") / Path(benchmark)).rglob('dump.csv'):
+        config = path.parent.name
+        with open(path, "r") as json_file:
+            df = pd.DataFrame(columns=["iodepth", "bs", "io_alignment","threadid","reqId","type", "begin", "submit", "end", "addr", "len"])
+            df = pd.read_csv(path,skiprows=range(1, 1000001), on_bad_lines="skip")
+            df.columns = df.columns.str.strip()
+            latency_dumps[config] = df 
+    return latency_dumps
+
+
 def import_benchmarks(benchmark):
     benchmarks = {}
     path = current_directory / Path("results") / Path(benchmark)
