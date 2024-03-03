@@ -1,0 +1,12 @@
+seq_read_write:
+  matrix:
+    THREADS: ["16"]
+    IOENGINE: ["io_uring"]
+    FILENAME: ["/mnt/nvme1/f", "/mnt/nvme2/f", "/mnt/nvme3/f"]
+    FILESIZE: ["10G"]
+    RW: ["0.0", "1.0"]
+    IOPATTERN: ["seq", "random"]
+  args:
+    INIT: "disable"
+    RUNTIME: "30"
+    BS: "1048576"
