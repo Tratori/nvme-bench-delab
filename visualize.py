@@ -7,7 +7,7 @@ from pathlib import Path
 import seaborn as sns
 import pandas as pd
 from benchmark_helper import import_logs, aggregate_repeated_benchmark, import_benchmarks, import_benchmark, import_latency_dump
-
+import matplotlib.lines as mlines
 sns.set()
 
 COLORS = [
@@ -353,6 +353,9 @@ def visualize_additional_write_random_read(repeated_benchmark):
     plt.savefig("figures/additional_write.png", dpi=400)
     plt.show()
 
+LABELSIZE=20
+TICKSIZE=16
+LEGENDSIZE=14
 
 def visualize_different_runtimes(repeated_benchmark, ylim=[0.2, 0.8]):
     plt.figure(figsize=(6, 4))
@@ -364,8 +367,8 @@ def visualize_different_runtimes(repeated_benchmark, ylim=[0.2, 0.8]):
     for idx, machine in enumerate(machine_configs, start=1):
         plt.subplot(num_machines // num_columns, num_columns, idx)
         # plt.title(f"{machine} - Different Runtimes Mixed RW - IOP/s")
-        plt.ylabel("Throughput (M IOP/s)", fontdict={"fontsize": 12})
-        plt.xlabel("Benchmark duration (s)", fontdict={"fontsize": 12})
+        plt.ylabel("Throughput (M IOP/s)", fontdict={"fontsize": LABELSIZE})
+        plt.xlabel("Benchmark duration (s)", fontdict={"fontsize": LABELSIZE})
 
         for ssd, benchmark in repeated_benchmark[machine].items():
             for id, rw in enumerate(RW_RUNTIMES):
@@ -402,11 +405,11 @@ def visualize_different_runtimes(repeated_benchmark, ylim=[0.2, 0.8]):
         #     fontsize=12,
         # )
         plt.ylim(ylim)
-        plt.yticks([0.2, 0.4, 0.6, 0.8])
+        plt.yticks([0.2, 0.4, 0.6, 0.8], fontsize=TICKSIZE)
         plt.legend(loc='upper center', bbox_to_anchor=(0.5, 1.05),
-            ncol=3,fancybox=True, shadow=True)
+            ncol=3,fancybox=True, shadow=True, fontsize=LEGENDSIZE)
         plt.xscale("log")
-        plt.xticks([ 2,  8,  32,  128], [ 2,  8,  32,  128])
+        plt.xticks([ 2,  8,  32,  128], [ 2,  8,  32,  128], fontsize=TICKSIZE)
 
     plt.tight_layout()  # Adjust layout to prevent overlap
     plt.savefig("figures/different_runtime_benchmark.pdf", dpi=400)
@@ -519,8 +522,8 @@ def visualize_logs(logs, bin_size=1):
     fig = plt.figure(figsize=(6, 4))
     for idx, machine in enumerate(machine_configs, start=1):
         # plt.title(f"Average Throughput per Thread")
-        plt.ylabel("Throughput (MiB / s)", fontdict={"fontsize": 12})
-        plt.xlabel("Time (min)", fontdict={"fontsize": 12})
+        plt.ylabel("Throughput (MiB / s)", fontdict={"fontsize": LABELSIZE})
+        plt.xlabel("Time (min)", fontdict={"fontsize": LABELSIZE})
 
         logs[machine]["time"] = logs[machine]["time"] / bin_size
         logs[machine]["time"] = logs[machine]["time"].astype(int)
@@ -581,11 +584,21 @@ def visualize_logs(logs, bin_size=1):
 
         plt.ylim([50,  150])
 
-    plt.xticks([0, float(600) / bin_size, float(1200) / bin_size, float(1800) /bin_size], ["0", "10", "20", "30"])
-    plt.yticks([75, 125])
+    plt.xticks([0, float(600) / bin_size, float(1200) / bin_size, float(1800) /bin_size], ["0", "10", "20", "30"], fontsize=TICKSIZE)
+    plt.yticks([75, 125], fontsize=TICKSIZE)
     # plt.legend(fontsize=8)
-    plt.legend(loc='upper center', bbox_to_anchor=(0.5, 1.05),
-          ncol=3,fancybox=True, shadow=True)
+    # plt.legend(loc='upper center', bbox_to_anchor=(0.5, 1.05),
+    #       ncol=3,fancybox=True, shadow=True, fontsize=LEGENDSIZE)
+
+    l1 = mlines.Line2D([], [], color=COLORS_ENGINE["io_uring"], label='io_uring')
+    l2 = mlines.Line2D([], [], color=COLORS_ENGINE["libaio"], label='libaio')
+
+    l3 = mlines.Line2D([], [], color='black', marker=RW_MARKER["0"], markersize=10, label='read')
+    l4 = mlines.Line2D([], [], color='black', marker=RW_MARKER["0.5"], markersize=10, label='mixed')
+    l5 = mlines.Line2D([], [], color='black', marker=RW_MARKER["1.0"], markersize=10, label='write')
+
+    plt.legend(handles=[l1, l2, l3, l4, l5], loc='upper center', bbox_to_anchor=(0.5, 1.05),
+          ncol=3,fancybox=True, shadow=True, fontsize=LEGENDSIZE)
 
     plt.tight_layout()  # Adjust layout to prevent overlap
         # plt.tight_layout()  # Adjust layout to prevent overlap
@@ -771,24 +784,21 @@ def visualize_mixed_read_write_queue_depths(
     plt.show()
 
 
-def visualize_zero_vs_random_final(repeated_benchmark, threads=[32], rw=[0.0, 0.5, 1.0], inits =["zero", "random"], engines=["libaio", "io_uring"], title=""):
-    fig = plt.figure(figsize=(12, 4))
-    aggregate_repeated_benchmark(repeated_benchmark)
+def visualize_zero_vs_random_final(repeated_benchmark, threads=[32], rw=[0.0, 0.5, 1.0], inits=["zero", "random"], engines=["libaio", "io_uring"], title=""):
+    fig, axes = plt.subplots(nrows=1, ncols=len(repeated_benchmark), figsize=(12, 4), sharey=True)
 
     machine_configs = sorted(list(repeated_benchmark.keys()))  # Convert to list if necessary
-    num_machines = len(machine_configs)
-    num_columns = num_machines  # You can adjust the number of columns as needed
-    axes = []
-    for idx, machine in enumerate(machine_configs, start=1):
-        ax = plt.subplot(num_machines // num_columns, num_columns, idx)
-        axes.append(ax)
+
+    for idx, (machine, ax) in enumerate(zip(machine_configs, axes), start=1):
+        aggregate_repeated_benchmark(repeated_benchmark)
+
         for ssd, benchmark in repeated_benchmark[machine].items():
             color_id = 0
             bars = []
             legend_keys = []
+            
             for enine_idx, engine in enumerate(["io_uring", "libaio"]):
                 for init_idx, init in enumerate(inits):
-                    # for RW in rw:
                     runs = [x for x in benchmark if x["IOENGINE"] == engine and x["DD_INIT"] == init]
                     throughputs = np.asarray(
                         [
@@ -817,21 +827,24 @@ def visualize_zero_vs_random_final(repeated_benchmark, threads=[32], rw=[0.0, 0.
                     bars.append(bar[0])
 
                     color_id += 1
-                    ax.set_xticks(range(len(rw)), ["read", "mixed", "write"])
+                    ax.set_xticks(range(len(rw)))
+                    ax.set_xticklabels(["read", "mixed", "write"], fontsize=TICKSIZE)
 
-                    x_axis =  "Write null data" if machine == "1ssds_nullwrite" else "Write random data"
-                    ax.set_xlabel(x_axis, fontdict={"fontsize": 12})
+                    x_axis = "Write null data" if machine == "1ssds_nullwrite" else "Write random data"
+                    ax.set_xlabel(x_axis, fontdict={"fontsize": LABELSIZE})
+        if idx == 1:
+            ax.set_ylabel("Throughput (M IOP/s)", fontdict={"fontsize": LABELSIZE})
+            ax.set_yticks([0.0, 0.5, 1.0], [0, 0.5,  1.0], fontdict={"fontsize": TICKSIZE})
+            plt.ylim([0.0, 1.1])
+            # ax.y("Throughput (M IOP/s)", fontdict={"fontsize": 16})
+        
+            # ax.set_title(machine)  # Set title for each subplot
 
-    axes[0].set_ylabel("Throughput (M IOP/s)", fontdict={"fontsize": 12})
-    # fig.supxlabel("Write percentage")
-    # fig.suptitle(f"{title} - Mixed Read Writes for files initialized with random data/zeros - IOP/s", fontsize=16)
-    fig.legend(bars, legend_keys,loc='upper center',bbox_to_anchor=(0.5, 1.05),
-        fancybox=True, shadow=True, ncol=4)
-    # plt.legend(loc='upper center', bbox_to_anchor=(0.5, 1.05),
-    #     ncol=3,fancybox=True, shadow=True)
-    
+    fig.legend(bars, legend_keys, loc='upper center', bbox_to_anchor=(0.51, 1.05),
+               fancybox=True, shadow=True, ncol=4, fontsize=LEGENDSIZE)
+
     plt.tight_layout()  # Adjust layout to prevent overlap
-    save_file = title.replace("/","_")
+    save_file = title.replace("/", "_")
     safe = save_file.replace(" ", "_")
     plt.savefig(
         f"./figures/{safe}_zero_vs_random_final.pdf",
@@ -1279,10 +1292,9 @@ def visualize_latency(latency_dump):
 
 
 def main():
-    visualize_logs(import_logs("hour_long/hour_long_vis"), bin_size=16)
-
-    visualize_different_runtimes(import_benchmarks("different_runtimes_results/relevant"))
     visualize_zero_vs_random_final(import_benchmarks("zero_vs_random_koro_final"), threads=[32])
+    visualize_logs(import_logs("hour_long/hour_long_vis"), bin_size=16)
+    visualize_different_runtimes(import_benchmarks("different_runtimes_results/relevant"))
     # visualize_scalability(import_benchmarks("io_uring_koroneia/upsala"), expected_iops=1.0,title="SSD Scalability - Random Reads - Koroneia", save="figures/koroneia_scalability.png")
     
 
