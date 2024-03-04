@@ -1,0 +1,130 @@
+{
+    "local_ssd": [
+        {
+            "THREADS": "16",
+            "IOENGINE": "io_uring",
+            "FILESIZE": "10G",
+            "RW": "0.0",
+            "IOPATTERN": "random",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "FILENAME": "/home/fabian/Desktop/HPI3/Data_processing/nvme-bench-delab/test",
+            "CONFIG_STR": "THREADS_16__IOENGINE_io_uring__FILESIZE_10G__RW_00__IOPATTERN_random__INIT_disable__RUNTIME_30__FILENAME_homefabianDesktopHPI3Data_processingnvmebenchdelabtest",
+            "repetitions": [
+                {
+                    "iops": "0.345",
+                    "readss": "0.345",
+                    "writess": "0",
+                    "throughput_gb": "1.316",
+                    "throughput_gb_reads": "1.316",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "0.3498",
+                    "readss": "0.3498",
+                    "writess": "0",
+                    "throughput_gb": "1.334",
+                    "throughput_gb_reads": "1.334",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "0.2939",
+                    "readss": "0.2939",
+                    "writess": "0",
+                    "throughput_gb": "1.121",
+                    "throughput_gb_reads": "1.121",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "0.2298",
+                    "readss": "0.2298",
+                    "writess": "0",
+                    "throughput_gb": "0.8767",
+                    "throughput_gb_reads": "0.8767",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "0.2571",
+                    "readss": "0.2571",
+                    "writess": "0",
+                    "throughput_gb": "0.9806",
+                    "throughput_gb_reads": "0.9806",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "THREADS": "16",
+            "IOENGINE": "io_uring",
+            "FILESIZE": "10G",
+            "RW": "1.0",
+            "IOPATTERN": "random",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "FILENAME": "/home/fabian/Desktop/HPI3/Data_processing/nvme-bench-delab/test",
+            "CONFIG_STR": "THREADS_16__IOENGINE_io_uring__FILESIZE_10G__RW_10__IOPATTERN_random__INIT_disable__RUNTIME_30__FILENAME_homefabianDesktopHPI3Data_processingnvmebenchdelabtest",
+            "repetitions": [
+                {
+                    "iops": "0.0491",
+                    "readss": "0",
+                    "writess": "0.0491",
+                    "throughput_gb": "0.1873",
+                    "throughput_gb_reads": "0",
+                    "throughput_gb_writes": "0.1873",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "0.05577",
+                    "readss": "0",
+                    "writess": "0.05577",
+                    "throughput_gb": "0.2127",
+                    "throughput_gb_reads": "0",
+                    "throughput_gb_writes": "0.2127",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "0.05087",
+                    "readss": "0",
+                    "writess": "0.05087",
+                    "throughput_gb": "0.1941",
+                    "throughput_gb_reads": "0",
+                    "throughput_gb_writes": "0.1941",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "0.04733",
+                    "readss": "0",
+                    "writess": "0.04733",
+                    "throughput_gb": "0.1805",
+                    "throughput_gb_reads": "0",
+                    "throughput_gb_writes": "0.1805",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "0.04974",
+                    "readss": "0",
+                    "writess": "0.04974",
+                    "throughput_gb": "0.1897",
+                    "throughput_gb_reads": "0",
+                    "throughput_gb_writes": "0.1897",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        }
+    ]
+}

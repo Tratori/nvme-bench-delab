@@ -1,0 +1,260 @@
+{
+    "local_ssd": [
+        {
+            "THREADS": "16",
+            "IOENGINE": "io_uring",
+            "FILENAME": "/home/fabian/Desktop/HPI3/Data_processing/nvme-bench-delab/io_bench",
+            "FILESIZE": "10G",
+            "RW": "0.0",
+            "IOPATTERN": "random",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "BS": "1048576",
+            "CONFIG_STR": "THREADS_16__IOENGINE_io_uring__FILENAME_homefabianDesktopHPI3Data_processingnvmebenchdelabio_bench__FILESIZE_10G__RW_00__IOPATTERN_random__INIT_disable__RUNTIME_30__BS_1048576",
+            "repetitions": [
+                {
+                    "iops": "0.002672",
+                    "readss": "0.002672",
+                    "writess": "0",
+                    "throughput_gb": "2.609",
+                    "throughput_gb_reads": "2.609",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "0.002657",
+                    "readss": "0.002657",
+                    "writess": "0",
+                    "throughput_gb": "2.594",
+                    "throughput_gb_reads": "2.594",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "0.002575",
+                    "readss": "0.002575",
+                    "writess": "0",
+                    "throughput_gb": "2.515",
+                    "throughput_gb_reads": "2.515",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "0.002626",
+                    "readss": "0.002626",
+                    "writess": "0",
+                    "throughput_gb": "2.564",
+                    "throughput_gb_reads": "2.564",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "0.002747",
+                    "readss": "0.002747",
+                    "writess": "0",
+                    "throughput_gb": "2.682",
+                    "throughput_gb_reads": "2.682",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "THREADS": "16",
+            "IOENGINE": "io_uring",
+            "FILENAME": "/home/fabian/Desktop/HPI3/Data_processing/nvme-bench-delab/io_bench",
+            "FILESIZE": "10G",
+            "RW": "1.0",
+            "IOPATTERN": "seq",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "BS": "1048576",
+            "CONFIG_STR": "THREADS_16__IOENGINE_io_uring__FILENAME_homefabianDesktopHPI3Data_processingnvmebenchdelabio_bench__FILESIZE_10G__RW_10__IOPATTERN_seq__INIT_disable__RUNTIME_30__BS_1048576",
+            "repetitions": [
+                {
+                    "iops": "0.0003327",
+                    "readss": "0",
+                    "writess": "0.0003327",
+                    "throughput_gb": "0.3249",
+                    "throughput_gb_reads": "0",
+                    "throughput_gb_writes": "0.3249",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "0.0002492",
+                    "readss": "0",
+                    "writess": "0.0002492",
+                    "throughput_gb": "0.2434",
+                    "throughput_gb_reads": "0",
+                    "throughput_gb_writes": "0.2434",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "0.000262",
+                    "readss": "0",
+                    "writess": "0.000262",
+                    "throughput_gb": "0.2559",
+                    "throughput_gb_reads": "0",
+                    "throughput_gb_writes": "0.2559",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "0.00026",
+                    "readss": "0",
+                    "writess": "0.00026",
+                    "throughput_gb": "0.2539",
+                    "throughput_gb_reads": "0",
+                    "throughput_gb_writes": "0.2539",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "0.0002272",
+                    "readss": "0",
+                    "writess": "0.0002272",
+                    "throughput_gb": "0.2219",
+                    "throughput_gb_reads": "0",
+                    "throughput_gb_writes": "0.2219",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "THREADS": "16",
+            "IOENGINE": "io_uring",
+            "FILENAME": "/home/fabian/Desktop/HPI3/Data_processing/nvme-bench-delab/io_bench",
+            "FILESIZE": "10G",
+            "RW": "1.0",
+            "IOPATTERN": "random",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "BS": "1048576",
+            "CONFIG_STR": "THREADS_16__IOENGINE_io_uring__FILENAME_homefabianDesktopHPI3Data_processingnvmebenchdelabio_bench__FILESIZE_10G__RW_10__IOPATTERN_random__INIT_disable__RUNTIME_30__BS_1048576",
+            "repetitions": [
+                {
+                    "iops": "0.0002583",
+                    "readss": "0",
+                    "writess": "0.0002583",
+                    "throughput_gb": "0.2523",
+                    "throughput_gb_reads": "0",
+                    "throughput_gb_writes": "0.2523",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "0.0002764",
+                    "readss": "0",
+                    "writess": "0.0002764",
+                    "throughput_gb": "0.27",
+                    "throughput_gb_reads": "0",
+                    "throughput_gb_writes": "0.27",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "0.00026",
+                    "readss": "0",
+                    "writess": "0.00026",
+                    "throughput_gb": "0.2539",
+                    "throughput_gb_reads": "0",
+                    "throughput_gb_writes": "0.2539",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "0.0002021",
+                    "readss": "0",
+                    "writess": "0.0002021",
+                    "throughput_gb": "0.1974",
+                    "throughput_gb_reads": "0",
+                    "throughput_gb_writes": "0.1974",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "0.000252",
+                    "readss": "0",
+                    "writess": "0.000252",
+                    "throughput_gb": "0.2461",
+                    "throughput_gb_reads": "0",
+                    "throughput_gb_writes": "0.2461",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "THREADS": "16",
+            "IOENGINE": "io_uring",
+            "FILENAME": "/home/fabian/Desktop/HPI3/Data_processing/nvme-bench-delab/io_bench",
+            "FILESIZE": "10G",
+            "RW": "0.0",
+            "IOPATTERN": "seq",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "BS": "1048576",
+            "CONFIG_STR": "THREADS_16__IOENGINE_io_uring__FILENAME_homefabianDesktopHPI3Data_processingnvmebenchdelabio_bench__FILESIZE_10G__RW_00__IOPATTERN_seq__INIT_disable__RUNTIME_30__BS_1048576",
+            "repetitions": [
+                {
+                    "iops": "0.002532",
+                    "readss": "0.002532",
+                    "writess": "0",
+                    "throughput_gb": "2.473",
+                    "throughput_gb_reads": "2.473",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "0.002759",
+                    "readss": "0.002759",
+                    "writess": "0",
+                    "throughput_gb": "2.695",
+                    "throughput_gb_reads": "2.695",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "0.002677",
+                    "readss": "0.002677",
+                    "writess": "0",
+                    "throughput_gb": "2.614",
+                    "throughput_gb_reads": "2.614",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "0.002774",
+                    "readss": "0.002774",
+                    "writess": "0",
+                    "throughput_gb": "2.709",
+                    "throughput_gb_reads": "2.709",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "0.002744",
+                    "readss": "0.002744",
+                    "writess": "0",
+                    "throughput_gb": "2.68",
+                    "throughput_gb_reads": "2.68",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        }
+    ]
+}

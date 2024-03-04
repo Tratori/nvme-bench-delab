@@ -1,0 +1,130 @@
+{
+    "nx05_ssds": [
+        {
+            "THREADS": "16",
+            "IOENGINE": "io_uring",
+            "FILESIZE": "10G",
+            "RW": "0.0",
+            "IOPATTERN": "random",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "FILENAME": "/mnt/nvme0n1/f",
+            "CONFIG_STR": "THREADS_16__IOENGINE_io_uring__FILESIZE_10G__RW_00__IOPATTERN_random__INIT_disable__RUNTIME_30__FILENAME_mntnvme0n1f",
+            "repetitions": [
+                {
+                    "iops": "1.562",
+                    "readss": "1.562",
+                    "writess": "0",
+                    "throughput_gb": "5.959",
+                    "throughput_gb_reads": "5.959",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "1.562",
+                    "readss": "1.562",
+                    "writess": "0",
+                    "throughput_gb": "5.959",
+                    "throughput_gb_reads": "5.959",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "1.562",
+                    "readss": "1.562",
+                    "writess": "0",
+                    "throughput_gb": "5.959",
+                    "throughput_gb_reads": "5.959",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "1.562",
+                    "readss": "1.562",
+                    "writess": "0",
+                    "throughput_gb": "5.959",
+                    "throughput_gb_reads": "5.959",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "1.562",
+                    "readss": "1.562",
+                    "writess": "0",
+                    "throughput_gb": "5.959",
+                    "throughput_gb_reads": "5.959",
+                    "throughput_gb_writes": "0",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        },
+        {
+            "THREADS": "16",
+            "IOENGINE": "io_uring",
+            "FILESIZE": "10G",
+            "RW": "1.0",
+            "IOPATTERN": "random",
+            "INIT": "disable",
+            "RUNTIME": "30",
+            "FILENAME": "/mnt/nvme0n1/f",
+            "CONFIG_STR": "THREADS_16__IOENGINE_io_uring__FILESIZE_10G__RW_10__IOPATTERN_random__INIT_disable__RUNTIME_30__FILENAME_mntnvme0n1f",
+            "repetitions": [
+                {
+                    "iops": "1.341",
+                    "readss": "0",
+                    "writess": "1.341",
+                    "throughput_gb": "5.114",
+                    "throughput_gb_reads": "0",
+                    "throughput_gb_writes": "5.114",
+                    "max_iops": "0",
+                    "repetition": 0
+                },
+                {
+                    "iops": "1.34",
+                    "readss": "0",
+                    "writess": "1.34",
+                    "throughput_gb": "5.113",
+                    "throughput_gb_reads": "0",
+                    "throughput_gb_writes": "5.113",
+                    "max_iops": "0",
+                    "repetition": 1
+                },
+                {
+                    "iops": "1.34",
+                    "readss": "0",
+                    "writess": "1.34",
+                    "throughput_gb": "5.113",
+                    "throughput_gb_reads": "0",
+                    "throughput_gb_writes": "5.113",
+                    "max_iops": "0",
+                    "repetition": 2
+                },
+                {
+                    "iops": "1.339",
+                    "readss": "0",
+                    "writess": "1.339",
+                    "throughput_gb": "5.108",
+                    "throughput_gb_reads": "0",
+                    "throughput_gb_writes": "5.108",
+                    "max_iops": "0",
+                    "repetition": 3
+                },
+                {
+                    "iops": "1.34",
+                    "readss": "0",
+                    "writess": "1.34",
+                    "throughput_gb": "5.11",
+                    "throughput_gb_reads": "0",
+                    "throughput_gb_writes": "5.11",
+                    "max_iops": "0",
+                    "repetition": 4
+                }
+            ]
+        }
+    ]
+}

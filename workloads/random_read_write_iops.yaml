@@ -1,0 +1,10 @@
+random_read_write_iops.yaml:
+  matrix:
+    THREADS: ["16"]
+    IOENGINE: ["io_uring"]
+    FILESIZE: ["10G"]
+    RW: ["0.0", "1.0"]
+    IOPATTERN: ["random"]
+  args:
+    INIT: "disable"
+    RUNTIME: "30"

@@ -869,7 +869,7 @@ def visualize_zero_vs_random_final(repeated_benchmark, threads=[32], rw=[0.0, 0.
             color_id = 0
             bars = []
             legend_keys = []
-            
+
             for enine_idx, engine in enumerate(["io_uring", "libaio"]):
                 for init_idx, init in enumerate(inits):
                     runs = [x for x in benchmark if x["IOENGINE"] == engine and x["DD_INIT"] == init]
@@ -910,7 +910,7 @@ def visualize_zero_vs_random_final(repeated_benchmark, threads=[32], rw=[0.0, 0.
             ax.set_yticks([0.0, 0.5, 1.0], [0, 0.5,  1.0], fontdict={"fontsize": TICKSIZE})
             plt.ylim([0.0, 1.1])
             # ax.y("Throughput (M IOP/s)", fontdict={"fontsize": 16})
-        
+
             # ax.set_title(machine)  # Set title for each subplot
 
     fig.legend(bars, legend_keys, loc='upper center', bbox_to_anchor=(0.51, 1.05),
@@ -1372,9 +1372,209 @@ def visualize_latency(latency_dump):
         plt.show()
 
 
+# def visualize_ssds_vs_reported(benchmarks):
+#    ratio = []
+#    for ssd, benchmark in benchmarks.items():
+#        best_run = sorted(benchmark, key=lambda x: float(x["iops"]))[-1]
+#        ssd_ratio = (float(best_run["iops"]) / REPORTED_READS_M[ssd] - 1) * 100
+#        ratio.append(ssd_ratio)
+#        plt.text(
+#            0.002,
+#            ssd_ratio,
+#            ssd.replace("_", " "),
+#            ha="left",
+#            va="center",
+#            color="black",
+#            fontdict={"fontsize": 12},
+#        )
+#    plt.title("Measured vs. Reported random reads/s", fontdict={"fontsize": 16})
+#    plt.ylabel("Difference in % ", fontdict={"fontsize": 14})
+#    plt.xlim([-0.01, 0.055])
+#    plt.xticks([])
+#    plt.scatter([0] * len(ratio), ratio)
+#    plt.tight_layout()
+#    plt.savefig("figures/reported_read_measured.png", dpi=400)
+#    plt.show()
+
+
+ssd_reported_by_metric = {
+    "4_SSD_Raid0": {
+        "readss": 2.480,
+        "writess": 0.800,
+        "throughput_gb_reads": 12.8,
+        "throughput_gb_writes": 8.4,
+    },
+    "local_ssd": {
+        "readss": 0.350,
+        "writess": 0.320,
+        "throughput_gb_reads": 3.1,
+        "throughput_gb_writes": 1.8,
+    },
+    "INTEL_SSDPE2KE016T8": {
+        "readss": 0.620,
+        "writess": 0.200,
+        "throughput_gb_reads": 3.2,
+        "throughput_gb_writes": 2.1,
+    },
+    "koro_ssd": {
+        "readss": 1.000,
+        "writess": 0.400,
+        "throughput_gb_reads": 6.800,
+        "throughput_gb_writes": 5.600,
+    },
+    "nx05_ssds": {
+        "readss": 1.500,
+        "writess": 1.350,
+        "throughput_gb_reads": 7.200,
+        "throughput_gb_writes": 6.100,
+    },
+}
+
+ssd_to_paper_machine = {
+    "4_SSD_Raid0": "D2",
+    "local_ssd": "S7",
+    "INTEL_SSDPE2KE016T8": "D1",
+    "koro_ssd": "D4",
+    "nx05_ssds": "D3",
+}
+metric_titles = {
+    "throughput_gb_reads": ["Read", "% Reported Read"],
+    "throughput_gb_writes": ["Write", "% Reported Write"],
+    "readss": ["Read", "+/- % Read"],
+    "writess": ["Write", "+/- % Write"],
+}
+label_offsets = {
+    (0, 0, "D3"): -0.5,
+    (0, 0, "D4"): +0.5,
+    (0, 0, "D1"): +0.2,
+    (0, 0, "S7"): -0.2,
+    # 0 1
+    (0, 1, "D3"): +0.3,
+    (0, 1, "D4"): -0.3,
+    # 0 2
+    (0, 2, "D1"): +2,
+    (0, 2, "D4"): +1,
+    (0, 2, "D2"): -2,
+    (0, 2, "D3"): -5,
+    (0, 2, "S7"): -5,
+    # 0 3
+    (0, 3, "D4"): +7,
+    (0, 3, "D2"): +3,
+    (0, 3, "D3"): -1,
+    (0, 3, "D1"): -6,
+    # 1 1
+    (1, 1, "D1"): +0.05,
+    (1, 1, "D2"): -0.05,
+    # 1 2
+    (1, 2, "D3"): +21,
+    (1, 2, "D1"): +11,
+    (1, 2, "D2"): -7,
+    (1, 2, "S7"): -8,
+}
+
+
+def visualize_max_bandwidth_seq_vs_reported(*repeated_benchmarks):
+
+    metrics = [["throughput_gb_reads", "throughput_gb_writes"], ["readss", "writess"]]
+    metrics_flattened = [item for sublist in metrics for item in sublist]
+    for bench in repeated_benchmarks:
+        aggregate_repeated_benchmark(
+            bench, ["iops", "throughput_gb"] + metrics_flattened
+        )
+
+    fig, axs = plt.subplots(2, len(metrics) * 2, figsize=(8, 6), sharey=False)
+
+    for idy, row_metrics in enumerate(metrics):
+        machine_configs = list(
+            repeated_benchmarks[idy].keys()
+        )  # Convert to list if necessary
+        num_machines = len(machine_configs)
+        axs[idy][0].sharey(axs[idy][1])
+        axs[idy][2].sharey(axs[idy][3])
+        for idx, metric in enumerate(row_metrics):
+            max_metrics = []
+            metric_ratio = []
+            for machine in machine_configs:
+                for ssd, benchmark in repeated_benchmarks[idy][machine].items():
+
+                    runs = benchmark
+                    max_iops = max([float(run[metric + "_mean"]) for run in runs])
+                    max_metrics.append(max_iops)
+                    percentage_reported = (
+                        max_iops / ssd_reported_by_metric[ssd][metric] * 100.0
+                    )
+
+                    metric_ratio.append(percentage_reported)
+
+                    key = (idy, idx, ssd_to_paper_machine[ssd])
+                    axs[idy][idx].text(
+                        0.004,
+                        max_iops + (label_offsets[key] if key in label_offsets else 0),
+                        ssd_to_paper_machine[ssd],
+                        ha="left",
+                        va="center",
+                        color="black",
+                        fontdict={"fontsize": 12},
+                    )
+                    key = (idy, len(metrics) + idx, ssd_to_paper_machine[ssd])
+                    axs[idy][len(metrics) + idx].text(
+                        0.004,
+                        percentage_reported
+                        + (label_offsets[key] if key in label_offsets else 0),
+                        ssd_to_paper_machine[ssd],
+                        ha="left",
+                        va="center",
+                        color="black",
+                        fontdict={"fontsize": 12},
+                    )
+            axs[idy][idx].tick_params(
+                axis="x",  # changes apply to the x-axis
+                labelbottom=False,
+            )
+            axs[idy][3 - idx].tick_params(
+                axis="x",  # changes apply to the x-axis
+                labelbottom=False,
+            )
+
+            if idx == 0:
+                if idy == 0:
+                    axs[idy][idx].set_ylabel("Bandwidth (GB/s)")
+                if idy == 1:
+                    axs[idy][idx].set_ylabel("IOP/s (M)")
+
+            if idy == 0:
+                axs[idy][idx].set_title(metric_titles[metric][0])
+                axs[idy][len(metrics) + idx].set_title(metric_titles[metric][1])
+            axs[idy][idx].scatter(
+                [0] * len(max_metrics),
+                max_metrics,
+                color="darkblue",
+            )
+            axs[idy][len(metrics) + idx].scatter(
+                [0] * len(max_metrics), metric_ratio, color="darkblue"
+            )
+        axs[idy][1].tick_params(
+            axis="y",  # changes apply to the x-axis
+            labelleft=False,
+        )
+        axs[idy][3].tick_params(
+            axis="y",  # changes apply to the x-axis
+            labelleft=False,
+        )
+    plt.tight_layout()  # Adjust layout to prevent overlap
+    # fig.legend(fontsize=12, ncol=3, loc="upper center", bbox_to_anchor=(0.5, 1.0))
+
+    plt.savefig("figures/comparison_bandwidth.png", dpi=400)
+    plt.savefig("figures/comparison_bandwidth.pdf")
+    plt.show()
+
+
 def main():
-    visualize_bs_read_write(import_benchmarks("blocksize_read"))
+    visualize_max_bandwidth_seq_vs_reported(
+        import_benchmarks("seq_read"), import_benchmarks("random_read_write_iops")
+    )
     return 0
+    visualize_bs_read_write(import_benchmarks("blocksize_read"))
     visualize_logs(import_logs("hour_long/hour_long_vis"), bin_size=16)
 
     visualize_different_runtimes(import_benchmarks("different_runtimes_results/relevant"))
