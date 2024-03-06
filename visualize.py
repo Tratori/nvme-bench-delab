@@ -176,23 +176,37 @@ def visualize_ssds_vs_reported(benchmarks):
     plt.show()
 
 
+machine_to_paper_machine = {
+    "nx01": "D1",
+    "nx02": "D2",
+    "gx01": "D5",
+    "gx03": "S7",
+    "gx04": "S8",
+}
+axs_map = {
+    "D1": 0,
+    "D2": 1,
+    "D5": 2,
+    "S7": 3,
+    "S8": 4,
+}
 def visualize_mixed_read_write(
     benchmarks, suplabelx="Write Percentage", suplabely="Throughput (M IOP/s)"
 ):
+    fig = plt.figure(figsize=(12, 8))
 
     machine_configs = list(benchmarks.keys())  # Convert to list if necessary
-    num_machines = len(machine_configs)
-    num_columns = 2  # You can adjust the number of columns as needed
 
-    fig, axs = plt.subplots(num_machines // num_columns, num_columns, figsize=(12, 8))
-    fig.supxlabel(suplabelx)
-    fig.supylabel(suplabely)
-    for idx, (machine, ax) in enumerate(zip(machine_configs, axs.flatten()), start=1):
+    axs = np.array([plt.subplot(3, 2, idx) for idx in [1, 3, 4, 5, 6]])
+    fig.supxlabel(suplabelx, fontsize=19)
+    fig.supylabel(suplabely, fontsize=19)
+    for idx, machine in enumerate(machine_configs, start=1):
         # plt.ylabel("Throughput (M IOP/s)", fontdict={"fontsize": 12})
         # plt.xlabel("Write percentage", fontdict={"fontsize": 12})
-
+        paper_name = machine_to_paper_machine[machine]
+        ax = axs[axs_map[paper_name]]
         for ssd, benchmark in benchmarks[machine].items():
-            ax.set_title(f"{machine} - {ssd}")
+            ax.set_title(f"{paper_name}", fontdict={"fontsize": 16})
             for engine in ENGINES:
                 runs = [x for x in benchmark if x["IOENGINE"] == engine]
                 throughputs = [
@@ -204,17 +218,26 @@ def visualize_mixed_read_write(
                     RW,
                     throughputs,
                     color=COLORS_ENGINE[engine],
+                    marker="x" if engine == "libaio" else "o",
                 )
-        if idx == 4:
-            ax.legend(
-                handles=HANDLES_ENGINE_LABELS, fontsize=12, bbox_to_anchor=(1, 0.5)
-            )
+        ax.set_xticks(RW[::2], RW[::2], fontsize=TICKSIZE)
+        y_ticks = [T._y for T in ax.get_yticklabels() if T._y >= 0][::2]
+        ax.set_yticks(y_ticks, [str(tick)[:3] for tick in y_ticks], fontsize=TICKSIZE)
 
-        ax.set_ylim([0.0, max(throughputs) * 1.5])
-        ax.set_xticks(RW)
-
+    fig.legend(
+        handles=[
+            mpatches.Patch(color=color, label=label)
+            for label, color in {
+                "libaio": "blue",
+                "io_uring": "green",
+            }.items()
+        ],
+        fontsize=19,
+        bbox_to_anchor=(0.85, 0.9),
+    )
     plt.tight_layout()  # Adjust layout to prevent overlap
     plt.savefig("figures/mixed_read_write.png", dpi=400)
+    plt.savefig("figures/mixed_read_write.pdf")
     plt.show()
 
 
@@ -1570,6 +1593,8 @@ def visualize_max_bandwidth_seq_vs_reported(*repeated_benchmarks):
 
 
 def main():
+    visualize_mixed_read_write(import_benchmarks("mixed_read_write_results"))
+    return 0
     visualize_max_bandwidth_seq_vs_reported(
         import_benchmarks("seq_read"), import_benchmarks("random_read_write_iops")
     )
@@ -1641,7 +1666,6 @@ def main():
     # visualize_mixed_read_write_queue_depths(
     #     import_benchmarks("random_read_write_different_queue_depths")
     # )
-    # visualize_mixed_read_write(import_benchmarks("mixed_read_write_results"))
     # visualize_filled_ssd(import_benchmarks("filled_ssd"))
     # visualize_logs(import_logs("hour_long"), bin_size=1)
     # visualize_mixed_read_write_threads_polished(
