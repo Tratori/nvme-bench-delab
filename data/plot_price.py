@@ -55,11 +55,15 @@ for storage_type, data in all_data.groupby("Type"):
     )
 
 
-plt.xlabel("Year", fontsize=16)
+plt.xlabel("Year", fontsize=20)
 plt.yscale("log")
-plt.ylabel("GB/$", fontsize=16)
+plt.ylabel("GB/$", fontsize=20)
 plt.grid(True)
-plt.xticks(list(range(2000, 2025, 5)) + [2024])
+plt.xticks(
+    list(range(2000, 2025, 5)) + [2024],
+    list(range(2000, 2025, 5)) + [2024],
+    fontsize=19,
+)
 
 
 def custom_format(x, _):
@@ -80,9 +84,10 @@ def custom_format(x, _):
 
 
 plt.gca().yaxis.set_major_formatter(custom_format)
+plt.yticks(plt.yticks()[0][2:-2], plt.yticks()[1][2:-2], fontsize=19)
 # plt.ticklabel_format(axis="y", style="plain")  # scilimits=(0, 0))
 plt.tight_layout()
-plt.legend(fontsize=16)
+plt.legend(fontsize=20)
 plt.savefig("../figures/capacity_per_dollar.png", dpi=300)
 plt.savefig("../figures/capacity_per_dollar.pdf")
 plt.show()
